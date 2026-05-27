@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_BKav_Chat_FILE /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat)
+set(__QT_DEPLOY_TARGET_BKav_Chat_TYPE EXECUTABLE)

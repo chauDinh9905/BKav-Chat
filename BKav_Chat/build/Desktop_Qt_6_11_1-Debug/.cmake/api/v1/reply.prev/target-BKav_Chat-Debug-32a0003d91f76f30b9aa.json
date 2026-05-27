@@ -1,0 +1,752 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "BKav_Chat"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_qt_internal_create_executable",
+			"qt6_add_executable",
+			"qt_add_executable",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"set_property",
+			"find_dependency",
+			"_qt_internal_find_third_party_dependencies",
+			"_qt_internal_find_qt_dependencies",
+			"add_compile_definitions",
+			"project",
+			"target_sources",
+			"_qt_internal_expose_deferred_files_to_ide",
+			"_qt_internal_expose_source_file_to_ide",
+			"qt6_add_translations",
+			"_qt_internal_process_resource",
+			"qt6_add_resources",
+			"__qt_propagate_generated_resource"
+		],
+		"files" : 
+		[
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"CMakeLists.txt",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"build/Desktop_Qt_6_11_1-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake",
+			"/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
+			"/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"build/Desktop_Qt_6_11_1-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake",
+			"/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:844:EVAL"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1033,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 687,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 766,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 234,
+				"parent" : 7
+			},
+			{
+				"file" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 55,
+				"parent" : 9
+			},
+			{
+				"file" : 2,
+				"parent" : 10
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 61,
+				"parent" : 11
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 40,
+				"parent" : 9
+			},
+			{
+				"file" : 11,
+				"parent" : 13
+			},
+			{
+				"command" : 12,
+				"file" : 11,
+				"line" : 50,
+				"parent" : 14
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 142,
+				"parent" : 15
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 16
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 252,
+				"parent" : 17
+			},
+			{
+				"file" : 10,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 10,
+				"line" : 40,
+				"parent" : 19
+			},
+			{
+				"file" : 9,
+				"parent" : 20
+			},
+			{
+				"command" : 11,
+				"file" : 9,
+				"line" : 37,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 36,
+				"parent" : 22
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 23
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 259,
+				"parent" : 24
+			},
+			{
+				"file" : 6,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 6,
+				"line" : 13,
+				"parent" : 26
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 259,
+				"parent" : 27
+			},
+			{
+				"file" : 5,
+				"parent" : 28
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 712,
+				"parent" : 29
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 710,
+				"parent" : 29
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 688,
+				"parent" : 2
+			},
+			{
+				"command" : 14,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"file" : 12,
+				"parent" : 33
+			},
+			{
+				"command" : 13,
+				"file" : 12,
+				"line" : 81,
+				"parent" : 34
+			},
+			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 18,
+				"file" : 14,
+				"line" : 1,
+				"parent" : 36
+			},
+			{
+				"command" : 17,
+				"file" : 13,
+				"line" : 889,
+				"parent" : 37
+			},
+			{
+				"command" : 16,
+				"file" : 0,
+				"line" : 2249,
+				"parent" : 38
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 2324,
+				"parent" : 39
+			},
+			{
+				"command" : 20,
+				"file" : 13,
+				"line" : 922,
+				"parent" : 37
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 419,
+				"parent" : 41
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 2464,
+				"parent" : 42
+			},
+			{
+				"command" : 16,
+				"file" : 0,
+				"line" : 2249,
+				"parent" : 43
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 2324,
+				"parent" : 44
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 2533,
+				"parent" : 42
+			},
+			{
+				"command" : 16,
+				"file" : 0,
+				"line" : 2249,
+				"parent" : 46
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 2324,
+				"parent" : 47
+			},
+			{
+				"command" : 21,
+				"file" : 0,
+				"line" : 2659,
+				"parent" : 42
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 2199,
+				"parent" : 49
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 32,
+					"fragment" : "-fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 32,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 35,
+					"define" : "QT_QML_DEBUG"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_WIDGETS_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/home/chau-dinh/Qt/6.11.1/gcc_64/include"
+				},
+				{
+					"backtrace" : 32,
+					"isSystem" : true,
+					"path" : "/home/chau-dinh/Qt/6.11.1/gcc_64/mkspecs/linux-g++"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				6,
+				9,
+				12,
+				15,
+				20
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/tmp"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/chau-dinh/Qt/6.11.1/gcc_64/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Widgets.so.6.11.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Gui.so.6.11.1",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "/home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Core.so.6.11.1",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/home/chau-dinh/Qt/6.11.1/gcc_64/lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "BKav_Chat",
+	"nameOnDisk" : "BKav_Chat",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files\\Generated",
+			"sourceIndexes" : 
+			[
+				0,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				6,
+				9,
+				12,
+				15,
+				20
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				3,
+				5,
+				8,
+				11,
+				14
+			]
+		},
+		{
+			"name" : "Forms",
+			"sourceIndexes" : 
+			[
+				4,
+				7,
+				10,
+				13,
+				16
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				17,
+				19
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				18
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				27,
+				28,
+				29
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mainwindow.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.ui",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 4,
+			"path" : "login.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "login.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "login.ui",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 4,
+			"path" : "signup.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "signup.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "signup.ui",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 4,
+			"path" : "errorlogin.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "errorlogin.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "errorlogin.ui",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 4,
+			"path" : "errorsignup.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "errorsignup.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "errorsignup.ui",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 40,
+			"path" : "BKav_Chat_vi_VN.ts",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 45,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/.qt/rcc/BKav_Chat_translations.qrc",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 48,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_vi_VN.qm",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 50,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_login.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_signup.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_errorlogin.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_errorsignup.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/timestamp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_vi_VN.qm.rule",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.rule",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/timestamp.rule",
+			"sourceGroupIndex" : 6
+		}
+	],
+	"type" : "EXECUTABLE"
+}
