@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\BKav_Chat.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\BKav_Chat.dir/objects.a @CMakeFiles\BKav_Chat.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\BKav_Chat.dir/objects.a -Wl,--no-whole-archive -o BKav_Chat.exe -Wl,--out-implib,libBKav_Chat.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BKav_Chat.dir\linkLibs.rsp

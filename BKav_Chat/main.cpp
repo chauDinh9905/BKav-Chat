@@ -1,7 +1,6 @@
 #include "signup.h"
 #include "login.h"
 #include "errorlogin.h"
-#include "errorsignup.h"
 #include "errorconnectionnetwork.h"
 #include <QApplication>
 #include <QLocale>
@@ -20,8 +19,9 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    ErrorConnectionNetwork w;
-    w.show();
+    SignUpModel *model = new SignUpModel();
+    SignUp *w = new SignUp(model); // Tạo bằng con trỏ new
+    w->show();
 
     return QApplication::exec();
 }

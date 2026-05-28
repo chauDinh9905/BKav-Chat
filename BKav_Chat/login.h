@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QGridLayout>
+#include "loginmodel.h"
 
 namespace Ui {
 class LogIn;
@@ -18,14 +19,18 @@ class LogIn : public QWidget
     Q_OBJECT
 
 public:
-    explicit LogIn(QWidget *parent = nullptr);
+    explicit LogIn(LogInModel *model,QWidget *parent = nullptr);
     ~LogIn();
 
 private:
     Ui::LogIn *ui;
+
+    LogInModel *model;
+
     QLabel *title;
     QLabel *account;
     QLabel *password;
+    QLabel *error;
 
     QLineEdit *textAccount;
     QLineEdit *textPassword;
@@ -37,6 +42,15 @@ private:
 
     QVBoxLayout *mainLayout;
     QGridLayout *gridLayout;
+
+signals:
+    void logInSuccess();
+    void wantSignUp();
+    void rememberAccount();
+public slots:
+    void rememberInfoClicked();
+    void logInClicked();
+    void signUpClicked();
 };
 
 #endif // LOGIN_H

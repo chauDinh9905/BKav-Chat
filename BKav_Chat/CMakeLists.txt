@@ -13,9 +13,12 @@ qt_add_executable(BKav_Chat
     mainwindow.ui
     login.h login.cpp login.ui
     signup.h signup.cpp signup.ui
-    errorlogin.h errorlogin.cpp errorlogin.ui
-    errorsignup.h errorsignup.cpp errorsignup.ui
+
+
     errorconnectionnetwork.h errorconnectionnetwork.cpp errorconnectionnetwork.ui
+    signupmodel.h signupmodel.cpp
+    loginmodel.h
+
 )
 
 qt_add_translations(

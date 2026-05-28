@@ -1,7 +1,7 @@
 #include "login.h"
 
-LogIn::LogIn(QWidget *parent)
-    : QWidget(parent)
+LogIn::LogIn(LogInModel *model, QWidget *parent)
+    : QWidget(parent), model(model)
 {
     this->setWindowTitle("BKav Chat");
     this->setFixedSize(650, 400);
@@ -75,6 +75,23 @@ LogIn::LogIn(QWidget *parent)
         "}"
         );
     mainLayout->addWidget(signUp);
+
+    error = new QLabel("", this);
+    error->setStyleSheet("font-size: 14px; color: red");
+    error->setAlignment(Qt::AlignCenter);
+    mainLayout->addWidget(error);
+
+    connect(remeberPass, &QCheckBox::clicked, this, &LogIn::rememberInfoClicked);
+    connect(logIn, &QPushButton::clicked, this, &LogIn::logInClicked);
+    connect(signUp, &QPushButton::clicked, this, &LogIn::signUpClicked);
+}
+
+void LogIn::remeberInforClicked(){
+    emit rememberAccount();
+}
+
+void LogIn::logInClicked(){
+
 }
 
 LogIn::~LogIn()

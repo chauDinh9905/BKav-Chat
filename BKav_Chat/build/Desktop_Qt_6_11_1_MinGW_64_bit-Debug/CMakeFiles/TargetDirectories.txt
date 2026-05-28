@@ -1,0 +1,13 @@
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/BKav_Chat.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/BKav_Chat_lupdate.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/update_translations.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/BKav_Chat_lrelease.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/release_translations.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/BKav_Chat_autogen_timestamp_deps.dir
+C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/BKav_Chat_autogen.dir

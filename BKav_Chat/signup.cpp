@@ -1,9 +1,9 @@
 #include "signup.h"
 #include "ui_signup.h"
+#include <QMessageBox>
 
-SignUp::SignUp(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::SignUp)
+SignUp::SignUp( SignUpModel *model ,QWidget *parent)
+    : QWidget(parent), model(model)
 {
     this->setWindowTitle("BKav Chat");
     this->setFixedSize(650, 400);
@@ -52,14 +52,39 @@ SignUp::SignUp(QWidget *parent)
     gridLayout->addWidget(textPassword1, 3, 1);
     mainLayout->addLayout(gridLayout);
 
+    error = new QLabel("", this);
+    error->setStyleSheet("font-size: 14px; color: red;");
+    error->setAlignment(Qt::AlignCenter);
+    mainLayout->addWidget(error);
+
     taoTaiKhoan = new QPushButton("Tạo tài khoản", this);
     taoTaiKhoan->setCursor(Qt::PointingHandCursor);
     taoTaiKhoan->setStyleSheet("background-color: blue; color: white; font-size: 14px");
     mainLayout->addWidget(taoTaiKhoan);
-    ui->setupUi(this);
+
+    connect(taoTaiKhoan, &QPushButton::clicked, this, &SignUp::taoTaiKhoanClicked);
+
+}
+
+void SignUp::taoTaiKhoanClicked(){
+    if(!model) return;
+    model->displayName = textName->text();
+    model->userName = textAccount->text();
+    model->password = textPassword->text();
+    model->confirmPassword = textPassword1->text();
+
+    if(model->checkCredentials()){
+        model->registerOnServer();
+        //QMessageBox::information(this, "Thông báo", "Đăng ký tài khoản thành công!");
+        error->setText("");
+        emit signUpSuccess();
+    }else{
+        //QMessageBox::warning(this, "Lỗi", "Thông tin không hợp lệ hoặc mật khẩu không khớp!");
+        error->setText("Tài khoản đã tồn tại hoặc thông tin không hợp lệ");
+    }
 }
 
 SignUp::~SignUp()
 {
-    delete ui;
+
 }
