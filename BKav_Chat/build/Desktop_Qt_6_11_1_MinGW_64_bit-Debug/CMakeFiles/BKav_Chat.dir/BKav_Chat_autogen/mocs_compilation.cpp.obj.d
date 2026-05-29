@@ -408,24 +408,30 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_errorlogin.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorlogin.h \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_login.cpp \
+ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_login.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
+ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_loginmodel.cpp \
+ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_mainwindow.cpp \
  C:/Users/Public/Documents/BKav-Chat/BKav_Chat/mainwindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signup.cpp \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStackedWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstackedwidget.h \
+ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
  C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
  C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signup.cpp \
+ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signupmodel.cpp \
  C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h

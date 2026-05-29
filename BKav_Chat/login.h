@@ -35,7 +35,7 @@ private:
     QLineEdit *textAccount;
     QLineEdit *textPassword;
 
-    QCheckBox *remeberPass;
+    QCheckBox *rememberPass;
 
     QPushButton *logIn;
     QPushButton *signUp;
@@ -45,7 +45,7 @@ private:
 
 signals:
     void logInSuccess();
-    void wantSignUp();
+    void signUpRequest();
     void rememberAccount();
 public slots:
     void rememberInfoClicked();

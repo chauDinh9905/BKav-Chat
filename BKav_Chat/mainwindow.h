@@ -2,22 +2,26 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
-QT_END_NAMESPACE
+#include <QStackedWidget>
+#include "login.h"
+#include "loginmodel.h"
+#include "signup.h"
+#include "signupmodel.h"
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    QStackedWidget *stackedWidget;
+
+    LogIn *loginView;
+    SignUp *signUpView;
+
+    LogInModel *loginModel;
+    SignUpModel *signUpModel;
 };
-#endif // MAINWINDOW_H
+#endif

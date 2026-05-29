@@ -407,4 +407,7 @@ CMakeFiles/BKav_Chat.dir/login.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QObject

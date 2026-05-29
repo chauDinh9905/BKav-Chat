@@ -411,6 +411,8 @@ CMakeFiles/BKav_Chat.dir/main.cpp.obj: \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\login.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\errorlogin.h \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\errorconnectionnetwork.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
@@ -431,4 +433,10 @@ CMakeFiles/BKav_Chat.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qguiapplication_platform.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QLocale \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QTranslator \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtranslator.h
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtranslator.h \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\mainwindow.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStackedWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstackedwidget.h

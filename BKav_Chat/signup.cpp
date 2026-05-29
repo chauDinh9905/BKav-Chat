@@ -9,9 +9,15 @@ SignUp::SignUp( SignUpModel *model ,QWidget *parent)
     this->setFixedSize(650, 400);
     this->setStyleSheet("background-color: white;");
 
+
     mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(40, 40, 40, 40);
+    mainLayout->setContentsMargins(30, 30, 30, 30);
     mainLayout->setSpacing(20);
+
+    backToLogIn = new QPushButton("←", this);
+    backToLogIn->setStyleSheet("QPushButton { text-align: left; background: none; border: none; color: black; font-size: 18px}");
+    backToLogIn->setCursor(Qt::PointingHandCursor);
+    mainLayout->addWidget(backToLogIn);
 
     title = new QLabel("Tạo tài khoản");
     title->setStyleSheet("color: black; font-size: 24px; font-weight: bold;");
@@ -36,11 +42,13 @@ SignUp::SignUp( SignUpModel *model ,QWidget *parent)
     password->setStyleSheet("font-size: 14px; color: black;");
     textPassword = new QLineEdit(this);
     textPassword->setStyleSheet("padding: 6px; border: 1px solid; border-radius: 4px; font-size: 14px");
+    textPassword->setEchoMode(QLineEdit::Password);
 
     password1 = new QLabel("Nhập lại mật khẩu", this);
     password1->setStyleSheet("font-size: 14px; color: black;");
     textPassword1 = new QLineEdit(this);
     textPassword1->setStyleSheet("padding: 6px; border: 1px solid; border-radius: 4px; font-size: 14px");
+    textPassword1->setEchoMode(QLineEdit::Password);
 
     gridLayout->addWidget(name, 0, 0);
     gridLayout->addWidget(textName, 0, 1);
@@ -63,7 +71,7 @@ SignUp::SignUp( SignUpModel *model ,QWidget *parent)
     mainLayout->addWidget(taoTaiKhoan);
 
     connect(taoTaiKhoan, &QPushButton::clicked, this, &SignUp::taoTaiKhoanClicked);
-
+    connect(backToLogIn, &QPushButton::clicked, this, &SignUp::backToLogInRequest);
 }
 
 void SignUp::taoTaiKhoanClicked(){

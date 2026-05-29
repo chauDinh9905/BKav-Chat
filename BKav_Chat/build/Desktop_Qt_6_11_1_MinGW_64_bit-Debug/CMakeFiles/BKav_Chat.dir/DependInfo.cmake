@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorconnectionnetwork.cpp" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.cpp" "CMakeFiles/BKav_Chat.dir/login.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/login.cpp.obj.d"
+  "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.cpp" "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/main.cpp" "CMakeFiles/BKav_Chat.dir/main.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/main.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/mainwindow.cpp" "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.cpp" "CMakeFiles/BKav_Chat.dir/signup.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/signup.cpp.obj.d"

@@ -347,6 +347,30 @@ login.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/login.cpp.s
 .PHONY : login.cpp.s
 
+loginmodel.obj: loginmodel.cpp.obj
+.PHONY : loginmodel.obj
+
+# target to build an object file
+loginmodel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj
+.PHONY : loginmodel.cpp.obj
+
+loginmodel.i: loginmodel.cpp.i
+.PHONY : loginmodel.i
+
+# target to preprocess a source file
+loginmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/loginmodel.cpp.i
+.PHONY : loginmodel.cpp.i
+
+loginmodel.s: loginmodel.cpp.s
+.PHONY : loginmodel.s
+
+# target to generate assembly for a file
+loginmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/loginmodel.cpp.s
+.PHONY : loginmodel.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -474,6 +498,9 @@ help:
 	@echo ... login.obj
 	@echo ... login.i
 	@echo ... login.s
+	@echo ... loginmodel.obj
+	@echo ... loginmodel.i
+	@echo ... loginmodel.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

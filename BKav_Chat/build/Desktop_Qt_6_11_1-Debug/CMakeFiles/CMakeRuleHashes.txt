@@ -1,7 +1,0 @@
-# Hashes of file build rules.
-1596338874d66a8d37f4f936fec4c277 .qt/rcc/qrc_BKav_Chat_translations.cpp
-4df433572ea0f056469c9d95689c284c BKav_Chat_autogen/timestamp
-96fa2ea81b61459b0ea4b1137b55af01 BKav_Chat_vi_VN.qm
-f604a050d10ecbdb52a29ed6718963d5 CMakeFiles/BKav_Chat_autogen
-f604a050d10ecbdb52a29ed6718963d5 CMakeFiles/BKav_Chat_lrelease
-d916be1cffd8e36456368539b8996e95 CMakeFiles/BKav_Chat_lupdate

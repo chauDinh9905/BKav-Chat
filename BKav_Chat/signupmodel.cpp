@@ -11,6 +11,6 @@ bool SignUpModel::checkCredentials(){
 }
 
 bool SignUpModel::registerOnServer(){
-    // Về sau sẽ xử lý code chi tiết ở đây khi đăng ký tài khoản
+    // Về sau sẽ xử lý code chi tiết ở đây khi đăng ký tài khoản, phải kiểm tra xem thông tin đăng ký, nếu tên hiển thị bị trùng với người khác thì trả về
     return true;
 }

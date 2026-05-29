@@ -38,12 +38,14 @@ private:
     QLineEdit *textPassword1;
 
     QPushButton *taoTaiKhoan;
+    QPushButton *backToLogIn;
 
     QVBoxLayout *mainLayout;
     QGridLayout *gridLayout;
 
 signals:
     void signUpSuccess();
+    void backToLogInRequest();
 
 private slots:
     void taoTaiKhoanClicked();

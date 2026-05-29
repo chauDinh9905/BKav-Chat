@@ -520,6 +520,11 @@
 			null
 		],
 		[ "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.cpp", "MU", null ],
+		[
+			"C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.cpp",
+			"MU",
+			null
+		],
 		[ "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/main.cpp", "MU", null ],
 		[
 			"C:/Users/Public/Documents/BKav-Chat/BKav_Chat/mainwindow.cpp",

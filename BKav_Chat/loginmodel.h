@@ -4,17 +4,24 @@
 #include <QString>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QObject>
 
 class LogInModel:public QObject{
     Q_OBJECT
 
 public:
-    explicit LogInModel(Object *parrent = nullptr);
+    explicit LogInModel(QObject *parent = nullptr);
 
     QString account;
     QString password;
     bool rememberInfo;
-    bool validate();
+    bool validateInfo();
+    void authenticateWithServer();
+
+signals:
+    void authenticationSucceeded();
+    void authenticationFailed();
+
 };
 
 #endif // LOGINMODEL_H

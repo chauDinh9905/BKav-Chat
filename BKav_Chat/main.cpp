@@ -5,6 +5,8 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include "loginmodel.h"
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,9 +21,8 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    SignUpModel *model = new SignUpModel();
-    SignUp *w = new SignUp(model); // Tạo bằng con trỏ new
-    w->show();
+    MainWindow w;
+    w.show();
 
     return QApplication::exec();
 }

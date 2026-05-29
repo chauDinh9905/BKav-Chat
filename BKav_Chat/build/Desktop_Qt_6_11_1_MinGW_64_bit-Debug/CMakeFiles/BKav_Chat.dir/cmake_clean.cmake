@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/login.cpp.obj"
   "CMakeFiles/BKav_Chat.dir/login.cpp.obj.d"
+  "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj"
+  "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/main.cpp.obj"
   "CMakeFiles/BKav_Chat.dir/main.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj"

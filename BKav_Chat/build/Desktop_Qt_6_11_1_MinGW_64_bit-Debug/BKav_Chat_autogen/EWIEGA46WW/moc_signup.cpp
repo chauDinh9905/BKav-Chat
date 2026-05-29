@@ -42,14 +42,17 @@ template <> constexpr inline auto SignUp::qt_create_metaobjectdata<qt_meta_tag_Z
         "SignUp",
         "signUpSuccess",
         "",
+        "backToLogInRequest",
         "taoTaiKhoanClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'signUpSuccess'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'backToLogInRequest'
+        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'taoTaiKhoanClicked'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -74,12 +77,15 @@ void SignUp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->signUpSuccess(); break;
-        case 1: _t->taoTaiKhoanClicked(); break;
+        case 1: _t->backToLogInRequest(); break;
+        case 2: _t->taoTaiKhoanClicked(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (SignUp::*)()>(_a, &SignUp::signUpSuccess, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (SignUp::*)()>(_a, &SignUp::backToLogInRequest, 1))
             return;
     }
 }
@@ -103,14 +109,14 @@ int SignUp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
@@ -119,5 +125,11 @@ int SignUp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void SignUp::signUpSuccess()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void SignUp::backToLogInRequest()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

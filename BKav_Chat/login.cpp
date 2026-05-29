@@ -29,6 +29,7 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
     textPassword = new QLineEdit(this);
     textPassword->setEchoMode(QLineEdit::Password); // Ẩn mật khẩu bằng dấu chấm tròn
     textPassword->setStyleSheet("padding: 6px; border: 1px solid ; border-radius: 4px; font-size: 14px;");
+    textPassword->setEchoMode(QLineEdit::Password);
 
     gridLayout->addWidget(account, 0, 0);
     gridLayout->addWidget(textAccount, 0, 1);
@@ -36,9 +37,9 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
     gridLayout->addWidget(textPassword, 1, 1);
     mainLayout->addLayout(gridLayout);
 
-    remeberPass = new QCheckBox("Nhớ tài khoản và mật khẩu", this);
-    remeberPass->setStyleSheet("font-size: 13px; color: #555555;");
-    mainLayout->addWidget(remeberPass);
+    rememberPass = new QCheckBox("Nhớ tài khoản và mật khẩu", this);
+    rememberPass->setStyleSheet("font-size: 13px; color: #555555;");
+    mainLayout->addWidget(rememberPass);
 
     logIn = new QPushButton("Đăng nhập", this);
     logIn->setCursor(Qt::PointingHandCursor); // Đổi con trỏ chuột thành hình bàn tay khi di qua
@@ -51,12 +52,6 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
         "   border: none;"
         "   border-radius: 4px;"
         "   padding: 10px;"
-        "}"
-        "QPushButton:hover {"
-        "   background-color: #1565c0;" // Đậm màu khi di chuột vào
-        "}"
-        "QPushButton:pressed {"
-        "   background-color: #0d47a1;" // Đậm hơn nữa khi bấm giữ nút
         "}"
         );
     mainLayout->addWidget(logIn);
@@ -81,18 +76,42 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
     error->setAlignment(Qt::AlignCenter);
     mainLayout->addWidget(error);
 
-    connect(remeberPass, &QCheckBox::clicked, this, &LogIn::rememberInfoClicked);
+    connect(rememberPass, &QCheckBox::clicked, this, &LogIn::rememberInfoClicked);
     connect(logIn, &QPushButton::clicked, this, &LogIn::logInClicked);
     connect(signUp, &QPushButton::clicked, this, &LogIn::signUpClicked);
+    connect(model, &LogInModel::authenticationSucceeded, this, [=]() {
+        // Server OK -> View phát tín hiệu báo cho main.cpp đổi sang màn hình chính A
+        emit logInSuccess();
+    });
+
+    connect(model, &LogInModel::authenticationFailed, this, [=]() {
+        // Server báo lỗi -> Hiện lên QLabel error của giao diện đăng nhập
+        error->setText("Sai tên tài khoản hoặc mật khẩu");
+    });
 }
 
-void LogIn::remeberInforClicked(){
+void LogIn::rememberInfoClicked(){
+     model->rememberInfo = true;
     emit rememberAccount();
 }
 
 void LogIn::logInClicked(){
+    model->account = textAccount->text();
+    model->password = textPassword->text();
+    model->rememberInfo = rememberPass->isChecked();
 
+    if(model->validateInfo()){
+        error->setText("");
+        model->authenticateWithServer();
+    }else{
+        error->setText("Thông tin tài khoản không hợp lệ");
+    }
 }
+
+void LogIn::signUpClicked(){
+    emit signUpRequest();
+}
+
 
 LogIn::~LogIn()
 {
