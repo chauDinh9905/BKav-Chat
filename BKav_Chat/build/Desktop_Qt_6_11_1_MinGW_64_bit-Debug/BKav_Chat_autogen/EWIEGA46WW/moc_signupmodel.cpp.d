@@ -1,9 +1,11 @@
 C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_signupmodel.cpp: C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h \
   C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/moc_predefs.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20functional.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/q23type_traits.h \
@@ -31,6 +33,7 @@ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_b
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerfwd.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainertools_impl.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -66,6 +69,7 @@ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_b
   C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qscopeguard.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qspan.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qstdlibdetection.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qstringalgorithms.h \
@@ -195,6 +199,7 @@ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_b
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
+  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \

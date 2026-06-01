@@ -321,4 +321,42 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qspan.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qset.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qhash.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug

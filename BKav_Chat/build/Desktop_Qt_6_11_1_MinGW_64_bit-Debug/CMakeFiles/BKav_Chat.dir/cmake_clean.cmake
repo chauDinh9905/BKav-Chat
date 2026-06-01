@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj"
   "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj.d"
+  "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj"
+  "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj"
   "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj.d"
   "CMakeFiles/BKav_Chat.dir/login.cpp.obj"

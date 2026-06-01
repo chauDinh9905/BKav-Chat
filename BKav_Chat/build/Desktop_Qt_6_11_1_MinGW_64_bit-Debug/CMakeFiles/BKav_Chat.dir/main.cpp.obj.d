@@ -408,6 +408,8 @@ CMakeFiles/BKav_Chat.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\signupmodel.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
  C:\Users\Public\Documents\BKav-Chat\BKav_Chat\login.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \

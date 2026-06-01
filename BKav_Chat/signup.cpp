@@ -71,7 +71,15 @@ SignUp::SignUp( SignUpModel *model ,QWidget *parent)
     mainLayout->addWidget(taoTaiKhoan);
 
     connect(taoTaiKhoan, &QPushButton::clicked, this, &SignUp::taoTaiKhoanClicked);
-    connect(backToLogIn, &QPushButton::clicked, this, &SignUp::backToLogInRequest);
+    connect(backToLogIn, &QPushButton::clicked, this, [this]() {
+        QString currentUsername = this->model->userName;
+        emit backToLogInRequest(currentUsername);
+    });
+}
+
+void SignUp::handleRegistrationFailed(const QString &msg)
+{
+    error->setText(msg);
 }
 
 void SignUp::taoTaiKhoanClicked(){
@@ -80,6 +88,9 @@ void SignUp::taoTaiKhoanClicked(){
     model->userName = textAccount->text();
     model->password = textPassword->text();
     model->confirmPassword = textPassword1->text();
+
+    connect(model, &SignUpModel::registrationFailed, this,
+           &SignUp::handleRegistrationFailed, Qt::UniqueConnection);
 
     if(model->checkCredentials()){
         model->registerOnServer();

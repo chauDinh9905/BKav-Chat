@@ -45,10 +45,11 @@ private:
 
 signals:
     void signUpSuccess();
-    void backToLogInRequest();
+    void backToLogInRequest(const QString &username);
 
 private slots:
     void taoTaiKhoanClicked();
+    void handleRegistrationFailed(const QString &msg);
 };
 
 #endif // SIGNUP_H

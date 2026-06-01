@@ -22,8 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
         stackedWidget->setCurrentWidget(signUpView); // Chuyển sang màn SignUp mượt mà
     });
 
-    // Giả sử bên SignUp bạn có signal backToLoginRequested
-    connect(signUpView, &SignUp::backToLogInRequest, this, [=]() {
+    connect(signUpView, &SignUp::backToLogInRequest, this, [=](const QString &username) {
+        loginView->setAccountName(username);
         stackedWidget->setCurrentWidget(loginView);
     });
 

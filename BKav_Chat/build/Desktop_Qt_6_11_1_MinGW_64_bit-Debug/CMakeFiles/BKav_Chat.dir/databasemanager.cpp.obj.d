@@ -1,10 +1,9 @@
-CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\mainwindow.cpp \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\mainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj: \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.cpp \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qglobal.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -152,12 +151,9 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtresource.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qttranslation.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qwidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qobjectdefs.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcompare.h \
@@ -231,11 +227,8 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qobject.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearray.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydata.h \
@@ -288,7 +281,15 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearrayview.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringfwd.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringalgorithms.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevicebase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qscopedpointer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qfloat16.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qlatin1stringview.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qanystringview.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qutf8stringview.h \
@@ -296,23 +297,12 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringbuilder.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter_base.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qlist.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiterator.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearraylist.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstringlist.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmath.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qalgorithms.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20bit.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstringmatcher.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qscopedpointer.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevicebase.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qfloat16.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qmath.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtformat_impl.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qiterable.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtaggedpointer.h \
@@ -326,16 +316,53 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qobject_impl.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qbindingstorage.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qmargins.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcheckedint_impl.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlist.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiterator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearraylist.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringlist.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringmatcher.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qset.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qhash.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qobject_impl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qbindingstorage.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmessagebox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmargins.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcheckedint_impl.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qicon.h \
@@ -347,7 +374,6 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcolor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qrgb.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qimage.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qtransform.h \
@@ -357,24 +383,6 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qline.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qset.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qhash.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbrush.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qfont.h \
@@ -385,39 +393,6 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStackedWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstackedwidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\login.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\signup.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\signupmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h

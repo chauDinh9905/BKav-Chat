@@ -200,11 +200,26 @@ CMakeFiles/BKav_Chat.dir/loginmodel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/loginmodel.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.cpp -o CMakeFiles\BKav_Chat.dir\loginmodel.cpp.s
 
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj: CMakeFiles/BKav_Chat.dir/includes_CXX.rsp
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj: C:/Users/Public/Documents/BKav-Chat/BKav_Chat/databasemanager.cpp
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj -MF CMakeFiles\BKav_Chat.dir\databasemanager.cpp.obj.d -o CMakeFiles\BKav_Chat.dir\databasemanager.cpp.obj -c C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.cpp
+
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/databasemanager.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.cpp > CMakeFiles\BKav_Chat.dir\databasemanager.cpp.i
+
+CMakeFiles/BKav_Chat.dir/databasemanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/databasemanager.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Public\Documents\BKav-Chat\BKav_Chat\databasemanager.cpp -o CMakeFiles\BKav_Chat.dir\databasemanager.cpp.s
+
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj: CMakeFiles/BKav_Chat.dir/flags.make
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj: CMakeFiles/BKav_Chat.dir/includes_CXX.rsp
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj: .qt/rcc/qrc_BKav_Chat_translations.cpp
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj -MF CMakeFiles\BKav_Chat.dir\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\.qt\rcc\qrc_BKav_Chat_translations.cpp.obj.d -o CMakeFiles\BKav_Chat.dir\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\.qt\rcc\qrc_BKav_Chat_translations.cpp.obj -c C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\.qt\rcc\qrc_BKav_Chat_translations.cpp
 
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.i: cmake_force
@@ -225,6 +240,7 @@ BKav_Chat_OBJECTS = \
 "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj" \
 "CMakeFiles/BKav_Chat.dir/signupmodel.cpp.obj" \
 "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj" \
+"CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj" \
 "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj"
 
 # External object files for target BKav_Chat
@@ -238,9 +254,11 @@ BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/signup.cpp.obj
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/signupmodel.cpp.obj
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj
+BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/build.make
 BKav_Chat.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a
+BKav_Chat.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Sql.a
 BKav_Chat.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a
 BKav_Chat.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a
 BKav_Chat.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a
@@ -248,7 +266,7 @@ BKav_Chat.exe: BKav_Chat.exe.manifest
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/linkLibs.rsp
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/objects1.rsp
 BKav_Chat.exe: CMakeFiles/BKav_Chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable BKav_Chat.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable BKav_Chat.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BKav_Chat.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

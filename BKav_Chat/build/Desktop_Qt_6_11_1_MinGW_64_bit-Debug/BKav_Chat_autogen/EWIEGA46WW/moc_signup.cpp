@@ -43,16 +43,25 @@ template <> constexpr inline auto SignUp::qt_create_metaobjectdata<qt_meta_tag_Z
         "signUpSuccess",
         "",
         "backToLogInRequest",
-        "taoTaiKhoanClicked"
+        "username",
+        "taoTaiKhoanClicked",
+        "handleRegistrationFailed",
+        "msg"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'signUpSuccess'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'backToLogInRequest'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SignalData<void(const QString &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 4 },
+        }}),
         // Slot 'taoTaiKhoanClicked'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'handleRegistrationFailed'
+        QtMocHelpers::SlotData<void(const QString &)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 7 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -77,15 +86,16 @@ void SignUp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->signUpSuccess(); break;
-        case 1: _t->backToLogInRequest(); break;
+        case 1: _t->backToLogInRequest((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->taoTaiKhoanClicked(); break;
+        case 3: _t->handleRegistrationFailed((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (SignUp::*)()>(_a, &SignUp::signUpSuccess, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (SignUp::*)()>(_a, &SignUp::backToLogInRequest, 1))
+        if (QtMocHelpers::indexOfMethod<void (SignUp::*)(const QString & )>(_a, &SignUp::backToLogInRequest, 1))
             return;
     }
 }
@@ -109,14 +119,14 @@ int SignUp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
@@ -128,8 +138,8 @@ void SignUp::signUpSuccess()
 }
 
 // SIGNAL 1
-void SignUp::backToLogInRequest()
+void SignUp::backToLogInRequest(const QString & _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 QT_WARNING_POP

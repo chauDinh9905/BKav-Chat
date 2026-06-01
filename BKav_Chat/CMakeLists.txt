@@ -4,7 +4,7 @@ project(BKav_Chat LANGUAGES CXX)
 
 
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools Sql)
 
 
 
@@ -39,6 +39,8 @@ qt_add_executable(BKav_Chat
     loginmodel.h
 
     loginmodel.cpp
+    databasemanager.h
+    databasemanager.cpp
 
 
 
@@ -89,5 +91,16 @@ qt_generate_deploy_app_script(
     NO_UNSUPPORTED_PLATFORM_ERROR
 
 )
+
+find_package(Qt6 REQUIRED COMPONENTS Core Sql)
+target_link_libraries(BKav_Chat PRIVATE
+    Qt6::Sql
+    Qt6::Sql
+)
+
+#target_include_directories(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/include")
+#target_link_libraries(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/lib/mysql")
+
+#target_link_libraries(BKav_Chat PRIVATE libmysql)
 
 install(SCRIPT ${deploy_script})

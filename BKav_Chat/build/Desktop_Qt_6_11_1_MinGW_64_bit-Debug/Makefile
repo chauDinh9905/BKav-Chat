@@ -299,6 +299,30 @@ build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
 .PHONY : build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
 
+databasemanager.obj: databasemanager.cpp.obj
+.PHONY : databasemanager.obj
+
+# target to build an object file
+databasemanager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj
+.PHONY : databasemanager.cpp.obj
+
+databasemanager.i: databasemanager.cpp.i
+.PHONY : databasemanager.i
+
+# target to preprocess a source file
+databasemanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.i
+.PHONY : databasemanager.cpp.i
+
+databasemanager.s: databasemanager.cpp.s
+.PHONY : databasemanager.s
+
+# target to generate assembly for a file
+databasemanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.s
+.PHONY : databasemanager.cpp.s
+
 errorconnectionnetwork.obj: errorconnectionnetwork.cpp.obj
 .PHONY : errorconnectionnetwork.obj
 
@@ -492,6 +516,9 @@ help:
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.obj
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.i
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.s
+	@echo ... databasemanager.obj
+	@echo ... databasemanager.i
+	@echo ... databasemanager.s
 	@echo ... errorconnectionnetwork.obj
 	@echo ... errorconnectionnetwork.i
 	@echo ... errorconnectionnetwork.s

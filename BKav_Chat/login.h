@@ -42,7 +42,8 @@ private:
 
     QVBoxLayout *mainLayout;
     QGridLayout *gridLayout;
-
+public:
+    void setAccountName(const QString &username);
 signals:
     void logInSuccess();
     void signUpRequest();

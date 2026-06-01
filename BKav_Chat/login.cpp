@@ -112,6 +112,10 @@ void LogIn::signUpClicked(){
     emit signUpRequest();
 }
 
+void LogIn::setAccountName(const QString &username) {
+    model->account = username;
+    textAccount->setText(username);
+}
 
 LogIn::~LogIn()
 {
