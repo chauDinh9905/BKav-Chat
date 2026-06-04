@@ -41,6 +41,10 @@ qt_add_executable(BKav_Chat
     loginmodel.cpp
     databasemanager.h
     databasemanager.cpp
+    dashboardmodel.h
+    dashboard.h
+    dashboardmodel.cpp
+    dashboard.cpp
 
 
 
@@ -96,6 +100,12 @@ find_package(Qt6 REQUIRED COMPONENTS Core Sql)
 target_link_libraries(BKav_Chat PRIVATE
     Qt6::Sql
     Qt6::Sql
+)
+
+find_package(Qt6 REQUIRED COMPONENTS WebSockets Network)
+
+target_link_libraries(BKav_Chat
+    PRIVATE Qt6::WebSockets
 )
 
 #target_include_directories(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/include")

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-4a7ad72f23142845ed9b.json",
+					"jsonFile" : "directory-.-Debug-8ee9e5d90cdeeaf7a28b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -52,7 +52,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BKav_Chat-Debug-4449e9f197c3a08f80f6.json",
+					"jsonFile" : "target-BKav_Chat-Debug-355bb71833a9f95ddac3.json",
 					"name" : "BKav_Chat",
 					"projectIndex" : 0
 				},

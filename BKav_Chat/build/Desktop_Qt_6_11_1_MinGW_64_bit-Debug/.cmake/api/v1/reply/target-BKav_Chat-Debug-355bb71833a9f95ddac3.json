@@ -49,11 +49,16 @@
 			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake",
+			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
+			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
+			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
+			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake",
 			"build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake",
 			"C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:942:EVAL",
@@ -92,19 +97,25 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 73,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 61,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 96,
+				"line" : 100,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 107,
 				"parent" : 0
 			},
 			{
@@ -117,81 +128,113 @@
 				"command" : 8,
 				"file" : 4,
 				"line" : 234,
-				"parent" : 8
+				"parent" : 9
 			},
 			{
 				"file" : 3,
-				"parent" : 9
+				"parent" : 10
 			},
 			{
 				"command" : 7,
 				"file" : 3,
 				"line" : 55,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 2,
-				"parent" : 11
+				"parent" : 12
 			},
 			{
 				"command" : 6,
 				"file" : 2,
 				"line" : 61,
-				"parent" : 12
+				"parent" : 13
 			},
 			{
 				"command" : 7,
 				"file" : 3,
 				"line" : 40,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 9,
-				"parent" : 14
+				"parent" : 15
 			},
 			{
 				"command" : 10,
 				"file" : 9,
 				"line" : 50,
-				"parent" : 15
+				"parent" : 16
 			},
 			{
 				"command" : 9,
 				"file" : 8,
 				"line" : 142,
-				"parent" : 16
+				"parent" : 17
 			},
 			{
 				"command" : 8,
 				"file" : 7,
 				"line" : 76,
-				"parent" : 17
+				"parent" : 18
 			},
 			{
 				"command" : 8,
 				"file" : 4,
 				"line" : 252,
-				"parent" : 18
+				"parent" : 19
 			},
 			{
 				"file" : 6,
-				"parent" : 19
+				"parent" : 20
 			},
 			{
 				"command" : 7,
 				"file" : 6,
 				"line" : 55,
-				"parent" : 20
+				"parent" : 21
 			},
 			{
 				"file" : 5,
-				"parent" : 21
+				"parent" : 22
 			},
 			{
 				"command" : 6,
 				"file" : 5,
 				"line" : 61,
-				"parent" : 22
+				"parent" : 23
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 105,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 234,
+				"parent" : 25
+			},
+			{
+				"file" : 11,
+				"parent" : 26
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 55,
+				"parent" : 27
+			},
+			{
+				"file" : 10,
+				"parent" : 28
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 61,
+				"parent" : 29
 			},
 			{
 				"command" : 5,
@@ -203,87 +246,141 @@
 				"command" : 8,
 				"file" : 4,
 				"line" : 234,
-				"parent" : 8
-			},
-			{
-				"file" : 11,
-				"parent" : 25
-			},
-			{
-				"command" : 7,
-				"file" : 11,
-				"line" : 57,
-				"parent" : 26
-			},
-			{
-				"file" : 10,
-				"parent" : 27
-			},
-			{
-				"command" : 6,
-				"file" : 10,
-				"line" : 61,
-				"parent" : 28
-			},
-			{
-				"command" : 7,
-				"file" : 11,
-				"line" : 42,
-				"parent" : 26
-			},
-			{
-				"file" : 14,
-				"parent" : 30
-			},
-			{
-				"command" : 10,
-				"file" : 14,
-				"line" : 51,
-				"parent" : 31
-			},
-			{
-				"command" : 9,
-				"file" : 8,
-				"line" : 142,
-				"parent" : 32
-			},
-			{
-				"command" : 8,
-				"file" : 7,
-				"line" : 76,
-				"parent" : 33
-			},
-			{
-				"command" : 8,
-				"file" : 4,
-				"line" : 252,
-				"parent" : 34
+				"parent" : 9
 			},
 			{
 				"file" : 13,
+				"parent" : 32
+			},
+			{
+				"command" : 7,
+				"file" : 13,
+				"line" : 57,
+				"parent" : 33
+			},
+			{
+				"file" : 12,
+				"parent" : 34
+			},
+			{
+				"command" : 6,
+				"file" : 12,
+				"line" : 61,
 				"parent" : 35
 			},
 			{
 				"command" : 7,
 				"file" : 13,
-				"line" : 55,
-				"parent" : 36
+				"line" : 42,
+				"parent" : 33
 			},
 			{
-				"file" : 12,
+				"file" : 16,
 				"parent" : 37
 			},
 			{
-				"command" : 6,
-				"file" : 12,
-				"line" : 61,
+				"command" : 10,
+				"file" : 16,
+				"line" : 51,
 				"parent" : 38
 			},
 			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 142,
+				"parent" : 39
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 40
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 252,
+				"parent" : 41
+			},
+			{
+				"file" : 15,
+				"parent" : 42
+			},
+			{
+				"command" : 7,
+				"file" : 15,
+				"line" : 55,
+				"parent" : 43
+			},
+			{
+				"file" : 14,
+				"parent" : 44
+			},
+			{
 				"command" : 6,
-				"file" : 12,
+				"file" : 14,
+				"line" : 61,
+				"parent" : 45
+			},
+			{
+				"command" : 6,
+				"file" : 14,
 				"line" : 94,
-				"parent" : 38
+				"parent" : 45
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 40,
+				"parent" : 27
+			},
+			{
+				"file" : 19,
+				"parent" : 48
+			},
+			{
+				"command" : 10,
+				"file" : 19,
+				"line" : 50,
+				"parent" : 49
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 142,
+				"parent" : 50
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 51
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 252,
+				"parent" : 52
+			},
+			{
+				"file" : 18,
+				"parent" : 53
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 55,
+				"parent" : 54
+			},
+			{
+				"file" : 17,
+				"parent" : 55
+			},
+			{
+				"command" : 6,
+				"file" : 17,
+				"line" : 61,
+				"parent" : 56
 			},
 			{
 				"command" : 12,
@@ -292,14 +389,14 @@
 				"parent" : 0
 			},
 			{
-				"file" : 15,
-				"parent" : 41
+				"file" : 20,
+				"parent" : 58
 			},
 			{
 				"command" : 11,
-				"file" : 15,
+				"file" : 20,
 				"line" : 81,
-				"parent" : 42
+				"parent" : 59
 			},
 			{
 				"file" : 1,
@@ -308,111 +405,111 @@
 			},
 			{
 				"command" : 16,
-				"file" : 17,
+				"file" : 22,
 				"line" : 1,
-				"parent" : 44
+				"parent" : 61
 			},
 			{
 				"command" : 15,
 				"file" : 0,
 				"line" : 898,
-				"parent" : 45
+				"parent" : 62
 			},
 			{
 				"command" : 14,
 				"file" : 0,
 				"line" : 835,
-				"parent" : 46
+				"parent" : 63
 			},
 			{
 				"command" : 13,
-				"file" : 16,
+				"file" : 21,
 				"line" : 126,
-				"parent" : 47
+				"parent" : 64
 			},
 			{
 				"command" : 19,
-				"file" : 19,
+				"file" : 24,
 				"line" : 1,
-				"parent" : 44
+				"parent" : 61
 			},
 			{
 				"command" : 18,
-				"file" : 18,
+				"file" : 23,
 				"line" : 889,
-				"parent" : 49
+				"parent" : 66
 			},
 			{
 				"command" : 17,
 				"file" : 0,
 				"line" : 2249,
-				"parent" : 50
+				"parent" : 67
 			},
 			{
 				"command" : 13,
 				"file" : 0,
 				"line" : 2324,
-				"parent" : 51
+				"parent" : 68
 			},
 			{
 				"command" : 21,
-				"file" : 18,
+				"file" : 23,
 				"line" : 922,
-				"parent" : 49
+				"parent" : 66
 			},
 			{
 				"command" : 20,
 				"file" : 0,
 				"line" : 419,
-				"parent" : 53
+				"parent" : 70
 			},
 			{
 				"command" : 18,
 				"file" : 0,
 				"line" : 2464,
-				"parent" : 54
+				"parent" : 71
 			},
 			{
 				"command" : 17,
 				"file" : 0,
 				"line" : 2249,
-				"parent" : 55
+				"parent" : 72
 			},
 			{
 				"command" : 13,
 				"file" : 0,
 				"line" : 2324,
-				"parent" : 56
+				"parent" : 73
 			},
 			{
 				"command" : 18,
 				"file" : 0,
 				"line" : 2533,
-				"parent" : 54
+				"parent" : 71
 			},
 			{
 				"command" : 17,
 				"file" : 0,
 				"line" : 2249,
-				"parent" : 58
+				"parent" : 75
 			},
 			{
 				"command" : 13,
 				"file" : 0,
 				"line" : 2324,
-				"parent" : 59
+				"parent" : 76
 			},
 			{
 				"command" : 22,
 				"file" : 0,
 				"line" : 2659,
-				"parent" : 54
+				"parent" : 71
 			},
 			{
 				"command" : 13,
 				"file" : 0,
 				"line" : 2199,
-				"parent" : 61
+				"parent" : 78
 			}
 		]
 	},
@@ -428,11 +525,11 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "MINGW_HAS_SECURE_API=1"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "QT_CORE_LIB"
 				},
 				{
@@ -440,11 +537,15 @@
 					"define" : "QT_GUI_LIB"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "QT_NEEDS_QMAIN"
 				},
 				{
-					"backtrace" : 43,
+					"backtrace" : 8,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 60,
 					"define" : "QT_QML_DEBUG"
 				},
 				{
@@ -452,31 +553,35 @@
 					"define" : "QT_SQL_LIB"
 				},
 				{
+					"backtrace" : 8,
+					"define" : "QT_WEBSOCKETS_LIB"
+				},
+				{
 					"backtrace" : 6,
 					"define" : "QT_WIDGETS_LIB"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "UNICODE"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "WIN32"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "WIN64"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "_UNICODE"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"define" : "_WIN64"
 				}
 			],
@@ -487,17 +592,17 @@
 					"path" : "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/include"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.11.1/mingw_64/include/QtCore"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.11.1/mingw_64/include"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 31,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.11.1/mingw_64/mkspecs/win32-g++"
 				},
@@ -515,6 +620,16 @@
 					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "C:/Qt/6.11.1/mingw_64/include/QtSql"
+				},
+				{
+					"backtrace" : 8,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.11.1/mingw_64/include/QtWebSockets"
+				},
+				{
+					"backtrace" : 8,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.11.1/mingw_64/include/QtNetwork"
 				}
 			],
 			"language" : "CXX",
@@ -529,7 +644,9 @@
 				15,
 				17,
 				19,
-				24
+				22,
+				23,
+				28
 			]
 		}
 	],
@@ -581,58 +698,73 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 13,
+				"backtrace" : 8,
+				"fragment" : "C:\\Qt\\6.11.1\\mingw_64\\lib\\libQt6WebSockets.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
 				"fragment" : "C:\\Qt\\6.11.1\\mingw_64\\lib\\libQt6Gui.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 23,
+				"backtrace" : 24,
 				"fragment" : "-ld3d11",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 23,
+				"backtrace" : 24,
 				"fragment" : "-ldxgi",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 23,
+				"backtrace" : 24,
 				"fragment" : "-ldxguid",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 23,
+				"backtrace" : 24,
 				"fragment" : "-ld3d12",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 24,
+				"backtrace" : 30,
+				"fragment" : "C:\\Qt\\6.11.1\\mingw_64\\lib\\libQt6Network.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
 				"fragment" : "C:\\Qt\\6.11.1\\mingw_64\\lib\\libQt6Core.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 29,
+				"backtrace" : 36,
 				"fragment" : "-lmpr",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 29,
+				"backtrace" : 36,
 				"fragment" : "-luserenv",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 39,
+				"backtrace" : 46,
 				"fragment" : "-lmingw32",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 39,
+				"backtrace" : 46,
 				"fragment" : "C:\\Qt\\6.11.1\\mingw_64\\lib\\libQt6EntryPoint.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 40,
+				"backtrace" : 47,
 				"fragment" : "-lshell32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 57,
+				"fragment" : "-lws2_32",
 				"role" : "libraries"
 			},
 			{
@@ -656,11 +788,11 @@
 			"sourceIndexes" : 
 			[
 				0,
-				25,
-				26,
-				27,
-				28,
-				29
+				29,
+				30,
+				31,
+				32,
+				33
 			]
 		},
 		{
@@ -675,7 +807,9 @@
 				15,
 				17,
 				19,
-				24
+				22,
+				23,
+				28
 			]
 		},
 		{
@@ -688,7 +822,9 @@
 				11,
 				14,
 				16,
-				18
+				18,
+				20,
+				21
 			]
 		},
 		{
@@ -705,25 +841,25 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				20,
-				21,
-				23
+				24,
+				25,
+				27
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				22
+				26
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				30,
-				31,
-				32
+				34,
+				35,
+				36
 			]
 		}
 	],
@@ -840,29 +976,51 @@
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 48,
+			"backtrace" : 4,
+			"path" : "dashboardmodel.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "dashboard.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "dashboardmodel.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "dashboard.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 65,
 			"path" : "build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat.exe.manifest",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 52,
+			"backtrace" : 69,
 			"path" : "BKav_Chat_vi_VN.ts",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 57,
+			"backtrace" : 74,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/BKav_Chat_translations.qrc",
 			"sourceGroupIndex" : 5
 		},
 		{
-			"backtrace" : 60,
+			"backtrace" : 77,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_vi_VN.qm",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 62,
+			"backtrace" : 79,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp",

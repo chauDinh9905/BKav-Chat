@@ -1,5 +1,5 @@
 #include "signup.h"
-#include "ui_signup.h"
+//#include "ui_signup.h"
 #include <QMessageBox>
 
 SignUp::SignUp( SignUpModel *model ,QWidget *parent)

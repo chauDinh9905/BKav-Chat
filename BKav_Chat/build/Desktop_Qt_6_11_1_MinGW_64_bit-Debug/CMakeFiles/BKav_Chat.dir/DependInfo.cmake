@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/mocs_compilation.cpp" "CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.obj.d"
+  "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.cpp" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.obj.d"
+  "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboardmodel.cpp" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/databasemanager.cpp" "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorconnectionnetwork.cpp" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.obj.d"
   "C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.cpp" "CMakeFiles/BKav_Chat.dir/login.cpp.obj" "gcc" "CMakeFiles/BKav_Chat.dir/login.cpp.obj.d"

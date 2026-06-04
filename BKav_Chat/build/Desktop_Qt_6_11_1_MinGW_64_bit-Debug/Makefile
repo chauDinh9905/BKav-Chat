@@ -299,6 +299,54 @@ build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
 .PHONY : build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
 
+dashboard.obj: dashboard.cpp.obj
+.PHONY : dashboard.obj
+
+# target to build an object file
+dashboard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboard.cpp.obj
+.PHONY : dashboard.cpp.obj
+
+dashboard.i: dashboard.cpp.i
+.PHONY : dashboard.i
+
+# target to preprocess a source file
+dashboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboard.cpp.i
+.PHONY : dashboard.cpp.i
+
+dashboard.s: dashboard.cpp.s
+.PHONY : dashboard.s
+
+# target to generate assembly for a file
+dashboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboard.cpp.s
+.PHONY : dashboard.cpp.s
+
+dashboardmodel.obj: dashboardmodel.cpp.obj
+.PHONY : dashboardmodel.obj
+
+# target to build an object file
+dashboardmodel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.obj
+.PHONY : dashboardmodel.cpp.obj
+
+dashboardmodel.i: dashboardmodel.cpp.i
+.PHONY : dashboardmodel.i
+
+# target to preprocess a source file
+dashboardmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.i
+.PHONY : dashboardmodel.cpp.i
+
+dashboardmodel.s: dashboardmodel.cpp.s
+.PHONY : dashboardmodel.s
+
+# target to generate assembly for a file
+dashboardmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BKav_Chat.dir\build.make CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.s
+.PHONY : dashboardmodel.cpp.s
+
 databasemanager.obj: databasemanager.cpp.obj
 .PHONY : databasemanager.obj
 
@@ -516,6 +564,12 @@ help:
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.obj
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.i
 	@echo ... build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/.qt/rcc/qrc_BKav_Chat_translations.s
+	@echo ... dashboard.obj
+	@echo ... dashboard.i
+	@echo ... dashboard.s
+	@echo ... dashboardmodel.obj
+	@echo ... dashboardmodel.i
+	@echo ... dashboardmodel.s
 	@echo ... databasemanager.obj
 	@echo ... databasemanager.i
 	@echo ... databasemanager.s
