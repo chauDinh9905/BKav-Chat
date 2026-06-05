@@ -1,4 +1,5 @@
 BKav_Chat_autogen/timestamp: \
+	C:/Qt/6.11.1/mingw_64/include/QtCore/QAbstractListModel \
 	C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
 	C:/Qt/6.11.1/mingw_64/include/QtCore/QFlags \
 	C:/Qt/6.11.1/mingw_64/include/QtCore/QHash \
@@ -853,5 +854,4 @@ BKav_Chat_autogen/timestamp: \
 	C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.cpp \
 	C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h \
 	C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorconnectionnetwork.ui \
-	C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

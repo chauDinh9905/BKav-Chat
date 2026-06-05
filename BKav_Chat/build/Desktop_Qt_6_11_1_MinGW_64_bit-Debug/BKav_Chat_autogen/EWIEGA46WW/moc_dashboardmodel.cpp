@@ -51,7 +51,7 @@ template <> constexpr inline auto DashboardModel::qt_create_metaobjectdata<qt_me
             qt_methods, qt_properties, qt_enums);
 }
 Q_CONSTINIT const QMetaObject DashboardModel::staticMetaObject = { {
-    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    QMetaObject::SuperData::link<QAbstractListModel::staticMetaObject>(),
     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN14DashboardModelE_t>.stringdata,
     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN14DashboardModelE_t>.data,
     qt_static_metacall,
@@ -79,12 +79,12 @@ void *DashboardModel::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN14DashboardModelE_t>.strings))
         return static_cast<void*>(this);
-    return QObject::qt_metacast(_clname);
+    return QAbstractListModel::qt_metacast(_clname);
 }
 
 int DashboardModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QObject::qt_metacall(_c, _id, _a);
+    _id = QAbstractListModel::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

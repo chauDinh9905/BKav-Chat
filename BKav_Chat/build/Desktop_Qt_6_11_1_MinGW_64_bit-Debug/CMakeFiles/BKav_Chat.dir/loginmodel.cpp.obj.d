@@ -1,11 +1,9 @@
-CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\mocs_compilation.cpp \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_dashboard.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
+CMakeFiles/BKav_Chat.dir/loginmodel.cpp.obj: \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.cpp \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\loginmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qglobal.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -153,14 +151,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtresource.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qttranslation.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qicon.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qsize.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcheckedint_impl.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcompare.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstdlibdetection.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcomparehelpers.h \
@@ -191,9 +181,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearray.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
@@ -295,6 +282,19 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringbuilder.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter_base.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qicon.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsize.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcheckedint_impl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
@@ -387,121 +387,17 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLineEdit \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlineedit.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListView \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.11.1/mingw_64/include/QtWebSockets/QWebSocket \
- C:/Qt/6.11.1/mingw_64/include/QtWebSockets/qwebsocket.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QUrl \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QAbstractSocket \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkglobal.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qtnetwork-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkRequest \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qnetworkrequest.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qhttpheaders.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QSharedDataPointer \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QVariant \
- C:/Qt/6.11.1/mingw_64/include/QtCore/q26numeric.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkProxy \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qnetworkproxy.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QSslError \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslerror.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslcertificate.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qssl.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QFlags \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QSslConfiguration \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslconfiguration.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslsocket.h \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
- C:/Qt/6.11.1/mingw_64/include/QtWebSockets/qwebsockets_global.h \
- C:/Qt/6.11.1/mingw_64/include/QtWebSockets/qtwebsocketsexports.h \
- C:/Qt/6.11.1/mingw_64/include/QtWebSockets/qwebsocketprotocol.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboardmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QHash \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QAbstractListModel \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkAccessManager \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
- C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QMetaType \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_dashboardmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboardmodel.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_errorconnectionnetwork.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorconnectionnetwork.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_login.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_loginmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_mainwindow.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/mainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStackedWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstackedwidget.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signup.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signupmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h

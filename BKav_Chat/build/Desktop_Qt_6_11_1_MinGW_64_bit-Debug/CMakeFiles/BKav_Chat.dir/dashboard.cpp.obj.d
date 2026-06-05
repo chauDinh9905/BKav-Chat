@@ -1,7 +1,6 @@
-CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\mocs_compilation.cpp \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_dashboard.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.h \
+CMakeFiles/BKav_Chat.dir/dashboard.cpp.obj: \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\dashboard.cpp \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\dashboard.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -459,7 +458,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboardmodel.h \
+ C:\Users\Public\Documents\BKav-Chat\BKav_Chat\dashboardmodel.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
@@ -472,36 +471,51 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
  C:/Qt/6.11.1/mingw_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QMetaType \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_dashboardmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboardmodel.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_errorconnectionnetwork.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/errorconnectionnetwork.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_login.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QCheckBox \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcheckbox.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_loginmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/loginmodel.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_mainwindow.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/mainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStackedWidget \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstackedwidget.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/login.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signup.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signup.h \
- C:\Users\Public\Documents\BKav-Chat\BKav_Chat\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\BKav_Chat_autogen\EWIEGA46WW/moc_signupmodel.cpp \
- C:/Users/Public/Documents/BKav-Chat/BKav_Chat/signupmodel.h
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlerror.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QFile \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstracteventdispatcher.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qeventloop.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qdeadlinetimer.h

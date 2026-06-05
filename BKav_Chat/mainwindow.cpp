@@ -6,20 +6,27 @@ MainWindow::MainWindow(QWidget *parent)
     this->setStyleSheet("QMainWindow, QWidget { background-color: white; }");
     stackedWidget = new QStackedWidget(this);
     setCentralWidget(stackedWidget);
-   setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+    setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 
     loginModel = new LogInModel(this);
     signUpModel = new SignUpModel(this);
+    dashboardModel = new DashboardModel(this);
 
     loginView = new LogIn(loginModel, this);
     signUpView = new SignUp(signUpModel, this);
+    dashboardView = new Dashboard(dashboardModel, this);
 
     // currentIndex của loginView sẽ là 0, signUpView sẽ là 1
     stackedWidget->addWidget(loginView);
     stackedWidget->addWidget(signUpView);
+    stackedWidget->addWidget(dashboardView);
 
     connect(loginView, &LogIn::signUpRequest, this, [=]() {
         stackedWidget->setCurrentWidget(signUpView); // Chuyển sang màn SignUp mượt mà
+    });
+
+    connect(loginView, &LogIn::logInSuccess, this, [=](){
+        stackedWidget->setCurrentWidget(dashboardView);
     });
 
     connect(signUpView, &SignUp::backToLogInRequest, this, [=](const QString &username) {

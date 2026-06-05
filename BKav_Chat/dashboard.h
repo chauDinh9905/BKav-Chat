@@ -41,14 +41,17 @@ private:
     QWebSocket *activeSocket;
     QNetworkAccessManager *networkManager;
 
-    QString friendChatId;
+    QString *friendChatId;
     int myId;
 
-    QHBoxLayout headerLayout;
-    QVBoxLayout mainLayout, userProfile;
+    QHBoxLayout *headerLayout;
+    QVBoxLayout *mainLayout, *userProfile;
 
     QByteArray convertPixmapToByteArray(const QPixmap &pixmap);
     void loadAvatarFromServer(const QString &avatarUrl);
+public:
+    void initUserCache();
+    void loadFriendList();
 };
 
 

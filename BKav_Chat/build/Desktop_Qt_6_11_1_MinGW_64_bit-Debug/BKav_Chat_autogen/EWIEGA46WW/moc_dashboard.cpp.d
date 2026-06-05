@@ -1,5 +1,6 @@
 C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp: C:/Users/Public/Documents/BKav-Chat/BKav_Chat/dashboard.h \
   C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/BKav_Chat_autogen/moc_predefs.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QAbstractListModel \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QFlags \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QHash \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
@@ -184,7 +185,7 @@ C:/Users/Public/Documents/BKav-Chat/BKav_Chat/build/Desktop_Qt_6_11_1_MinGW_64_b
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.1/mingw_64/include/QtNetwork/QAbstractSocket \
-  C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkAccessmanager \
+  C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkAccessManager \
   C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkProxy \
   C:/Qt/6.11.1/mingw_64/include/QtNetwork/QNetworkRequest \
   C:/Qt/6.11.1/mingw_64/include/QtNetwork/QSslConfiguration \

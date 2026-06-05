@@ -7,6 +7,8 @@
 #include "loginmodel.h"
 #include "signup.h"
 #include "signupmodel.h"
+#include "dashboard.h"
+#include "dashboardmodel.h"
 
 class MainWindow : public QMainWindow
 {
@@ -20,8 +22,11 @@ private:
 
     LogIn *loginView;
     SignUp *signUpView;
+    Dashboard *dashboardView;
 
     LogInModel *loginModel;
     SignUpModel *signUpModel;
+    DashboardModel *dashboardModel;
+
 };
 #endif
