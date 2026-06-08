@@ -1,11 +1,7 @@
-#include "signup.h"
-#include "login.h"
-#include "errorlogin.h"
-#include "errorconnectionnetwork.h"
+#include "databasemanager.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-#include "loginmodel.h"
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
@@ -20,6 +16,11 @@ int main(int argc, char *argv[])
             a.installTranslator(&translator);
             break;
         }
+    }
+    if (!DatabaseManager::instance().connectToDatabase())
+    {
+        qDebug() << "Cannot connect database";
+        return -1;
     }
     MainWindow w;
     w.show();

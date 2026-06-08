@@ -11,6 +11,10 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools Sql)
 qt_standard_project_setup()
 
 
+file(GLOB SOURCES "*.cpp")
+file(GLOB HEADERS "*.h")
+file(GLOB FORMS "*.ui")
+
 
 qt_add_executable(BKav_Chat
 

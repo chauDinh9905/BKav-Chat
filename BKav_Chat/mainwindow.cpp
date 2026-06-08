@@ -25,9 +25,14 @@ MainWindow::MainWindow(QWidget *parent)
         stackedWidget->setCurrentWidget(signUpView); // Chuyển sang màn SignUp mượt mà
     });
 
-    connect(loginView, &LogIn::logInSuccess, this, [=](){
-        stackedWidget->setCurrentWidget(dashboardView);
-    });
+    connect(loginView,
+            &LogIn::logInSuccess,
+            this,
+            [=](int userId)
+            {
+                dashboardView->setCurrentUser(userId);
+                stackedWidget->setCurrentWidget(dashboardView);
+            });
 
     connect(signUpView, &SignUp::backToLogInRequest, this, [=](const QString &username) {
         loginView->setAccountName(username);

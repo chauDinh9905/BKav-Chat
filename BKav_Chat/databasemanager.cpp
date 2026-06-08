@@ -12,6 +12,8 @@ DatabaseManager& DatabaseManager::instance()
 DatabaseManager::DatabaseManager()
 {
     db = QSqlDatabase::addDatabase("QODBC");
+    qDebug() << "Available Qt SQL Drivers:";
+    qDebug() << QSqlDatabase::drivers();
 }
 
 bool DatabaseManager::connectToDatabase()
@@ -19,7 +21,7 @@ bool DatabaseManager::connectToDatabase()
     db.setDatabaseName(
         "Driver={MySQL ODBC 9.7 Unicode Driver};"
         "Server=localhost;"
-        "Database=BKav_chat;"
+        "Database=BKav_chat_desktop;"
         "User=root;"
         "Password=Chau@123;"
         "Port=3306;"

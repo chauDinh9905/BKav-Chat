@@ -20,13 +20,13 @@ void LogInModel::authenticateWithServer(){
      // về sau khi kết nối vơi server thì sẽ khác
      QSqlQuery query;
      QString passwordHash;
-     query.prepare("select u"
-                   "from users u"
-                   "where u.display_name = :account"
-                   "and u.password_hash = :password");
-     query.bindValue(":display_name", account);
-     passwordHash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256);
-     query.bindValue(":password_hash", passwordHash);
+     query.prepare("select * "
+                   "from users u "
+                   "where u.display_name = :account "
+                   "and u.password_hash = :password ");
+     query.bindValue(":account", account);
+     passwordHash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
+     query.bindValue(":password", passwordHash);
      if (!query.exec())
      {
          qDebug() << "SQL Error:" << query.lastError().text();
@@ -34,11 +34,14 @@ void LogInModel::authenticateWithServer(){
      }else{
              if (query.next())
              {
-                 emit authenticationSucceeded();
+             int userId = query.value("user_id").toInt();
+
+             emit authenticationSucceeded(userId);
              }
              else
              {
                  emit authenticationFailed();
               }
         }
+     //query.finish();
 }

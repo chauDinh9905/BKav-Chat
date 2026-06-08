@@ -54,5 +54,6 @@ bool SignUpModel::registerOnServer(){
         qDebug() << "Register error:" << err;
         return false;
     }
+    //query.finish();
     return true;
 }

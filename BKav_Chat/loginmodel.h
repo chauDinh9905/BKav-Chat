@@ -19,7 +19,7 @@ public:
     void authenticateWithServer();
 
 signals:
-    void authenticationSucceeded();
+    void authenticationSucceeded(int user_id);
     void authenticationFailed();
 
 };

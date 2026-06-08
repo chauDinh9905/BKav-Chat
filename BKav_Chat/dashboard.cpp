@@ -11,6 +11,12 @@
 #include <QWidget>
 #include <QFile>
 #include <QTimer>
+#include "databasemanager.h"
+#include <QFileDialog>
+#include <QPixmap>
+#include <QIcon>
+#include <QSqlQuery>
+#include <QSqlError>
 
 Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     : QWidget(parent), model(model)
@@ -54,7 +60,7 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     friendListView = new QListView(this);
     friendListView->setStyleSheet("QListView { border: none; background: transparent; }");
 
-    model = new DashboardModel(this);
+    this->model = model;
     searchDebounceTimer = new QTimer(this);
 
     friendListView->setModel(model);
@@ -76,8 +82,6 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     mainLayout->addWidget(titleList);
     mainLayout->addWidget(friendListView);
 
-    initUserCache();
-    loadFriendList();
 
     connect(avatarButton, &QPushButton::clicked, this, &Dashboard::onAvatarClicked);
     connect(searchDebounceTimer, &QTimer::timeout, this, &Dashboard::triggerSearch);
@@ -98,16 +102,16 @@ void onFriendSelected(){
 
 void Dashboard::triggerSearch(){
     QString keyword = searchFriend->text().trimmed();
-    QSqlQuery query;
+    QSqlQuery query(DatabaseManager::instance().getDatabase());
 
     if(keyword.isEmpty()){
-        query.prepare("select u.user_id, u.display_name, u.avatar_path"
-                    "from users u"
+        query.prepare("select u.user_id, u.display_name, u.avatar_path "
+                    "from users u "
                       "where u.user_id != :my_id");
     }else{
-        query.prepare("select u.user_id, u.display_name, u.avatar_path"
-                      "from users u"
-                      "where u.user_id != :my_id and u.display_name like :keyword");
+        query.prepare("select u.user_id, u.display_name, u.avatar_path "
+                      "from users u "
+                      "where u.user_id != :my_id and u.display_name like :keyword ");
         query.bindValue(":keyword", "%" + keyword + "%");
     }
     query.bindValue(":my_id", myId);
@@ -132,10 +136,12 @@ void onAvatarClicked(){
 }
 
 void Dashboard::initUserCache(){
-    QSqlQuery query;
-    query.prepare("select u.username, u.display_name, u.avatar_path"
-                  "from users u"
+    QSqlQuery query(DatabaseManager::instance().getDatabase());
+    query.prepare("select u.username, u.display_name, u.avatar_path "
+                  "from users u "
                   "where u.user_id = :my_id");
+    //qDebug() << "prepare =" << ok;
+    qDebug() << "prepare error =" << query.lastError().text();
     query.bindValue(":my_id", myId);
     if(query.exec() && query.next()){
         displayName->setText(query.value(1).toString());
@@ -156,9 +162,10 @@ void Dashboard::initUserCache(){
         }else{
             avatarButton->setStyleSheet(
                 "QPushButton {"
-                    "background-color: light-blue;""}"
+                    "background-color: grey;""}"
                 );
             avatarButton->setText(displayName->text().left(1).toUpper());
+
         }
         qDebug() << "Nạp cache thành công: "<< query.lastError().text();
     }else{
@@ -169,12 +176,24 @@ void Dashboard::initUserCache(){
 }
 
 void Dashboard::loadFriendList(){
-    QSqlQuery query;
-    query.prepare("select u.user_id, u.display_name, u.avatar_path"
-                  "from users u"
-                  "where u.users_id != :my_id");
-    query.bindValue("my_id", myId);
-    if(query.exec()){
+    QSqlQuery query(DatabaseManager::instance().getDatabase());
+
+    bool ok = query.prepare(
+        "SELECT u.username, u.display_name, u.avatar_path "
+        "FROM users u "
+        "WHERE u.user_id = ?"
+        );
+
+    qDebug() << "prepare =" << ok;
+    qDebug() << "prepare error =" << query.lastError().text();
+
+    query.addBindValue(myId);
+
+    ok = query.exec();
+
+    qDebug() << "exec =" << ok;
+    qDebug() << "exec error =" << query.lastError().text();
+    if(ok){
         model->clear();
         while(query.next()){
             QString friendId = query.value(0).toString();
@@ -189,3 +208,70 @@ void Dashboard::loadFriendList(){
     }
     return;
 }
+
+void Dashboard::setCurrentUser(int userId)
+{
+    myId = userId;
+
+    initUserCache();
+    loadFriendList();
+}
+
+void Dashboard::onAvatarClicked()
+{
+    qDebug() << "Nút avatar được nhấn, đang mở thư mục chọn ảnh...";
+
+    // 1. Mở hộp thoại chọn file ảnh từ máy tính
+    QString filePath = QFileDialog::getOpenFileName(
+        this,
+        tr("Chọn ảnh đại diện"),                 // Tiêu đề cửa sổ
+        QDir::homePath(),                      // Thư mục mặc định mở ra (Thư mục Home của Ubuntu)
+        tr("Hình ảnh (*.png *.jpg *.jpeg)")     // Bộ lọc chỉ cho phép chọn các định dạng ảnh này
+        );
+
+    // 2. Kiểm tra xem người dùng có thực sự chọn file hay bấm "Cancel"
+    if (!filePath.isEmpty()) {
+        qDebug() << "Đường dẫn ảnh đã chọn:" << filePath;
+
+        // 3. Cập nhật ngay lập tức ảnh vừa chọn lên nút QPushButton làm background cục bộ
+        QPixmap pixmap(filePath);
+        if (!pixmap.isNull()) {
+            // Bo tròn hoặc scale ảnh cho vừa khít với kích thước của nút bấm
+            QIcon buttonIcon(pixmap.scaled(avatarButton->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+            avatarButton->setIcon(buttonIcon);
+            avatarButton->setIconSize(avatarButton->size()); // Đảm bảo icon chiếm trọn nút
+
+            // Nếu bạn đang dùng StyleSheet để làm background, có thể đổi bằng dòng này thay thế:
+            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 25px;").arg(filePath));
+
+            QSqlQuery query(DatabaseManager::instance().getDatabase());
+            query.prepare("UPDATE users SET avatar_path = :path WHERE user_id = :id");
+            query.bindValue(":path", filePath);
+            query.bindValue(":id", myId); // myId là id của bạn hiện tại
+
+            if (!query.exec()) {
+                qDebug() << "Lưu đường dẫn avatar thất bại:" << query.lastError().text();
+            } else {
+                qDebug() << "Đã cập nhật đường dẫn avatar vào DB!";
+            }
+        }
+
+        //  Gửi file ảnh này lên server hoặc xử lý tiếp sang hàm upload
+        // loadAvatarFromServer(filePath);
+    } else {
+        qDebug() << "Người dùng đã hủy chọn file.";
+    }
+}
+
+void Dashboard::onAvartaUploadFinished(){
+
+}
+
+void Dashboard::onFriendSelected(const QModelIndex &index){
+
+}
+
+Dashboard::~Dashboard()
+{
+}
+

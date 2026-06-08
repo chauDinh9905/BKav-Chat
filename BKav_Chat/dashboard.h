@@ -49,9 +49,11 @@ private:
 
     QByteArray convertPixmapToByteArray(const QPixmap &pixmap);
     void loadAvatarFromServer(const QString &avatarUrl);
+
 public:
     void initUserCache();
     void loadFriendList();
+    void setCurrentUser(int userId);
 };
 
 

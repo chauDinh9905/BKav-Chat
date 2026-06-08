@@ -79,10 +79,13 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
     connect(rememberPass, &QCheckBox::clicked, this, &LogIn::rememberInfoClicked);
     connect(logIn, &QPushButton::clicked, this, &LogIn::logInClicked);
     connect(signUp, &QPushButton::clicked, this, &LogIn::signUpClicked);
-    connect(model, &LogInModel::authenticationSucceeded, this, [=]() {
-        // Server OK -> View phát tín hiệu báo cho main.cpp đổi sang màn hình chính A
-        emit logInSuccess();
-    });
+    connect(model,
+            &LogInModel::authenticationSucceeded,
+            this,
+            [this](int userId)
+            {
+                emit logInSuccess(userId);
+            });
 
     connect(model, &LogInModel::authenticationFailed, this, [=]() {
         // Server báo lỗi -> Hiện lên QLabel error của giao diện đăng nhập
