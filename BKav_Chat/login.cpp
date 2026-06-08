@@ -88,7 +88,6 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
             });
 
     connect(model, &LogInModel::authenticationFailed, this, [=]() {
-        // Server báo lỗi -> Hiện lên QLabel error của giao diện đăng nhập
         error->setText("Sai tên tài khoản hoặc mật khẩu");
     });
 }

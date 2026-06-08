@@ -807,6 +807,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -826,6 +827,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
@@ -6179,6 +6181,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signupmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qoverload.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer:
@@ -6400,6 +6404,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h:
 

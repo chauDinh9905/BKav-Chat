@@ -525,4 +525,6 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h

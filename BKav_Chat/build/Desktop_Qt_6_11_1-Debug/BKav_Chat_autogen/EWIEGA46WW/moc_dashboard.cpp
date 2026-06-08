@@ -41,32 +41,41 @@ template <> constexpr inline auto Dashboard::qt_create_metaobjectdata<qt_meta_ta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "Dashboard",
-        "onAvatarClicked",
+        "logOutRequest",
         "",
+        "onAvatarClicked",
         "onAvartaUploadFinished",
         "onSearchTextChanged",
         "text",
         "triggerSearch",
         "onFriendSelected",
         "QModelIndex",
-        "index"
+        "index",
+        "changeAvatar",
+        "logOut"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'logOutRequest'
+        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'onAvatarClicked'
-        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessProtected, QMetaType::Void),
         // Slot 'onAvartaUploadFinished'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessProtected, QMetaType::Void),
         // Slot 'onSearchTextChanged'
-        QtMocHelpers::SlotData<void(const QString &)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 5 },
+        QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessProtected, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
         }}),
         // Slot 'triggerSearch'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessProtected, QMetaType::Void),
         // Slot 'onFriendSelected'
-        QtMocHelpers::SlotData<void(const QModelIndex &)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 8, 9 },
+        QtMocHelpers::SlotData<void(const QModelIndex &)>(8, 2, QMC::AccessProtected, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 },
         }}),
+        // Slot 'changeAvatar'
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessProtected, QMetaType::Void),
+        // Slot 'logOut'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessProtected, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -90,13 +99,20 @@ void Dashboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     auto *_t = static_cast<Dashboard *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->onAvatarClicked(); break;
-        case 1: _t->onAvartaUploadFinished(); break;
-        case 2: _t->onSearchTextChanged((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->triggerSearch(); break;
-        case 4: _t->onFriendSelected((*reinterpret_cast<std::add_pointer_t<QModelIndex>>(_a[1]))); break;
+        case 0: _t->logOutRequest(); break;
+        case 1: _t->onAvatarClicked(); break;
+        case 2: _t->onAvartaUploadFinished(); break;
+        case 3: _t->onSearchTextChanged((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->triggerSearch(); break;
+        case 5: _t->onFriendSelected((*reinterpret_cast<std::add_pointer_t<QModelIndex>>(_a[1]))); break;
+        case 6: _t->changeAvatar(); break;
+        case 7: _t->logOut(); break;
         default: ;
         }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (Dashboard::*)()>(_a, &Dashboard::logOutRequest, 0))
+            return;
     }
 }
 
@@ -119,15 +135,21 @@ int Dashboard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
+}
+
+// SIGNAL 0
+void Dashboard::logOutRequest()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP

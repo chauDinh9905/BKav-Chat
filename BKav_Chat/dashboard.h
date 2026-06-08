@@ -11,6 +11,7 @@
 #include <QWidget>
 #include "dashboardmodel.h"
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 class DashboardModel;
 
@@ -20,12 +21,16 @@ public:
     explicit Dashboard(DashboardModel *model, QWidget *parent = nullptr);
     ~Dashboard();
 
-private slots:
+signals:
+    void logOutRequest();
+protected slots:
     void onAvatarClicked(); // khi có signal người dùng ấn vào avatar của mình
     void onAvartaUploadFinished(); // khi có signal từ server báo rằng ng dùng đã load ảnh đại diện mới lên xong
     void onSearchTextChanged(const QString &text); // khi có signal người dùng điền ký tự vào ô tìm kiếm
     void triggerSearch(); // đếm ngược mỗi khi người dùng dừng điền kí tự trên ô tìm kiếm, khi hàm này kết thúc thì những ký tự sẽ được gửi lên server
     void onFriendSelected(const QModelIndex &index);// khi có signal người dùng ấn vào một người trong danh sách bạn bè
+    void changeAvatar();
+    void logOut();
 
 private:
     DashboardModel *model;

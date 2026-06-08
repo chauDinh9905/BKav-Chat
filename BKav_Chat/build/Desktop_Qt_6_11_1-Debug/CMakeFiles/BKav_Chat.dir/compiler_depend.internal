@@ -810,6 +810,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget
@@ -829,6 +830,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h

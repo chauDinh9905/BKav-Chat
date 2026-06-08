@@ -5,6 +5,8 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QObject>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 class LogInModel:public QObject{
     Q_OBJECT
@@ -17,6 +19,8 @@ public:
     bool rememberInfo;
     bool validateInfo();
     void authenticateWithServer();
+private:
+    QNetworkAccessManager *networkManager;
 
 signals:
     void authenticationSucceeded(int user_id);

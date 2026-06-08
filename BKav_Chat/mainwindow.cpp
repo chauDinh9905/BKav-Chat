@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     stackedWidget->addWidget(dashboardView);
 
     connect(loginView, &LogIn::signUpRequest, this, [=]() {
-        stackedWidget->setCurrentWidget(signUpView); // Chuyển sang màn SignUp mượt mà
+        stackedWidget->setCurrentWidget(signUpView);
     });
 
     connect(loginView,
@@ -39,6 +39,9 @@ MainWindow::MainWindow(QWidget *parent)
         stackedWidget->setCurrentWidget(loginView);
     });
 
+    connect(dashboardView, &Dashboard::logOutRequest, this, [=]{
+        stackedWidget->setCurrentWidget(loginView);
+    });
     // Mặc định ban đầu mở App là hiện trang Login (vị trí 0)
     stackedWidget->setCurrentIndex(0);
 }

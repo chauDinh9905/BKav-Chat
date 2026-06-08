@@ -17,6 +17,7 @@
 #include <QIcon>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QMenu>
 
 Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     : QWidget(parent), model(model)
@@ -27,19 +28,24 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
 
     mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(20, 20, 20, 20);
-    mainLayout->setSpacing(10);
+    mainLayout->setSpacing(5);
 
     title = new QLabel("Bkav Chat", this);
     title->setStyleSheet("color: blue; font-size: 24px; font-weight: bold;");
     title->setAlignment(Qt::AlignLeft);
 
     avatarButton = new QPushButton(this);
-    avatarButton->setFixedSize(46, 46);
-    avatarButton->setStyleSheet("QPushButton{""border-radius: 23px;""}");
+    avatarButton->setFixedSize(60, 60);
+    avatarButton->setStyleSheet(
+        "QPushButton {"
+        "   border-radius: 30px;"
+        "   outline: none;"
+        "}"
+        );
     avatarButton->setCursor(Qt::PointingHandCursor);
 
     displayName = new QLabel(this);
-    displayName->setStyleSheet("color: #000000; font-size: 12px; font-weight: bold;");
+    displayName->setStyleSheet("color: #000000; font-size: 16px; font-weight: bold;");
 
     searchFriend = new QLineEdit(this);
     searchFriend->setPlaceholderText("Tìm kiếm");
@@ -58,7 +64,15 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     titleList->setStyleSheet("color: #000000; font-size: 16px; font-weight: normal; margin-top: 5px;");
 
     friendListView = new QListView(this);
-    friendListView->setStyleSheet("QListView { border: none; background: transparent; }");
+    friendListView->setStyleSheet(
+        "QListView {"
+        "   border: none;"
+        "   background: transparent;"
+        "   padding: 0px 10px; /* Thêm padding trái/phải để danh sách thu hẹp lại, không dính sát viền màn hình */"
+        "}"
+        );
+    friendListView->setMaximumWidth(150);
+    friendListView->setMaximumHeight(100);
 
     this->model = model;
     searchDebounceTimer = new QTimer(this);
@@ -69,18 +83,21 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     headerLayout = new QHBoxLayout();
     userProfile = new QVBoxLayout();
     userProfile->setSpacing(4);
-    userProfile->addWidget(avatarButton, Qt::AlignCenter);
-    userProfile->addWidget(displayName, Qt::AlignCenter);
+    userProfile->setContentsMargins(0, 0, 0, 0);
+    userProfile->addWidget(avatarButton, 0, Qt::AlignCenter);
+    userProfile->addWidget(displayName, 0, Qt::AlignCenter);
+    userProfile->addStretch();
 
     headerLayout->addWidget(title, Qt::AlignLeft);
     headerLayout->addStretch();
     headerLayout->addLayout(userProfile);
 
     mainLayout->addLayout(headerLayout);
-    mainLayout->addSpacing(5);
+    //mainLayout->addSpacing(5);
     mainLayout->addWidget(searchFriend);
     mainLayout->addWidget(titleList);
     mainLayout->addWidget(friendListView);
+    mainLayout->addStretch();
 
 
     connect(avatarButton, &QPushButton::clicked, this, &Dashboard::onAvatarClicked);
@@ -130,11 +147,6 @@ void Dashboard::triggerSearch(){
     }
 }
 
-void onAvatarClicked(){
-    //Về sau xử lý việc thay ảnh đại diện
-    return;
-}
-
 void Dashboard::initUserCache(){
     QSqlQuery query(DatabaseManager::instance().getDatabase());
     query.prepare("select u.username, u.display_name, u.avatar_path "
@@ -146,23 +158,23 @@ void Dashboard::initUserCache(){
     if(query.exec() && query.next()){
         displayName->setText(query.value(1).toString());
         QString avatarPath = query.value(2).toString();
-        if(!avatarPath.isEmpty() && QFile::exists(avatarPath)){
-            avatarButton->setStyleSheet(
-                QString(
-                    "QPushButton {"
-                    "background-image: url(%1);"
-                    "background-position: center;"
-                    "background-repeat: no-repeat;"
-                    "}"
-                    "QPushButton:hover {"
-                    "   opacity: 0.85;"
-                    "}"
-                    ).arg(avatarPath)
-                );
+        QPixmap pixmap(avatarPath);
+        if (!pixmap.isNull()) {
+            // Bo tròn hoặc scale ảnh cho vừa khít với kích thước của nút bấm
+            QIcon buttonIcon(pixmap.scaled(avatarButton->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+            avatarButton->setIcon(buttonIcon);
+            avatarButton->setIconSize(avatarButton->size()); // Đảm bảo icon chiếm trọn nút
+
+            // Nếu bạn đang dùng StyleSheet để làm background, có thể đổi bằng dòng này thay thế:
+            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 30px; outline: none;").arg(avatarPath));
         }else{
             avatarButton->setStyleSheet(
                 "QPushButton {"
                     "background-color: grey;""}"
+                "QPushButton {"
+                "   border-radius: 30px;"
+                "   outline: none;"
+                "}"
                 );
             avatarButton->setText(displayName->text().left(1).toUpper());
 
@@ -181,7 +193,7 @@ void Dashboard::loadFriendList(){
     bool ok = query.prepare(
         "SELECT u.username, u.display_name, u.avatar_path "
         "FROM users u "
-        "WHERE u.user_id = ?"
+        "WHERE u.user_id != ?"
         );
 
     qDebug() << "prepare =" << ok;
@@ -192,10 +204,10 @@ void Dashboard::loadFriendList(){
     ok = query.exec();
 
     qDebug() << "exec =" << ok;
-    qDebug() << "exec error =" << query.lastError().text();
+    qDebug() << "exec error = " << query.lastError().text();
     if(ok){
         model->clear();
-        while(query.next()){
+        while(query.next()){connect(friendListView, &QListView::clicked, this, &Dashboard::onFriendSelected);
             QString friendId = query.value(0).toString();
             QString friendName = query.value(1).toString();
             QString friendAvatarPath = query.value(2).toString();
@@ -219,9 +231,37 @@ void Dashboard::setCurrentUser(int userId)
 
 void Dashboard::onAvatarClicked()
 {
-    qDebug() << "Nút avatar được nhấn, đang mở thư mục chọn ảnh...";
+    // Tạo menu
+    QMenu *chatMenu = new QMenu(this);
+    QAction *actionChangeAvatar = chatMenu->addAction("Thay ảnh đại diện");
+    QAction *actionLogout = chatMenu->addAction("Đăng xuất");
 
-    // 1. Mở hộp thoại chọn file ảnh từ máy tính
+    // Áp dụng QSS để đổi con trỏ chuột thành hình bàn tay
+    chatMenu->setStyleSheet(
+        "QMenu {"
+        "   background-color: #ffffff;"
+        "   border: 1px solid #dcdcdc;"
+        "   border-radius: 8px;"
+        "   padding: 4px;"
+        "}"
+        "QMenu::item {"
+        "   padding: 8px 32px 8px 12px;"
+        "   background-color: transparent;"
+        "   cursor: pointing-hand;"
+        "}"
+        "QMenu::item:selected {"
+        "   background-color: #F5F5F5;"
+        "   color: #000000;"
+        "}"
+        );
+
+    // Hiển thị menu tại vị trí con trỏ chuột
+    connect(actionChangeAvatar, &QAction::triggered, this, &Dashboard::changeAvatar);
+    connect(actionLogout, &QAction::triggered, this, &Dashboard::logOut);
+    chatMenu->exec(QCursor::pos());
+}
+
+void Dashboard::changeAvatar(){
     QString filePath = QFileDialog::getOpenFileName(
         this,
         tr("Chọn ảnh đại diện"),                 // Tiêu đề cửa sổ
@@ -242,29 +282,29 @@ void Dashboard::onAvatarClicked()
             avatarButton->setIconSize(avatarButton->size()); // Đảm bảo icon chiếm trọn nút
 
             // Nếu bạn đang dùng StyleSheet để làm background, có thể đổi bằng dòng này thay thế:
-            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 25px;").arg(filePath));
-
-            QSqlQuery query(DatabaseManager::instance().getDatabase());
-            query.prepare("UPDATE users SET avatar_path = :path WHERE user_id = :id");
-            query.bindValue(":path", filePath);
-            query.bindValue(":id", myId); // myId là id của bạn hiện tại
-
-            if (!query.exec()) {
-                qDebug() << "Lưu đường dẫn avatar thất bại:" << query.lastError().text();
-            } else {
-                qDebug() << "Đã cập nhật đường dẫn avatar vào DB!";
-            }
+            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 30px; outline: none;").arg(filePath));
         }
 
         //  Gửi file ảnh này lên server hoặc xử lý tiếp sang hàm upload
         // loadAvatarFromServer(filePath);
+        QSqlQuery query;
+        query.prepare("update users "
+                      "set avatar_path = :avatar "
+                      "where user_id = :id");
+        query.bindValue(":avatar", filePath);
+        query.bindValue(":id", myId);
+        query.exec();
     } else {
         qDebug() << "Người dùng đã hủy chọn file.";
     }
-}
 
+}
 void Dashboard::onAvartaUploadFinished(){
 
+}
+
+void Dashboard::logOut(){
+    emit logOutRequest();
 }
 
 void Dashboard::onFriendSelected(const QModelIndex &index){
