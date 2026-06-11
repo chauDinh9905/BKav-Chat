@@ -1,12 +1,16 @@
 #include "loginmodel.h"
 #include <QObject>
 #include <QString>
-#include <QSqlQuery>
-#include <QSqlError>
 #include <QCryptographicHash>
+#include "appconfig.h"
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QSettings>
 
 LogInModel::LogInModel(QObject *parent)
-    :QObject(parent){}
+    :QObject(parent){
+    networkManager = new QNetworkAccessManager(this);
+}
 
 bool LogInModel::validateInfo(){
     if(account.isEmpty() || password.isEmpty()){
@@ -16,32 +20,64 @@ bool LogInModel::validateInfo(){
 }
 
 void LogInModel::authenticateWithServer(){
-     // Hiện tại thì check tài khoản với database local
-     // về sau khi kết nối vơi server thì sẽ khác
-     QSqlQuery query;
-     QString passwordHash;
-     query.prepare("select * "
-                   "from users u "
-                   "where u.display_name = :account "
-                   "and u.password_hash = :password ");
-     query.bindValue(":account", account);
-     passwordHash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
-     query.bindValue(":password", passwordHash);
-     if (!query.exec())
-     {
-         qDebug() << "SQL Error:" << query.lastError().text();
-         return;
-     }else{
-             if (query.next())
-             {
-             int userId = query.value("user_id").toInt();
 
-             emit authenticationSucceeded(userId);
-             }
-             else
-             {
-                 emit authenticationFailed();
-              }
+    if (!validateInfo())
+    {
+        emit authenticationFailed();
+        return;
+    }
+
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+
+    QUrl url(baseUrl + "/api/auth/login");
+
+    QNetworkRequest request(url);
+
+    request.setHeader(
+        QNetworkRequest::ContentTypeHeader,
+        "application/json"
+        );
+    QString passwordHash = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
+
+    QJsonObject json;
+    json["username"] = account;
+    json["password"] = passwordHash;
+    QJsonDocument doc(json);
+
+    QNetworkReply *reply = networkManager->post(request, doc.toJson());
+
+    connect(reply, &QNetworkReply::finished, this, [this, reply](){
+        if(reply->error() == QNetworkReply::NoError){
+            QByteArray responseData = reply->readAll();
+            QJsonDocument resDoc = QJsonDocument::fromJson(responseData);
+            QJsonObject resJson = resDoc.object();
+
+            if(resJson["status"].toInt()){
+                QJsonObject data =
+                    resJson["data"].toObject();
+
+                int userId =
+                    data["user_id"].toInt();
+
+                QString token =
+                    data["token"].toString();
+
+                QString username =
+                    data["username"].toString();
+
+                QString displayName = data["display_name"].toString();
+
+                QSettings settings("BKAV", "ChatApp");
+
+                settings.setValue("auth/token", token);
+                settings.setValue("auth/user_id", userId);
+                settings.setValue("auth/username", username);
+                settings.setValue("auth/display_name", username);
+
+                emit authenticationSucceeded(userId);
+            }else{
+                emit authenticationFailed();
+            }
         }
-     //query.finish();
+    });
 }

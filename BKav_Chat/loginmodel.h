@@ -19,12 +19,17 @@ public:
     bool rememberInfo;
     bool validateInfo();
     void authenticateWithServer();
+
+    void setAccount(const QString &acc) { account = acc; }
+    void setPassword(const QString &pwd) { password = pwd; }
+
 private:
     QNetworkAccessManager *networkManager;
 
 signals:
     void authenticationSucceeded(int user_id);
     void authenticationFailed();
+
 
 };
 

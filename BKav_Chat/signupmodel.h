@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QCryptographicHash>
+#include <QNetworkAccessManager>
 
 class SignUpModel : public QObject
 {
@@ -21,8 +22,11 @@ public:
 signals:
     //đăng ký thất bại thì sẽ phát đi một tín hiệu
     void registrationFailed(const QString &errorMessage);
+    void registrationSuccess();
 private:
     QString hashPassword(const QString &plainPassword);
+    QNetworkAccessManager *networkManager;
 };
+
 
 #endif // SIGNUPMODEL_H

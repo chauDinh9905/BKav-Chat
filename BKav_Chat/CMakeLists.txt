@@ -49,6 +49,7 @@ qt_add_executable(BKav_Chat
     dashboard.h
     dashboardmodel.cpp
     dashboard.cpp
+    appconfig.h
 
 
 

@@ -1,12 +1,16 @@
 #include "signupmodel.h"
-#include "databasemanager.h"
-#include <QSqlQuery>
-#include <QSqlError>
+#include "appconfig.h"
+#include <QNetworkReply>
 #include <QDebug>
 #include <QCryptographicHash>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QSettings>
 
 SignUpModel::SignUpModel(QObject *parent)
-    : QObject(parent){}
+    : QObject(parent){
+    networkManager = new QNetworkAccessManager(this);
+}
 
 bool SignUpModel::checkCredentials(){
     if(displayName.isEmpty() || userName.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()){
@@ -22,38 +26,50 @@ QString SignUpModel::hashPassword(const QString &plainPassword)
 }
 
 bool SignUpModel::registerOnServer(){
-    // Về sau sẽ xử lý code chi tiết ở đây khi đăng ký tài khoản, phải kiểm tra xem thông tin đăng ký, nếu tên hiển thị bị trùng với người khác thì trả về,
-    // hiện tại thì kết nối thẳng đến database trên máy local, chưa thông qua server
     if (!checkCredentials()) {
         emit registrationFailed("Thông tin không đầy đủ hoặc mật khẩu không khớp!");
         return false;
     }
-    if (!DatabaseManager::instance().connectToDatabase()) {
-        emit registrationFailed("Không thể kết nối đến database!");
-        return false;
-    }
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+    QUrl url(baseUrl + "/api/auth/register");
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     QString hashedPass = hashPassword(password);
-    QSqlQuery query;
-    query.prepare("INSERT INTO users (display_name, username, password_hash) "
-                  "VALUES (:display_name, :username, :password_hash)");
+    QJsonObject json;
+    json["display_name"] = displayName.trimmed();
+    json["username"] = userName.trimmed();
+    json["password"] = hashedPass;
+    QJsonDocument doc(json);
 
-    query.bindValue(":display_name", displayName.trimmed());
-    query.bindValue(":username", userName.trimmed());
-    query.bindValue(":password_hash", hashedPass);
-
-    if (query.exec()) {
-        qDebug() << "Đăng ký thành công:" << userName;
-        return true;
-    } else {
-        QString err = query.lastError().text();
-        if (err.contains("Duplicate", Qt::CaseInsensitive)) {
-            emit registrationFailed("Tài khoản đã tồn tại!");
-        } else {
-            emit registrationFailed("Lỗi: " + err);
+    QNetworkReply *reply = networkManager->post(request, doc.toJson());
+    connect(reply, &QNetworkReply::finished, this, [this, reply](){
+        QByteArray response = reply->readAll();
+        if(reply->error() != QNetworkReply::NoError){
+            emit registrationFailed(reply->errorString());
+            reply->deleteLater();
+            return;
         }
-        qDebug() << "Register error:" << err;
-        return false;
-    }
-    //query.finish();
+        QJsonDocument resDoc = QJsonDocument::fromJson(response);
+        QJsonObject object = resDoc.object();
+        if(!object["status"].toInt()){
+            emit registrationFailed(object["message"].toString());
+        }else{
+            QJsonObject data = object["data"].toObject();
+            int userId = data["user_id"].toInt();
+            QString token = data["token"].toString();
+            QString username = data["username"].toString();
+            QString displayName = data["display_name"].toString();
+            QSettings settings("BKAV", "ChatApp");
+
+            settings.setValue("auth/token", token);
+            settings.setValue("auth/user_id", userId);
+            settings.setValue("auth/username", username);
+            settings.setValue("auth/display_name", displayName);
+
+            emit registrationSuccess();
+        }
+        reply->deleteLater();
+        return;
+    });
     return true;
 }

@@ -12,6 +12,11 @@
 #include "dashboardmodel.h"
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QSettings>
+#include "appconfig.h"
 
 class DashboardModel;
 
@@ -56,9 +61,8 @@ private:
     void loadAvatarFromServer(const QString &avatarUrl);
 
 public:
-    void initUserCache();
     void loadFriendList();
-    void setCurrentUser(int userId);
+    void loadCurrentUser();
 };
 
 

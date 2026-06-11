@@ -1,4 +1,4 @@
-#include "databasemanager.h"
+#include "appconfig.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -7,6 +7,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    AppConfig::instance().loadConfig();
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -17,11 +18,12 @@ int main(int argc, char *argv[])
             break;
         }
     }
+    /*
     if (!DatabaseManager::instance().connectToDatabase())
     {
         qDebug() << "Cannot connect database";
         return -1;
-    }
+    }*/
     MainWindow w;
     w.show();
 

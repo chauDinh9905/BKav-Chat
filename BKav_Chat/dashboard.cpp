@@ -19,6 +19,8 @@
 #include <QSqlError>
 #include <QMenu>
 
+using namespace std;
+
 Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     : QWidget(parent), model(model)
 {
@@ -104,6 +106,99 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     connect(searchDebounceTimer, &QTimer::timeout, this, &Dashboard::triggerSearch);
     connect(friendListView, &QListView::clicked, this, &Dashboard::onFriendSelected);
     connect(searchFriend, &QLineEdit::textChanged, this, &Dashboard::onSearchTextChanged);
+
+    networkManager = new QNetworkAccessManager(this);
+
+    loadCurrentUser();
+    loadFriendList();
+}
+
+void Dashboard::loadCurrentUser()
+{
+    QSettings settings("BKAV", "ChatApp");
+
+    QString token = settings.value("auth/token").toString();
+
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+
+    QNetworkRequest request(QUrl(baseUrl + "/api/user/info"));
+
+    request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
+
+    QNetworkReply *reply = networkManager->get(request);
+
+    connect(reply, &QNetworkReply::finished,this,[this, reply](){
+                QByteArray response = reply->readAll();
+
+                if(reply->error() != QNetworkReply::NoError)
+                {
+                    qDebug() << reply->errorString();
+                    reply->deleteLater();
+                    return;
+                }
+                QJsonDocument doc = QJsonDocument::fromJson(response);
+                QJsonObject obj = doc.object();
+                if(obj["status"].toInt() != 1)
+                {
+                    qDebug()
+                    << obj["message"].toString();
+
+                    reply->deleteLater();
+                    return;
+                }
+                QJsonObject data = obj["data"].toObject();
+                myId = data["Id"].toInt();
+                displayName->setText(data["FullName"].toString());
+                QString avatar = data["Avatar"] .toString();
+                if(!avatar.isEmpty())
+                {
+                    QPixmap pixmap(avatar);
+                    avatarButton->setIcon(QIcon(pixmap));
+                    avatarButton->setIconSize(avatarButton->size());
+                }
+                reply->deleteLater();
+            });
+}
+
+void Dashboard::loadFriendList()
+{
+    QSettings settings("BKAV", "ChatApp");
+    QString token = settings.value("auth/token").toString();
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+    QNetworkRequest request(QUrl(baseUrl + "/api/user/list"));
+    request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, this, [this, reply]()
+            {
+                QByteArray response = reply->readAll();
+                if(reply->error())
+                {
+                    qDebug() << reply->errorString();
+                    reply->deleteLater();
+                    return;
+                }
+
+                QJsonDocument doc = QJsonDocument::fromJson(response);
+
+                QJsonObject obj = doc.object();
+
+                if(obj["status"].toInt() != 1)
+                {
+                    qDebug() << obj["message"].toString();
+                    reply->deleteLater();
+                    return;
+                }
+
+                QJsonArray users = obj["data"].toArray();
+                QVector<FriendInfo> list;
+                for(const QJsonValue &value : as_const(users))
+                {
+                    QJsonObject user = value.toObject();
+                    list.append(FriendInfo(QString::number(user["user_id"].toInt()),user["display_name"].toString(), user["avatar_path"].toString(),false));
+                }
+                model->setFriendList(list);
+                reply->deleteLater();
+            });
 }
 
 void Dashboard::onSearchTextChanged(const QString &text)
@@ -145,88 +240,6 @@ void Dashboard::triggerSearch(){
     }else{
         qDebug() << "Lỗi tìm kiếm bạn bè:" << query.lastError().text();
     }
-}
-
-void Dashboard::initUserCache(){
-    QSqlQuery query(DatabaseManager::instance().getDatabase());
-    query.prepare("select u.username, u.display_name, u.avatar_path "
-                  "from users u "
-                  "where u.user_id = :my_id");
-    //qDebug() << "prepare =" << ok;
-    qDebug() << "prepare error =" << query.lastError().text();
-    query.bindValue(":my_id", myId);
-    if(query.exec() && query.next()){
-        displayName->setText(query.value(1).toString());
-        QString avatarPath = query.value(2).toString();
-        QPixmap pixmap(avatarPath);
-        if (!pixmap.isNull()) {
-            // Bo tròn hoặc scale ảnh cho vừa khít với kích thước của nút bấm
-            QIcon buttonIcon(pixmap.scaled(avatarButton->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
-            avatarButton->setIcon(buttonIcon);
-            avatarButton->setIconSize(avatarButton->size()); // Đảm bảo icon chiếm trọn nút
-
-            // Nếu bạn đang dùng StyleSheet để làm background, có thể đổi bằng dòng này thay thế:
-            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 30px; outline: none;").arg(avatarPath));
-        }else{
-            avatarButton->setStyleSheet(
-                "QPushButton {"
-                    "background-color: grey;""}"
-                "QPushButton {"
-                "   border-radius: 30px;"
-                "   outline: none;"
-                "}"
-                );
-            avatarButton->setText(displayName->text().left(1).toUpper());
-
-        }
-        qDebug() << "Nạp cache thành công: "<< query.lastError().text();
-    }else{
-        qDebug() << "Không tìm thấy thông tin trong database: "<< query.lastError().text();
-    }
-
-    return;
-}
-
-void Dashboard::loadFriendList(){
-    QSqlQuery query(DatabaseManager::instance().getDatabase());
-
-    bool ok = query.prepare(
-        "SELECT u.username, u.display_name, u.avatar_path "
-        "FROM users u "
-        "WHERE u.user_id != ?"
-        );
-
-    qDebug() << "prepare =" << ok;
-    qDebug() << "prepare error =" << query.lastError().text();
-
-    query.addBindValue(myId);
-
-    ok = query.exec();
-
-    qDebug() << "exec =" << ok;
-    qDebug() << "exec error = " << query.lastError().text();
-    if(ok){
-        model->clear();
-        while(query.next()){connect(friendListView, &QListView::clicked, this, &Dashboard::onFriendSelected);
-            QString friendId = query.value(0).toString();
-            QString friendName = query.value(1).toString();
-            QString friendAvatarPath = query.value(2).toString();
-
-            model->friends.append(FriendInfo(friendId, friendName, friendAvatarPath, false));
-            model->rowMap[friendId] = model->friends.size() - 1;
-        }
-    }else{
-        qDebug() << "Lỗi truy vấn danh sách người dùng: "<< query.lastError().text();
-    }
-    return;
-}
-
-void Dashboard::setCurrentUser(int userId)
-{
-    myId = userId;
-
-    initUserCache();
-    loadFriendList();
 }
 
 void Dashboard::onAvatarClicked()
@@ -304,6 +317,11 @@ void Dashboard::onAvartaUploadFinished(){
 }
 
 void Dashboard::logOut(){
+    QSettings settings(
+        "BKAV",
+        "ChatApp");
+
+    settings.remove("auth");
     emit logOutRequest();
 }
 
