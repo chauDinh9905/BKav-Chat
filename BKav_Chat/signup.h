@@ -50,6 +50,7 @@ signals:
 private slots:
     void taoTaiKhoanClicked();
     void handleRegistrationFailed(const QString &msg);
+    void handleRegistrationSuccess();
 };
 
 #endif // SIGNUP_H

@@ -835,9 +835,33 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h",
+			"MU",
+			"EWIEGA46WW/moc_SocketManager.cpp",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h",
 			"MU",
 			"EWIEGA46WW/moc_appconfig.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h",
+			"MU",
+			"EWIEGA46WW/moc_chat.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h",
+			"MU",
+			"EWIEGA46WW/moc_chatdelegate.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h",
+			"MU",
+			"EWIEGA46WW/moc_chatmodel.cpp",
 			null
 		],
 		[
@@ -968,6 +992,26 @@
 	"SETTINGS_FILE" : "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles/BKav_Chat_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp",
 			"MU",

@@ -12,6 +12,7 @@ const currentDirectory = __dirname;
 const parentDirectory = path.resolve(currentDirectory, '..', '..');
 const savePathImage = `${parentDirectory}/images`;
 const savePathFile = `${parentDirectory}/files`;
+const authMiddleware = require('./../../middleware/index.js')
 
 module.exports = () => {
     router.get('/list-friend', async (req, res) => {
@@ -38,7 +39,7 @@ module.exports = () => {
                     Files: response.length > 0 ? response[0]?.Files : null,
                     Images: response.length > 0 ? response[0]?.Images : null,
                     isSend: response.length > 0 ? response[0]?.isSend : 0,
-                    FriendID: value._id,
+                    FriendID: value.user_id,
                     FullName: value.display_name,
                     Username: value.username,
                     Avatar: value.avatar_path,
@@ -57,6 +58,7 @@ module.exports = () => {
         try {
             const UserID = req.UserID
             const { FriendID, Content } = req.body
+            console.log('send-message UserID:', UserID, 'FriendID:', FriendID)
             let listImages = []
             let listFiles = []
             let user = await models.Users.findOne({ _id: new ObjectId(UserID) }).exec()
@@ -64,11 +66,14 @@ module.exports = () => {
                 return res.status(400).json({ status: 0, data: null, message: 'User not found' })
             }
 
-            let Friend = await models.Users.findOne({ _id: new ObjectId(FriendID) }).exec()
+            let Friend = await models.Users.findOne({ user_id: parseInt(FriendID)}).exec()
+            console.log('user.user_id:', user.user_id)
+            console.log('Friend found:', Friend)
             if (Friend == null) {
                 return res.status(400).json({ status: 0, data: null, message: 'Friend not found' })
             }
-            for (const file of req.files) {
+            for (const file of (req.files || []) /*req.files*/) {
+                console.log('req.files:', req.files)
                 if (file.fieldname === 'files') {
                     const extension = file.originalname.split('.').pop();
                     const nameFile = uuidv4();
@@ -105,6 +110,14 @@ module.exports = () => {
                 isSend: 0
             }).save()
             await models.Users.updateOne({ _id: user._id }, { created_at: moment().toDate() })
+            const targetWs = global.wsClients.get(Friend.user_id.toString());
+            if (targetWs && targetWs.readyState === 1) {
+                targetWs.send(JSON.stringify({
+                    from: user.user_id,
+                    to: Friend.user_id,
+                    content: Content
+                }));
+            }
             const resMessage = await models.Message.find({ FriendID: Friend.user_id, isSend: 0 }, { _id: 1, content: 1 }).sort({ CreatedAt: 1 });
             await Promise.all(resMessage.map(async (value) => {
                 await models.Message.updateOne({ _id: value._id }, { isSend: 1 });
@@ -126,16 +139,20 @@ module.exports = () => {
         }
     })
 
+
     router.get('/get-message', async (req, res) => {
         try {
             const UserID = req.UserID
             const { FriendID, LastTime } = req.query
+            console.log('get-message UserID:', UserID, 'FriendID:', FriendID)
             let user = await models.Users.findOne({ _id: new ObjectId(UserID) }).exec()
             if (user == null) {
                 return res.status(400).json({ status: 0, data: null, message: 'User not found' })
             }
 
-            let Friend = await models.Users.findOne({ _id: new ObjectId(FriendID) }).exec()
+            let Friend = await models.Users.findOne({ user_id: parseInt(FriendID)}).exec()
+            console.log('user.user_id:', user.user_id)
+            console.log('Friend.user_id:', Friend.user_id)
             if (Friend == null) {
                 return res.status(400).json({ status: 0, data: null, message: 'Friend not found' })
             }
@@ -152,8 +169,9 @@ module.exports = () => {
                 queryConditions.push({ CreatedAt: { $gt: LastTime } });
             }
             const response = await models.Message.find({ $and: queryConditions }).sort({ CreatedAt: 1 });
+            console.log('messages found:', response.length)
             const data = await Promise.all(response?.map(async (value) => {
-                if (value.UserID.equals(user.user_id)) {
+                if (value.UserID === user.user_id) {
                     return ({
                         id: value._id,
                         Content: value?.Content,
@@ -183,6 +201,7 @@ module.exports = () => {
             await models.Users.updateOne({ _id: user._id }, { created_at: moment().toDate() })
             return res.status(200).json({ status: 1, data: data, message: "" })
         } catch (error) {
+            console.log('get-message error:', error.message)
             return res.status(400).json({ status: 0, data: null, message: error.message })
         }
     })

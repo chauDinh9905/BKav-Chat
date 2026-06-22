@@ -43,6 +43,9 @@ template <> constexpr inline auto Dashboard::qt_create_metaobjectdata<qt_meta_ta
         "Dashboard",
         "logOutRequest",
         "",
+        "openChatRequest",
+        "FriendInfo",
+        "friendInfo",
         "onAvatarClicked",
         "onAvartaUploadFinished",
         "onSearchTextChanged",
@@ -58,24 +61,28 @@ template <> constexpr inline auto Dashboard::qt_create_metaobjectdata<qt_meta_ta
     QtMocHelpers::UintData qt_methods {
         // Signal 'logOutRequest'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'openChatRequest'
+        QtMocHelpers::SignalData<void(const FriendInfo &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 4, 5 },
+        }}),
         // Slot 'onAvatarClicked'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessProtected, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onAvartaUploadFinished'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessProtected, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onSearchTextChanged'
-        QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessProtected, QMetaType::Void, {{
-            { QMetaType::QString, 6 },
+        QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 9 },
         }}),
         // Slot 'triggerSearch'
-        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessProtected, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onFriendSelected'
-        QtMocHelpers::SlotData<void(const QModelIndex &)>(8, 2, QMC::AccessProtected, QMetaType::Void, {{
-            { 0x80000000 | 9, 10 },
+        QtMocHelpers::SlotData<void(QModelIndex)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 12, 13 },
         }}),
         // Slot 'changeAvatar'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessProtected, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'logOut'
-        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessProtected, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -100,18 +107,33 @@ void Dashboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->logOutRequest(); break;
-        case 1: _t->onAvatarClicked(); break;
-        case 2: _t->onAvartaUploadFinished(); break;
-        case 3: _t->onSearchTextChanged((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->triggerSearch(); break;
-        case 5: _t->onFriendSelected((*reinterpret_cast<std::add_pointer_t<QModelIndex>>(_a[1]))); break;
-        case 6: _t->changeAvatar(); break;
-        case 7: _t->logOut(); break;
+        case 1: _t->openChatRequest((*reinterpret_cast<std::add_pointer_t<FriendInfo>>(_a[1]))); break;
+        case 2: _t->onAvatarClicked(); break;
+        case 3: _t->onAvartaUploadFinished(); break;
+        case 4: _t->onSearchTextChanged((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->triggerSearch(); break;
+        case 6: _t->onFriendSelected((*reinterpret_cast<std::add_pointer_t<QModelIndex>>(_a[1]))); break;
+        case 7: _t->changeAvatar(); break;
+        case 8: _t->logOut(); break;
         default: ;
+        }
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 1:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< FriendInfo >(); break;
+            }
+            break;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (Dashboard::*)()>(_a, &Dashboard::logOutRequest, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (Dashboard::*)(const FriendInfo & )>(_a, &Dashboard::openChatRequest, 1))
             return;
     }
 }
@@ -135,14 +157,14 @@ int Dashboard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        if (_id < 9)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 9;
     }
     return _id;
 }
@@ -151,5 +173,11 @@ int Dashboard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void Dashboard::logOutRequest()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void Dashboard::openChatRequest(const FriendInfo & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 QT_WARNING_POP

@@ -235,10 +235,66 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/dashboard.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp -o CMakeFiles/BKav_Chat.dir/dashboard.cpp.s
 
+CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp
+CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o -MF CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o.d -o CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp
+
+CMakeFiles/BKav_Chat.dir/chatmodel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/chatmodel.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp > CMakeFiles/BKav_Chat.dir/chatmodel.cpp.i
+
+CMakeFiles/BKav_Chat.dir/chatmodel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/chatmodel.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp -o CMakeFiles/BKav_Chat.dir/chatmodel.cpp.s
+
+CMakeFiles/BKav_Chat.dir/chat.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/chat.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp
+CMakeFiles/BKav_Chat.dir/chat.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BKav_Chat.dir/chat.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/chat.cpp.o -MF CMakeFiles/BKav_Chat.dir/chat.cpp.o.d -o CMakeFiles/BKav_Chat.dir/chat.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp
+
+CMakeFiles/BKav_Chat.dir/chat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/chat.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp > CMakeFiles/BKav_Chat.dir/chat.cpp.i
+
+CMakeFiles/BKav_Chat.dir/chat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/chat.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp -o CMakeFiles/BKav_Chat.dir/chat.cpp.s
+
+CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp
+CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o -MF CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o.d -o CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp
+
+CMakeFiles/BKav_Chat.dir/SocketManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/SocketManager.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp > CMakeFiles/BKav_Chat.dir/SocketManager.cpp.i
+
+CMakeFiles/BKav_Chat.dir/SocketManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/SocketManager.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp -o CMakeFiles/BKav_Chat.dir/SocketManager.cpp.s
+
+CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp
+CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o -MF CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o.d -o CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp
+
+CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp > CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.i
+
+CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp -o CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.s
+
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: .qt/rcc/qrc_BKav_Chat_translations.cpp
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o -MF CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o.d -o CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp
 
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.i: cmake_force
@@ -262,6 +318,10 @@ BKav_Chat_OBJECTS = \
 "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o" \
+"CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o" \
+"CMakeFiles/BKav_Chat.dir/chat.cpp.o" \
+"CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o" \
+"CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
 
 # External object files for target BKav_Chat
@@ -278,6 +338,10 @@ BKav_Chat: CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/dashboard.cpp.o
+BKav_Chat: CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o
+BKav_Chat: CMakeFiles/BKav_Chat.dir/chat.cpp.o
+BKav_Chat: CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o
+BKav_Chat: CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/build.make
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Widgets.so.6.11.1
@@ -289,7 +353,7 @@ BKav_Chat: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Network.so.6.11.1
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Core.so.6.11.1
 BKav_Chat: CMakeFiles/BKav_Chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable BKav_Chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable BKav_Chat"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BKav_Chat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -2,7 +2,14 @@
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/moc_predefs.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
@@ -12,6 +19,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -27,6 +35,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
@@ -42,6 +51,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
@@ -62,12 +72,14 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
@@ -165,6 +177,24 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \

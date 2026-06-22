@@ -395,14 +395,65 @@ CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument

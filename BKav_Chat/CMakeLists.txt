@@ -50,6 +50,14 @@ qt_add_executable(BKav_Chat
     dashboardmodel.cpp
     dashboard.cpp
     appconfig.h
+    chatmodel.h
+    chat.h
+    chatmodel.cpp
+    chat.cpp
+    SocketManager.h
+    SocketManager.cpp
+    chatdelegate.h
+    chatdelegate.cpp
 
 
 

@@ -7,7 +7,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    AppConfig::instance().loadConfig();
+    qint64 currentPid = QCoreApplication::applicationPid();
+    AppConfig::instance().setProfile(QString::number(currentPid));
+    //AppConfig::instance().loadConfig();
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -18,15 +20,8 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    /*
-    if (!DatabaseManager::instance().connectToDatabase())
-    {
-        qDebug() << "Cannot connect database";
-        return -1;
-    }*/
     MainWindow w;
     w.show();
 
     return QApplication::exec();
 }
-

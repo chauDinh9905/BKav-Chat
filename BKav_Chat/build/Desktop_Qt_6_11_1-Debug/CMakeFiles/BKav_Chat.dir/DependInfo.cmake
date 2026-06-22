@@ -9,7 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/mocs_compilation.cpp" "CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp" "CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp" "CMakeFiles/BKav_Chat.dir/chat.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/chat.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp" "CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp" "CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.cpp" "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o.d"

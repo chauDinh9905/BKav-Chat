@@ -8,6 +8,7 @@ module.exports = async function (req, res, next) {
             return res.status(403).json({ error: "Please provide a token" })
         const data = verifyToken(token.replace('Bearer ', ''))
         req.UserID = data.uuid
+        console.log("JWT DATA =", data)
         return next()
 
     } catch (e) {

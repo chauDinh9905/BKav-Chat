@@ -9,6 +9,7 @@
 #include "signupmodel.h"
 #include "dashboard.h"
 #include "dashboardmodel.h"
+#include "chat.h"
 
 class MainWindow : public QMainWindow
 {
@@ -23,10 +24,13 @@ private:
     LogIn *loginView;
     SignUp *signUpView;
     Dashboard *dashboardView;
+    Chat *chatView = nullptr;
 
     LogInModel *loginModel;
     SignUpModel *signUpModel;
     DashboardModel *dashboardModel;
-
+    ChatModel *chatModel;
+private:
+    void connectDashboardSignals();
 };
 #endif

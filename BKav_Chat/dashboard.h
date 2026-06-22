@@ -16,7 +16,6 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QSettings>
-#include "appconfig.h"
 
 class DashboardModel;
 
@@ -28,12 +27,13 @@ public:
 
 signals:
     void logOutRequest();
-protected slots:
+    void openChatRequest(const FriendInfo &friendInfo);
+private slots:
     void onAvatarClicked(); // khi có signal người dùng ấn vào avatar của mình
     void onAvartaUploadFinished(); // khi có signal từ server báo rằng ng dùng đã load ảnh đại diện mới lên xong
     void onSearchTextChanged(const QString &text); // khi có signal người dùng điền ký tự vào ô tìm kiếm
     void triggerSearch(); // đếm ngược mỗi khi người dùng dừng điền kí tự trên ô tìm kiếm, khi hàm này kết thúc thì những ký tự sẽ được gửi lên server
-    void onFriendSelected(const QModelIndex &index);// khi có signal người dùng ấn vào một người trong danh sách bạn bè
+    void onFriendSelected(QModelIndex index);// khi có signal người dùng ấn vào một người trong danh sách bạn bè
     void changeAvatar();
     void logOut();
 
@@ -52,7 +52,7 @@ private:
     QNetworkAccessManager *networkManager;
 
     QString *friendChatId;
-    int myId;
+    qint64 myId;
 
     QHBoxLayout *headerLayout;
     QVBoxLayout *mainLayout, *userProfile;
@@ -63,6 +63,9 @@ private:
 public:
     void loadFriendList();
     void loadCurrentUser();
+    void loadAvatarFromBase64(const QString &base64String);
+    FriendInfo friendAt(int row);
+    qint64 getMyId();
 };
 
 

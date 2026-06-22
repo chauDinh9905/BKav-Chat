@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../../loginmodel.h"
+#include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -47,8 +48,8 @@ template <> constexpr inline auto LogInModel::qt_create_metaobjectdata<qt_meta_t
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'authenticationSucceeded'
-        QtMocHelpers::SignalData<void(int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 3 },
+        QtMocHelpers::SignalData<void(qint64)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::LongLong, 3 },
         }}),
         // Signal 'authenticationFailed'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
@@ -75,13 +76,13 @@ void LogInModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<LogInModel *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->authenticationSucceeded((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 0: _t->authenticationSucceeded((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         case 1: _t->authenticationFailed(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (LogInModel::*)(int )>(_a, &LogInModel::authenticationSucceeded, 0))
+        if (QtMocHelpers::indexOfMethod<void (LogInModel::*)(qint64 )>(_a, &LogInModel::authenticationSucceeded, 0))
             return;
         if (QtMocHelpers::indexOfMethod<void (LogInModel::*)()>(_a, &LogInModel::authenticationFailed, 1))
             return;
@@ -120,7 +121,7 @@ int LogInModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void LogInModel::authenticationSucceeded(int _t1)
+void LogInModel::authenticationSucceeded(qint64 _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }

@@ -1,9 +1,8 @@
 #include "dashboard.h"
 #include "dashboardmodel.h"
+#include "SocketManager.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <QSqlQuery>
-#include <QSqlError>
 #include <QDebug>
 #include <QLabel>
 #include <QPushButton>
@@ -11,13 +10,14 @@
 #include <QWidget>
 #include <QFile>
 #include <QTimer>
-#include "databasemanager.h"
+#include "appconfig.h"
 #include <QFileDialog>
 #include <QPixmap>
 #include <QIcon>
-#include <QSqlQuery>
-#include <QSqlError>
+#include <QUrlQuery>
 #include <QMenu>
+#include <QHttpMultiPart>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -111,17 +111,23 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
 
     loadCurrentUser();
     loadFriendList();
+    //SocketManager::instance().connectToServer();
+    connect(&SocketManager::instance(), &SocketManager::connected,
+            this, [this]() {
+                SocketManager::instance().registerUser(myId);
+            });
 }
 
 void Dashboard::loadCurrentUser()
 {
-    QSettings settings("BKAV", "ChatApp");
-
+    //QSettings settings("BKAV", "ChatApp");
+    QString configPath = AppConfig::instance().getConfigFilePath();
+    QSettings settings(configPath, QSettings::IniFormat);
     QString token = settings.value("auth/token").toString();
 
     QString baseUrl = AppConfig::instance().getBaseUrl();
 
-    QNetworkRequest request(QUrl(baseUrl + "/api/user/info"));
+    QNetworkRequest request(QUrl(baseUrl + "/user/info"));
 
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
 
@@ -147,14 +153,13 @@ void Dashboard::loadCurrentUser()
                     return;
                 }
                 QJsonObject data = obj["data"].toObject();
-                myId = data["Id"].toInt();
+                myId = data["Id"].toVariant().toLongLong();
                 displayName->setText(data["FullName"].toString());
+                 SocketManager::instance().registerUser(myId);
                 QString avatar = data["Avatar"] .toString();
                 if(!avatar.isEmpty())
                 {
-                    QPixmap pixmap(avatar);
-                    avatarButton->setIcon(QIcon(pixmap));
-                    avatarButton->setIconSize(avatarButton->size());
+                   loadAvatarFromServer(avatar);
                 }
                 reply->deleteLater();
             });
@@ -162,10 +167,12 @@ void Dashboard::loadCurrentUser()
 
 void Dashboard::loadFriendList()
 {
-    QSettings settings("BKAV", "ChatApp");
+    //QSettings settings("BKAV", "ChatApp");
+    QString configPath = AppConfig::instance().getConfigFilePath();
+    QSettings settings(configPath, QSettings::IniFormat);
     QString token = settings.value("auth/token").toString();
     QString baseUrl = AppConfig::instance().getBaseUrl();
-    QNetworkRequest request(QUrl(baseUrl + "/api/user/list"));
+    QNetworkRequest request(QUrl(baseUrl + "/user/list"));
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
     QNetworkReply *reply = networkManager->get(request);
     connect(reply, &QNetworkReply::finished, this, [this, reply]()
@@ -194,8 +201,12 @@ void Dashboard::loadFriendList()
                 for(const QJsonValue &value : as_const(users))
                 {
                     QJsonObject user = value.toObject();
-                    list.append(FriendInfo(QString::number(user["user_id"].toInt()),user["display_name"].toString(), user["avatar_path"].toString(),false));
+                    qDebug() << "USER =" << user;
+                    qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
+
+                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false));
                 }
+                qDebug() << "LIST SIZE =" << list.size();
                 model->setFriendList(list);
                 reply->deleteLater();
             });
@@ -207,39 +218,75 @@ void Dashboard::onSearchTextChanged(const QString &text)
     searchDebounceTimer->start(300); // Gõ phím liên tục sẽ kéo lại cót 300ms, ngừng gõ mới kích hoạt tìm kiếm
 }
 
-void onFriendSelected(){
-    //Về sau sẽ xử lý đoạn mở khung chat
-    return;
-}
+void Dashboard::onFriendSelected(QModelIndex index)
+{
+    qDebug() << "1";
 
+    FriendInfo selectedFriend = model->getFriendAt(index.row());
+
+    qDebug() << "2";
+
+    qDebug()
+        << selectedFriend.friendId
+        << selectedFriend.displayName
+        << selectedFriend.avatarUrl;
+
+    qDebug() << "3";
+
+    emit openChatRequest(selectedFriend);
+
+    qDebug() << "4";
+}
 void Dashboard::triggerSearch(){
     QString keyword = searchFriend->text().trimmed();
-    QSqlQuery query(DatabaseManager::instance().getDatabase());
-
-    if(keyword.isEmpty()){
-        query.prepare("select u.user_id, u.display_name, u.avatar_path "
-                    "from users u "
-                      "where u.user_id != :my_id");
-    }else{
-        query.prepare("select u.user_id, u.display_name, u.avatar_path "
-                      "from users u "
-                      "where u.user_id != :my_id and u.display_name like :keyword ");
-        query.bindValue(":keyword", "%" + keyword + "%");
+    //QSettings settings("BKAV", "ChatApp");
+    QString configPath = AppConfig::instance().getConfigFilePath();
+    QSettings settings(configPath, QSettings::IniFormat);
+    QString token = settings.value("auth/token").toString();
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+    QUrl url( baseUrl + "/user/search");
+    QUrlQuery query;
+    query.addQueryItem("keyword", keyword);
+    if(keyword.isEmpty())
+    {
+        loadFriendList();
+        return;
     }
-    query.bindValue(":my_id", myId);
-    if(query.exec()){
-        model->clear();
-        while(query.next()){
-            QString friendId = query.value(0).toString();
-            QString friendName = query.value(1).toString();
-            QString friendAvatarPath = query.value(2).toString();
-
-            model->friends.append(FriendInfo(friendId, friendName, friendAvatarPath, false));
-            model->rowMap[friendId] = model->friends.size() - 1;
-        }
-    }else{
-        qDebug() << "Lỗi tìm kiếm bạn bè:" << query.lastError().text();
-    }
+    url.setQuery(query);
+    QNetworkRequest request(url);
+    request.setRawHeader("Authorization", ("Bearer " + token).toUtf8());
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, this, [this, reply]()
+            {
+                QByteArray response = reply->readAll();
+                qDebug() << response;
+                if(reply->error())
+                {
+                    qDebug() << reply->errorString();
+                    reply->deleteLater();
+                    return;
+                }
+                QJsonDocument doc = QJsonDocument::fromJson(response);
+                QJsonObject obj = doc.object();
+                if(obj["status"].toInt() != 1)
+                {
+                    qDebug() << obj["message"].toString();
+                    reply->deleteLater();
+                    return;
+                }
+                QJsonArray users = obj["data"].toArray();
+                QVector<FriendInfo> list;
+                for(const auto &value : as_const(users))
+                {
+                    QJsonObject user = value.toObject();
+                     qDebug() << "SEARCH USER =" << user;
+                    qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
+                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false));
+                }
+                qDebug() << "SEARCH LIST SIZE =" << list.size();
+                model->setFriendList(list);
+                reply->deleteLater();
+            });
 }
 
 void Dashboard::onAvatarClicked()
@@ -274,61 +321,141 @@ void Dashboard::onAvatarClicked()
     chatMenu->exec(QCursor::pos());
 }
 
-void Dashboard::changeAvatar(){
-    QString filePath = QFileDialog::getOpenFileName(
-        this,
-        tr("Chọn ảnh đại diện"),                 // Tiêu đề cửa sổ
-        QDir::homePath(),                      // Thư mục mặc định mở ra (Thư mục Home của Ubuntu)
-        tr("Hình ảnh (*.png *.jpg *.jpeg)")     // Bộ lọc chỉ cho phép chọn các định dạng ảnh này
+void Dashboard::changeAvatar()
+{
+    QString fileName =
+        QFileDialog::getOpenFileName(
+            this,
+            "Select Avatar",
+            QString(),
+            "Images (*.png *.jpg *.jpeg)");
+
+    if(fileName.isEmpty())
+        return;
+
+    QFile *file = new QFile(fileName);
+
+    if(!file->open(QIODevice::ReadOnly))
+    {
+        delete file;
+        return;
+    }
+    //QSettings settings("BKAV", "ChatApp");
+    QString configPath = AppConfig::instance().getConfigFilePath();
+    QSettings settings(configPath, QSettings::IniFormat);
+    QString token = settings.value("auth/token").toString();
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+    QHttpMultiPart *multiPart =
+        new QHttpMultiPart(
+            QHttpMultiPart::FormDataType);
+    QHttpPart avatarPart;
+    avatarPart.setHeader(QNetworkRequest::ContentDispositionHeader,
+        QVariant(
+            QString(
+                "form-data; "
+                "name=\"avatar\"; "
+                "filename=\"%1\"")
+                .arg(
+                    QFileInfo(
+                        fileName)
+                        .fileName()
+                    )
+            )
         );
 
-    // 2. Kiểm tra xem người dùng có thực sự chọn file hay bấm "Cancel"
-    if (!filePath.isEmpty()) {
-        qDebug() << "Đường dẫn ảnh đã chọn:" << filePath;
-
-        // 3. Cập nhật ngay lập tức ảnh vừa chọn lên nút QPushButton làm background cục bộ
-        QPixmap pixmap(filePath);
-        if (!pixmap.isNull()) {
-            // Bo tròn hoặc scale ảnh cho vừa khít với kích thước của nút bấm
-            QIcon buttonIcon(pixmap.scaled(avatarButton->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
-            avatarButton->setIcon(buttonIcon);
-            avatarButton->setIconSize(avatarButton->size()); // Đảm bảo icon chiếm trọn nút
-
-            // Nếu bạn đang dùng StyleSheet để làm background, có thể đổi bằng dòng này thay thế:
-            avatarButton->setStyleSheet(QString("border-image: url(%1); border-radius: 30px; outline: none;").arg(filePath));
-        }
-
-        //  Gửi file ảnh này lên server hoặc xử lý tiếp sang hàm upload
-        // loadAvatarFromServer(filePath);
-        QSqlQuery query;
-        query.prepare("update users "
-                      "set avatar_path = :avatar "
-                      "where user_id = :id");
-        query.bindValue(":avatar", filePath);
-        query.bindValue(":id", myId);
-        query.exec();
-    } else {
-        qDebug() << "Người dùng đã hủy chọn file.";
-    }
-
+    avatarPart.setBodyDevice(file);
+    file->setParent(multiPart);
+    multiPart->append(avatarPart);
+    QNetworkRequest request(QUrl(baseUrl + "/user/update"));
+    request.setRawHeader("Authorization",("Bearer " + token).toUtf8());
+    QNetworkReply *reply = networkManager->post(request,multiPart);
+    multiPart->setParent(reply);
+    connect(reply, &QNetworkReply::finished, this, &Dashboard::onAvartaUploadFinished);
 }
-void Dashboard::onAvartaUploadFinished(){
-
+void Dashboard::onAvartaUploadFinished()
+{
+    QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
+    if(!reply)
+        return;
+    QByteArray response =
+        reply->readAll();
+    if(reply->error())
+    {
+        qDebug() << reply->errorString();
+        reply->deleteLater();
+        return;
+    }
+    QJsonObject obj =
+        QJsonDocument::fromJson(
+            response)
+            .object();
+    if(obj["status"].toInt() == 1)
+    {
+        QMessageBox::information(
+            this,
+            "Success",
+            "Avatar updated");
+        loadCurrentUser();
+    }
+    else
+    {
+        QMessageBox::warning(
+            this,
+            "Error",
+            obj["message"]
+                .toString());
+    }
+    reply->deleteLater();
 }
 
 void Dashboard::logOut(){
-    QSettings settings(
-        "BKAV",
-        "ChatApp");
-
+    //QSettings settings("BKAV","ChatApp");
+    QString configPath = AppConfig::instance().getConfigFilePath();
+    QSettings settings(configPath, QSettings::IniFormat);
     settings.remove("auth");
     emit logOutRequest();
 }
+void Dashboard::loadAvatarFromServer(const QString &avatarPath)
+{
+    QString baseUrl = AppConfig::instance().getBaseUrl();
+    baseUrl.chop(4);
+    QUrl url(baseUrl + avatarPath);
+    qDebug() << baseUrl + avatarPath;
+    QNetworkReply *reply = networkManager->get(QNetworkRequest(url));
+    connect(reply, &QNetworkReply::finished, this, [this, reply]()
+            {
+        if(reply->error() != QNetworkReply::NoError)
+        {
+            qDebug() << "Avatar error:"
+                     << reply->errorString();
 
-void Dashboard::onFriendSelected(const QModelIndex &index){
+            reply->deleteLater();
+            return;
+        }
 
+        QByteArray data = reply->readAll();
+
+        QPixmap pixmap;
+
+        if(!pixmap.loadFromData(data))
+        {
+            qDebug() << "Cannot decode avatar image";
+            reply->deleteLater();
+            return;
+        }
+
+        avatarButton->setIcon(QIcon(pixmap));
+        avatarButton->setIconSize(avatarButton->size());
+
+        qDebug() << "Avatar loaded";
+
+        reply->deleteLater();
+            });
 }
-
+qint64 Dashboard::getMyId()
+{
+    return myId;
+}
 Dashboard::~Dashboard()
 {
 }

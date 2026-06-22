@@ -476,14 +476,24 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h \
@@ -515,8 +525,13 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QFileDialog \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qfiledialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \
@@ -526,5 +541,13 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrlQuery \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurlquery.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpMultiPart \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h

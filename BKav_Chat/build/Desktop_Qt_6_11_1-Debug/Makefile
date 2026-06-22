@@ -276,6 +276,30 @@ BKav_Chat_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.s
 .PHONY : BKav_Chat_autogen/mocs_compilation.cpp.s
 
+SocketManager.o: SocketManager.cpp.o
+.PHONY : SocketManager.o
+
+# target to build an object file
+SocketManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o
+.PHONY : SocketManager.cpp.o
+
+SocketManager.i: SocketManager.cpp.i
+.PHONY : SocketManager.i
+
+# target to preprocess a source file
+SocketManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SocketManager.cpp.i
+.PHONY : SocketManager.cpp.i
+
+SocketManager.s: SocketManager.cpp.s
+.PHONY : SocketManager.s
+
+# target to generate assembly for a file
+SocketManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SocketManager.cpp.s
+.PHONY : SocketManager.cpp.s
+
 build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o: build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o
 .PHONY : build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o
 
@@ -299,6 +323,78 @@ build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.s: build/Deskto
 build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
 .PHONY : build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.s
+
+chat.o: chat.cpp.o
+.PHONY : chat.o
+
+# target to build an object file
+chat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chat.cpp.o
+.PHONY : chat.cpp.o
+
+chat.i: chat.cpp.i
+.PHONY : chat.i
+
+# target to preprocess a source file
+chat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chat.cpp.i
+.PHONY : chat.cpp.i
+
+chat.s: chat.cpp.s
+.PHONY : chat.s
+
+# target to generate assembly for a file
+chat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chat.cpp.s
+.PHONY : chat.cpp.s
+
+chatdelegate.o: chatdelegate.cpp.o
+.PHONY : chatdelegate.o
+
+# target to build an object file
+chatdelegate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
+.PHONY : chatdelegate.cpp.o
+
+chatdelegate.i: chatdelegate.cpp.i
+.PHONY : chatdelegate.i
+
+# target to preprocess a source file
+chatdelegate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.i
+.PHONY : chatdelegate.cpp.i
+
+chatdelegate.s: chatdelegate.cpp.s
+.PHONY : chatdelegate.s
+
+# target to generate assembly for a file
+chatdelegate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.s
+.PHONY : chatdelegate.cpp.s
+
+chatmodel.o: chatmodel.cpp.o
+.PHONY : chatmodel.o
+
+# target to build an object file
+chatmodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o
+.PHONY : chatmodel.cpp.o
+
+chatmodel.i: chatmodel.cpp.i
+.PHONY : chatmodel.i
+
+# target to preprocess a source file
+chatmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatmodel.cpp.i
+.PHONY : chatmodel.cpp.i
+
+chatmodel.s: chatmodel.cpp.s
+.PHONY : chatmodel.s
+
+# target to generate assembly for a file
+chatmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/chatmodel.cpp.s
+.PHONY : chatmodel.cpp.s
 
 dashboard.o: dashboard.cpp.o
 .PHONY : dashboard.o
@@ -562,9 +658,21 @@ help:
 	@echo "... BKav_Chat_autogen/mocs_compilation.o"
 	@echo "... BKav_Chat_autogen/mocs_compilation.i"
 	@echo "... BKav_Chat_autogen/mocs_compilation.s"
+	@echo "... SocketManager.o"
+	@echo "... SocketManager.i"
+	@echo "... SocketManager.s"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.i"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.s"
+	@echo "... chat.o"
+	@echo "... chat.i"
+	@echo "... chat.s"
+	@echo "... chatdelegate.o"
+	@echo "... chatdelegate.i"
+	@echo "... chatdelegate.s"
+	@echo "... chatmodel.o"
+	@echo "... chatmodel.i"
+	@echo "... chatmodel.s"
 	@echo "... dashboard.o"
 	@echo "... dashboard.i"
 	@echo "... dashboard.s"

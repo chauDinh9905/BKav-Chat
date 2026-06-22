@@ -82,6 +82,10 @@ void SignUp::handleRegistrationFailed(const QString &msg)
     error->setText(msg);
 }
 
+void SignUp::handleRegistrationSuccess(){
+    emit signUpSuccess();
+}
+
 void SignUp::taoTaiKhoanClicked(){
     if(!model) return;
     model->displayName = textName->text();
@@ -92,11 +96,13 @@ void SignUp::taoTaiKhoanClicked(){
     connect(model, &SignUpModel::registrationFailed, this,
            &SignUp::handleRegistrationFailed, Qt::UniqueConnection);
 
+    connect(model, &SignUpModel::registrationSuccess, this,
+            &SignUp::handleRegistrationSuccess, Qt::UniqueConnection);
     if(model->checkCredentials()){
         model->registerOnServer();
         //QMessageBox::information(this, "Thông báo", "Đăng ký tài khoản thành công!");
         error->setText("");
-        emit signUpSuccess();
+        //emit signUpSuccess();
     }else{
         //QMessageBox::warning(this, "Lỗi", "Thông tin không hợp lệ hoặc mật khẩu không khớp!");
         error->setText("Tài khoản đã tồn tại hoặc thông tin không hợp lệ");

@@ -1,5 +1,5 @@
 #include "errorconnectionnetwork.h"
-#include "ui_errorconnectionnetwork.h"
+
 
 ErrorConnectionNetwork::ErrorConnectionNetwork(QWidget *parent)
     : QDialog(parent)

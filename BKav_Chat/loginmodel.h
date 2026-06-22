@@ -27,7 +27,7 @@ private:
     QNetworkAccessManager *networkManager;
 
 signals:
-    void authenticationSucceeded(int user_id);
+    void authenticationSucceeded(qint64 user_id);
     void authenticationFailed();
 
 

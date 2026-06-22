@@ -422,10 +422,46 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
@@ -435,7 +471,6 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
@@ -446,34 +481,10 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsockets_global.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qtwebsocketsexports.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
@@ -483,10 +494,20 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h

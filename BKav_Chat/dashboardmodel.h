@@ -22,6 +22,7 @@ struct FriendInfo{
     {
     }
 };
+Q_DECLARE_METATYPE(FriendInfo)
 
 class DashboardModel:public  QAbstractListModel{
     Q_OBJECT

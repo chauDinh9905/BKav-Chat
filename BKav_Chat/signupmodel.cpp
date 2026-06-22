@@ -31,36 +31,58 @@ bool SignUpModel::registerOnServer(){
         return false;
     }
     QString baseUrl = AppConfig::instance().getBaseUrl();
-    QUrl url(baseUrl + "/api/auth/register");
+    QUrl url(baseUrl + "/auth/register");
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     QString hashedPass = hashPassword(password);
+    qDebug() << "🔐 Signup - Plain password:" << password;
+    qDebug() << "🔐 Signup - Hashed password:" << hashedPass;
     QJsonObject json;
     json["display_name"] = displayName.trimmed();
     json["username"] = userName.trimmed();
     json["password"] = hashedPass;
     QJsonDocument doc(json);
 
+    qDebug() << "📤 Sending to:" << url.toString();
+    qDebug() << "📦 Payload:" << doc.toJson();
+
     QNetworkReply *reply = networkManager->post(request, doc.toJson());
     connect(reply, &QNetworkReply::finished, this, [this, reply](){
-        QByteArray response = reply->readAll();
+        int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+        qDebug() << "✅ HTTP Status Code:" << statusCode;
         if(reply->error() != QNetworkReply::NoError){
             emit registrationFailed(reply->errorString());
             reply->deleteLater();
+            return;int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+            qDebug() << "✅ HTTP Status Code:" << statusCode;
+        }
+        QByteArray response = reply->readAll();
+        qDebug() << "📦 Server Response:" << response;
+        QJsonDocument resDoc = QJsonDocument::fromJson(response);
+        if(resDoc.isNull()) {
+            qDebug() << "❌ Invalid JSON response";
+            emit registrationFailed("Server returned invalid response");
+            reply->deleteLater();
             return;
         }
-        QJsonDocument resDoc = QJsonDocument::fromJson(response);
         QJsonObject object = resDoc.object();
+        qDebug() << "📊 Parsed JSON:" << object;
         if(!object["status"].toInt()){
-            emit registrationFailed(object["message"].toString());
+            QString errorMsg = object["message"].toString();
+            qDebug() << "❌ Server error:" << errorMsg;
+            emit registrationFailed(errorMsg);
         }else{
             QJsonObject data = object["data"].toObject();
-            int userId = data["user_id"].toInt();
+            qDebug() << "✅ Registration success! User ID:" << data["user_id"].toInt();
+            //int userId = data["user_id"].toInt();
+            qint64 userId = data["user_id"].toDouble();
+
             QString token = data["token"].toString();
             QString username = data["username"].toString();
             QString displayName = data["display_name"].toString();
-            QSettings settings("BKAV", "ChatApp");
-
+            //QSettings settings("BKAV", "ChatApp");
+            QString configPath = AppConfig::instance().getConfigFilePath();
+            QSettings settings(configPath, QSettings::IniFormat);
             settings.setValue("auth/token", token);
             settings.setValue("auth/user_id", userId);
             settings.setValue("auth/username", username);

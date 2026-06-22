@@ -415,6 +415,37 @@ CMakeFiles/BKav_Chat.dir/signup.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \

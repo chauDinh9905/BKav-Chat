@@ -404,21 +404,4 @@ CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayout.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/include/ui_errorconnectionnetwork.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QApplication \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h

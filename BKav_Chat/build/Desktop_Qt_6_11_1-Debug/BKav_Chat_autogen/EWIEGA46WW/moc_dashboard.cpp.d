@@ -4,9 +4,14 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
@@ -39,6 +44,8 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
@@ -73,6 +80,11 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
@@ -102,6 +114,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
@@ -146,6 +159,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
@@ -187,6 +201,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslError \
@@ -196,6 +211,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \

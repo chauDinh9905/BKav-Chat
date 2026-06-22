@@ -1,15 +1,26 @@
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_signupmodel.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/moc_predefs.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
@@ -23,6 +34,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare_impl.h \
@@ -33,9 +45,12 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
@@ -45,16 +60,21 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qgenericatomic.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
@@ -69,6 +89,11 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -94,6 +119,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
@@ -105,10 +131,31 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -183,10 +230,12 @@
   /usr/include/c++/13/bits/stl_list.h \
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -199,6 +248,7 @@
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/unordered_set.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -207,6 +257,7 @@
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
@@ -244,6 +295,7 @@
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -265,6 +317,7 @@
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
   /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/unordered_set \
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
@@ -274,7 +327,9 @@
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
@@ -296,8 +351,11 @@
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -343,10 +401,12 @@
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
