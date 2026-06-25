@@ -503,6 +503,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h \

@@ -363,4 +363,5 @@ CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug

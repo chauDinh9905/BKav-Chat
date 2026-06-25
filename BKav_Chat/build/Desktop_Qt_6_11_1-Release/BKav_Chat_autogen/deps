@@ -1,5 +1,7 @@
 BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/CMakeLists.txt \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/.qtcreator/cmake-helper/maintenance_tool_provider.cmake \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/.qtcreator/cmake-helper/package-manager.cmake \
@@ -7,12 +9,16 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/BKav_Chat_autogen/moc_predefs.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
-	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.cpp \
-	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.cpp \
@@ -28,6 +34,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
@@ -192,6 +199,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
@@ -205,6 +213,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
@@ -264,6 +273,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -289,6 +299,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -729,93 +740,33 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeSystem.cmake.in \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeUnixFindMake.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindThreads.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/FindVulkan.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/MacroAddFileDependencies.cmake \
-	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Platform/Linux-Determine-CXX.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Platform/Linux-GNU-CXX.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Platform/Linux-GNU.cmake \
 	/home/chau-dinh/Qt/Tools/CMake/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake \

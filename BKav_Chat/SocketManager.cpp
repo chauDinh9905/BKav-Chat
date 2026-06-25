@@ -33,7 +33,7 @@ void SocketManager::connectToServer()
 }
 void SocketManager::onErrorOccurred(QAbstractSocket::SocketError error)
 {
-    qDebug() << "❌ [Socket] WS error:" << error;
+    qDebug() << " [Socket] WS error:" << error;
 }
 void SocketManager::sendMessage(
     qint64 from,

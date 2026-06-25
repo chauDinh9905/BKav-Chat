@@ -43,8 +43,8 @@ qt_add_executable(BKav_Chat
     loginmodel.h
 
     loginmodel.cpp
-    databasemanager.h
-    databasemanager.cpp
+
+
     dashboardmodel.h
     dashboard.h
     dashboardmodel.cpp
@@ -58,6 +58,10 @@ qt_add_executable(BKav_Chat
     SocketManager.cpp
     chatdelegate.h
     chatdelegate.cpp
+    friendproxymodel.h
+    friendproxymodel.cpp
+    avatarcache.h
+    avatarcache.cpp
 
 
 

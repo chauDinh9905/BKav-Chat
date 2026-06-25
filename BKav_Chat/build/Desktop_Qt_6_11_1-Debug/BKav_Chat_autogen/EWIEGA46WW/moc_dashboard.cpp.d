@@ -1,7 +1,9 @@
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/moc_predefs.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
@@ -13,6 +15,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
@@ -28,6 +31,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -120,6 +124,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \

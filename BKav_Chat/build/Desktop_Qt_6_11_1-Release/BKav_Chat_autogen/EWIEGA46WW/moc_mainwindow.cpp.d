@@ -1,5 +1,7 @@
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/BKav_Chat_autogen/moc_predefs.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
@@ -8,6 +10,7 @@
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \

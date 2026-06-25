@@ -469,6 +469,11 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
@@ -550,4 +555,8 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h

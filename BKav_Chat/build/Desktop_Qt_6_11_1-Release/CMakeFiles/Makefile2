@@ -89,12 +89,12 @@ CMakeFiles/BKav_Chat.dir/all: CMakeFiles/BKav_Chat_autogen_timestamp_deps.dir/al
 CMakeFiles/BKav_Chat.dir/all: CMakeFiles/BKav_Chat_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target BKav_Chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target BKav_Chat"
 .PHONY : CMakeFiles/BKav_Chat.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BKav_Chat.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BKav_Chat.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles 0
 .PHONY : CMakeFiles/BKav_Chat.dir/rule
@@ -167,7 +167,7 @@ CMakeFiles/update_translations.dir/clean:
 CMakeFiles/BKav_Chat_lrelease.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat_lrelease.dir/build.make CMakeFiles/BKav_Chat_lrelease.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat_lrelease.dir/build.make CMakeFiles/BKav_Chat_lrelease.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=17 "Built target BKav_Chat_lrelease"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=20 "Built target BKav_Chat_lrelease"
 .PHONY : CMakeFiles/BKav_Chat_lrelease.dir/all
 
 # Build rule for subdir invocation for target.
@@ -245,7 +245,7 @@ CMakeFiles/BKav_Chat_autogen_timestamp_deps.dir/clean:
 CMakeFiles/BKav_Chat_autogen.dir/all: CMakeFiles/BKav_Chat_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat_autogen.dir/build.make CMakeFiles/BKav_Chat_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat_autogen.dir/build.make CMakeFiles/BKav_Chat_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=16 "Built target BKav_Chat_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release/CMakeFiles --progress-num=19 "Built target BKav_Chat_autogen"
 .PHONY : CMakeFiles/BKav_Chat_autogen.dir/all
 
 # Build rule for subdir invocation for target.

@@ -300,6 +300,30 @@ SocketManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SocketManager.cpp.s
 .PHONY : SocketManager.cpp.s
 
+avatarcache.o: avatarcache.cpp.o
+.PHONY : avatarcache.o
+
+# target to build an object file
+avatarcache.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/avatarcache.cpp.o
+.PHONY : avatarcache.cpp.o
+
+avatarcache.i: avatarcache.cpp.i
+.PHONY : avatarcache.i
+
+# target to preprocess a source file
+avatarcache.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/avatarcache.cpp.i
+.PHONY : avatarcache.cpp.i
+
+avatarcache.s: avatarcache.cpp.s
+.PHONY : avatarcache.s
+
+# target to generate assembly for a file
+avatarcache.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/avatarcache.cpp.s
+.PHONY : avatarcache.cpp.s
+
 build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o: build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o
 .PHONY : build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o
 
@@ -444,30 +468,6 @@ dashboardmodel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.s
 .PHONY : dashboardmodel.cpp.s
 
-databasemanager.o: databasemanager.cpp.o
-.PHONY : databasemanager.o
-
-# target to build an object file
-databasemanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o
-.PHONY : databasemanager.cpp.o
-
-databasemanager.i: databasemanager.cpp.i
-.PHONY : databasemanager.i
-
-# target to preprocess a source file
-databasemanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.i
-.PHONY : databasemanager.cpp.i
-
-databasemanager.s: databasemanager.cpp.s
-.PHONY : databasemanager.s
-
-# target to generate assembly for a file
-databasemanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databasemanager.cpp.s
-.PHONY : databasemanager.cpp.s
-
 errorconnectionnetwork.o: errorconnectionnetwork.cpp.o
 .PHONY : errorconnectionnetwork.o
 
@@ -491,6 +491,30 @@ errorconnectionnetwork.s: errorconnectionnetwork.cpp.s
 errorconnectionnetwork.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.s
 .PHONY : errorconnectionnetwork.cpp.s
+
+friendproxymodel.o: friendproxymodel.cpp.o
+.PHONY : friendproxymodel.o
+
+# target to build an object file
+friendproxymodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o
+.PHONY : friendproxymodel.cpp.o
+
+friendproxymodel.i: friendproxymodel.cpp.i
+.PHONY : friendproxymodel.i
+
+# target to preprocess a source file
+friendproxymodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.i
+.PHONY : friendproxymodel.cpp.i
+
+friendproxymodel.s: friendproxymodel.cpp.s
+.PHONY : friendproxymodel.s
+
+# target to generate assembly for a file
+friendproxymodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.s
+.PHONY : friendproxymodel.cpp.s
 
 login.o: login.cpp.o
 .PHONY : login.o
@@ -661,6 +685,9 @@ help:
 	@echo "... SocketManager.o"
 	@echo "... SocketManager.i"
 	@echo "... SocketManager.s"
+	@echo "... avatarcache.o"
+	@echo "... avatarcache.i"
+	@echo "... avatarcache.s"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.o"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.i"
 	@echo "... build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.s"
@@ -679,12 +706,12 @@ help:
 	@echo "... dashboardmodel.o"
 	@echo "... dashboardmodel.i"
 	@echo "... dashboardmodel.s"
-	@echo "... databasemanager.o"
-	@echo "... databasemanager.i"
-	@echo "... databasemanager.s"
 	@echo "... errorconnectionnetwork.o"
 	@echo "... errorconnectionnetwork.i"
 	@echo "... errorconnectionnetwork.s"
+	@echo "... friendproxymodel.o"
+	@echo "... friendproxymodel.i"
+	@echo "... friendproxymodel.s"
 	@echo "... login.o"
 	@echo "... login.i"
 	@echo "... login.s"

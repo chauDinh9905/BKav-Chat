@@ -393,26 +393,21 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmochelpers.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmocconstants.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20algorithm.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chat.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_avatarcache.cpp \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../avatarcache.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpoint.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
@@ -423,6 +418,27 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chat.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
@@ -470,17 +486,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chatmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
@@ -497,7 +502,10 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../dashboard.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../dashboardmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../friendproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
@@ -517,6 +525,8 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../errorconnectionnetwork.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QDialog \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../friendproxymodel.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_login.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../login.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QCheckBox \

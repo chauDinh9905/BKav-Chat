@@ -847,6 +847,12 @@
 			null
 		],
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.h",
+			"MU",
+			"EWIEGA46WW/moc_avatarcache.cpp",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h",
 			"MU",
 			"EWIEGA46WW/moc_chat.cpp",
@@ -877,15 +883,15 @@
 			null
 		],
 		[
-			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.h",
-			"MU",
-			"EWIEGA46WW/moc_databasemanager.cpp",
-			null
-		],
-		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h",
 			"MU",
 			"EWIEGA46WW/moc_errorconnectionnetwork.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h",
+			"MU",
+			"EWIEGA46WW/moc_friendproxymodel.cpp",
 			null
 		],
 		[
@@ -998,6 +1004,11 @@
 			null
 		],
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp",
 			"MU",
 			null
@@ -1023,12 +1034,12 @@
 			null
 		],
 		[
-			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.cpp",
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp",
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp",
 			"MU",
 			null
 		],

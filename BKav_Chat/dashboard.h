@@ -10,6 +10,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include "dashboardmodel.h"
+#include "friendproxymodel.h"
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QJsonDocument>
@@ -42,6 +43,7 @@ private:
 
     QPushButton *avatarButton;
     QLineEdit *searchFriend;
+    FriendProxyModel *proxyModel;
     QListView *friendListView;
     QLabel *title;
     QLabel *titleList;

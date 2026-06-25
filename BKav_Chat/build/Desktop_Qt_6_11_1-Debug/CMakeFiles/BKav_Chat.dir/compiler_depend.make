@@ -3,24 +3,28 @@
 
 CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: BKav_Chat_autogen/mocs_compilation.cpp \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
   BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp \
+  BKav_Chat_autogen/EWIEGA46WW/moc_avatarcache.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_chatmodel.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp \
+  BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_login.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_loginmodel.cpp \
   BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp \
@@ -38,8 +42,10 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: BKav_Chat_aut
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
@@ -56,6 +62,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: BKav_Chat_aut
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -148,6 +155,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: BKav_Chat_aut
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -197,6 +205,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: BKav_Chat_aut
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
@@ -773,6 +782,486 @@ CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsockets_global.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
+  /usr/include/c++/13/backward/auto_ptr.h \
+  /usr/include/c++/13/backward/binders.h \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
+  /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
+  /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/13/bits/basic_string.h \
+  /usr/include/c++/13/bits/basic_string.tcc \
+  /usr/include/c++/13/bits/char_traits.h \
+  /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
+  /usr/include/c++/13/bits/concept_check.h \
+  /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/cxxabi_forced.h \
+  /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/list.tcc \
+  /usr/include/c++/13/bits/locale_classes.h \
+  /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/localefwd.h \
+  /usr/include/c++/13/bits/memory_resource.h \
+  /usr/include/c++/13/bits/memoryfwd.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/nested_exception.h \
+  /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/stl_algo.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_list.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
+  /usr/include/c++/13/bits/stream_iterator.h \
+  /usr/include/c++/13/bits/streambuf.tcc \
+  /usr/include/c++/13/bits/streambuf_iterator.h \
+  /usr/include/c++/13/bits/string_view.tcc \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/unordered_set.h \
+  /usr/include/c++/13/bits/uses_allocator.h \
+  /usr/include/c++/13/bits/uses_allocator_args.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/cassert \
+  /usr/include/c++/13/cctype \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
+  /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
+  /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
+  /usr/include/c++/13/cstdio \
+  /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
+  /usr/include/c++/13/ext/alloc_traits.h \
+  /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/string_conversions.h \
+  /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
+  /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iterator \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/list \
+  /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
+  /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
+  /usr/include/c++/13/optional \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
+  /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/streambuf \
+  /usr/include/c++/13/string \
+  /usr/include/c++/13/string_view \
+  /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
+  /usr/include/c++/13/tuple \
+  /usr/include/c++/13/type_traits \
+  /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/unordered_set \
+  /usr/include/c++/13/utility \
+  /usr/include/c++/13/variant \
+  /usr/include/c++/13/vector \
+  /usr/include/c++/13/version \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/limits.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
+
+CMakeFiles/BKav_Chat.dir/avatarcache.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.cpp \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qassert.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompilerdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconstructormacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qgenericatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qoverload.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpoint.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringtokenizer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qswap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsysinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfiginclude.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfigmacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcore-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreglobal.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtresource.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttranslation.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttypetraits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversion.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -2552,9 +3041,11 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
@@ -2568,6 +3059,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
@@ -2586,6 +3078,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -2690,6 +3183,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -3163,20 +3657,33 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
@@ -3193,413 +3700,7 @@ CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o: /home/chau-dinh/Documents/intern/
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompilerdetection.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconstructormacros.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionpointer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qgenericatomic.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qoverload.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringfwd.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringtokenizer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qswap.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsysinfo.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfiginclude.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfigmacros.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcore-config.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtresource.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttranslation.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttypetraits.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversion.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/assert.h \
-  /usr/include/c++/13/algorithm \
-  /usr/include/c++/13/array \
-  /usr/include/c++/13/atomic \
-  /usr/include/c++/13/backward/auto_ptr.h \
-  /usr/include/c++/13/backward/binders.h \
-  /usr/include/c++/13/bit \
-  /usr/include/c++/13/bits/algorithmfwd.h \
-  /usr/include/c++/13/bits/align.h \
-  /usr/include/c++/13/bits/alloc_traits.h \
-  /usr/include/c++/13/bits/allocated_ptr.h \
-  /usr/include/c++/13/bits/allocator.h \
-  /usr/include/c++/13/bits/atomic_base.h \
-  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/13/bits/basic_string.h \
-  /usr/include/c++/13/bits/basic_string.tcc \
-  /usr/include/c++/13/bits/char_traits.h \
-  /usr/include/c++/13/bits/charconv.h \
-  /usr/include/c++/13/bits/chrono.h \
-  /usr/include/c++/13/bits/concept_check.h \
-  /usr/include/c++/13/bits/cpp_type_traits.h \
-  /usr/include/c++/13/bits/cxxabi_forced.h \
-  /usr/include/c++/13/bits/cxxabi_init_exception.h \
-  /usr/include/c++/13/bits/enable_special_members.h \
-  /usr/include/c++/13/bits/erase_if.h \
-  /usr/include/c++/13/bits/exception.h \
-  /usr/include/c++/13/bits/exception_defines.h \
-  /usr/include/c++/13/bits/exception_ptr.h \
-  /usr/include/c++/13/bits/functexcept.h \
-  /usr/include/c++/13/bits/functional_hash.h \
-  /usr/include/c++/13/bits/hash_bytes.h \
-  /usr/include/c++/13/bits/hashtable.h \
-  /usr/include/c++/13/bits/hashtable_policy.h \
-  /usr/include/c++/13/bits/invoke.h \
-  /usr/include/c++/13/bits/ios_base.h \
-  /usr/include/c++/13/bits/list.tcc \
-  /usr/include/c++/13/bits/locale_classes.h \
-  /usr/include/c++/13/bits/locale_classes.tcc \
-  /usr/include/c++/13/bits/localefwd.h \
-  /usr/include/c++/13/bits/memory_resource.h \
-  /usr/include/c++/13/bits/memoryfwd.h \
-  /usr/include/c++/13/bits/move.h \
-  /usr/include/c++/13/bits/nested_exception.h \
-  /usr/include/c++/13/bits/new_allocator.h \
-  /usr/include/c++/13/bits/node_handle.h \
-  /usr/include/c++/13/bits/ostream_insert.h \
-  /usr/include/c++/13/bits/parse_numbers.h \
-  /usr/include/c++/13/bits/postypes.h \
-  /usr/include/c++/13/bits/predefined_ops.h \
-  /usr/include/c++/13/bits/ptr_traits.h \
-  /usr/include/c++/13/bits/range_access.h \
-  /usr/include/c++/13/bits/refwrap.h \
-  /usr/include/c++/13/bits/requires_hosted.h \
-  /usr/include/c++/13/bits/shared_ptr.h \
-  /usr/include/c++/13/bits/shared_ptr_atomic.h \
-  /usr/include/c++/13/bits/shared_ptr_base.h \
-  /usr/include/c++/13/bits/specfun.h \
-  /usr/include/c++/13/bits/std_abs.h \
-  /usr/include/c++/13/bits/std_function.h \
-  /usr/include/c++/13/bits/stl_algo.h \
-  /usr/include/c++/13/bits/stl_algobase.h \
-  /usr/include/c++/13/bits/stl_bvector.h \
-  /usr/include/c++/13/bits/stl_construct.h \
-  /usr/include/c++/13/bits/stl_function.h \
-  /usr/include/c++/13/bits/stl_heap.h \
-  /usr/include/c++/13/bits/stl_iterator.h \
-  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/13/bits/stl_iterator_base_types.h \
-  /usr/include/c++/13/bits/stl_list.h \
-  /usr/include/c++/13/bits/stl_map.h \
-  /usr/include/c++/13/bits/stl_multimap.h \
-  /usr/include/c++/13/bits/stl_multiset.h \
-  /usr/include/c++/13/bits/stl_numeric.h \
-  /usr/include/c++/13/bits/stl_pair.h \
-  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/13/bits/stl_relops.h \
-  /usr/include/c++/13/bits/stl_set.h \
-  /usr/include/c++/13/bits/stl_tempbuf.h \
-  /usr/include/c++/13/bits/stl_tree.h \
-  /usr/include/c++/13/bits/stl_uninitialized.h \
-  /usr/include/c++/13/bits/stl_vector.h \
-  /usr/include/c++/13/bits/stream_iterator.h \
-  /usr/include/c++/13/bits/streambuf.tcc \
-  /usr/include/c++/13/bits/streambuf_iterator.h \
-  /usr/include/c++/13/bits/string_view.tcc \
-  /usr/include/c++/13/bits/stringfwd.h \
-  /usr/include/c++/13/bits/uniform_int_dist.h \
-  /usr/include/c++/13/bits/unique_ptr.h \
-  /usr/include/c++/13/bits/unordered_map.h \
-  /usr/include/c++/13/bits/unordered_set.h \
-  /usr/include/c++/13/bits/uses_allocator.h \
-  /usr/include/c++/13/bits/uses_allocator_args.h \
-  /usr/include/c++/13/bits/utility.h \
-  /usr/include/c++/13/bits/vector.tcc \
-  /usr/include/c++/13/cctype \
-  /usr/include/c++/13/cerrno \
-  /usr/include/c++/13/chrono \
-  /usr/include/c++/13/climits \
-  /usr/include/c++/13/clocale \
-  /usr/include/c++/13/cmath \
-  /usr/include/c++/13/compare \
-  /usr/include/c++/13/cstddef \
-  /usr/include/c++/13/cstdint \
-  /usr/include/c++/13/cstdio \
-  /usr/include/c++/13/cstdlib \
-  /usr/include/c++/13/cstring \
-  /usr/include/c++/13/ctime \
-  /usr/include/c++/13/cwchar \
-  /usr/include/c++/13/debug/assertions.h \
-  /usr/include/c++/13/debug/debug.h \
-  /usr/include/c++/13/exception \
-  /usr/include/c++/13/ext/aligned_buffer.h \
-  /usr/include/c++/13/ext/alloc_traits.h \
-  /usr/include/c++/13/ext/atomicity.h \
-  /usr/include/c++/13/ext/concurrence.h \
-  /usr/include/c++/13/ext/numeric_traits.h \
-  /usr/include/c++/13/ext/string_conversions.h \
-  /usr/include/c++/13/ext/type_traits.h \
-  /usr/include/c++/13/functional \
-  /usr/include/c++/13/initializer_list \
-  /usr/include/c++/13/iosfwd \
-  /usr/include/c++/13/iterator \
-  /usr/include/c++/13/limits \
-  /usr/include/c++/13/list \
-  /usr/include/c++/13/map \
-  /usr/include/c++/13/memory \
-  /usr/include/c++/13/new \
-  /usr/include/c++/13/numeric \
-  /usr/include/c++/13/optional \
-  /usr/include/c++/13/pstl/execution_defs.h \
-  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/13/pstl/glue_memory_defs.h \
-  /usr/include/c++/13/pstl/glue_numeric_defs.h \
-  /usr/include/c++/13/pstl/pstl_config.h \
-  /usr/include/c++/13/ratio \
-  /usr/include/c++/13/set \
-  /usr/include/c++/13/stdexcept \
-  /usr/include/c++/13/stdlib.h \
-  /usr/include/c++/13/streambuf \
-  /usr/include/c++/13/string \
-  /usr/include/c++/13/string_view \
-  /usr/include/c++/13/system_error \
-  /usr/include/c++/13/tr1/bessel_function.tcc \
-  /usr/include/c++/13/tr1/beta_function.tcc \
-  /usr/include/c++/13/tr1/ell_integral.tcc \
-  /usr/include/c++/13/tr1/exp_integral.tcc \
-  /usr/include/c++/13/tr1/gamma.tcc \
-  /usr/include/c++/13/tr1/hypergeometric.tcc \
-  /usr/include/c++/13/tr1/legendre_function.tcc \
-  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/13/tr1/poly_hermite.tcc \
-  /usr/include/c++/13/tr1/poly_laguerre.tcc \
-  /usr/include/c++/13/tr1/riemann_zeta.tcc \
-  /usr/include/c++/13/tr1/special_function_util.h \
-  /usr/include/c++/13/tuple \
-  /usr/include/c++/13/type_traits \
-  /usr/include/c++/13/typeinfo \
-  /usr/include/c++/13/unordered_map \
-  /usr/include/c++/13/unordered_set \
-  /usr/include/c++/13/utility \
-  /usr/include/c++/13/variant \
-  /usr/include/c++/13/vector \
-  /usr/include/c++/13/version \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/limits.h \
-  /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
-  /usr/include/locale.h \
-  /usr/include/math.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdint.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/time.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
-
-CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.cpp \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qassert.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
@@ -3612,8 +3713,10 @@ CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o: /home/chau-dinh/Documents/intern
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
@@ -3627,12 +3730,14 @@ CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o: /home/chau-dinh/Documents/intern
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
@@ -3699,53 +3804,61 @@ CMakeFiles/BKav_Chat.dir/databasemanager.cpp.o: /home/chau-dinh/Documents/intern
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontmetrics.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontvariableaxis.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -4305,6 +4418,425 @@ CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o: /home/chau-dinh/Documents
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cassert \
+  /usr/include/c++/13/cctype \
+  /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
+  /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
+  /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
+  /usr/include/c++/13/cstdio \
+  /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
+  /usr/include/c++/13/cwchar \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
+  /usr/include/c++/13/ext/alloc_traits.h \
+  /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/string_conversions.h \
+  /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
+  /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iterator \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/list \
+  /usr/include/c++/13/map \
+  /usr/include/c++/13/memory \
+  /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
+  /usr/include/c++/13/optional \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
+  /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/streambuf \
+  /usr/include/c++/13/string \
+  /usr/include/c++/13/string_view \
+  /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
+  /usr/include/c++/13/tuple \
+  /usr/include/c++/13/type_traits \
+  /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/unordered_set \
+  /usr/include/c++/13/utility \
+  /usr/include/c++/13/variant \
+  /usr/include/c++/13/vector \
+  /usr/include/c++/13/version \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/limits.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
+
+CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qassert.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompilerdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconstructormacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qgenericatomic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qoverload.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringtokenizer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qswap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsysinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfiginclude.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfigmacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcore-config.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreexports.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcoreglobal.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtresource.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttranslation.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttypetraits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversion.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/assert.h \
+  /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/atomic \
+  /usr/include/c++/13/backward/auto_ptr.h \
+  /usr/include/c++/13/backward/binders.h \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
+  /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
+  /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/13/bits/basic_string.h \
+  /usr/include/c++/13/bits/basic_string.tcc \
+  /usr/include/c++/13/bits/char_traits.h \
+  /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
+  /usr/include/c++/13/bits/concept_check.h \
+  /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/cxxabi_forced.h \
+  /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/list.tcc \
+  /usr/include/c++/13/bits/locale_classes.h \
+  /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/localefwd.h \
+  /usr/include/c++/13/bits/memory_resource.h \
+  /usr/include/c++/13/bits/memoryfwd.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/nested_exception.h \
+  /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
+  /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
+  /usr/include/c++/13/bits/postypes.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
+  /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/stl_algo.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_list.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
+  /usr/include/c++/13/bits/stream_iterator.h \
+  /usr/include/c++/13/bits/streambuf.tcc \
+  /usr/include/c++/13/bits/streambuf_iterator.h \
+  /usr/include/c++/13/bits/string_view.tcc \
+  /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/unordered_set.h \
+  /usr/include/c++/13/bits/uses_allocator.h \
+  /usr/include/c++/13/bits/uses_allocator_args.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
@@ -5513,6 +6045,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
@@ -5534,6 +6067,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTranslator \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
@@ -5551,6 +6085,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -5650,6 +6185,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -6094,6 +6630,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
@@ -6113,6 +6650,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
@@ -6128,6 +6666,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -6220,6 +6759,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -7640,16 +8180,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.h:
-
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h:
@@ -7657,8 +8187,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpMultiPart:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrlQuery:
 
@@ -7745,8 +8273,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databasemanager.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -7835,8 +8361,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 /usr/include/sched.h:
 
 /usr/include/pthread.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h:
 
 /usr/include/locale.h:
 
@@ -7960,8 +8484,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
-/usr/include/c++/13/bits/stringfwd.h:
-
 /usr/include/c++/13/bits/string_view.tcc:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
@@ -8062,25 +8584,25 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h:
+/usr/include/c++/13/version:
 
-/usr/include/c++/13/locale:
+/usr/include/c++/13/bits/functional_hash.h:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
+/usr/include/c++/13/bits/functexcept.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h:
+/usr/include/c++/13/bits/exception_defines.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h:
+/usr/include/c++/13/type_traits:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h:
+/usr/include/c++/13/bits/predefined_ops.h:
 
-/usr/include/linux/errno.h:
+/usr/include/c++/13/bits/exception.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h:
+/usr/include/c++/13/bits/erase_if.h:
 
-/usr/include/c++/13/tr1/beta_function.tcc:
+/usr/include/c++/13/bits/locale_classes.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h:
+/usr/include/c++/13/bits/cxxabi_forced.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
@@ -8108,8 +8630,6 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 BKav_Chat_autogen/mocs_compilation.cpp:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h:
@@ -8124,11 +8644,13 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversion.h:
 
-BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
-
 /usr/include/c++/13/bits/sstream.tcc:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel:
 
 /usr/include/c++/13/filesystem:
 
@@ -8138,23 +8660,31 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h:
 
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp:
+
+/usr/include/c++/13/iterator:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h:
-
-/usr/include/c++/13/iterator:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h:
 
@@ -8173,10 +8703,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 /usr/include/c++/13/ext/atomicity.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qcheckbox.h:
 
 /usr/include/time.h:
 
@@ -8276,19 +8802,23 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompilerdetection.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h:
+/usr/include/c++/13/bits/parse_numbers.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h:
 
-/usr/include/c++/13/tr1/exp_integral.tcc:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h:
 
-/usr/include/c++/13/bits/allocated_ptr.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -8318,19 +8848,23 @@ BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h:
 
+BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qcheckbox.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h:
+
+/usr/include/asm-generic/errno.h:
+
 /usr/include/c++/13/pstl/execution_defs.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h:
 
 /usr/include/c++/13/bits/move.h:
 
@@ -8344,47 +8878,15 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h:
 
-/usr/include/c++/13/bits/parse_numbers.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h:
-
-BKav_Chat_autogen/EWIEGA46WW/moc_login.cpp:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfileinfo.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h:
-
-/usr/include/c++/13/bits/functexcept.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20algorithm.h:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsysinfo.h:
 
-/usr/include/c++/13/pstl/glue_memory_defs.h:
-
-BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h:
-
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h:
+
+BKav_Chat_autogen/EWIEGA46WW/moc_avatarcache.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h:
 
@@ -8392,9 +8894,19 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags:
 
-/usr/include/c++/13/tr1/special_function_util.h:
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector:
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h:
+
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h:
 
@@ -8406,17 +8918,11 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash:
 
-/usr/include/c++/13/ratio:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h:
+BKav_Chat_autogen/EWIEGA46WW/moc_login.cpp:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QDialog:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h:
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h:
 
@@ -8424,9 +8930,79 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfileinfo.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h:
+
+/usr/include/linux/errno.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h:
+
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer:
+
+BKav_Chat_autogen/EWIEGA46WW/moc_loginmodel.cpp:
+
 /usr/include/c++/13/bits/range_access.h:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel:
+
+/usr/include/c++/13/ratio:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QDialog:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h:
+
+BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h:
+
+/usr/include/c++/13/bits/concept_check.h:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration:
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
@@ -8434,19 +9010,21 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType:
-
-/usr/include/c++/13/atomic:
-
 /usr/include/c++/13/bits/streambuf.tcc:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime:
 
-BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp:
+/usr/include/c++/13/atomic:
 
-BKav_Chat_autogen/EWIEGA46WW/moc_loginmodel.cpp:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h:
+
+/usr/include/c++/13/tr1/exp_integral.tcc:
+
+/usr/include/c++/13/bits/allocated_ptr.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject:
 
@@ -8461,18 +9039,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_loginmodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h:
-
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h:
 
@@ -8496,6 +9062,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h:
+
 /usr/include/c++/13/bits/stl_bvector.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h:
@@ -8514,25 +9082,15 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h:
-
-/usr/include/asm-generic/errno.h:
-
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h:
 
 /usr/include/c++/13/bits/atomic_base.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h:
+/usr/include/c++/13/bits/charconv.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication:
 
@@ -8548,25 +9106,9 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h:
-
-/usr/include/c++/13/bits/concept_check.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h:
 
@@ -8602,6 +9144,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qassert.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h:
@@ -8610,7 +9154,29 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h:
+
+/usr/include/c++/13/locale:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20algorithm.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtcore-config.h:
 
@@ -8638,29 +9204,21 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h:
 
-/usr/include/c++/13/bits/locale_classes.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h:
 
 /usr/include/c++/13/cctype:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h:
-
-/usr/include/c++/13/bits/exception_defines.h:
-
-/usr/include/c++/13/version:
-
-/usr/include/c++/13/bits/functional_hash.h:
 
 /usr/include/c++/13/bits/shared_ptr_base.h:
 
@@ -8716,6 +9274,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /usr/include/wctype.h:
 
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/avatarcache.cpp:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout:
@@ -8726,11 +9286,7 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h:
-
-/usr/include/c++/13/bits/charconv.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h:
 
@@ -8778,10 +9334,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h:
@@ -8804,13 +9356,9 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h:
 
+BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h:
-
-/usr/include/c++/13/type_traits:
-
-/usr/include/c++/13/bits/predefined_ops.h:
-
-/usr/include/c++/13/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -8860,8 +9408,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
@@ -8879,6 +9425,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h:
 
@@ -8944,6 +9492,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h:
 
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/13/chrono:
@@ -8987,9 +9539,3 @@ BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp:
 /usr/include/c++/13/bits/algorithmfwd.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h:
-
-/usr/include/c++/13/bits/enable_special_members.h:
-
-/usr/include/c++/13/bits/erase_if.h:

@@ -494,6 +494,11 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
@@ -509,5 +514,4 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h

@@ -18,6 +18,8 @@
 #include <QMenu>
 #include <QHttpMultiPart>
 #include <QMessageBox>
+#include <QPainterPath>
+#include <QPainter>
 
 using namespace std;
 
@@ -76,10 +78,12 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     friendListView->setMaximumWidth(150);
     friendListView->setMaximumHeight(100);
 
+    proxyModel = new FriendProxyModel(this);
     this->model = model;
+    proxyModel->setSourceModel(model);
     searchDebounceTimer = new QTimer(this);
 
-    friendListView->setModel(model);
+    friendListView->setModel(proxyModel);
     searchDebounceTimer->setSingleShot(true);
 
     headerLayout = new QHBoxLayout();
@@ -155,7 +159,7 @@ void Dashboard::loadCurrentUser()
                 QJsonObject data = obj["data"].toObject();
                 myId = data["Id"].toVariant().toLongLong();
                 displayName->setText(data["FullName"].toString());
-                 SocketManager::instance().registerUser(myId);
+                // SocketManager::instance().registerUser(myId);
                 QString avatar = data["Avatar"] .toString();
                 if(!avatar.isEmpty())
                 {
@@ -204,10 +208,42 @@ void Dashboard::loadFriendList()
                     qDebug() << "USER =" << user;
                     qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
 
-                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false));
+                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false, 0, QDateTime::currentDateTime()));
                 }
                 qDebug() << "LIST SIZE =" << list.size();
                 model->setFriendList(list);
+                for (int i = 0; i < list.size(); i++) {
+                    const QString &avatarPath = list[i].avatarUrl;
+                    if (avatarPath.isEmpty()){
+                        continue;
+                    }
+
+                    QString baseUrl = AppConfig::instance().getBaseUrl();
+                    baseUrl.chop(4);
+                    QString fullUrl = baseUrl + avatarPath;
+                    qDebug() << "Fetching avatar:" << fullUrl;
+                    QNetworkReply *reply = networkManager->get(
+                        QNetworkRequest(QUrl(fullUrl)));
+                    if(!reply){
+                        qDebug() << "Đường dẫn ảnh không hợp lệ";
+                    }
+
+                    connect(reply, &QNetworkReply::finished, this, [this, reply, i]() {
+                        qDebug() << "Reply finished, error:" << reply->error();
+                        qDebug() << "HTTP status:" << reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+                        qDebug() << "Data size:" << reply->bytesAvailable();
+                        if (reply->error() == QNetworkReply::NoError) {
+                            QPixmap px;
+                            if (px.loadFromData(reply->readAll())){
+                                qDebug() << "Pixmap loaded, calling setAvatar at row" << i;
+                                model->setAvatar(i, px);
+                            }else{
+                                 qDebug() << "Failed to decode pixmap";
+                            }
+                        }
+                        reply->deleteLater();
+                    });
+                }
                 reply->deleteLater();
             });
 }
@@ -218,11 +254,11 @@ void Dashboard::onSearchTextChanged(const QString &text)
     searchDebounceTimer->start(300); // Gõ phím liên tục sẽ kéo lại cót 300ms, ngừng gõ mới kích hoạt tìm kiếm
 }
 
-void Dashboard::onFriendSelected(QModelIndex index)
+void Dashboard::onFriendSelected(QModelIndex proxyIndex)
 {
     qDebug() << "1";
-
-    FriendInfo selectedFriend = model->getFriendAt(index.row());
+    QModelIndex sourceIndex = proxyModel->mapToSource(proxyIndex);
+    FriendInfo selectedFriend = model->getFriendAt(sourceIndex.row());
 
     qDebug() << "2";
 
@@ -281,7 +317,7 @@ void Dashboard::triggerSearch(){
                     QJsonObject user = value.toObject();
                      qDebug() << "SEARCH USER =" << user;
                     qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
-                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false));
+                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false, 0, QDateTime::currentDateTime()));
                 }
                 qDebug() << "SEARCH LIST SIZE =" << list.size();
                 model->setFriendList(list);
@@ -444,7 +480,17 @@ void Dashboard::loadAvatarFromServer(const QString &avatarPath)
             return;
         }
 
-        avatarButton->setIcon(QIcon(pixmap));
+        QPixmap rounded(60, 60);
+        rounded.fill(Qt::transparent);
+        QPainter painter(&rounded);
+        painter.setRenderHint(QPainter::Antialiasing);
+        QPainterPath path;
+        path.addEllipse(0, 0, 60, 60);
+        painter.setClipPath(path);
+        painter.drawPixmap(0, 0, 60, 60, pixmap.scaled(60, 60,
+                                                       Qt::KeepAspectRatioByExpanding,
+                                                       Qt::SmoothTransformation));
+        avatarButton->setIcon(QIcon(rounded));
         avatarButton->setIconSize(avatarButton->size());
 
         qDebug() << "Avatar loaded";
@@ -452,11 +498,13 @@ void Dashboard::loadAvatarFromServer(const QString &avatarPath)
         reply->deleteLater();
             });
 }
+
 qint64 Dashboard::getMyId()
 {
     return myId;
 }
 Dashboard::~Dashboard()
 {
+    disconnect(&SocketManager::instance(), nullptr, this, nullptr);
 }
 

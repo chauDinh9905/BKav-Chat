@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-45e7cb6390e740c517b3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "BKav_Chat",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BKav_Chat-Release-8aad20219df821656fb7.json",
+					"name" : "BKav_Chat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BKav_Chat_autogen-Release-20e51fa471d918acae89.json",
+					"name" : "BKav_Chat_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BKav_Chat_autogen_timestamp_deps-Release-5d12361092411526216d.json",
+					"name" : "BKav_Chat_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BKav_Chat_lrelease::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BKav_Chat_lrelease-Release-ae16baca44579a363fe8.json",
+					"name" : "BKav_Chat_lrelease",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BKav_Chat_lupdate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BKav_Chat_lupdate-Release-aab0d7c6f20ebae47c47.json",
+					"name" : "BKav_Chat_lupdate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "release_translations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-release_translations-Release-9e253a3a7a3af79d462e.json",
+					"name" : "release_translations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update_translations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update_translations-Release-e371a63170733d70695f.json",
+					"name" : "update_translations",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Release",
+		"source" : "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
