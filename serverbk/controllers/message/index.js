@@ -18,7 +18,11 @@ module.exports = () => {
     router.get('/list-friend', async (req, res) => {
         try {
             const UserID = req.UserID
+            console.log('list-friend UserID:', UserID)
             let user = await models.Users.findOne({ _id: new ObjectId(UserID) }).exec()
+            console.log('user found:', user)  
+            console.log('error message sẽ là gì:',
+            user == null ? 'User not found' : 'OK') 
             if (user == null) {
                 return res.status(400).json({ status: 0, data: null, message: 'User not found' })
             }
@@ -34,6 +38,11 @@ module.exports = () => {
                     }
                 ];
                 const response = await models.Message.find({ $and: queryConditions }).sort({ CreatedAt: -1 }).limit(1);
+                const unreadCount = await models.Message.countDocuments({
+                UserID: value.user_id,
+                FriendID: user.user_id,
+                isSend: 0
+                });
                 listCustomFriend.push({
                     Content: response.length > 0 ? response[0]?.Content : '',
                     Files: response.length > 0 ? response[0]?.Files : null,
@@ -43,13 +52,24 @@ module.exports = () => {
                     FullName: value.display_name,
                     Username: value.username,
                     Avatar: value.avatar_path,
-                    isOnline: moment(value.created_at).isSameOrAfter(moment().subtract(10, 'minutes'))
+                    isOnline: moment(value.created_at).isSameOrAfter(moment().subtract(10, 'minutes')),
+                    UnreadCount: unreadCount,                                          
+                    LastMsgTime: response.length > 0 ? lastMsg[0].CreatedAt : null
                 })
             }))
+
+            listCustomFriend.sort((a, b) => {
+            if (!a.LastMsgTime) return 1;
+            if (!b.LastMsgTime) return -1;
+            return new Date(b.LastMsgTime) - new Date(a.LastMsgTime);
+            });
+
             await models.Users.updateOne({ _id: user._id }, { created_at: moment().toDate() })
             return res.status(200).json({ status: 1, data: listCustomFriend, message: "success" })
 
         } catch (error) {
+            console.log('list-friend ERROR:', error.message) // 
+            console.log('list-friend STACK:', error.stack)   //
             return res.status(400).json({ status: 0, data: null, message: error.message })
         }
     })
