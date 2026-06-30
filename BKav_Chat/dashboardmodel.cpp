@@ -129,3 +129,11 @@ void DashboardModel::updateFriendInfo(const QString &friendId, const QDateTime &
     QModelIndex idx = index(row, 0);
     emit dataChanged(idx, idx, {LastMsgTimeRole, UnreadCountRole});
 }
+void DashboardModel::resetUnreadCount(const QString &friendId)
+{
+    if (!rowMap.contains(friendId)) return;
+    int row = rowMap.value(friendId);
+    friends[row].unreadCount = 0;
+    QModelIndex idx = index(row, 0);
+    emit dataChanged(idx, idx, {UnreadCountRole});
+}

@@ -15,6 +15,7 @@ public:
 
     void sendMessage(qint64 from,qint64 to,const QString &content);
     void registerUser(qint64 userId);
+    void unregisterUser(qint64 userId);
 
 signals:
     void messageReceived(const QString &message);

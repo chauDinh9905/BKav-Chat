@@ -12,11 +12,25 @@ async function initKafka() {
     await producer.connect();
     await consumer.connect();
     // Subscribe vào topic 'chat-messages' để nhận tin từ các server khác
-    await consumer.subscribe({ topic: ['user_presence', 'notifications'], fromBeginning: false });
+    await consumer.subscribe({
+    topic: 'user_presence',
+    fromBeginning: false,
+    });
+
+    await consumer.subscribe({
+        topic: 'chat_messages',
+        fromBeginning: false,
+    });
+    await consumer.subscribe({ 
+        topic: 'user_presence_sync',
+        fromBeginning: false 
+    });
     console.log("Kafka Client initialized and connected.");
+
 }
 
 async function sendToKafka(topic, data) {
+    console.log("Sending to topic:", JSON.stringify(topic));
     await producer.send({
         topic: topic,
         messages: [{ value: JSON.stringify(data) }],

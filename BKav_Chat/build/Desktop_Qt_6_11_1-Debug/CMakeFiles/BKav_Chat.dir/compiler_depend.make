@@ -3234,6 +3234,8 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
@@ -3248,6 +3250,8 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \

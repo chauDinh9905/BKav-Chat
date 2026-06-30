@@ -75,8 +75,8 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
         "   padding: 0px 10px; /* Thêm padding trái/phải để danh sách thu hẹp lại, không dính sát viền màn hình */"
         "}"
         );
-    friendListView->setMaximumWidth(150);
-    friendListView->setMaximumHeight(100);
+    //friendListView->setMaximumWidth(150);
+    //friendListView->setMaximumHeight(100);
 
     proxyModel = new FriendProxyModel(this);
     this->model = model;
@@ -120,6 +120,8 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
             this, [this]() {
                 SocketManager::instance().registerUser(myId);
             });
+    connect(&SocketManager::instance(), &SocketManager::messageReceived,
+            this, &Dashboard::onNewMessageReceived);
 }
 
 void Dashboard::loadCurrentUser()
@@ -176,7 +178,7 @@ void Dashboard::loadFriendList()
     QSettings settings(configPath, QSettings::IniFormat);
     QString token = settings.value("auth/token").toString();
     QString baseUrl = AppConfig::instance().getBaseUrl();
-    QNetworkRequest request(QUrl(baseUrl + "/user/list"));
+    QNetworkRequest request(QUrl(baseUrl + "/message/list-friend"));
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
     QNetworkReply *reply = networkManager->get(request);
     connect(reply, &QNetworkReply::finished, this, [this, reply]()
@@ -206,9 +208,19 @@ void Dashboard::loadFriendList()
                 {
                     QJsonObject user = value.toObject();
                     qDebug() << "USER =" << user;
-                    qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
+                   // qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
 
-                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false, 0, QDateTime::currentDateTime()));
+                    //list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false, 0, QDateTime::currentDateTime()));
+                    list.append(FriendInfo(
+                        QString::number(user["FriendID"].toVariant().toLongLong()),
+                        user["FullName"].toString(),
+                        user["Avatar"].toString(),
+                        user["isOnline"].toBool(),
+                        user["UnreadCount"].toInt(),
+                        user["LastMsgTime"].toString().isEmpty()
+                            ? QDateTime()
+                            : QDateTime::fromString(user["LastMsgTime"].toString(), Qt::ISODate)
+                        ));
                 }
                 qDebug() << "LIST SIZE =" << list.size();
                 model->setFriendList(list);
@@ -268,7 +280,8 @@ void Dashboard::onFriendSelected(QModelIndex proxyIndex)
         << selectedFriend.avatarUrl;
 
     qDebug() << "3";
-
+    model->resetUnreadCount(selectedFriend.friendId);
+    model->updateFriendInfo(selectedFriend.friendId, selectedFriend.lastMsgTime, 0);
     emit openChatRequest(selectedFriend);
 
     qDebug() << "4";
@@ -276,6 +289,7 @@ void Dashboard::onFriendSelected(QModelIndex proxyIndex)
 void Dashboard::triggerSearch(){
     QString keyword = searchFriend->text().trimmed();
     //QSettings settings("BKAV", "ChatApp");
+    /*
     QString configPath = AppConfig::instance().getConfigFilePath();
     QSettings settings(configPath, QSettings::IniFormat);
     QString token = settings.value("auth/token").toString();
@@ -322,7 +336,9 @@ void Dashboard::triggerSearch(){
                 qDebug() << "SEARCH LIST SIZE =" << list.size();
                 model->setFriendList(list);
                 reply->deleteLater();
-            });
+            });*/
+    proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    proxyModel->setFilterRegularExpression(keyword);
 }
 
 void Dashboard::onAvatarClicked()
@@ -448,6 +464,7 @@ void Dashboard::logOut(){
     //QSettings settings("BKAV","ChatApp");
     QString configPath = AppConfig::instance().getConfigFilePath();
     QSettings settings(configPath, QSettings::IniFormat);
+    SocketManager::instance().unregisterUser(myId);
     settings.remove("auth");
     emit logOutRequest();
 }
@@ -497,6 +514,26 @@ void Dashboard::loadAvatarFromServer(const QString &avatarPath)
 
         reply->deleteLater();
             });
+}
+
+void Dashboard::onNewMessageReceived(const QString &message)
+{
+    qDebug() << "RAW PACKET:" << message;
+
+    QJsonObject obj = QJsonDocument::fromJson(message.toUtf8()).object();
+    QString type = obj["type"].toString();
+    if (type == "presence") {
+        QString userId = QString::number(obj["userId"].toVariant().toLongLong());
+        bool isOnline = obj["isOnline"].toBool();
+        qDebug() << "presence userId:" << userId << "isOnline:" << isOnline;
+        model->updateFriendStatus(userId, isOnline);
+        return;
+    }
+
+    // Tin nhắn thường
+    if (!obj.contains("from")) return;
+    QString fromId = QString::number(obj["from"].toVariant().toLongLong());
+    model->updateFriendInfo(fromId, QDateTime::currentDateTime(), 1);
 }
 
 qint64 Dashboard::getMyId()

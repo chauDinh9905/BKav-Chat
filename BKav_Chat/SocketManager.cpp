@@ -70,3 +70,12 @@ void SocketManager::registerUser(qint64 userId)
     socket.sendTextMessage(
         QJsonDocument(obj).toJson(QJsonDocument::Compact));
 }
+void SocketManager::unregisterUser(qint64 userId)
+{
+    QJsonObject obj;
+    obj["type"] = "unregister";
+    obj["userId"] = userId;
+    socket.sendTextMessage(
+        QJsonDocument(obj).toJson(QJsonDocument::Compact));
+    socket.close();
+}

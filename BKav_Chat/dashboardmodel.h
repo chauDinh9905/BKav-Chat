@@ -27,6 +27,7 @@ struct FriendInfo{
         unreadCount(unreadCount),
         lastMsgTime(lastMsgTime)
     {
+
     }
 };
 
@@ -62,6 +63,7 @@ public:
     QHash<QString, int> rowMap;
     QHash<QString, int> avatarRowMap;
     void setAvatar(int row, const QPixmap &avatar);
+    void resetUnreadCount(const QString &friendId);
 };
 
 

@@ -18,3 +18,11 @@ bool FriendProxyModel::lessThan(const QModelIndex &left, const QModelIndex &righ
     // Nếu muốn người mới nhất lên đầu, thì thời gian của 'left' phải lớn hơn 'right'
     return leftTime > rightTime;
 }
+bool FriendProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    if (filterRegularExpression().pattern().isEmpty()) return true;
+
+    QModelIndex idx = sourceModel()->index(sourceRow, 0, sourceParent);
+    QString name = sourceModel()->data(idx, Qt::DisplayRole).toString();
+    return name.contains(filterRegularExpression());
+}

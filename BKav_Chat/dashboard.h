@@ -36,6 +36,7 @@ private slots:
     void triggerSearch(); // đếm ngược mỗi khi người dùng dừng điền kí tự trên ô tìm kiếm, khi hàm này kết thúc thì những ký tự sẽ được gửi lên server
     void onFriendSelected(QModelIndex index);// khi có signal người dùng ấn vào một người trong danh sách bạn bè
     void changeAvatar();
+    void onNewMessageReceived(const QString &message);
     void logOut();
 
 private:
@@ -61,6 +62,7 @@ private:
 
     QByteArray convertPixmapToByteArray(const QPixmap &pixmap);
     void loadAvatarFromServer(const QString &avatarUrl);
+
 
 public:
     void loadFriendList();

@@ -13,6 +13,7 @@ const parentDirectory = path.resolve(currentDirectory, '..', '..');
 const savePathImage = `${parentDirectory}/images`;
 const savePathFile = `${parentDirectory}/files`;
 const authMiddleware = require('./../../middleware/index.js')
+const { sendToKafka } = require('./../../kafkaClient');
 
 module.exports = () => {
     router.get('/list-friend', async (req, res) => {
@@ -54,7 +55,7 @@ module.exports = () => {
                     Avatar: value.avatar_path,
                     isOnline: moment(value.created_at).isSameOrAfter(moment().subtract(10, 'minutes')),
                     UnreadCount: unreadCount,                                          
-                    LastMsgTime: response.length > 0 ? lastMsg[0].CreatedAt : null
+                    LastMsgTime: response.length > 0 ? response[0].CreatedAt : null
                 })
             }))
 
@@ -130,14 +131,11 @@ module.exports = () => {
                 isSend: 0
             }).save()
             await models.Users.updateOne({ _id: user._id }, { created_at: moment().toDate() })
-            const targetWs = global.wsClients.get(Friend.user_id.toString());
-            if (targetWs && targetWs.readyState === 1) {
-                targetWs.send(JSON.stringify({
-                    from: user.user_id,
-                    to: Friend.user_id,
-                    content: Content
-                }));
-            }
+            await sendToKafka('chat_messages', {
+                from: user.user_id,
+                to: Friend.user_id,
+                content: Content
+            });
             const resMessage = await models.Message.find({ FriendID: Friend.user_id, isSend: 0 }, { _id: 1, content: 1 }).sort({ CreatedAt: 1 });
             await Promise.all(resMessage.map(async (value) => {
                 await models.Message.updateOne({ _id: value._id }, { isSend: 1 });
