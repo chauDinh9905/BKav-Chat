@@ -18,3 +18,28 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_CLUSTER_ID: 'MkU3OEVBNT-J0123456789' # chuỗi ID bất kỳ    
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  chat_server:
+    build: . # Trỏ tới thư mục chứa code server và Dockerfile 
+    container_name: chat_server
+    env_file:
+    - .env
+    depends_on:
+      - kafka
+      - mongodb
+    environment:
+      KAFKA_BROKER: "kafka:9092"
+      MONGO_URI: "mongodb://mongodb:27017/chat_db"
+    ports:
+      - "8888:8888" # Port server
+
+volumes:
+  mongo_data:
