@@ -82,9 +82,9 @@ LogIn::LogIn(LogInModel *model, QWidget *parent)
     connect(model,
             &LogInModel::authenticationSucceeded,
             this,
-            [this]()
+            [this](qint64 userId)
             {
-                emit logInSuccess();
+                emit logInSuccess(userId);
             });
 
     connect(model, &LogInModel::authenticationFailed, this, [=]() {
@@ -102,14 +102,14 @@ void LogIn::logInClicked(){
     model->password = textPassword->text();
     model->rememberInfo = rememberPass->isChecked();
 
-     qDebug() << "🔐 Login clicked for user:" << model->account;
+     qDebug() << " Login clicked for user:" << model->account;
 
     if(model->validateInfo()){
         error->setText("");
-         qDebug() << "✅ Validation passed, authenticating...";
+         qDebug() << " Validation passed, authenticating...";
         model->authenticateWithServer();
     }else{
-        qDebug() << "❌ Validation failed";
+        qDebug() << " Validation failed";
         error->setText("Thông tin tài khoản không hợp lệ");
     }
 }

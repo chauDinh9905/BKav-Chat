@@ -4,8 +4,10 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QPainterPath>
-DashboardModel::DashboardModel(QObject *parent)
-    :QAbstractListModel(parent){
+#include <QPixmap>
+
+DashboardModel::DashboardModel(QObject *parent, const QString &userId)
+    :QAbstractListModel(parent), m_userId(userId){
     connect(&AvatarCache::instance(), &AvatarCache::avatarLoaded,
             this, [this](const QString &url, const QPixmap &px) {
         if (avatarRowMap.contains(url)) {
@@ -112,20 +114,20 @@ void DashboardModel::setAvatar(int row, const QPixmap &avatar) {
     }
 }
 void DashboardModel::updateFriendInfo(const QString &friendId, const QDateTime &newTime, int unreadCountIncrement) {
-    // 1. Kiểm tra xem người dùng có tồn tại trong danh sách không
+    //  Kiểm tra xem người dùng có tồn tại trong danh sách không
     if (!rowMap.contains(friendId)) {
         qWarning() << "Friend not found in model:" << friendId;
         return;
     }
 
-    // 2. Lấy vị trí dòng (row) trực tiếp từ rowMap (tốc độ O(1))
+    //  Lấy vị trí dòng (row) trực tiếp từ rowMap (tốc độ O(1))
     int row = rowMap.value(friendId);
 
-    // 3. Cập nhật dữ liệu
+    //  Cập nhật dữ liệu
     friends[row].lastMsgTime = newTime;
     friends[row].unreadCount += unreadCountIncrement;
 
-    // 4. Báo cho View (ProxyModel sẽ bắt được tín hiệu này)
+    //  Báo cho View (ProxyModel sẽ bắt được tín hiệu này)
     QModelIndex idx = index(row, 0);
     emit dataChanged(idx, idx, {LastMsgTimeRole, UnreadCountRole});
 }
@@ -136,4 +138,8 @@ void DashboardModel::resetUnreadCount(const QString &friendId)
     friends[row].unreadCount = 0;
     QModelIndex idx = index(row, 0);
     emit dataChanged(idx, idx, {UnreadCountRole});
+}
+
+qint64 DashboardModel::getMyId(){
+    return m_userId.toLongLong();
 }

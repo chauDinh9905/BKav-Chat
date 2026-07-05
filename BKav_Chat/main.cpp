@@ -7,8 +7,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    qint64 currentPid = QCoreApplication::applicationPid();
-    AppConfig::instance().setProfile(QString::number(currentPid));
+    //qint64 currentPid = QCoreApplication::applicationPid();
+    AppConfig::instance().setProfile("default");
     //AppConfig::instance().loadConfig();
 
     QTranslator translator;

@@ -62,6 +62,11 @@ qt_add_executable(BKav_Chat
     friendproxymodel.cpp
     avatarcache.h
     avatarcache.cpp
+    DatabaseManager.h
+    DatabaseManager.cpp
+    SecurityUtils.h
+    SecurityUtils.cpp
+    AccountManage.h
 
 
 
@@ -86,6 +91,8 @@ target_link_libraries(BKav_Chat
         Qt::Core
 
         Qt::Widgets
+
+        Qt::Sql
 
 )
 
@@ -114,16 +121,14 @@ qt_generate_deploy_app_script(
 )
 
 find_package(Qt6 REQUIRED COMPONENTS Core Sql)
-target_link_libraries(BKav_Chat PRIVATE
+target_link_libraries(BKav_Chat
+  PRIVATE
     Qt6::Sql
     Qt6::Sql
+    Qt6::WebSockets
 )
 
 find_package(Qt6 REQUIRED COMPONENTS WebSockets Network)
-
-target_link_libraries(BKav_Chat
-    PRIVATE Qt6::WebSockets
-)
 
 #target_include_directories(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/include")
 #target_link_libraries(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/lib/mysql")

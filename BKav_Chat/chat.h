@@ -65,6 +65,7 @@ private:
     QNetworkAccessManager *networkManager;
 public:
     void loadMessages();
+    MessageInfo createMessageFromVariant(const QVariantMap &data);
 };
 
 #endif

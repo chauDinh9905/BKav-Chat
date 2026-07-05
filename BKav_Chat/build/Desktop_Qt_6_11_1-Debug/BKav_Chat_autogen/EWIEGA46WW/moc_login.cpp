@@ -43,6 +43,7 @@ template <> constexpr inline auto LogIn::qt_create_metaobjectdata<qt_meta_tag_ZN
         "LogIn",
         "logInSuccess",
         "",
+        "userId",
         "signUpRequest",
         "rememberAccount",
         "rememberInfoClicked",
@@ -52,17 +53,19 @@ template <> constexpr inline auto LogIn::qt_create_metaobjectdata<qt_meta_tag_ZN
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'logInSuccess'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SignalData<void(qint64)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::LongLong, 3 },
+        }}),
         // Signal 'signUpRequest'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'rememberAccount'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'rememberAccount'
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'rememberInfoClicked'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'logInClicked'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'signUpClicked'
+        // Slot 'logInClicked'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'signUpClicked'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -86,7 +89,7 @@ void LogIn::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     auto *_t = static_cast<LogIn *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->logInSuccess(); break;
+        case 0: _t->logInSuccess((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         case 1: _t->signUpRequest(); break;
         case 2: _t->rememberAccount(); break;
         case 3: _t->rememberInfoClicked(); break;
@@ -96,7 +99,7 @@ void LogIn::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (LogIn::*)()>(_a, &LogIn::logInSuccess, 0))
+        if (QtMocHelpers::indexOfMethod<void (LogIn::*)(qint64 )>(_a, &LogIn::logInSuccess, 0))
             return;
         if (QtMocHelpers::indexOfMethod<void (LogIn::*)()>(_a, &LogIn::signUpRequest, 1))
             return;
@@ -137,9 +140,9 @@ int LogIn::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void LogIn::logInSuccess()
+void LogIn::logInSuccess(qint64 _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }
 
 // SIGNAL 1

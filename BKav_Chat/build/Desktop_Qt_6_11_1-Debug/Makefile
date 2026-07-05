@@ -276,6 +276,54 @@ BKav_Chat_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.s
 .PHONY : BKav_Chat_autogen/mocs_compilation.cpp.s
 
+DatabaseManager.o: DatabaseManager.cpp.o
+.PHONY : DatabaseManager.o
+
+# target to build an object file
+DatabaseManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o
+.PHONY : DatabaseManager.cpp.o
+
+DatabaseManager.i: DatabaseManager.cpp.i
+.PHONY : DatabaseManager.i
+
+# target to preprocess a source file
+DatabaseManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.i
+.PHONY : DatabaseManager.cpp.i
+
+DatabaseManager.s: DatabaseManager.cpp.s
+.PHONY : DatabaseManager.s
+
+# target to generate assembly for a file
+DatabaseManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.s
+.PHONY : DatabaseManager.cpp.s
+
+SecurityUtils.o: SecurityUtils.cpp.o
+.PHONY : SecurityUtils.o
+
+# target to build an object file
+SecurityUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o
+.PHONY : SecurityUtils.cpp.o
+
+SecurityUtils.i: SecurityUtils.cpp.i
+.PHONY : SecurityUtils.i
+
+# target to preprocess a source file
+SecurityUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.i
+.PHONY : SecurityUtils.cpp.i
+
+SecurityUtils.s: SecurityUtils.cpp.s
+.PHONY : SecurityUtils.s
+
+# target to generate assembly for a file
+SecurityUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.s
+.PHONY : SecurityUtils.cpp.s
+
 SocketManager.o: SocketManager.cpp.o
 .PHONY : SocketManager.o
 
@@ -682,6 +730,12 @@ help:
 	@echo "... BKav_Chat_autogen/mocs_compilation.o"
 	@echo "... BKav_Chat_autogen/mocs_compilation.i"
 	@echo "... BKav_Chat_autogen/mocs_compilation.s"
+	@echo "... DatabaseManager.o"
+	@echo "... DatabaseManager.i"
+	@echo "... DatabaseManager.s"
+	@echo "... SecurityUtils.o"
+	@echo "... SecurityUtils.i"
+	@echo "... SecurityUtils.s"
 	@echo "... SocketManager.o"
 	@echo "... SocketManager.i"
 	@echo "... SocketManager.s"

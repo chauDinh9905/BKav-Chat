@@ -30,7 +30,7 @@ private:
     SignUpModel *signUpModel;
     DashboardModel *dashboardModel;
     ChatModel *chatModel;
-private:
+public:
     void connectDashboardSignals();
 };
 #endif

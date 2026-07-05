@@ -514,4 +514,28 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h

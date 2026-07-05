@@ -456,4 +456,19 @@ CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h

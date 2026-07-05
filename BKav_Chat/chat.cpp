@@ -3,6 +3,7 @@
 #include "appconfig.h"
 #include "chatdelegate.h"
 #include "chat.h"
+#include "DatabaseManager.h"
 #include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -168,7 +169,8 @@ Chat::Chat(
         this,
         &Chat::onMessageReceived);
 
-     loadMessages();
+    DatabaseManager::instance().init(myId);
+    loadMessages();
 }
 
 void Chat::selectImage()
@@ -258,6 +260,10 @@ void Chat::sendMessage()
 
         QJsonObject data = resObj["data"].toObject();
 
+        DatabaseManager::instance().insertMessage(
+            data["id"].toString(), myId, friendId.toLongLong(),
+            text, {}, {}, QDateTime::currentDateTime().toString()
+            );
         // update UI từ server response
         MessageInfo msg(
             myId,
@@ -292,9 +298,10 @@ void Chat::onMessageReceived(
 {
     qDebug() << "onMessageReceived:" << message;
     QJsonDocument doc =QJsonDocument::fromJson(message.toUtf8());
-
-    if(doc.isNull())
+    if (doc.isNull() || !doc.isObject()) {
+        qDebug() << "Invalid JSON received ở onMessageReceived";
         return;
+    }
 
     QJsonObject obj =
         doc.object();
@@ -360,6 +367,16 @@ void Chat::loadMessages()
 
     QUrl url(baseUrl + "/message/get-message?FriendID=" + friendId);
     qDebug() << "friendId from get message: " << friendId;
+
+    model->clear();
+
+    auto cachedMsgs = DatabaseManager::instance().getMessages(myId, friendId.toLongLong());
+    for(auto& msgData : cachedMsgs) {
+        // Chuyển QVariantMap thành MessageInfo và add vào model
+        MessageInfo msg(msgData["sender_id"].toLongLong(), msgData["friend_id"].toLongLong(), msgData["content"].toString(), {}, {}, QDateTime::fromString(msgData["created_at"].toString(), Qt::ISODate), QDateTime::currentDateTime(),1, msgData["sender_id"].toLongLong() == myId);
+        model->addMessage(msg);
+    }
+
     QNetworkRequest request(url);
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
     QNetworkReply *reply = networkManager->get(request);
@@ -426,4 +443,19 @@ void Chat::loadMessages()
 
         reply->deleteLater();
     });
+}
+
+MessageInfo Chat::createMessageFromVariant(const QVariantMap &data) {
+    // Chuyển đổi từ QVariantMap (SQLite) hoặc QJsonObject (Server) thành MessageInfo
+    return MessageInfo(
+        data["sender_id"].toLongLong(),
+        data["friend_id"].toLongLong(),
+        data["content"].toString(),
+        {}, // Bạn cần parse lại JSON string thành QVector
+        {},
+        QDateTime::fromString(data["created_at"].toString(), Qt::ISODate),
+        QDateTime::currentDateTime(),
+        1,
+        (data["sender_id"].toLongLong() == myId)
+        );
 }

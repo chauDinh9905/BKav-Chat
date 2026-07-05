@@ -835,6 +835,24 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/AccountManage.h",
+			"MU",
+			"EWIEGA46WW/moc_AccountManage.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h",
+			"MU",
+			"EWIEGA46WW/moc_DatabaseManager.cpp",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h",
+			"MU",
+			"EWIEGA46WW/moc_SecurityUtils.cpp",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h",
 			"MU",
 			"EWIEGA46WW/moc_SocketManager.cpp",
@@ -998,6 +1016,16 @@
 	"SETTINGS_FILE" : "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles/BKav_Chat_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp",
 			"MU",

@@ -36,7 +36,7 @@ Q_DECLARE_METATYPE(FriendInfo)
 class DashboardModel:public  QAbstractListModel{
     Q_OBJECT
 public:
-    explicit DashboardModel(QObject *parent = nullptr);
+    explicit DashboardModel(QObject *parent = nullptr, const QString &userId = QString());
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     QVariant data(const QModelIndex &index,
@@ -64,6 +64,9 @@ public:
     QHash<QString, int> avatarRowMap;
     void setAvatar(int row, const QPixmap &avatar);
     void resetUnreadCount(const QString &friendId);
+    qint64 getMyId();
+private:
+    QString m_userId;
 };
 
 

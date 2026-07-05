@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "SocketManager.h"
+#include "appconfig.h"
+#include "DatabaseManager.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     loginModel = new LogInModel(this);
     signUpModel = new SignUpModel(this);
-    dashboardModel = new DashboardModel(this);
+    //dashboardModel = new DashboardModel(this);
 
 
     loginView = new LogIn(loginModel, this);
@@ -29,10 +31,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(loginView,
             &LogIn::logInSuccess,
             this,
-            [this]()
+            [this](qint64 loggedInUserId)
             {
-                dashboardModel = new DashboardModel(this);
+                dashboardModel = new DashboardModel(this), QString::number(loggedInUserId);
                 dashboardView = new Dashboard(dashboardModel, this);
+                DatabaseManager::instance().init(loggedInUserId);
 
                 stackedWidget->addWidget(dashboardView);
                 stackedWidget->setCurrentWidget(dashboardView);
@@ -45,58 +48,6 @@ MainWindow::MainWindow(QWidget *parent)
         loginView->setAccountName(username);
         stackedWidget->setCurrentWidget(loginView);
             });
-                    /*
-    connect(dashboardView, &Dashboard::logOutRequest, this, [=]{
-        stackedWidget->setCurrentWidget(loginView);
-    });
-
-    connect(
-        dashboardView,
-        &Dashboard::openChatRequest,
-        this,
-        [this](const FriendInfo &friendInfo)
-        {
-            qDebug() << "chatView =" << chatView;
-            if(chatView)
-            {
-                stackedWidget->removeWidget(chatView);
-
-                chatView->deleteLater();
-
-                chatView = nullptr;
-            }
-            qDebug() << "Before new Chat";
-            chatView =
-                new Chat(
-                    dashboardView->getMyId(),
-                    friendInfo.friendId,
-                    friendInfo.displayName,
-                    friendInfo.avatarUrl);
-            qDebug() << "After new Chat";
-            connect(
-                chatView,
-                &Chat::closeRequested,
-                this,
-                [this]()
-                {
-                    qDebug() << "closeRequested received";
-
-                    stackedWidget->setCurrentWidget(
-                        dashboardView);
-
-                    stackedWidget->removeWidget(chatView);
-
-                    chatView->deleteLater();
-
-                    chatView = nullptr;
-                });
-
-            stackedWidget->addWidget(chatView);
-
-            stackedWidget->setCurrentWidget(chatView);
-        });
-
-*/
                     // Mặc định ban đầu mở App là hiện trang Login (vị trí 0)
     stackedWidget->setCurrentIndex(0);
 
@@ -111,6 +62,7 @@ void MainWindow::connectDashboardSignals()
             this,
             [this]()
             {
+                AppConfig::instance().setProfile("default");
                 stackedWidget->setCurrentWidget(loginView);
 
                 stackedWidget->removeWidget(dashboardView);

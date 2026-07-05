@@ -45,7 +45,7 @@ private:
 public:
     void setAccountName(const QString &username);
 signals:
-    void logInSuccess();
+    void logInSuccess(qint64 userId);
     void signUpRequest();
     void rememberAccount();
 public slots:
