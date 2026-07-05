@@ -87,10 +87,14 @@ wss.on('connection', (ws) => {
             clients.delete(ws.userId.toString());
             console.log('User disconnected:', ws.userId);
 
-            await sendToKafka('user_presence', {
-                userId: ws.userId,
-                isOnline: false
-            });
+            try{
+                await sendToKafka('user_presence', {
+                    userId: ws.userId,
+                    isOnline: false
+                });
+            }catch(e){
+                console.e('Kafka presence update failed on disconnect (non-fatal):', e.message);
+            }
         }
     });
 });
