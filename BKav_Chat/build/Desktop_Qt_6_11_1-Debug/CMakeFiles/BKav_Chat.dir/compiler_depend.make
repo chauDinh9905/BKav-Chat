@@ -1125,13 +1125,17 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: /home/chau-dinh/Documents/intern
 CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.cpp \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20type_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
@@ -1142,6 +1146,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
@@ -1151,20 +1156,35 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconfig.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qconstructormacros.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qgenericatomic.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h \
@@ -1174,6 +1194,13 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -1182,11 +1209,14 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringfwd.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringtokenizer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qswap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsysinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsystemdetection.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfiginclude.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtconfigmacros.h \
@@ -1196,6 +1226,8 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
@@ -1207,6 +1239,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
@@ -1231,6 +1264,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -1247,6 +1281,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
+  /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
   /usr/include/c++/13/bits/localefwd.h \
@@ -1279,10 +1314,17 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_list.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_set.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
   /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/stream_iterator.h \
@@ -1293,6 +1335,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/unordered_map.h \
+  /usr/include/c++/13/bits/unordered_set.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -1300,6 +1343,8 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
@@ -1308,6 +1353,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
@@ -1324,13 +1370,19 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iterator \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/list \
+  /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
   /usr/include/c++/13/optional \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
@@ -1353,6 +1405,7 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
   /usr/include/c++/13/unordered_map \
+  /usr/include/c++/13/unordered_set \
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
@@ -1362,7 +1415,9 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -1390,12 +1445,15 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -1441,10 +1499,12 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -1460,10 +1520,12 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: /home/chau-dinh/Documents/intern/p
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.cpp \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
@@ -7527,6 +7589,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
 
 CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.cpp \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \

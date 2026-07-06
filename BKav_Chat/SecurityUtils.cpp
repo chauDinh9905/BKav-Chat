@@ -1,8 +1,13 @@
 #include "SecurityUtils.h"
 #include <QString>
 #include <QCryptographicHash>
+#include <QDebug>
 
 QString SecurityUtils::process(const QString &data, const QString &key) {
+    if (key.isEmpty()) {
+        qDebug() << "SecurityUtils::process gọi với key rỗng, bỏ qua mã hoá";
+        return data;
+    }
     QString result = data;
     for (int i = 0; i < data.length(); ++i) {
         result[i] = QChar(data[i].unicode() ^ key[i % key.length()].unicode());

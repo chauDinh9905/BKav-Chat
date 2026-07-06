@@ -118,7 +118,10 @@ Dashboard::Dashboard(DashboardModel *model, QWidget *parent)
     //SocketManager::instance().connectToServer();
     connect(&SocketManager::instance(), &SocketManager::connected,
             this, [this]() {
-                SocketManager::instance().registerUser(myId);
+        m_socketConnected = true;
+        if (myId != 0) {                       // myId đã sẵn sàng
+            SocketManager::instance().registerUser(myId);
+        }
             });
     connect(&SocketManager::instance(), &SocketManager::messageReceived,
             this, &Dashboard::onNewMessageReceived);
@@ -162,6 +165,10 @@ void Dashboard::loadCurrentUser()
                 myId = data["Id"].toVariant().toLongLong();
                 displayName->setText(data["FullName"].toString());
                 // SocketManager::instance().registerUser(myId);
+                if (m_socketConnected) {                              // socket đã connect trước rồi
+                    SocketManager::instance().registerUser(myId);
+                }
+
                 QString avatar = data["Avatar"] .toString();
                 if(!avatar.isEmpty())
                 {

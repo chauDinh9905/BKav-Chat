@@ -294,4 +294,58 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
  /usr/include/c++/13/cassert \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
+ /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+ /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
+ /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
+ /usr/include/c++/13/bits/list.tcc /usr/include/c++/13/map \
+ /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h /usr/include/c++/13/chrono \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/ctime /usr/include/c++/13/set \
+ /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/bits/stl_multiset.h \
+ /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h

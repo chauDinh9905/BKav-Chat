@@ -32,9 +32,29 @@ server.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
 
+function heartbeat() {
+    this.isAlive = true;
+}
+ 
+const heartbeatInterval = setInterval(() => {
+    wss.clients.forEach((ws) => {
+        if (ws.isAlive === false) {
+            console.log('Terminating dead connection for user:', ws.userId);
+            return ws.terminate(); // trigger 'close' -> dọn clients Map + báo offline
+        }
+        ws.isAlive = false;
+        ws.ping();
+    });
+}, 30000); // kiểm tra mỗi 30 giây
+ 
+wss.on('close', () => {
+    clearInterval(heartbeatInterval);
+});
+
 wss.on('connection', (ws) => {
     console.log('New WS connection');
-
+     ws.isAlive = true;
+    ws.on('pong', heartbeat);
     ws.on('message', async (data) => {
         try {
             const msg = JSON.parse(data);
@@ -92,8 +112,8 @@ wss.on('connection', (ws) => {
                     userId: ws.userId,
                     isOnline: false
                 });
-            }catch(e){
-                console.e('Kafka presence update failed on disconnect (non-fatal):', e.message);
+            }catch(error){
+                console.error('Kafka presence update failed on disconnect (non-fatal):', error.message);
             }
         }
     });

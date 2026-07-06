@@ -17,6 +17,7 @@ void DatabaseManager::init(qint64 userId) {
 
     QString dbFileName = QString("cache_%1.db").arg(userId);
     QString dbPath = dir.filePath(dbFileName);
+    qDebug() << "DB path:" << dbPath;
     QString connectionName = QString("conn_%1").arg(userId);
 
     //  Kết nối tới SQLite riêng cho từng userId (nếu chưa kết nối)
@@ -24,7 +25,7 @@ void DatabaseManager::init(qint64 userId) {
         db = QSqlDatabase::database(connectionName);
     } else {
         db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-        db.setDatabaseName(dbPath);                      // dùng full path, không phải string cứng
+        db.setDatabaseName(dbPath);
     }
 
     //  Mở database
@@ -85,6 +86,7 @@ void DatabaseManager::insertMessage(const QString& id, qint64 senderId, qint64 f
 }
 
 QVector<QVariantMap> DatabaseManager::getMessages(qint64 myId, qint64 friendId) {
+    QMutexLocker locker(&mutex);
     QVector<QVariantMap> messages;
     QSqlQuery query(db);
 

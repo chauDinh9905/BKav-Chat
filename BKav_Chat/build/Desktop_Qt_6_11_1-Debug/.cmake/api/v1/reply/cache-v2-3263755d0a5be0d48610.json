@@ -7351,7 +7351,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local"
+			"value" : "/tmp"
 		},
 		{
 			"name" : "_Qt6_LINGUIST_TOOLS_DIR",

@@ -538,4 +538,5 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h

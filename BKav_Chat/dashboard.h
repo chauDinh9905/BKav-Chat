@@ -55,7 +55,8 @@ private:
     QNetworkAccessManager *networkManager;
 
     QString *friendChatId;
-    qint64 myId;
+    qint64 myId = 0;
+    bool m_socketConnected = false;
 
     QHBoxLayout *headerLayout;
     QVBoxLayout *mainLayout, *userProfile;
