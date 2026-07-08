@@ -553,4 +553,17 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpMultiPart \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpPart \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMimeDatabase \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmimedatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmimetype.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFileInfo \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QDesktopServices \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qdesktopservices.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h

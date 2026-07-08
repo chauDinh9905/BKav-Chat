@@ -7,7 +7,8 @@ const { ObjectId } = require('mongoose').Types
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-
+const multer = require('multer')
+const upload = multer({ storage: multer.memoryStorage() })
 const currentDirectory = __dirname;
 const parentDirectory = path.resolve(currentDirectory, '..', '..');
 const savePathImage = `${parentDirectory}/images`;
@@ -75,7 +76,7 @@ module.exports = () => {
         }
     })
 
-    router.post('/send-message', async (req, res) => {
+    router.post('/send-message',upload.any(), async (req, res) => {
         try {
             const UserID = req.UserID
             const { FriendID, Content } = req.body
@@ -88,6 +89,9 @@ module.exports = () => {
             }
 
             let Friend = await models.Users.findOne({ user_id: parseInt(FriendID)}).exec()
+            if(Friend == null){
+                return res.status(400).json({status: 0, data: null, message: 'Friend not found at send-message'})
+            }
             console.log('user.user_id:', user.user_id)
             console.log('Friend found:', Friend)
             if (Friend == null) {
@@ -134,7 +138,9 @@ module.exports = () => {
             await sendToKafka('chat_messages', {
                 from: user.user_id,
                 to: Friend.user_id,
-                content: Content
+                content: Content,
+                files: listFiles,
+                images: listImages
             });
             const resMessage = await models.Message.find({ FriendID: Friend.user_id, isSend: 0 }, { _id: 1, content: 1 }).sort({ CreatedAt: 1 });
             await Promise.all(resMessage.map(async (value) => {
@@ -169,6 +175,9 @@ module.exports = () => {
             }
 
             let Friend = await models.Users.findOne({ user_id: parseInt(FriendID)}).exec()
+            if(Friend == null){
+                return res.status(400).json({status: 0, data: null, message: 'Friend not found at get-message'})
+            }
             console.log('user.user_id:', user.user_id)
             console.log('Friend.user_id:', Friend.user_id)
             if (Friend == null) {

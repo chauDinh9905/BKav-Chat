@@ -10,9 +10,16 @@
 #include <QHBoxLayout>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-
 #include "chatmodel.h"
 
+struct PendingAttachment {
+    QString filePath;
+    bool isImage;
+};
+
+inline bool operator==(const PendingAttachment &a, const PendingAttachment &b) {
+    return a.filePath == b.filePath && a.isImage == b.isImage;
+}
 class Chat : public QWidget
 {
     Q_OBJECT
@@ -63,9 +70,18 @@ private:
     QHBoxLayout *bottomLayout;
 
     QNetworkAccessManager *networkManager;
+    QWidget *attachmentPreviewBar;
+    QHBoxLayout *attachmentPreviewLayout;
+    QVector<PendingAttachment> pendingAttachments;
+    void addAttachmentPreview(const QString &filePath, bool isImage);
+    void clearAttachments();
 public:
     void loadMessages();
     MessageInfo createMessageFromVariant(const QVariantMap &data);
+    QVector<ImageInfo> parseImages(const QJsonArray &arr);
+    QVector<FileInfo> parseFiles(const QJsonArray &arr);
+private slots:
+    void downloadFile(const QString &url, const QString &fileName);
 };
 
 #endif

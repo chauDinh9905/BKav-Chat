@@ -9,6 +9,7 @@
 #include "EWIEGA46WW/moc_dashboardmodel.cpp"
 #include "EWIEGA46WW/moc_errorconnectionnetwork.cpp"
 #include "EWIEGA46WW/moc_friendproxymodel.cpp"
+#include "EWIEGA46WW/moc_imagecache.cpp"
 #include "EWIEGA46WW/moc_login.cpp"
 #include "EWIEGA46WW/moc_loginmodel.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"

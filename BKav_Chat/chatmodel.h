@@ -16,10 +16,16 @@ struct FileInfo
     QString urlFile;
     QString fileName;
 };
+
+Q_DECLARE_METATYPE(ImageInfo)
+Q_DECLARE_METATYPE(FileInfo)
+Q_DECLARE_METATYPE(QVector<ImageInfo>)
+Q_DECLARE_METATYPE(QVector<FileInfo>)
+
 struct MessageInfo
 {
-    int userId;
-    int friendId;
+    qint64 userId;
+    qint64 friendId;
 
     QString content;
 
@@ -34,8 +40,8 @@ struct MessageInfo
     bool isMine;
 
     MessageInfo(
-        int userId,
-        int friendId,
+        qint64 userId,
+        qint64 friendId,
         const QString &content,
         const QVector<FileInfo> &files,
         const QVector<ImageInfo> &images,
@@ -63,7 +69,9 @@ class ChatModel : public QAbstractListModel
 public:
     enum Roles {
         ContentRole = Qt::UserRole + 1,
-        IsMineRole
+        IsMineRole,
+        ImagesRole,
+        FilesRole
     };
     explicit ChatModel(QObject *parent = nullptr);
 
@@ -79,6 +87,9 @@ public:
         const MessageInfo &message);
 
     void clear();
+    const MessageInfo& messageAt(int row) const {
+        return messages.at(row);
+    }
 
 private:
     QVector<MessageInfo> messages;

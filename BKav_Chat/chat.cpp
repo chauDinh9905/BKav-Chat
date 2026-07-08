@@ -8,6 +8,12 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QHttpMultiPart>
+#include <QHttpPart>
+#include <QMimeDatabase>
+#include <QFileInfo>
+#include <QDesktopServices>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -128,6 +134,16 @@ Chat::Chat(
     bottomLayout->addWidget(
         fileButton);
 
+    attachmentPreviewBar = new QWidget();
+    attachmentPreviewBar->setStyleSheet("background:#EFEFEF;");
+    attachmentPreviewBar->setFixedHeight(70);
+    attachmentPreviewBar->hide();
+
+    attachmentPreviewLayout = new QHBoxLayout(attachmentPreviewBar);
+    attachmentPreviewLayout->setContentsMargins(5,5,5,5);
+    attachmentPreviewLayout->setSpacing(5);
+    attachmentPreviewLayout->addStretch();
+
     mainLayout =
         new QVBoxLayout(this);
 
@@ -136,6 +152,7 @@ Chat::Chat(
 
     mainLayout->addWidget(
         messageView);
+    mainLayout->addWidget(attachmentPreviewBar);
 
     mainLayout->addLayout(
         bottomLayout);
@@ -168,6 +185,17 @@ Chat::Chat(
         &SocketManager::messageReceived,
         this,
         &Chat::onMessageReceived);
+    connect(messageView, &QListView::clicked, this, [this](const QModelIndex &index){
+        QVector<FileInfo> files = index.data(ChatModel::FilesRole).value<QVector<FileInfo>>();
+        if(!files.isEmpty()){
+            QString baseUrl = AppConfig::instance().getBaseUrl();
+            this->downloadFile(baseUrl + files[])
+        }
+    });
+
+    if (auto *delegate = qobject_cast<ChatDelegate*>(messageView->itemDelegate())) {
+        connect(delegate, &ChatDelegate::fileClicked, this, &Chat::downloadFile);
+    }
 
     DatabaseManager::instance().init(myId);
     loadMessages();
@@ -175,45 +203,91 @@ Chat::Chat(
 
 void Chat::selectImage()
 {
-    QString file =
-        QFileDialog::getOpenFileName(
+    QStringList files =
+        QFileDialog::getOpenFileNames(
             this,
             "Chọn ảnh",
             "",
             "Images (*.png *.jpg *.jpeg)"
             );
 
-    if(file.isEmpty())
+    if(files.isEmpty())
         return;
 
-    qDebug()
-        << "Image:"
-        << file;
-
-    // upload API
+    for (const QString &f : files) {
+        pendingAttachments.append({f, true});
+        addAttachmentPreview(f, true);
+    }
 }
 
 void Chat::selectFile()
 {
-    QString file =
-        QFileDialog::getOpenFileName(
+    QStringList files =
+        QFileDialog::getOpenFileNames(
             this,
             "Chọn file");
 
-    if(file.isEmpty())
+    if(files.isEmpty())
         return;
 
-    qDebug()
-        << "File:"
-        << file;
-
-    // upload API
+    for (const QString &f : files) {
+        pendingAttachments.append({f, false});
+        addAttachmentPreview(f, false);
+    }
 }
 
+void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
+{
+    QWidget *thumb = new QWidget();
+    thumb->setFixedSize(60,60);
+
+    QVBoxLayout *thumbLayout = new QVBoxLayout(thumb);
+    thumbLayout->setContentsMargins(0,0,0,0);
+
+    QLabel *iconLabel = new QLabel();
+    iconLabel->setFixedSize(50,50);
+    iconLabel->setAlignment(Qt::AlignCenter);
+    iconLabel->setStyleSheet("border:1px solid #ccc; background:white;");
+
+    if (isImage) {
+        QPixmap pix(filePath);
+        iconLabel->setPixmap(pix.scaled(50,50, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+    } else {
+        iconLabel->setText("📄");
+        iconLabel->setToolTip(QFileInfo(filePath).fileName());
+    }
+    thumbLayout->addWidget(iconLabel);
+
+    QPushButton *removeBtn = new QPushButton("×", thumb);
+    removeBtn->setFixedSize(16,16);
+    removeBtn->move(44,0);
+    removeBtn->setStyleSheet("border-radius:8px; background:#999; color:white; font-size:10px;");
+
+    connect(removeBtn, &QPushButton::clicked, this, [=]() {
+        pendingAttachments.removeAll(PendingAttachment{filePath, isImage});
+        thumb->deleteLater();
+        if (pendingAttachments.isEmpty())
+            attachmentPreviewBar->hide();
+    });
+
+    attachmentPreviewLayout->insertWidget(attachmentPreviewLayout->count() - 1, thumb);
+    attachmentPreviewBar->show();
+}
+
+void Chat::clearAttachments()
+{
+    pendingAttachments.clear();
+    while (attachmentPreviewLayout->count() > 1) {
+        QLayoutItem *item = attachmentPreviewLayout->takeAt(0);
+        if (item->widget()) item->widget()->deleteLater();
+        delete item;
+    }
+    attachmentPreviewBar->hide();
+}
 void Chat::sendMessage()
 {
     QString text = messageEdit->text().trimmed();
-    if (text.isEmpty()) return;
+    if (text.isEmpty()&& pendingAttachments.isEmpty()) return;
 
     //QSettings settings("BKAV", "ChatApp");
     QString configPath = AppConfig::instance().getConfigFilePath();
@@ -229,17 +303,41 @@ void Chat::sendMessage()
 
     QNetworkRequest request(url);
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    //request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-    QJsonObject obj;
-    obj["FriendID"] = friendId.toLongLong();
-    qDebug() << "friend id:" << friendId;
-    obj["Content"] = text;
+    QHttpMultiPart *multiPart = new QHttpMultiPart(QHttpMultiPart::FormDataType);
 
-    QNetworkReply *reply = networkManager->post(
-        request,
-        QJsonDocument(obj).toJson(QJsonDocument::Compact)
-        );
+    QHttpPart friendPart;
+    friendPart.setHeader(QNetworkRequest::ContentDispositionHeader,
+                         QVariant("form-data; name=\"FriendID\""));
+    friendPart.setBody(friendId.toUtf8());
+    multiPart->append(friendPart);
+
+    QHttpPart contentPart;
+    contentPart.setHeader(QNetworkRequest::ContentDispositionHeader,
+                          QVariant("form-data; name=\"Content\""));
+    contentPart.setBody(text.toUtf8());
+    multiPart->append(contentPart);
+
+    QMimeDatabase mimeDb;
+    for (const auto &att : pendingAttachments) {
+        QFile *file = new QFile(att.filePath);
+        if (!file->open(QIODevice::ReadOnly)) { delete file; continue; }
+
+        QHttpPart filePart;
+        QString mimeType = mimeDb.mimeTypeForFile(att.filePath).name();
+        filePart.setHeader(QNetworkRequest::ContentTypeHeader, QVariant(mimeType));
+        filePart.setHeader(QNetworkRequest::ContentDispositionHeader,
+                           QVariant(QString("form-data; name=\"files\"; filename=\"%1\"")
+                                        .arg(QFileInfo(att.filePath).fileName())));
+        filePart.setBodyDevice(file);
+        file->setParent(multiPart);
+        multiPart->append(filePart);
+    }
+
+
+    QNetworkReply *reply = networkManager->post(request, multiPart);
+    multiPart->setParent(reply);
 
     connect(reply, &QNetworkReply::finished, this, [=]() {
         if (reply->error() != QNetworkReply::NoError) {
@@ -259,18 +357,22 @@ void Chat::sendMessage()
         }
 
         QJsonObject data = resObj["data"].toObject();
+        QJsonArray filesJson = data["Files"].toArray();     // dùng cho insertMessage (SQLite)
+        QJsonArray imagesJson = data["Images"].toArray();
+        auto images = parseImages(data["Images"].toArray());
+        auto files = parseFiles(data["Files"].toArray());
 
         DatabaseManager::instance().insertMessage(
             data["id"].toString(), myId, friendId.toLongLong(),
-            text, {}, {}, QDateTime::currentDateTime().toString()
+            text, filesJson, imagesJson, QDateTime::currentDateTime().toString()
             );
         // update UI từ server response
         MessageInfo msg(
             myId,
             friendId.toLongLong(),
             data["Content"].toString(),
-            {},
-            {},
+            files,
+            images,
             QDateTime::currentDateTime(),
             QDateTime::currentDateTime(),
             1,
@@ -278,14 +380,30 @@ void Chat::sendMessage()
             );
 
         model->addMessage(msg);
-        SocketManager::instance().sendMessage(myId, friendId.toLongLong(), text);
+        //SocketManager::instance().sendMessage(myId, friendId.toLongLong(), text);
         qDebug() << "myId: " << myId << " friendID: " << friendId << " " << text;
         messageEdit->clear();
-
+        clearAttachments();
         reply->deleteLater();
     });
 }
 
+QVector<ImageInfo> Chat::parseImages(const QJsonArray &arr) {
+    QVector<ImageInfo> result;
+    for (auto v : as_const(arr)) {
+        QJsonObject o = v.toObject();
+        result.append({o["urlImage"].toString(), o["FileName"].toString()});
+    }
+    return result;
+}
+QVector<FileInfo> Chat::parseFiles(const QJsonArray &arr) {
+    QVector<FileInfo> result;
+    for (auto v : as_const(arr)) {
+        QJsonObject o = v.toObject();
+        result.append({o["urlFile"].toString(), o["FileName"].toString()});
+    }
+    return result;
+}
 void Chat::closeChat()
 {
     qDebug() << "closeChat called";
@@ -458,4 +576,25 @@ MessageInfo Chat::createMessageFromVariant(const QVariantMap &data) {
         1,
         (data["sender_id"].toLongLong() == myId)
         );
+}
+
+void Chat::downloadFile(const QString &url, const QString &fileName){
+    QString saveFilePath = QFileDialog::getSaveFileName(this, "File", fileName);
+    if(saveFilePath.isEmpty()) return;
+
+    QUrl fileUrl(url);
+    QNetworkRequest request(fileUrl);
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, this, [=](){
+        if(reply->error() == QNetworkReply::NoError){
+            QFile file(saveFilePath);
+            if(file.open(QIODevice::WriteOnly)){
+                file.write(reply->readAll());
+                file.close();
+            }
+        }else{
+            QMessageBox::critical(this, "Lỗi", "không thể tải file: " + reply->errorString());
+        }
+        reply->deleteLater();
+    });
 }

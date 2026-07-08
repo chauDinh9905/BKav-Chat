@@ -414,4 +414,88 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/imagecache.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QStandardPaths \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstandardpaths.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDir \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdirlisting.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfiledevice.h \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+ /usr/include/c++/13/bits/locale_facets.tcc \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/istream /usr/include/c++/13/ios \
+ /usr/include/c++/13/bits/basic_ios.h \
+ /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
+ /usr/include/c++/13/bits/ostream.tcc \
+ /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfileinfo.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h

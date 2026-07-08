@@ -67,6 +67,7 @@ qt_add_executable(BKav_Chat
     SecurityUtils.h
     SecurityUtils.cpp
     AccountManage.h
+    imagecache.h
 
 
 

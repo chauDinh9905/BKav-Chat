@@ -295,55 +295,6 @@ void Dashboard::onFriendSelected(QModelIndex proxyIndex)
 }
 void Dashboard::triggerSearch(){
     QString keyword = searchFriend->text().trimmed();
-    //QSettings settings("BKAV", "ChatApp");
-    /*
-    QString configPath = AppConfig::instance().getConfigFilePath();
-    QSettings settings(configPath, QSettings::IniFormat);
-    QString token = settings.value("auth/token").toString();
-    QString baseUrl = AppConfig::instance().getBaseUrl();
-    QUrl url( baseUrl + "/user/search");
-    QUrlQuery query;
-    query.addQueryItem("keyword", keyword);
-    if(keyword.isEmpty())
-    {
-        loadFriendList();
-        return;
-    }
-    url.setQuery(query);
-    QNetworkRequest request(url);
-    request.setRawHeader("Authorization", ("Bearer " + token).toUtf8());
-    QNetworkReply *reply = networkManager->get(request);
-    connect(reply, &QNetworkReply::finished, this, [this, reply]()
-            {
-                QByteArray response = reply->readAll();
-                qDebug() << response;
-                if(reply->error())
-                {
-                    qDebug() << reply->errorString();
-                    reply->deleteLater();
-                    return;
-                }
-                QJsonDocument doc = QJsonDocument::fromJson(response);
-                QJsonObject obj = doc.object();
-                if(obj["status"].toInt() != 1)
-                {
-                    qDebug() << obj["message"].toString();
-                    reply->deleteLater();
-                    return;
-                }
-                QJsonArray users = obj["data"].toArray();
-                QVector<FriendInfo> list;
-                for(const auto &value : as_const(users))
-                {
-                    QJsonObject user = value.toObject();
-                     qDebug() << "SEARCH USER =" << user;
-                    qDebug() << "user_id =" << user["user_id"].toVariant().toLongLong();
-                    list.append(FriendInfo(QString::number(user["user_id"].toVariant().toLongLong()),user["display_name"].toString(), user["avatar_path"].toString(),false, 0, QDateTime::currentDateTime()));
-                }
-                qDebug() << "SEARCH LIST SIZE =" << list.size();
-                model->setFriendList(list);
-                reply->deleteLater();
-            });*/
     proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     proxyModel->setFilterRegularExpression(keyword);
 }

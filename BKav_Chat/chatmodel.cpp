@@ -19,11 +19,20 @@ QVariant ChatModel::data(
     if(!index.isValid())
         return QVariant();
 
-    if(role == ContentRole)
-        return messages[index.row()].content;
-    if(role == IsMineRole)
-        return messages[index.row()].isMine;
-    return QVariant();
+    const MessageInfo &msg = messages[index.row()];
+
+    switch (role) {
+    case ContentRole:
+        return msg.content;
+    case IsMineRole:
+        return msg.isMine;
+    case ImagesRole:
+        return QVariant::fromValue(msg.images);
+    case FilesRole:
+        return QVariant::fromValue(msg.files);
+    default:
+        return QVariant();
+    }
 }
 
 void ChatModel::addMessage(

@@ -35,6 +35,7 @@ void SocketManager::onErrorOccurred(QAbstractSocket::SocketError error)
 {
     qDebug() << " [Socket] WS error:" << error;
 }
+/*
 void SocketManager::sendMessage(
     qint64 from,
      qint64 to,
@@ -51,7 +52,7 @@ void SocketManager::sendMessage(
             .toJson(
                 QJsonDocument::Compact));
 }
-
+*/
 void SocketManager::onTextMessageReceived(
     const QString &message)
 {

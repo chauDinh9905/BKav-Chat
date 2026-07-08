@@ -74,19 +74,6 @@ wss.on('connection', (ws) => {
                 });
                 return;
             }
-
-            // Gửi tin nhắn realtime
-            if (msg.type === 'message') {
-                const targetWs = clients.get(msg.to.toString());
-                if (targetWs && targetWs.readyState === ws.OPEN) {
-                    targetWs.send(JSON.stringify({
-                        from: msg.from,
-                        to: msg.to,
-                        content: msg.content
-                    }));
-                    console.log('WS message received:', msg);
-                }
-            }
             if (msg.type === 'unregister') {
                 clients.delete(msg.userId.toString());
                 console.log('User unregistered:', msg.userId);
@@ -168,7 +155,9 @@ async function startConsumer() {
                     targetWs.send(JSON.stringify({
                         from: data.from,
                         to: data.to,
-                        content: data.content
+                        content: data.content,
+                        files: data.files,
+                        images: data.images
                     }));
                 }
             }

@@ -13,6 +13,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/imagecache.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h
@@ -28,6 +29,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_imagecache.cpp
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_login.cpp
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_loginmodel.cpp
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp
@@ -2494,9 +2496,11 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFileInfo
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray
@@ -2504,6 +2508,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMimeDatabase
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings
@@ -2604,6 +2609,8 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmimedatabase.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmimetype.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h
@@ -2677,12 +2684,14 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QDesktopServices
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qdesktopservices.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontmetrics.h
@@ -2712,6 +2721,8 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpMultiPart
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpPart
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply
@@ -2722,6 +2733,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h
@@ -2755,6 +2767,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
@@ -2767,6 +2780,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qboxlayout.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qfiledialog.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qframe.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h
@@ -2775,6 +2789,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h
@@ -3106,10 +3121,27 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
 
 CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.cpp
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/imagecache.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDir
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QStandardPaths
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h
@@ -3120,6 +3152,8 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h
@@ -3131,6 +3165,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasicatomic.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayalgorithms.h
@@ -3149,12 +3184,23 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerinfo.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdirlisting.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfiledevice.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfileinfo.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h
@@ -3165,6 +3211,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobalstatic.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h
@@ -3178,9 +3225,11 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qminmax.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnumeric.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h
@@ -3196,12 +3245,14 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstandardpaths.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h
@@ -3228,6 +3279,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtpreprocessorsupport.h
@@ -3238,6 +3290,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtversionchecks.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypeinfo.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h
@@ -3246,6 +3299,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h
@@ -3275,6 +3329,27 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractslider.h
@@ -3309,11 +3384,14 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/bits/allocator.h
  /usr/include/c++/13/bits/atomic_base.h
  /usr/include/c++/13/bits/atomic_lockfree_defines.h
+ /usr/include/c++/13/bits/basic_ios.h
+ /usr/include/c++/13/bits/basic_ios.tcc
  /usr/include/c++/13/bits/basic_string.h
  /usr/include/c++/13/bits/basic_string.tcc
  /usr/include/c++/13/bits/char_traits.h
  /usr/include/c++/13/bits/charconv.h
  /usr/include/c++/13/bits/chrono.h
+ /usr/include/c++/13/bits/codecvt.h
  /usr/include/c++/13/bits/concept_check.h
  /usr/include/c++/13/bits/cpp_type_traits.h
  /usr/include/c++/13/bits/cxxabi_forced.h
@@ -3323,6 +3401,10 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/bits/exception.h
  /usr/include/c++/13/bits/exception_defines.h
  /usr/include/c++/13/bits/exception_ptr.h
+ /usr/include/c++/13/bits/fs_dir.h
+ /usr/include/c++/13/bits/fs_fwd.h
+ /usr/include/c++/13/bits/fs_ops.h
+ /usr/include/c++/13/bits/fs_path.h
  /usr/include/c++/13/bits/functexcept.h
  /usr/include/c++/13/bits/functional_hash.h
  /usr/include/c++/13/bits/hash_bytes.h
@@ -3330,9 +3412,15 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/bits/hashtable_policy.h
  /usr/include/c++/13/bits/invoke.h
  /usr/include/c++/13/bits/ios_base.h
+ /usr/include/c++/13/bits/istream.tcc
  /usr/include/c++/13/bits/list.tcc
  /usr/include/c++/13/bits/locale_classes.h
  /usr/include/c++/13/bits/locale_classes.tcc
+ /usr/include/c++/13/bits/locale_conv.h
+ /usr/include/c++/13/bits/locale_facets.h
+ /usr/include/c++/13/bits/locale_facets.tcc
+ /usr/include/c++/13/bits/locale_facets_nonio.h
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc
  /usr/include/c++/13/bits/localefwd.h
  /usr/include/c++/13/bits/memory_resource.h
  /usr/include/c++/13/bits/memoryfwd.h
@@ -3340,11 +3428,13 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/bits/nested_exception.h
  /usr/include/c++/13/bits/new_allocator.h
  /usr/include/c++/13/bits/node_handle.h
+ /usr/include/c++/13/bits/ostream.tcc
  /usr/include/c++/13/bits/ostream_insert.h
  /usr/include/c++/13/bits/parse_numbers.h
  /usr/include/c++/13/bits/postypes.h
  /usr/include/c++/13/bits/predefined_ops.h
  /usr/include/c++/13/bits/ptr_traits.h
+ /usr/include/c++/13/bits/quoted_string.h
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
@@ -3352,6 +3442,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/bits/shared_ptr_atomic.h
  /usr/include/c++/13/bits/shared_ptr_base.h
  /usr/include/c++/13/bits/specfun.h
+ /usr/include/c++/13/bits/sstream.tcc
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_function.h
  /usr/include/c++/13/bits/stl_algo.h
@@ -3396,6 +3487,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/climits
  /usr/include/c++/13/clocale
  /usr/include/c++/13/cmath
+ /usr/include/c++/13/codecvt
  /usr/include/c++/13/compare
  /usr/include/c++/13/cstddef
  /usr/include/c++/13/cstdint
@@ -3404,6 +3496,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/cstring
  /usr/include/c++/13/ctime
  /usr/include/c++/13/cwchar
+ /usr/include/c++/13/cwctype
  /usr/include/c++/13/debug/assertions.h
  /usr/include/c++/13/debug/debug.h
  /usr/include/c++/13/exception
@@ -3414,17 +3507,23 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/ext/numeric_traits.h
  /usr/include/c++/13/ext/string_conversions.h
  /usr/include/c++/13/ext/type_traits.h
+ /usr/include/c++/13/filesystem
  /usr/include/c++/13/functional
  /usr/include/c++/13/initializer_list
+ /usr/include/c++/13/iomanip
+ /usr/include/c++/13/ios
  /usr/include/c++/13/iosfwd
+ /usr/include/c++/13/istream
  /usr/include/c++/13/iterator
  /usr/include/c++/13/limits
  /usr/include/c++/13/list
+ /usr/include/c++/13/locale
  /usr/include/c++/13/map
  /usr/include/c++/13/memory
  /usr/include/c++/13/new
  /usr/include/c++/13/numeric
  /usr/include/c++/13/optional
+ /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
  /usr/include/c++/13/pstl/glue_memory_defs.h
@@ -3432,6 +3531,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/ratio
  /usr/include/c++/13/set
+ /usr/include/c++/13/sstream
  /usr/include/c++/13/stdexcept
  /usr/include/c++/13/stdlib.h
  /usr/include/c++/13/streambuf
@@ -3464,6 +3564,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/errno.h
  /usr/include/features-time64.h
  /usr/include/features.h
+ /usr/include/libintl.h
  /usr/include/limits.h
  /usr/include/linux/errno.h
  /usr/include/linux/limits.h
@@ -3479,6 +3580,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/strings.h
  /usr/include/time.h
  /usr/include/wchar.h
+ /usr/include/wctype.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
@@ -3552,6 +3654,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -3559,10 +3662,14 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h

@@ -48,7 +48,10 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "selectFile",
         "closeChat",
         "onMessageReceived",
-        "message"
+        "message",
+        "downloadFile",
+        "url",
+        "fileName"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -65,6 +68,10 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         // Slot 'onMessageReceived'
         QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 8 },
+        }}),
+        // Slot 'downloadFile'
+        QtMocHelpers::SlotData<void(const QString &, const QString &)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 10 }, { QMetaType::QString, 11 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -95,6 +102,7 @@ void Chat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 3: _t->selectFile(); break;
         case 4: _t->closeChat(); break;
         case 5: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -123,14 +131,14 @@ int Chat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

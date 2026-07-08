@@ -85,19 +85,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 101,
+				"line" : 102,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 87,
+				"line" : 88,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 124,
+				"line" : 125,
 				"parent" : 0
 			},
 			{
@@ -239,7 +239,7 @@
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 131,
+				"line" : 132,
 				"parent" : 0
 			},
 			{
@@ -493,18 +493,18 @@
 				34,
 				36,
 				38,
-				43
+				44
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
+			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
@@ -599,11 +599,11 @@
 			"sourceIndexes" : 
 			[
 				0,
-				44,
 				45,
 				46,
 				47,
-				48
+				48,
+				49
 			]
 		},
 		{
@@ -627,7 +627,7 @@
 				34,
 				36,
 				38,
-				43
+				44
 			]
 		},
 		{
@@ -651,7 +651,8 @@
 				33,
 				35,
 				37,
-				39
+				39,
+				40
 			]
 		},
 		{
@@ -668,24 +669,24 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				40,
-				42
+				41,
+				43
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				41
+				42
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				49,
 				50,
-				51
+				51,
+				52
 			]
 		}
 	],
@@ -908,6 +909,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "AccountManage.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "imagecache.h",
 			"sourceGroupIndex" : 2
 		},
 		{
