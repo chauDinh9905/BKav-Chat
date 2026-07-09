@@ -15,7 +15,18 @@ QString ChatDelegate::imageBaseUrl() const
 {
     return AppConfig::instance().getBaseUrl();
 }
-
+static QFont emojiCapableFont(const QFont &base)
+{
+    QFont f = base;
+#if defined(Q_OS_WIN)
+    f.setFamilies({ base.family(), "Segoe UI Emoji" });
+#elif defined(Q_OS_MACOS)
+    f.setFamilies({ base.family(), "Apple Color Emoji" });
+#else
+    f.setFamilies({ base.family(), "Noto Color Emoji" });
+#endif
+    return f;
+}
 void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QString content = index.data(ChatModel::ContentRole).toString();
@@ -31,7 +42,7 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     int thumbSize = 120;
     int spacing = 6;
 
-    QFont font = option.font;
+    QFont font = emojiCapableFont(option.font);
     QFontMetrics fm(font);
     // Tính chiều cao phần text (nếu có nội dung)
     QRect textRect;
@@ -142,7 +153,7 @@ QSize ChatDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInd
     int spacing = 6;
     int fileChipH = 36;
 
-    QFontMetrics fm(option.font);
+    QFontMetrics fm(emojiCapableFont(option.font));
     int textH = 0;
     if (!content.isEmpty()) {
         QRect textRect = fm.boundingRect(

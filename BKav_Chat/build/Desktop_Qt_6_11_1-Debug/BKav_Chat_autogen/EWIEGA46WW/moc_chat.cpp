@@ -47,6 +47,7 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "selectImage",
         "selectFile",
         "closeChat",
+        "selectEmoji",
         "onMessageReceived",
         "message",
         "downloadFile",
@@ -65,13 +66,15 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'closeChat'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'selectEmoji'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onMessageReceived'
-        QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 8 },
+        QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 9 },
         }}),
         // Slot 'downloadFile'
-        QtMocHelpers::SlotData<void(const QString &, const QString &)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 10 }, { QMetaType::QString, 11 },
+        QtMocHelpers::SlotData<void(const QString &, const QString &)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 11 }, { QMetaType::QString, 12 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -101,8 +104,9 @@ void Chat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 2: _t->selectImage(); break;
         case 3: _t->selectFile(); break;
         case 4: _t->closeChat(); break;
-        case 5: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 6: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
+        case 5: _t->selectEmoji(); break;
+        case 6: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -131,14 +135,14 @@ int Chat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }

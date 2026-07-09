@@ -14,6 +14,8 @@
 #include <QFileInfo>
 #include <QDesktopServices>
 #include <QMessageBox>
+#include <QScrollArea>
+#include <QGridLayout>
 
 using namespace std;
 
@@ -185,14 +187,7 @@ Chat::Chat(
         &SocketManager::messageReceived,
         this,
         &Chat::onMessageReceived);
-    connect(messageView, &QListView::clicked, this, [this](const QModelIndex &index){
-        QVector<FileInfo> files = index.data(ChatModel::FilesRole).value<QVector<FileInfo>>();
-        if(!files.isEmpty()){
-            QString baseUrl = AppConfig::instance().getBaseUrl();
-            this->downloadFile(baseUrl + files[])
-        }
-    });
-
+    connect(emojiButton, &QPushButton::clicked, this, &Chat::selectEmoji);
     if (auto *delegate = qobject_cast<ChatDelegate*>(messageView->itemDelegate())) {
         connect(delegate, &ChatDelegate::fileClicked, this, &Chat::downloadFile);
     }
@@ -272,6 +267,105 @@ void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
 
     attachmentPreviewLayout->insertWidget(attachmentPreviewLayout->count() - 1, thumb);
     attachmentPreviewBar->show();
+}
+bool Chat::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == emojiPopup && event->type() == QEvent::Hide) {
+        lastEmojiPopupCloseMs = QDateTime::currentMSecsSinceEpoch();
+    }
+    return QWidget::eventFilter(obj, event);
+}
+void Chat::selectEmoji(){
+    if(emojiPopup && emojiPopup->isVisible()){
+        emojiPopup->close();
+        return;
+    }
+    qint64 now = QDateTime::currentMSecsSinceEpoch();
+    if(now - lastEmojiPopupCloseMs < 150){
+        return;
+    }
+    static const QStringList emojis = {
+        "😀","😃","😄","😁","😆","😅","🤣","😂","🙂","🙃",
+        "😉","😊","😇","🥰","😍","🤩","😘","😗","😚","😙",
+        "😋","😛","😜","🤪","😝","🤑","🤗","🤭","🫢","🫣",
+        "🤫","🤔","🫡","🤐","🤨","😐","😑","😶","🫥","😶‍🌫️",
+        "😏","😒","🙄","😬","🤥","😌","😔","😪","🤤","😴",
+        "😷","🤒","🤕","🤢","🤮","🥵","🥶","🥴","😵","🤯",
+        "😕","😟","🙁","☹️","😮","😯","😲","😳","🥺","😭",
+        "😢","😥","😰","😨","😱","😖","😣","😞","😓","😩",
+        "😫","🥱","😤","😡","🤬",
+        "👍","👎","👌","✌️","🤞","🤟","🤘","🤙",
+        "👋","👏","🙌","👐","🤲","🙏","💪",
+        "🫶","🫰","👈","👉","👆","👇","☝️","✋","🤚","🖐️",
+        "❤️","🩷","🧡","💛","💚","🩵","💙","💜",
+        "🖤","🩶","🤍","🤎","💔","❤️‍🔥","❤️‍🩹","❣️","💕","💞","💓","💗",
+        "🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐨","🐯",
+        "🦁","🐮","🐷","🐸","🐵","🐔","🐧","🐦","🦄","🐝",
+        "🍎","🍌","🍇","🍉","🍓","🍒","🥝","🍍",
+        "🥥","🥑","🍔","🍕","🌭","🍟","🌮",
+        "🍣","🍜","🍙","🍩","🍪","🍫","🍰","🎂","☕","🍺",
+        "⚽","🏀","🏈","⚾","🎾","🏐","🏓","🏸",
+        "🥊","🥋","🎳","⛳","🎮","🎲","🎯","🎸","🎹",
+        "🚗","🚕","🚙","🚌","🚎","🏎️","🚓","🚑",
+        "🚒","🚜","🚲","🛵","🏍️","✈️","🚀","🚁","🚢",
+        "☀️","🌤️","⛅","🌧️","⛈️","❄️","🌈",
+        "🌙","⭐","🌍","🌎","🌏","🌊","🌸","🌹","🌴","🍀"
+    };
+    if (!emojiPopup) {
+        emojiPopup = new QWidget(this, Qt::Popup);
+        emojiPopup->installEventFilter(this);
+        emojiPopup->setFixedSize(260, 220);
+        emojiPopup->setStyleSheet(
+            "background:white;"
+            "border:1px solid #DDDDDD;"
+            "border-radius:10px;"
+            );
+
+        QVBoxLayout *outer = new QVBoxLayout(emojiPopup);
+        outer->setContentsMargins(0, 0, 0, 0);
+
+        QScrollArea *scroll = new QScrollArea(emojiPopup);
+        scroll->setWidgetResizable(true);
+        scroll->setFrameShape(QFrame::NoFrame);
+        scroll->setStyleSheet("background:transparent;");
+        scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        QWidget *content = new QWidget();
+        content->setStyleSheet("background:transparent;");
+        QGridLayout *grid = new QGridLayout(content);
+        grid->setSpacing(2);
+        grid->setContentsMargins(8, 8, 8, 8);
+
+        const int columns = 7;
+        int row = 0, col = 0;
+        for (const QString &emoji : emojis) {
+            QPushButton *btn = new QPushButton(emoji, content);
+            btn->setFixedSize(32, 32);
+            btn->setStyleSheet(
+                "QPushButton { font-size:18px; border:none; border-radius:4px; }"
+                "QPushButton:hover { background:#F0F0F0; }"
+                );
+
+            connect(btn, &QPushButton::clicked, this, [this, emoji]() {
+                messageEdit->insert(emoji);
+                //emojiPopup->close();
+            });
+
+            grid->addWidget(btn, row, col);
+            if (++col >= columns) { col = 0; ++row; }
+        }
+        grid->setRowStretch(row + 1, 1);
+
+        scroll->setWidget(content);
+        outer->addWidget(scroll);
+    }
+
+    // Neo góc dưới-phải của popup vào góc trên-phải của nút emoji
+    QPoint buttonTopRight = emojiButton->mapToGlobal(QPoint(emojiButton->width(), 0));
+    QPoint popupPos(buttonTopRight.x() - emojiPopup->width(),
+                    buttonTopRight.y() - emojiPopup->height());
+    emojiPopup->move(popupPos);
+    emojiPopup->show();
 }
 
 void Chat::clearAttachments()

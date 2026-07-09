@@ -40,11 +40,13 @@ private slots:
     void selectImage();
     void selectFile();
     void closeChat();
+    void selectEmoji();
     void onMessageReceived(
         const QString &message);
 
 private:
     qint64 myId;
+    qint64 lastEmojiPopupCloseMs = 0;
     QString friendId;
     QString friendName;
     QString avatarPath;
@@ -71,6 +73,7 @@ private:
 
     QNetworkAccessManager *networkManager;
     QWidget *attachmentPreviewBar;
+    QWidget *emojiPopup;
     QHBoxLayout *attachmentPreviewLayout;
     QVector<PendingAttachment> pendingAttachments;
     void addAttachmentPreview(const QString &filePath, bool isImage);
@@ -80,6 +83,7 @@ public:
     MessageInfo createMessageFromVariant(const QVariantMap &data);
     QVector<ImageInfo> parseImages(const QJsonArray &arr);
     QVector<FileInfo> parseFiles(const QJsonArray &arr);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 private slots:
     void downloadFile(const QString &url, const QString &fileName);
 };

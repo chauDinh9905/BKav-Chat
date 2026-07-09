@@ -566,4 +566,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qdesktopservices.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout

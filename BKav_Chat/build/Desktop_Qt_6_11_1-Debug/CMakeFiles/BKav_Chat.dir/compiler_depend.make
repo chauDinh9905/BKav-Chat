@@ -2756,12 +2756,14 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsockets_global.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QFileDialog \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -2785,6 +2787,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
@@ -3128,8 +3131,11 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: /home/chau-dinh/Documents/intern/pr
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QRect \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSize \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSizeF \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QStandardPaths \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
@@ -3290,19 +3296,27 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: /home/chau-dinh/Documents/intern/pr
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QMouseEvent \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPixmap \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTransform \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qevent.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qeventpoint.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontmetrics.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontvariableaxis.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
@@ -3310,16 +3324,21 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: /home/chau-dinh/Documents/intern/pr
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpointingdevice.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvector2d.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvectornd.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
@@ -9269,9 +9288,33 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QApplication:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtranslator.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTranslator:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QLocale:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.cpp:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurlquery.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimer.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
@@ -9347,8 +9390,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
@@ -9421,12 +9462,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QIcon:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h:
@@ -9434,8 +9469,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp:
 /usr/include/endian.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMenu:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h:
 
@@ -9485,8 +9518,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurlquery.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h:
 
 /usr/include/c++/13/pstl/pstl_config.h:
@@ -9535,6 +9566,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h:
@@ -9579,8 +9614,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
@@ -9596,8 +9629,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTranslator:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h:
 
@@ -9639,8 +9670,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chat.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qforeach.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject:
@@ -9669,10 +9698,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_imagecache.cpp:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/imagecache.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h:
@@ -9691,6 +9716,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signupmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile:
+
+/usr/include/c++/13/new:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDir:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -9708,6 +9737,12 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signupmodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h:
 
 /usr/include/c++/13/pstl/execution_defs.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrlQuery:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h:
 
@@ -9743,8 +9778,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractslider.h:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/AccountManage.h:
@@ -9756,8 +9789,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp:
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash:
 
@@ -9839,6 +9870,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h:
+
 /usr/include/c++/13/bits/alloc_traits.h:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h:
@@ -9879,8 +9914,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainerfwd.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmenu.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h:
@@ -9914,6 +9947,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea:
 
 /usr/include/c++/13/debug/debug.h:
 
@@ -9949,6 +9984,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextdocument.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h:
 
 /usr/include/c++/13/istream:
@@ -9971,8 +10010,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QLocale:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h:
@@ -9984,10 +10021,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h:
 
 /usr/include/c++/13/cstddef:
-
-/usr/include/c++/13/new:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h:
 
@@ -10046,8 +10079,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_friendproxymodel.cpp:
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h:
 
 /usr/include/c++/13/iterator:
-
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h:
 
@@ -10191,6 +10222,8 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/locale_conv.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputdevice.h:
+
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qatomic_cxx11.h:
 
 /usr/include/c++/13/bits/locale_facets.h:
@@ -10219,8 +10252,6 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
-/usr/include/ctype.h:
-
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
@@ -10231,8 +10262,6 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/postypes.h:
 
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp:
-
 /usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/c++/13/bits/quoted_string.h:
@@ -10242,6 +10271,8 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 /usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qeventpoint.h:
 
 /usr/include/c++/13/bits/std_function.h:
 
@@ -10274,8 +10305,6 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 /usr/include/c++/13/numeric:
 
 /usr/include/c++/13/bits/stl_list.h:
-
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimer.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h:
 
@@ -10358,6 +10387,8 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 /usr/include/c++/13/cstdlib:
 
 /usr/include/c++/13/stdexcept:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QMouseEvent:
 
 /usr/include/c++/13/cstring:
 
@@ -10561,6 +10592,8 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QRect:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
@@ -10611,6 +10644,8 @@ BKav_Chat_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h:
+
 BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
@@ -10657,6 +10692,10 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qfiledialog.h:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTransform:
+
 .qt/rcc/qrc_BKav_Chat_translations.cpp:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp:
@@ -10681,18 +10720,28 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextdocument.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSize:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash:
+/usr/include/ctype.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSizeF:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrlQuery:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qevent.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h:
 
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp:
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/imagecache.h:
 
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp:
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpointingdevice.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvector2d.h:
+
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvectornd.h:
