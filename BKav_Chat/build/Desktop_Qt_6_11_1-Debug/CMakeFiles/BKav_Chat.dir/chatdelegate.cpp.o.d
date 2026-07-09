@@ -514,4 +514,16 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTextLayout \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextlayout.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qglyphrun.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrawfont.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontdatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextcursor.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextdocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QtMath

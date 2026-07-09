@@ -16,6 +16,7 @@
 #include <QMessageBox>
 #include <QScrollArea>
 #include <QGridLayout>
+#include <QKeyEvent>
 
 using namespace std;
 
@@ -84,20 +85,20 @@ Chat::Chat(
 
     messageView->setItemDelegate(new ChatDelegate(this));
     messageView->setSpacing(2);
-
+    messageView->setResizeMode(QListView::Adjust);
     messageView->setStyleSheet(
         "border:none;"
         "background:#F5F5F5;"
         );
 
-    messageEdit =
-        new QLineEdit();
+    messageEdit = new QTextEdit();
 
-    messageEdit->setPlaceholderText(
-        "Nhập tin nhắn..."
-        );
+    messageEdit->setPlaceholderText("Nhập tin nhắn...");
 
-    messageEdit->setMinimumHeight(40);
+    messageEdit->setFixedHeight(40);
+    messageEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    messageEdit->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    messageEdit->installEventFilter(this);
 
     sendButton =
         new QPushButton();
@@ -191,9 +192,24 @@ Chat::Chat(
     if (auto *delegate = qobject_cast<ChatDelegate*>(messageView->itemDelegate())) {
         connect(delegate, &ChatDelegate::fileClicked, this, &Chat::downloadFile);
     }
-
+    connect(messageEdit, &QTextEdit::textChanged, this, &Chat::adjustMessageEditHeight);
     DatabaseManager::instance().init(myId);
     loadMessages();
+}
+
+void Chat::adjustMessageEditHeight()
+{
+    const int minH = 40;
+    const int maxH = 120;
+
+    int docH = static_cast<int>(messageEdit->document()->size().height()) + 12;
+    int newH = qBound(minH, docH, maxH);
+
+    if (messageEdit->height() != newH)
+        messageEdit->setFixedHeight(newH);
+
+    messageEdit->setVerticalScrollBarPolicy(
+        docH > maxH ? Qt::ScrollBarAsNeeded : Qt::ScrollBarAlwaysOff);
 }
 
 void Chat::selectImage()
@@ -270,9 +286,25 @@ void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
 }
 bool Chat::eventFilter(QObject *obj, QEvent *event)
 {
-    if (obj == emojiPopup && event->type() == QEvent::Hide) {
-        lastEmojiPopupCloseMs = QDateTime::currentMSecsSinceEpoch();
+    if (obj == emojiPopup) {
+        if (event->type() == QEvent::Hide) {
+            lastEmojiPopupCloseMs = QDateTime::currentMSecsSinceEpoch();
+        }
+        return QWidget::eventFilter(obj, event);
     }
+    if (obj == messageEdit && event->type() == QEvent::KeyPress) {
+        auto *keyEvent = static_cast<QKeyEvent*>(event);
+
+        if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter) {
+            if (keyEvent->modifiers() & Qt::ShiftModifier) {
+                return false;
+            }
+            sendMessage();
+            return true;
+        }
+        return false;
+    }
+
     return QWidget::eventFilter(obj, event);
 }
 void Chat::selectEmoji(){
@@ -347,8 +379,10 @@ void Chat::selectEmoji(){
                 );
 
             connect(btn, &QPushButton::clicked, this, [this, emoji]() {
-                messageEdit->insert(emoji);
-                //emojiPopup->close();
+                QTextCursor cursor = messageEdit->textCursor();
+                cursor.insertText(emoji);
+                messageEdit->setTextCursor(cursor);
+                messageEdit->setFocus();
             });
 
             grid->addWidget(btn, row, col);
@@ -380,7 +414,7 @@ void Chat::clearAttachments()
 }
 void Chat::sendMessage()
 {
-    QString text = messageEdit->text().trimmed();
+    QString text = messageEdit->toPlainText().trimmed();
     if (text.isEmpty()&& pendingAttachments.isEmpty()) return;
 
     //QSettings settings("BKAV", "ChatApp");

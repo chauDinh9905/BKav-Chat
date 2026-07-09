@@ -489,16 +489,16 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextcursor.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -533,6 +533,8 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chatmodel.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboard.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../dashboard.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../dashboardmodel.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../friendproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \

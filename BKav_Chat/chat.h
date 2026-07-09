@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
-#include <QLineEdit>
+#include <QTextEdit>
 #include <QListView>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -58,7 +58,7 @@ private:
 
     QListView *messageView;
 
-    QLineEdit *messageEdit;
+    QTextEdit *messageEdit;
 
     QPushButton *sendButton;
     QPushButton *emojiButton;
@@ -83,9 +83,11 @@ public:
     MessageInfo createMessageFromVariant(const QVariantMap &data);
     QVector<ImageInfo> parseImages(const QJsonArray &arr);
     QVector<FileInfo> parseFiles(const QJsonArray &arr);
+protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 private slots:
     void downloadFile(const QString &url, const QString &fileName);
+    void adjustMessageEditHeight();
 };
 
 #endif

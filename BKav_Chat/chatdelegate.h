@@ -14,6 +14,7 @@ signals:
     void fileClicked(const QString &url, const QString &fileName);
     void imageClicked(const QString &url);
 private:
+    QSizeF wrappedTextSize(const QString &text, const QFont &font, qreal maxWidth) const;
     QString imageBaseUrl() const;
     bool editorEvent(QEvent *event,
                      QAbstractItemModel *model,

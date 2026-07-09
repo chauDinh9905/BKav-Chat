@@ -3,6 +3,9 @@
 #include "imagecache.h"
 #include "appconfig.h"
 #include <QMouseEvent>
+#include <QTextLayout>
+#include <QTextEdit>
+#include <QtMath>
 
 ChatDelegate::ChatDelegate(QObject *parent)
     : QStyledItemDelegate(parent) {
@@ -45,14 +48,12 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     QFont font = emojiCapableFont(option.font);
     QFontMetrics fm(font);
     // Tính chiều cao phần text (nếu có nội dung)
-    QRect textRect;
-    if (!content.isEmpty()) {
-        textRect = fm.boundingRect(
-            QRect(0, 0, maxWidth - 2 * padding, 0),
-            Qt::TextWordWrap,
-            content);
+    QSizeF textSize;
+    if(!content.isEmpty()){
+        textSize = wrappedTextSize(content, font, maxWidth - 2*padding);
+        qDebug()<< "[paint] dang chay" << option.rect.width() << "maxWidth: " << maxWidth
+                 << "textSize: "<< textSize << "content len:" << content.length();
     }
-
     // Tính layout lưới ảnh (tối đa 3 ảnh/dòng, giống Messenger)
     int imgCols = qMin(3, qMax(1, images.size()));
     int imgRows = images.isEmpty() ? 0 : (images.size() + imgCols - 1) / imgCols;
@@ -63,10 +64,10 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     const int fileChipH = 36;
     int filesBlockH = files.isEmpty() ? 0 : files.size() * (fileChipH + 4);
 
-    int bubbleW = qMax(textRect.width(), imagesBlockW) + 2 * padding;
+    int bubbleW = qMax(qCeil(textSize.width()), imagesBlockW) + 2 * padding;
     bubbleW = qMax(bubbleW, files.isEmpty() ? 0 : maxWidth); // file chip rộng theo maxWidth cho dễ đọc tên
     int bubbleH = 2 * padding
-                  + (content.isEmpty() ? 0 : textRect.height() + spacing)
+                  + (content.isEmpty() ? 0 : qCeil(textSize.height()) + spacing)
                   + imagesBlockH + (images.isEmpty() ? 0 : spacing)
                   + filesBlockH;
 
@@ -86,13 +87,25 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
 
     // Vẽ text
     if (!content.isEmpty()) {
-        QRect tRect(bubbleRect.left() + padding, curY, bubbleRect.width() - 2 * padding, textRect.height());
         painter->setPen(Qt::black);
         painter->setFont(font);
-        painter->drawText(tRect, Qt::TextWordWrap, content);
-        curY += textRect.height() + spacing;
+        QTextLayout drawLayout(content, font);
+        QTextOption opt;
+        opt.setWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+        drawLayout.setTextOption(opt);
+        drawLayout.beginLayout();
+        qreal lineY = 0;
+        while(true){
+            QTextLine line = drawLayout.createLine();
+            if (!line.isValid()) break;
+            line.setLineWidth(bubbleRect.width() - 2 * padding);
+            line.setPosition(QPointF(0, lineY));
+            lineY += line.height();
+        }
+        drawLayout.endLayout();
+        drawLayout.draw(painter, QPointF(bubbleRect.left() + padding, curY));
+        curY += qCeil(textSize.height()) + spacing;
     }
-
     // Vẽ ảnh (lưới)
     for (int i = 0; i < images.size(); ++i) {
         int row = i / imgCols;
@@ -140,6 +153,7 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     }
 
     painter->restore();
+
 }
 
 QSize ChatDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -147,22 +161,17 @@ QSize ChatDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInd
     QString content = index.data(ChatModel::ContentRole).toString();
     QVector<ImageInfo> images = index.data(ChatModel::ImagesRole).value<QVector<ImageInfo>>();
     QVector<FileInfo> files = index.data(ChatModel::FilesRole).value<QVector<FileInfo>>();
-    int maxWidth = 400;
+    int maxWidth = option.rect.width()*0.65;
     int padding = 10;
     int thumbSize = 120;
     int spacing = 6;
     int fileChipH = 36;
 
-    QFontMetrics fm(emojiCapableFont(option.font));
+    QFont font = emojiCapableFont(option.font);
     int textH = 0;
     if (!content.isEmpty()) {
-        QRect textRect = fm.boundingRect(
-            QRect(0, 0, maxWidth - 2 * padding, 0),
-            Qt::TextWordWrap,
-            content);
-        textH = textRect.height() + spacing;
+        textH = qCeil(wrappedTextSize(content, font, maxWidth - 2 * padding).height()) + spacing;
     }
-
     int imgCols = qMin(3, qMax(1, images.size()));
     int imgRows = images.isEmpty() ? 0 : (images.size() + imgCols - 1) / imgCols;
     int imagesH = images.isEmpty() ? 0 : imgRows * thumbSize + (imgRows - 1) * spacing + spacing;
@@ -187,17 +196,10 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
     int thumbSize = 120;
     int spacing = 6;
     int fileChipH = 36;
-
-    QFontMetrics fm(option.font);
-
-    QRect textRect;
-
-    if (!content.isEmpty())
-    {
-        textRect = fm.boundingRect(
-            QRect(0,0,maxWidth-2*padding,0),
-            Qt::TextWordWrap,
-            content);
+    QFont font = emojiCapableFont(option.font);
+    QSizeF textSize;
+    if(!content.isEmpty()){
+        textSize = wrappedTextSize(content, font, maxWidth - 2*padding);
     }
 
     int imgCols = qMin(3, qMax(1, images.size()));
@@ -209,13 +211,13 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
 
     int filesBlockH =files.isEmpty()? 0: files.size()*(fileChipH+4);
 
-    int bubbleW =qMax(textRect.width(), imagesBlockW)+2*padding;
+   int bubbleW = qMax(qCeil(textSize.width()), imagesBlockW) + 2 * padding;
 
     bubbleW = qMax(bubbleW,files.isEmpty() ? 0 : maxWidth);
 
     int bubbleH =
         2*padding
-        +(content.isEmpty()?0:textRect.height()+spacing)
+         + (content.isEmpty() ? 0 : qCeil(textSize.height()) + spacing)
         +imagesBlockH
         +(images.isEmpty()?0:spacing)
         +filesBlockH;
@@ -237,7 +239,7 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
         bubbleRect.top()+padding;
 
     if(!content.isEmpty())
-        curY += textRect.height()+spacing;
+        curY += qCeil(textSize.height())+spacing;
 
     if(!images.isEmpty())
         curY += imagesBlockH+spacing;
@@ -257,4 +259,24 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
         curY += fileChipH+4;
     }
     return false;
+}
+
+QSizeF ChatDelegate::wrappedTextSize(const QString &text, const QFont &font, qreal maxWidth) const
+{
+    QTextLayout layout(text, font);
+    QTextOption opt;
+    opt.setWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+    layout.setTextOption(opt);
+    layout.beginLayout();
+    qreal height = 0, lineWidth = 0;
+    while (true) {
+        QTextLine line = layout.createLine();
+        if (!line.isValid()) break;
+        line.setLineWidth(maxWidth);
+        line.setPosition(QPointF(0, height));
+        height += line.height();
+        lineWidth = qMax(lineWidth, line.naturalTextWidth());
+    }
+    layout.endLayout();
+    return QSizeF(std::ceil(lineWidth), std::ceil(height));
 }

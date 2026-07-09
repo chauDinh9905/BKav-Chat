@@ -531,4 +531,6 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h

@@ -52,7 +52,8 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "message",
         "downloadFile",
         "url",
-        "fileName"
+        "fileName",
+        "adjustMessageEditHeight"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -76,6 +77,8 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         QtMocHelpers::SlotData<void(const QString &, const QString &)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 11 }, { QMetaType::QString, 12 },
         }}),
+        // Slot 'adjustMessageEditHeight'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -107,6 +110,7 @@ void Chat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 5: _t->selectEmoji(); break;
         case 6: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 7: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
+        case 8: _t->adjustMessageEditHeight(); break;
         default: ;
         }
     }
@@ -135,14 +139,14 @@ int Chat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

@@ -399,16 +399,16 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextcursor.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -569,4 +569,20 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QKeyEvent \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qeventpoint.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvector2d.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvectornd.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpointingdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QRect \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSize \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSizeF \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTransform \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h

@@ -1184,6 +1184,7 @@
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget
+ mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h
@@ -1211,6 +1212,7 @@
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h
+ mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h
@@ -2585,9 +2587,9 @@
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel
- mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
+ mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h
@@ -2602,7 +2604,6 @@
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlabel.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayout.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h
- mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
@@ -2612,6 +2613,7 @@
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h
+ mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h
  mdp:/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h

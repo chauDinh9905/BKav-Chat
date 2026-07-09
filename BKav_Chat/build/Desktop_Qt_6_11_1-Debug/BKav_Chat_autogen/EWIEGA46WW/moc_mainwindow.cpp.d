@@ -250,6 +250,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -277,6 +278,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
