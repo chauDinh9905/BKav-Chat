@@ -51,8 +51,6 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     QSizeF textSize;
     if(!content.isEmpty()){
         textSize = wrappedTextSize(content, font, maxWidth - 2*padding);
-        qDebug()<< "[paint] dang chay" << option.rect.width() << "maxWidth: " << maxWidth
-                 << "textSize: "<< textSize << "content len:" << content.length();
     }
     // Tính layout lưới ảnh (tối đa 3 ảnh/dòng, giống Messenger)
     int imgCols = qMin(3, qMax(1, images.size()));

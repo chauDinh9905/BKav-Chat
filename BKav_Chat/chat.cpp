@@ -711,6 +711,7 @@ void Chat::downloadFile(const QString &url, const QString &fileName){
     if(saveFilePath.isEmpty()) return;
 
     QUrl fileUrl(url);
+    qDebug() << "url file:" << url;
     QNetworkRequest request(fileUrl);
     QNetworkReply *reply = networkManager->get(request);
     connect(reply, &QNetworkReply::finished, this, [=](){
