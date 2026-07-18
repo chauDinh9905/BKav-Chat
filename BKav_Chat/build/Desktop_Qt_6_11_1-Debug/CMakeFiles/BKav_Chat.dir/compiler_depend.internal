@@ -292,6 +292,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit
@@ -316,6 +317,7 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h
@@ -2519,6 +2521,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSize
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSizeF
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector
@@ -2668,6 +2671,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimer.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h
@@ -7442,6 +7446,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
@@ -7465,6 +7470,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h
@@ -8039,6 +8045,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout
@@ -8061,6 +8068,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h

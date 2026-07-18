@@ -465,6 +465,8 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
@@ -567,8 +569,6 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QKeyEvent \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qevent.h \
@@ -585,4 +585,6 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimer.h

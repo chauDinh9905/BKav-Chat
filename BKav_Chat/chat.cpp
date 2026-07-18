@@ -17,7 +17,8 @@
 #include <QScrollArea>
 #include <QGridLayout>
 #include <QKeyEvent>
-
+#include <QTimer>
+#include <algorithm>
 using namespace std;
 
 Chat::Chat(
@@ -36,60 +37,42 @@ Chat::Chat(
     qDebug() << "Chat constructor start";
     resize(650,700);
 
-    setStyleSheet(
-        "background:white;"
-        );
+    setStyleSheet("background:white;");
 
-    networkManager =
-        new QNetworkAccessManager(this);
+    networkManager = new QNetworkAccessManager(this);
 
-    model =
-        new ChatModel(this);
+    model =new ChatModel(this);
 
-    headerLayout =
-        new QHBoxLayout();
+    headerLayout =new QHBoxLayout();
 
-    avatarLabel =
-        new QLabel();
+    avatarLabel =new QLabel();
 
     avatarLabel->setFixedSize(40,40);
 
-    nameLabel =
-        new QLabel(friendName);
+    nameLabel =new QLabel(friendName);
 
-    nameLabel->setStyleSheet(
-        "font-size:16px;"
-        "font-weight:bold;"
-        );
+    nameLabel->setStyleSheet("font-size:16px;""font-weight:bold;");
 
-    closeButton =
-        new QPushButton("X");
+    closeButton =new QPushButton("X");
 
     closeButton->setFixedSize(30,30);
 
-    headerLayout->addWidget(
-        avatarLabel);
+    headerLayout->addWidget(avatarLabel);
 
-    headerLayout->addWidget(
-        nameLabel);
+    headerLayout->addWidget(nameLabel);
 
     headerLayout->addStretch();
 
-    headerLayout->addWidget(
-        closeButton);
+    headerLayout->addWidget(closeButton);
 
-    messageView =
-        new QListView(this);
+    messageView =new QListView(this);
 
     messageView->setModel(model);
 
     messageView->setItemDelegate(new ChatDelegate(this));
     messageView->setSpacing(2);
     messageView->setResizeMode(QListView::Adjust);
-    messageView->setStyleSheet(
-        "border:none;"
-        "background:#F5F5F5;"
-        );
+    messageView->setStyleSheet("border:none;""background:#F5F5F5;");
 
     messageEdit = new QTextEdit();
 
@@ -140,13 +123,22 @@ Chat::Chat(
     attachmentPreviewBar = new QWidget();
     attachmentPreviewBar->setStyleSheet("background:#EFEFEF;");
     attachmentPreviewBar->setFixedHeight(70);
-    attachmentPreviewBar->hide();
+    //attachmentPreviewBar->hide();
 
     attachmentPreviewLayout = new QHBoxLayout(attachmentPreviewBar);
     attachmentPreviewLayout->setContentsMargins(5,5,5,5);
     attachmentPreviewLayout->setSpacing(5);
     attachmentPreviewLayout->addStretch();
 
+    attachmentPreviewScroll = new QScrollArea();     // scroll area bọc ngoài, đây mới là widget add vào mainLayout
+    attachmentPreviewScroll->setWidget(attachmentPreviewBar);
+    attachmentPreviewScroll->setWidgetResizable(false); // để attachmentPreviewBar tự tính sizeHint theo nội dung, không bị ép co giãn theo scroll area
+    attachmentPreviewScroll->setFixedHeight(80);        // 70 (thumbnail) + margin, cố định chiều cao, không phình theo window
+    attachmentPreviewScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    attachmentPreviewScroll->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    attachmentPreviewScroll->setFrameShape(QFrame::NoFrame);
+    attachmentPreviewScroll->setStyleSheet("background:#EFEFEF;");
+    attachmentPreviewScroll->hide();
     mainLayout =
         new QVBoxLayout(this);
 
@@ -155,7 +147,7 @@ Chat::Chat(
 
     mainLayout->addWidget(
         messageView);
-    mainLayout->addWidget(attachmentPreviewBar);
+    mainLayout->addWidget(attachmentPreviewScroll);
 
     mainLayout->addLayout(
         bottomLayout);
@@ -249,40 +241,75 @@ void Chat::selectFile()
 
 void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
 {
+    int thumbW = isImage ? 60 : 170;
     QWidget *thumb = new QWidget();
-    thumb->setFixedSize(60,60);
-
-    QVBoxLayout *thumbLayout = new QVBoxLayout(thumb);
-    thumbLayout->setContentsMargins(0,0,0,0);
-
-    QLabel *iconLabel = new QLabel();
-    iconLabel->setFixedSize(50,50);
-    iconLabel->setAlignment(Qt::AlignCenter);
-    iconLabel->setStyleSheet("border:1px solid #ccc; background:white;");
-
+    thumb->setFixedSize(thumbW, 70);
     if (isImage) {
+        QVBoxLayout *thumbLayout = new QVBoxLayout(thumb);
+        thumbLayout->setContentsMargins(2, 0, 2, 0);
+        thumbLayout->setSpacing(2);
+        QLabel *iconLabel = new QLabel();
+        iconLabel->setFixedSize(50, 50);
         QPixmap pix(filePath);
-        iconLabel->setPixmap(pix.scaled(50,50, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+        iconLabel->setPixmap(pix.scaled(50, 50, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+        iconLabel->setAlignment(Qt::AlignCenter);
+        iconLabel->setStyleSheet("border:1px solid #ccc; background:white;");
+        thumbLayout->addWidget(iconLabel, 0, Qt::AlignHCenter);
     } else {
+        QHBoxLayout *thumbLayout = new QHBoxLayout(thumb);
+        thumbLayout->setContentsMargins(6, 0, 20, 0);   // chừa lề phải cho nút xoá "×"
+        thumbLayout->setSpacing(6);
+        thumbLayout->setAlignment(Qt::AlignVCenter);
+        QLabel *iconLabel = new QLabel();
+        iconLabel->setFixedSize(40, 40);
         iconLabel->setText("📄");
-        iconLabel->setToolTip(QFileInfo(filePath).fileName());
+        iconLabel->setAlignment(Qt::AlignCenter);
+        iconLabel->setStyleSheet("border:1px solid #ccc; background:white;");
+        thumbLayout->addWidget(iconLabel, 0, Qt::AlignVCenter);
+
+        // Hiện tên file rút gọn ngay dưới icon, kèm "..." nếu quá dài
+        QFileInfo fileInfo(filePath);
+        QString fileName = QFileInfo(filePath).fileName();
+        QString baseName = fileInfo.completeBaseName(); // tên không kèm đuôi, ví dụ "BaoCaoCuoiKy"
+        QString suffix = fileInfo.suffix();
+        QLabel *nameLabel = new QLabel();
+        nameLabel->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+        nameLabel->setStyleSheet("font-size:9px; color:#333; background:transparent; border:none;");
+        nameLabel->setWordWrap(false);
+        QFontMetrics fm(nameLabel->font());
+        int availWidth = thumbW - 40 - 20 - 12; // trừ icon, lề phải, spacing
+        QString displayText;
+        if (!suffix.isEmpty()) {
+            QString ext = "." + suffix;
+            int extWidth = fm.horizontalAdvance(ext);
+            QString elidedBase = fm.elidedText(baseName, Qt::ElideRight, availWidth - extWidth);
+            displayText = elidedBase + ext;
+        } else {
+            displayText = fm.elidedText(fileName, Qt::ElideRight, availWidth);
+        }
+        nameLabel->setText(displayText);
+        nameLabel->setToolTip(fileName); // hover vẫn hiện tên đầy đủ
+
+        thumbLayout->addWidget(nameLabel);
     }
-    thumbLayout->addWidget(iconLabel);
-
     QPushButton *removeBtn = new QPushButton("×", thumb);
-    removeBtn->setFixedSize(16,16);
-    removeBtn->move(44,0);
+    removeBtn->setFixedSize(16, 16);
+    removeBtn->move(thumbW - 16, 0);
     removeBtn->setStyleSheet("border-radius:8px; background:#999; color:white; font-size:10px;");
-
     connect(removeBtn, &QPushButton::clicked, this, [=]() {
         pendingAttachments.removeAll(PendingAttachment{filePath, isImage});
+        attachmentPreviewLayout->removeWidget(thumb);
         thumb->deleteLater();
+        attachmentPreviewLayout->activate();
+        attachmentPreviewBar->adjustSize();
         if (pendingAttachments.isEmpty())
-            attachmentPreviewBar->hide();
+            attachmentPreviewScroll->hide();
     });
-
     attachmentPreviewLayout->insertWidget(attachmentPreviewLayout->count() - 1, thumb);
-    attachmentPreviewBar->show();
+    attachmentPreviewLayout->activate();
+    attachmentPreviewBar->adjustSize();
+    attachmentPreviewScroll->updateGeometry();
+    attachmentPreviewScroll->show();
 }
 bool Chat::eventFilter(QObject *obj, QEvent *event)
 {
@@ -410,7 +437,7 @@ void Chat::clearAttachments()
         if (item->widget()) item->widget()->deleteLater();
         delete item;
     }
-    attachmentPreviewBar->hide();
+    attachmentPreviewScroll->hide();
 }
 void Chat::sendMessage()
 {
@@ -506,7 +533,6 @@ void Chat::sendMessage()
             1,
             true
             );
-
         model->addMessage(msg);
         //SocketManager::instance().sendMessage(myId, friendId.toLongLong(), text);
         qDebug() << "myId: " << myId << " friendID: " << friendId << " " << text;
@@ -622,7 +648,9 @@ void Chat::loadMessages()
         MessageInfo msg(msgData["sender_id"].toLongLong(), msgData["friend_id"].toLongLong(), msgData["content"].toString(), {}, {}, QDateTime::fromString(msgData["created_at"].toString(), Qt::ISODate), QDateTime::currentDateTime(),1, msgData["sender_id"].toLongLong() == myId);
         model->addMessage(msg);
     }
-
+    QTimer::singleShot(0, this, [this]() {
+        messageView->scrollToBottom();
+    });
     QNetworkRequest request(url);
     request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
     QNetworkReply *reply = networkManager->get(request);
@@ -686,7 +714,9 @@ void Chat::loadMessages()
 
             model->addMessage(msg);
         }
-
+        QTimer::singleShot(0, this, [this]() {
+            messageView->scrollToBottom();
+        });
         reply->deleteLater();
     });
 }

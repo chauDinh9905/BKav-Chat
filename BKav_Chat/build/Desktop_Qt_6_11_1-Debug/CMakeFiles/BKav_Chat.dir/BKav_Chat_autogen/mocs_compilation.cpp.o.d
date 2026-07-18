@@ -518,6 +518,8 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chatmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \

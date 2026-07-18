@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QScrollArea>
 #include "chatmodel.h"
 
 struct PendingAttachment {
@@ -73,8 +74,9 @@ private:
 
     QNetworkAccessManager *networkManager;
     QWidget *attachmentPreviewBar;
-    QWidget *emojiPopup;
+    QWidget *emojiPopup = nullptr;
     QHBoxLayout *attachmentPreviewLayout;
+    QScrollArea *attachmentPreviewScroll;
     QVector<PendingAttachment> pendingAttachments;
     void addAttachmentPreview(const QString &filePath, bool isImage);
     void clearAttachments();

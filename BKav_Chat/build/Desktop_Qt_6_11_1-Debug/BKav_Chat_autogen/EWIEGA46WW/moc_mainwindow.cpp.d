@@ -249,6 +249,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
@@ -271,6 +272,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
