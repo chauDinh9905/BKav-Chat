@@ -84,6 +84,22 @@ wss.on('connection', (ws) => {
                 });
                 return;
             }
+            if(msg.type === 'mark_seen'){
+                const models = reqlib('database').models;
+                await models.Message.updateMany(
+                    {UserID: msg.friendId, FriendID: msg.userId, isSend: {$lt: 2}},
+                    {isSend: 2}
+                );
+
+                const friendWs = clients.get(msg.friendId.toString());
+                if(friendWs && friendWs.readyState === 1){
+                    friendWs.send(JSON.stringify({
+                        type: 'message_seen',
+                        by: msg.userId
+                    }));
+                }
+                return;
+            }
         } catch (e) {
             console.log('WS error:', e.message);
         }
@@ -153,12 +169,24 @@ async function startConsumer() {
                 const targetWs = clients.get(data.to.toString());
                 if (targetWs && targetWs.readyState === 1) {
                     targetWs.send(JSON.stringify({
+                        id: data.id,
                         from: data.from,
                         to: data.to,
                         content: data.content,
                         files: data.files,
                         images: data.images
                     }));
+                    const models = reqlib('database').models;
+                    await models.Message.updateOne({_id: data.id, isSend: 0}, {isSend: 1});
+
+                    const senderWs = clients.get(data.from.toString());
+                    if(senderWs && senderWs.readyState === 1){
+                        senderWs.send(JSON.stringify({
+                            type: 'message_delivered',
+                            messageId: data.id,
+                            to: data.to
+                        }));
+                    }
                 }
             }
         }

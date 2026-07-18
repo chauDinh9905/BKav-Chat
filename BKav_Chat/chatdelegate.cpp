@@ -6,6 +6,8 @@
 #include <QTextLayout>
 #include <QTextEdit>
 #include <QtMath>
+#include <QPainterPath>
+#include <QPixMap>
 
 ChatDelegate::ChatDelegate(QObject *parent)
     : QStyledItemDelegate(parent) {
@@ -69,7 +71,7 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
                   + imagesBlockH + (images.isEmpty() ? 0 : spacing)
                   + filesBlockH;
 
-    int x = isMine ? option.rect.right() - bubbleW - 10 : option.rect.left() + 10;
+    int x = isMine ? option.rect.right() - bubbleW - 10 - tickGutter : option.rect.left() + 10 + avatarGutter;
     int y = option.rect.top() + 5;
     QRect bubbleRect(x, y, bubbleW, bubbleH);
 
@@ -150,6 +152,43 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
         curY += fileChipH + 4;
     }
 
+    if(!isMine && isLastInFriendGroup(index) && !m_friendAvatarUrl.isEmpty()){
+        int avatarSize = 28;
+        QRect avatarRect(option.rect.left() + 4, bubbleRect.bottom() - avatarSize, avatarSize, avatarSize);
+        QPixmap avatarPix = ImageCache::instance().get(m_friendAvatarUrl);
+        if(!avatarPix.isNull()){
+            QPixmap scaled = avatarPix.scaled(avatarSize, avatarSize, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+            QPainterPath clip;
+            clip.addEllipse(avatarRect);
+            painter->save();
+            painter->setClipPath(clip);
+            painter->drawPixmap(avatarRect, scaled);
+            painter->restore();
+        }else{
+            painter->setBrush(Qt::gray);
+            painter->setPen(Qt::NoPen);
+            painter->drawEllipse(avatarRect);
+        }
+    }
+    if(isMine && isLastMineMessage(index)){
+        int isSend = index.data(ChatModel::IsSendRole).toInt();
+        QString tickText;
+        QColor tickColor = Qt::blue;
+        switch(isSend){
+        case 0:
+            tickText = "✓";
+            break;
+        case 1:
+            tickText = "✓✓";
+            break;
+        case 2:
+            tickText = "đã xem";
+            break;
+        default:
+            tickText = "✓";
+            break;
+        }
+    }
     painter->restore();
 
 }
@@ -277,4 +316,20 @@ QSizeF ChatDelegate::wrappedTextSize(const QString &text, const QFont &font, qre
     }
     layout.endLayout();
     return QSizeF(std::ceil(lineWidth), std::ceil(height));
+}
+void ChatDelegate::setFriendAvatarUrl(const QString &url){
+    m_friendAvatarUrl = url;
+}
+
+bool ChatDelegate::isLastMineMessage(const QModelIndex &index) const{
+    if(!index.data(ChatModel::IsMineRole).toBool()) return false;
+    return index.row() == index.model()->rowCount() - 1;
+}
+bool ChatDelegate::isLastInFriendGroup(const QModelIndex &index) const{
+    if(index.data(ChatModel::IsMineRole).toBool()) return false;
+    int row = index.row();
+    int rowCount = index.model() -> rowCount();
+    if(row == rowCount - 1) return true;
+    QModelIndex next = index.model() -> index(row + 1, 0);
+    return next.data(ChatModel::IsMineRole).toBool();
 }

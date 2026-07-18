@@ -26,19 +26,14 @@ struct MessageInfo
 {
     qint64 userId;
     qint64 friendId;
-
     QString content;
-
     QVector<FileInfo> files;
     QVector<ImageInfo> images;
-
     QDateTime createdAt;
     QDateTime updatedAt;
-
     int isSend;
-
     bool isMine;
-
+    QString messageId;
     MessageInfo(
         qint64 userId,
         qint64 friendId,
@@ -48,7 +43,8 @@ struct MessageInfo
         const QDateTime &createdAt,
         const QDateTime &updatedAt,
         int isSend,
-        bool isMine)
+        bool isMine,
+        const QString &messageId = QString())
         :
         userId(userId),
         friendId(friendId),
@@ -58,7 +54,8 @@ struct MessageInfo
         createdAt(createdAt),
         updatedAt(updatedAt),
         isSend(isSend),
-        isMine(isMine)
+        isMine(isMine),
+        messageId(messageId)
     {
     }
 };
@@ -71,26 +68,20 @@ public:
         ContentRole = Qt::UserRole + 1,
         IsMineRole,
         ImagesRole,
-        FilesRole
+        FilesRole,
+        IsSendRole,
+        MessageIdRole
     };
     explicit ChatModel(QObject *parent = nullptr);
-
-    int rowCount(
-        const QModelIndex &parent =
-        QModelIndex()) const override;
-
-    QVariant data(
-        const QModelIndex &index,
-        int role) const override;
-
-    void addMessage(
-        const MessageInfo &message);
-
+    int rowCount(const QModelIndex &parent =QModelIndex()) const override;
+    QVariant data(const QModelIndex &index,int role) const override;
+    void addMessage(const MessageInfo &message);
     void clear();
     const MessageInfo& messageAt(int row) const {
-        return messages.at(row);
+        return messages[row];
     }
-
+    void updateMessageStatusById(const QString &messageId, int newStatus);
+    void markAllMineSeen();
 private:
     QVector<MessageInfo> messages;
 };

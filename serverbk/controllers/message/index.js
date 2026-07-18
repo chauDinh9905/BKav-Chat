@@ -43,7 +43,7 @@ module.exports = () => {
                 const unreadCount = await models.Message.countDocuments({
                 UserID: value.user_id,
                 FriendID: user.user_id,
-                isSend: 0
+                isSend: {$lt: 2}
                 });
                 listCustomFriend.push({
                     Content: response.length > 0 ? response[0]?.Content : '',
@@ -136,6 +136,7 @@ module.exports = () => {
             }).save()
             await models.Users.updateOne({ _id: user._id }, { created_at: moment().toDate() })
             await sendToKafka('chat_messages', {
+                id: response._id,
                 from: user.user_id,
                 to: Friend.user_id,
                 content: Content,
@@ -212,13 +213,21 @@ module.exports = () => {
                 else {
                     if (value?.isSend === 0) {
                         await models.Message.updateOne({ _id: value._id }, { isSend: 1 });
+                        const senderWs = global.wsClients.get(value.UserID.toString());
+                        if(senderWs && senderWs.readyState === 1){
+                            senderWs.send(JSON.stringify({
+                                type: 'message_delivered',
+                                messageId: value._id,
+                                to: user.user_id
+                            }));
+                        }
                     }
                     return ({
                         id: value._id,
                         Content: value?.Content,
                         Files: value?.Files,
                         Images: value?.Images,
-                        isSend: 1,
+                        isSend: value?.isSend === 0 ? 1 : values?.isSend,
                         CreatedAt: value?.CreatedAt,
                         MessageType: 0
                     })

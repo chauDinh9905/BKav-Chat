@@ -500,11 +500,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
