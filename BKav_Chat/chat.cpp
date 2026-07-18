@@ -83,47 +83,36 @@ Chat::Chat(
     messageEdit->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     messageEdit->installEventFilter(this);
 
-    sendButton =
-        new QPushButton();
+    sendButton =new QPushButton();
 
     sendButton->setText("▶");
 
-    emojiButton =
-        new QPushButton("😊");
+    emojiButton =new QPushButton("😊");
 
-    imageButton =
-        new QPushButton("🖼");
-
-    fileButton =
-        new QPushButton("📎");
+    imageButton =new QPushButton("🖼");
+    fileButton =new QPushButton("📎");
 
     sendButton->setFixedSize(40,40);
     emojiButton->setFixedSize(40,40);
     imageButton->setFixedSize(40,40);
     fileButton->setFixedSize(40,40);
 
-    bottomLayout =
-        new QHBoxLayout();
+    bottomLayout =new QHBoxLayout();
 
-    bottomLayout->addWidget(
-        messageEdit);
+    bottomLayout->addWidget(messageEdit);
 
-    bottomLayout->addWidget(
-        sendButton);
+    bottomLayout->addWidget(sendButton);
 
-    bottomLayout->addWidget(
-        emojiButton);
+    bottomLayout->addWidget(emojiButton);
 
-    bottomLayout->addWidget(
-        imageButton);
+    bottomLayout->addWidget(imageButton);
 
-    bottomLayout->addWidget(
-        fileButton);
+    bottomLayout->addWidget(fileButton);
 
     attachmentPreviewBar = new QWidget();
     attachmentPreviewBar->setStyleSheet("background:#EFEFEF;");
     attachmentPreviewBar->setFixedHeight(70);
-    //attachmentPreviewBar->hide();
+    attachmentPreviewBar->hide();
 
     attachmentPreviewLayout = new QHBoxLayout(attachmentPreviewBar);
     attachmentPreviewLayout->setContentsMargins(5,5,5,5);
@@ -139,18 +128,14 @@ Chat::Chat(
     attachmentPreviewScroll->setFrameShape(QFrame::NoFrame);
     attachmentPreviewScroll->setStyleSheet("background:#EFEFEF;");
     attachmentPreviewScroll->hide();
-    mainLayout =
-        new QVBoxLayout(this);
+    mainLayout =new QVBoxLayout(this);
 
-    mainLayout->addLayout(
-        headerLayout);
+    mainLayout->addLayout(headerLayout);
 
-    mainLayout->addWidget(
-        messageView);
+    mainLayout->addWidget(messageView);
     mainLayout->addWidget(attachmentPreviewScroll);
 
-    mainLayout->addLayout(
-        bottomLayout);
+    mainLayout->addLayout(bottomLayout);
 
     connect(
         sendButton,
@@ -207,36 +192,35 @@ void Chat::adjustMessageEditHeight()
 void Chat::selectImage()
 {
     QStringList files =
-        QFileDialog::getOpenFileNames(
-            this,
-            "Chọn ảnh",
-            "",
-            "Images (*.png *.jpg *.jpeg)"
-            );
-
+        QFileDialog::getOpenFileNames(this,"Chọn ảnh","","Images (*.png *.jpg *.jpeg)");
     if(files.isEmpty())
         return;
-
     for (const QString &f : files) {
         pendingAttachments.append({f, true});
         addAttachmentPreview(f, true);
     }
+    refreshAttachmentPreviewLayout();
+}
+void Chat::refreshAttachmentPreviewLayout()
+{
+    QTimer::singleShot(0, this, [this]() {
+        attachmentPreviewScroll->show();
+        attachmentPreviewLayout->activate();
+        attachmentPreviewBar->adjustSize();
+        attachmentPreviewScroll->updateGeometry();
+        if (layout()) layout()->activate();});
 }
 
 void Chat::selectFile()
 {
-    QStringList files =
-        QFileDialog::getOpenFileNames(
-            this,
-            "Chọn file");
-
+    QStringList files = QFileDialog::getOpenFileNames(this,"Chọn file");
     if(files.isEmpty())
         return;
-
     for (const QString &f : files) {
         pendingAttachments.append({f, false});
         addAttachmentPreview(f, false);
     }
+    refreshAttachmentPreviewLayout();
 }
 
 void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
@@ -309,7 +293,6 @@ void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
     attachmentPreviewLayout->activate();
     attachmentPreviewBar->adjustSize();
     attachmentPreviewScroll->updateGeometry();
-    attachmentPreviewScroll->show();
 }
 bool Chat::eventFilter(QObject *obj, QEvent *event)
 {

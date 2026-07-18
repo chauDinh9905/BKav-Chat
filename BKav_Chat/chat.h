@@ -87,6 +87,7 @@ public:
     QVector<FileInfo> parseFiles(const QJsonArray &arr);
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
+    void refreshAttachmentPreviewLayout();
 private slots:
     void downloadFile(const QString &url, const QString &fileName);
     void adjustMessageEditHeight();
