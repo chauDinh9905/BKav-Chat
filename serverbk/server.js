@@ -149,10 +149,10 @@ async function startConsumer() {
             const models = reqlib('database').models;
 
             // Cập nhật persistent state trong DB
-            await models.Users.updateOne(
-                { user_id: data.userId },
-                { $set: { isOnline: data.isOnline } }
-            );
+            // await models.Users.updateOne(
+            //     { user_id: data.userId },
+            //     { $set: { isOnline: data.isOnline } }
+            // );
             // Gửi từng user đang online trên instance này
             clients.forEach((clientWs, clientId) => {
                 if (clientId !== data.requesterId.toString() 

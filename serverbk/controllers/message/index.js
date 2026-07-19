@@ -54,7 +54,7 @@ module.exports = () => {
                     FullName: value.display_name,
                     Username: value.username,
                     Avatar: value.avatar_path,
-                    isOnline: moment(value.created_at).isSameOrAfter(moment().subtract(10, 'minutes')),
+                    isOnline: global.wsClients.has(value.user_id.toString()),
                     UnreadCount: unreadCount,                                          
                     LastMsgTime: response.length > 0 ? response[0].CreatedAt : null
                 })
