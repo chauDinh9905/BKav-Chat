@@ -3,6 +3,7 @@
 #include "appconfig.h"
 #include "DatabaseManager.h"
 #include "SecurityUtils.h"
+#include <QCloseEvent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -115,6 +116,13 @@ void MainWindow::connectDashboardSignals()
                             chatView = nullptr;
                         });
             });
+}
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if (dashboardView) {
+        SocketManager::instance().unregisterUser(dashboardView->getMyId());
+    }
+    QMainWindow::closeEvent(event);
 }
 
 MainWindow::~MainWindow() {}

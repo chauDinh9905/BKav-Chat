@@ -45,7 +45,8 @@ void DatabaseManager::init(qint64 userId) {
                               "content TEXT, "
                               "files_json TEXT, "
                               "images_json TEXT, "
-                              "created_at TEXT)");
+                              "created_at TEXT, "
+                              "is_send INTEGER DEFAULT 1)");
     if (!success) {
         qDebug() << "Lỗi tạo bảng:" << query.lastError().text();
     }
@@ -58,11 +59,11 @@ void DatabaseManager::init(qint64 userId) {
 
 void DatabaseManager::insertMessage(const QString& id, qint64 senderId, qint64 friendId,
                                     const QString& content, const QJsonArray& files,
-                                    const QJsonArray& images, const QString& createdAt) {
+                                    const QJsonArray& images, const QString& createdAt, int isSend) {
     QMutexLocker locker(&mutex);
     QSqlQuery query(db);
-    query.prepare("INSERT OR REPLACE INTO messages (id, sender_id, friend_id, content, files_json, images_json, created_at) "
-                  "VALUES (:id, :s_id, :f_id, :content, :files, :images, :time)");
+    query.prepare("INSERT OR REPLACE INTO messages (id, sender_id, friend_id, content, files_json, images_json, created_at, is_send) "
+                  "VALUES (:id, :s_id, :f_id, :content, :files, :images, :time, :is_send)");
 
     // Chuyển QJsonArray sang chuỗi JSON string
     QString filesStr = QJsonDocument(files).toJson(QJsonDocument::Compact);
@@ -79,6 +80,8 @@ void DatabaseManager::insertMessage(const QString& id, qint64 senderId, qint64 f
     query.bindValue(":f_id", friendId);
     query.bindValue(":files", encFiles);
     query.bindValue(":images", encImages);
+    query.bindValue(":time", createdAt);
+    query.bindValue(":is_send", isSend);
 
     if (!query.exec()) {
         qDebug() << "Lỗi lưu tin nhắn ở cache:" << query.lastError().text();
@@ -115,9 +118,35 @@ QVector<QVariantMap> DatabaseManager::getMessages(qint64 myId, qint64 friendId) 
             msg["sender_id"] = query.value("sender_id");
             msg["friend_id"] = query.value("friend_id");
             msg["created_at"]= query.value("created_at");
-
+            msg["is_send"] = query.value("is_send");
             messages.append(msg);
         }
     }
     return messages;
+}
+void DatabaseManager::updateMessageStatus(const QString& id, int isSend)
+{
+    QMutexLocker locker(&mutex);
+    QSqlQuery query(db);
+    // chỉ tăng dần, không cho giảm - tránh sự kiện đến trễ/trùng làm sai lệch trạng thái
+    query.prepare("UPDATE messages SET is_send = :is_send WHERE id = :id AND is_send < :is_send");
+    query.bindValue(":is_send", isSend);
+    query.bindValue(":id", id);
+
+    if (!query.exec()) {
+        qDebug() << "Lỗi update trạng thái tin nhắn:" << query.lastError().text();
+    }
+}
+void DatabaseManager::markAllSeenFromFriend(qint64 friendId, qint64 myId)
+{
+    QMutexLocker locker(&mutex);
+    QSqlQuery query(db);
+    query.prepare("UPDATE messages SET is_send = 2 "
+                  "WHERE sender_id = :my AND friend_id = :friend AND is_send < 2");
+    query.bindValue(":my", myId);
+    query.bindValue(":friend", friendId);
+
+    if (!query.exec()) {
+        qDebug() << "Lỗi update seen hàng loạt:" << query.lastError().text();
+    }
 }

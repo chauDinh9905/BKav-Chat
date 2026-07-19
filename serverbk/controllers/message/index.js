@@ -141,7 +141,8 @@ module.exports = () => {
                 to: Friend.user_id,
                 content: Content,
                 files: listFiles,
-                images: listImages
+                images: listImages,
+                createAt: response.CreatedAt
             });
             const resMessage = await models.Message.find({ FriendID: Friend.user_id, isSend: 0 }, { _id: 1, content: 1 }).sort({ CreatedAt: 1 });
             await Promise.all(resMessage.map(async (value) => {
@@ -227,7 +228,7 @@ module.exports = () => {
                         Content: value?.Content,
                         Files: value?.Files,
                         Images: value?.Images,
-                        isSend: value?.isSend === 0 ? 1 : values?.isSend,
+                        isSend: value?.isSend === 0 ? 1 : value?.isSend,
                         CreatedAt: value?.CreatedAt,
                         MessageType: 0
                     })

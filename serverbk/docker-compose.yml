@@ -42,6 +42,8 @@ services:
       MONGO_URI: "mongodb://mongodb:27017/chat_db"
     ports:
       - "8888:8888" # Port server
+    volumes:
+      - .:/app
 
 volumes:
   mongo_data:

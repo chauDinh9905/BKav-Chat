@@ -543,4 +543,20 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QCloseEvent \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qevent.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qeventpoint.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvector2d.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvectornd.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpointingdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QRect \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSize \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSizeF \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTransform \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qscreen_platform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h

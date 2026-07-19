@@ -70,7 +70,8 @@ public:
         ImagesRole,
         FilesRole,
         IsSendRole,
-        MessageIdRole
+        MessageIdRole,
+        CreateAtRole
     };
     explicit ChatModel(QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent =QModelIndex()) const override;
@@ -82,8 +83,10 @@ public:
     }
     void updateMessageStatusById(const QString &messageId, int newStatus);
     void markAllMineSeen();
+    bool hasMessage(const QString &messageId) const;
 private:
     QVector<MessageInfo> messages;
+
 };
 
 #endif

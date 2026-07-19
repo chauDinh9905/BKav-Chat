@@ -18,8 +18,10 @@ public:
     void init(qint64 myId); // Hàm khởi tạo database và tạo bảng
     void insertMessage(const QString& id, qint64 senderId, qint64 friendId,
                     const QString& content, const QJsonArray& files,
-                        const QJsonArray& images, const QString& createdAt);
+                        const QJsonArray& images, const QString& createdAt, int isSend = 1);
     QVector<QVariantMap> getMessages(qint64 myId, qint64 friendId);
+     void updateMessageStatus(const QString& id, int isSend);
+    void markAllSeenFromFriend(qint64 friendId, qint64 myId);
     void setEncryptionKey(QString key){
         if (key.isEmpty()) {
             qWarning() << "Cảnh báo: Khóa mã hóa đang bị trống!";

@@ -59,10 +59,6 @@ QVariant DashboardModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
-/*
-    if (role == Qt::DisplayRole)
-        return friends[index.row()].displayName;
-*/
     const auto &friendInfo = friends[index.row()];
 
     if (role == Qt::DecorationRole) {

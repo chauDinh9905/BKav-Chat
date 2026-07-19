@@ -3,6 +3,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QDebug>
+#include <QTimer>
 
 SocketManager::SocketManager(QObject *parent)
     : QObject(parent)
@@ -35,24 +36,6 @@ void SocketManager::onErrorOccurred(QAbstractSocket::SocketError error)
 {
     qDebug() << " [Socket] WS error:" << error;
 }
-/*
-void SocketManager::sendMessage(
-    qint64 from,
-     qint64 to,
-    const QString &content)
-{
-    QJsonObject obj;
-
-    obj["from"] = from;
-    obj["to"] = to;
-    obj["content"] = content;
-
-    socket.sendTextMessage(
-        QJsonDocument(obj)
-            .toJson(
-                QJsonDocument::Compact));
-}
-*/
 void SocketManager::onTextMessageReceived(
     const QString &message)
 {
@@ -76,7 +59,14 @@ void SocketManager::unregisterUser(qint64 userId)
     QJsonObject obj;
     obj["type"] = "unregister";
     obj["userId"] = userId;
-    socket.sendTextMessage(
-        QJsonDocument(obj).toJson(QJsonDocument::Compact));
+    socket.sendTextMessage(QJsonDocument(obj).toJson(QJsonDocument::Compact));
+    QTimer::singleShot(150, &socket, [this]() {socket.close();});
     socket.close();
+}
+void SocketManager::markSeen(qint64 userId, qint64 friendId){
+    QJsonObject obj;
+    obj["type"] = "mark_seen";
+    obj["userId"] = userId;
+    obj["friendId"] = friendId;
+    socket.sendTextMessage(QJsonDocument(obj).toJson(QJsonDocument::Compact));
 }

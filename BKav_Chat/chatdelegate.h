@@ -20,8 +20,11 @@ private:
     bool editorEvent(QEvent *event,QAbstractItemModel *model,const QStyleOptionViewItem &option,const QModelIndex &index) override;
     bool isLastMineMessage(const QModelIndex &index) const;
     bool isLastInFriendGroup(const QModelIndex &index) const;
+    bool shouldShowTimeSeparator(const QModelIndex &index) const;
+    QString formatSeparatorTime(const QDateTime &dt) const;
     QString m_friendAvatarUrl;
     static const int avatarGutter = 34;
     static const int tickGutter = 26;
+    static const int separatorHeight = 26;
 };
 #endif

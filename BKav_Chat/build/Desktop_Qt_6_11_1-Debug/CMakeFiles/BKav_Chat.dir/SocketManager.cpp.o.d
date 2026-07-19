@@ -413,4 +413,6 @@ CMakeFiles/BKav_Chat.dir/SocketManager.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTimer \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimer.h

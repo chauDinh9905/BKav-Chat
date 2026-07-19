@@ -16,7 +16,7 @@ public:
     void sendMessage(qint64 from,qint64 to,const QString &content);
     void registerUser(qint64 userId);
     void unregisterUser(qint64 userId);
-
+    void markSeen(qint64 userId, qint64 friendId);
 signals:
     void messageReceived(const QString &message);
     void connected();

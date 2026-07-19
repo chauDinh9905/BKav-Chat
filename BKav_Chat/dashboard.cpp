@@ -359,6 +359,9 @@ void Dashboard::changeAvatar()
         new QHttpMultiPart(
             QHttpMultiPart::FormDataType);
     QHttpPart avatarPart;
+    QString ext = QFileInfo(fileName).suffix().toLower();
+    QString mimeType = (ext == "png") ? "image/png" : "image/jpeg";
+    avatarPart.setHeader(QNetworkRequest::ContentTypeHeader, QVariant(mimeType));
     avatarPart.setHeader(QNetworkRequest::ContentDispositionHeader,
         QVariant(
             QString(
@@ -389,6 +392,8 @@ void Dashboard::onAvartaUploadFinished()
         return;
     QByteArray response =
         reply->readAll();
+    qDebug() << "HTTP status:" << reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    qDebug() << "Response body:" << response;
     if(reply->error())
     {
         qDebug() << reply->errorString();

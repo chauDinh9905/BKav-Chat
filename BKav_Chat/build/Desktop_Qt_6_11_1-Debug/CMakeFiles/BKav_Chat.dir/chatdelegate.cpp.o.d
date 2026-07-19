@@ -526,4 +526,7 @@ CMakeFiles/BKav_Chat.dir/chatdelegate.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QtMath
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QtMath \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDate

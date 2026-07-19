@@ -3,7 +3,6 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser')
 var cors = require('cors')
-const multer = require('multer');
 const http = require('http');
 const { WebSocketServer } = require('ws');
 const { initKafka, sendToKafka, consumer } = require('./kafkaClient');
@@ -15,7 +14,6 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer().any());
 app.use(cookieParser());
 global.reqlib = require('app-root-path').require;
 app.use('/api', require('./controllers')());
@@ -91,13 +89,10 @@ wss.on('connection', (ws) => {
                     {isSend: 2}
                 );
 
-                const friendWs = clients.get(msg.friendId.toString());
-                if(friendWs && friendWs.readyState === 1){
-                    friendWs.send(JSON.stringify({
-                        type: 'message_seen',
-                        by: msg.userId
-                    }));
-                }
+                await sendToKafka('message_seen', {
+                    to: msg.friendId,
+                    by: msg.userId
+                    });
                 return;
             }
         } catch (e) {
@@ -151,7 +146,13 @@ async function startConsumer() {
             // về cho requester
             const requesterWs = clients.get(data.requesterId.toString());
             if (!requesterWs || requesterWs.readyState !== 1) return;
+            const models = reqlib('database').models;
 
+            // Cập nhật persistent state trong DB
+            await models.Users.updateOne(
+                { user_id: data.userId },
+                { $set: { isOnline: data.isOnline } }
+            );
             // Gửi từng user đang online trên instance này
             clients.forEach((clientWs, clientId) => {
                 if (clientId !== data.requesterId.toString() 
@@ -174,7 +175,8 @@ async function startConsumer() {
                         to: data.to,
                         content: data.content,
                         files: data.files,
-                        images: data.images
+                        images: data.images,
+                        createAt: data.createAt
                     }));
                     const models = reqlib('database').models;
                     await models.Message.updateOne({_id: data.id, isSend: 0}, {isSend: 1});
@@ -187,6 +189,15 @@ async function startConsumer() {
                             to: data.to
                         }));
                     }
+                }
+            }
+            if (topic === 'message_seen') {
+                const targetWs = clients.get(data.to.toString());
+                if (targetWs && targetWs.readyState === 1) {
+                    targetWs.send(JSON.stringify({
+                        type: 'message_seen',
+                        by: data.by
+                    }));
                 }
             }
         }

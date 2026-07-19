@@ -7,7 +7,8 @@
 #include <QTextEdit>
 #include <QtMath>
 #include <QPainterPath>
-#include <QPixMap>
+#include <QPixmap>
+#include <QDate>
 
 ChatDelegate::ChatDelegate(QObject *parent)
     : QStyledItemDelegate(parent) {
@@ -40,8 +41,8 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
     QVector<FileInfo> files = index.data(ChatModel::FilesRole).value<QVector<FileInfo>>();
     painter->save();
     painter->setRenderHint(QPainter::Antialiasing);
-
-
+    bool showSep = shouldShowTimeSeparator(index);
+    int sepH = showSep ? separatorHeight : 0;
     int padding = 10;
     int maxWidth = option.rect.width() * 0.65;
     int thumbSize = 120;
@@ -71,9 +72,19 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
                   + imagesBlockH + (images.isEmpty() ? 0 : spacing)
                   + filesBlockH;
 
-    int x = isMine ? option.rect.right() - bubbleW - 10 - tickGutter : option.rect.left() + 10 + avatarGutter;
-    int y = option.rect.top() + 5;
+    int x = isMine ? option.rect.right() - bubbleW - 10 : option.rect.left() + 10 + avatarGutter;
+    int y = option.rect.top() + 5 + sepH;
     QRect bubbleRect(x, y, bubbleW, bubbleH);
+    if(showSep){
+        QDateTime msgTime = index.data(ChatModel::CreateAtRole).toDateTime();
+        QString sepText = formatSeparatorTime(msgTime);
+        painter->setPen(Qt::black);
+        QFont sepFont = font;
+        sepFont.setPointSize(qMax(8, font.pointSize() - 1));
+        painter->setFont(sepFont);
+        QRect sepRect(option.rect.left(), option.rect.top(), option.rect.width(), separatorHeight);
+        painter->drawText(sepRect, Qt::AlignCenter, sepText);
+    }
 
     // Nếu chỉ có ảnh (không text, không file) -> bong bóng trong suốt, chỉ viền nhẹ (giống Messenger)
     bool onlyImages = content.isEmpty() && files.isEmpty() && !images.isEmpty();
@@ -180,14 +191,23 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
             break;
         case 1:
             tickText = "✓✓";
+            tickColor = Qt::blue;
             break;
         case 2:
             tickText = "đã xem";
+            tickColor = Qt::lightGray;
             break;
         default:
             tickText = "✓";
             break;
         }
+        QFont tickFont = font;
+        tickFont.setPointSize(qMax(7, font.pointSize() - 2));
+        painter->setPen(tickColor);
+        painter->setFont(tickFont);
+        QFontMetrics tickFm(tickFont);
+        QRect tickRect(bubbleRect.left(), bubbleRect.bottom() + 2, bubbleRect.width(), tickFm.height() + 2);
+        painter->drawText(tickRect, Qt::AlignRight | Qt::AlignVCenter, tickText);
     }
     painter->restore();
 
@@ -214,9 +234,11 @@ QSize ChatDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInd
     int imagesH = images.isEmpty() ? 0 : imgRows * thumbSize + (imgRows - 1) * spacing + spacing;
 
     int filesH = files.isEmpty() ? 0 : files.size() * (fileChipH + 4);
-
-    int totalH = 2 * padding + textH + imagesH + filesH + 10;
-    return QSize(option.rect.width(), totalH);
+    int sepH = shouldShowTimeSeparator(index) ? separatorHeight : 0;
+    bool isMine = index.data(ChatModel::IsMineRole).toBool();
+    int tickH = (isMine && isLastMineMessage(index)) ? 18 : 0;
+    int totalH = 2 * padding + textH + imagesH + filesH + 10 + tickH;
+    return QSize(option.rect.width(), totalH + sepH);
 }
 
 bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const QStyleOptionViewItem &option, const QModelIndex &index){
@@ -262,13 +284,9 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
     bool isMine =
         index.data(ChatModel::IsMineRole).toBool();
 
-    int x =
-        isMine
-            ? option.rect.right()-bubbleW-10
-            : option.rect.left()+10;
-
-    int y =
-        option.rect.top()+5;
+    int x =isMine? option.rect.right()-bubbleW-10 : option.rect.left()+10 + avatarGutter;
+    int sepH = shouldShowTimeSeparator(index) ? separatorHeight : 0;
+    int y = option.rect.top()+5+sepH;
 
     QRect bubbleRect(x,y,bubbleW,bubbleH);
 
@@ -323,7 +341,12 @@ void ChatDelegate::setFriendAvatarUrl(const QString &url){
 
 bool ChatDelegate::isLastMineMessage(const QModelIndex &index) const{
     if(!index.data(ChatModel::IsMineRole).toBool()) return false;
-    return index.row() == index.model()->rowCount() - 1;
+    int rowCount = index.model()->rowCount();
+    for(int r = rowCount - 1; r > index.row(); --r){
+        if(index.model()->index(r, 0).data(ChatModel::IsMineRole).toBool())
+            return false;
+    }
+    return true;
 }
 bool ChatDelegate::isLastInFriendGroup(const QModelIndex &index) const{
     if(index.data(ChatModel::IsMineRole).toBool()) return false;
@@ -332,4 +355,22 @@ bool ChatDelegate::isLastInFriendGroup(const QModelIndex &index) const{
     if(row == rowCount - 1) return true;
     QModelIndex next = index.model() -> index(row + 1, 0);
     return next.data(ChatModel::IsMineRole).toBool();
+}
+bool ChatDelegate::shouldShowTimeSeparator(const QModelIndex &index) const{
+    if(index.row() == 0) return true;
+    QDateTime cur = index.data(ChatModel::CreateAtRole).toDateTime();
+    QModelIndex prev = index.model()->index(index.row() - 1, 0);
+    QDateTime prevTime = prev.data(ChatModel::CreateAtRole).toDateTime();
+    if(!cur.isValid() || !prevTime.isValid()) return false;
+    return prevTime.secsTo(cur) >= 30*60;
+}
+QString ChatDelegate::formatSeparatorTime(const QDateTime &dt) const{
+    QDate today = QDate::currentDate();
+    if(dt.date() == today){
+        return dt.toString("HH:mm");
+    }else if(dt.date() == today.addDays(-1)){
+        return "Hôm qua, " + dt.toString("HH:mm");
+    }else{
+        return dt.toString("d MM yyyy, HH:mm");
+    }
 }

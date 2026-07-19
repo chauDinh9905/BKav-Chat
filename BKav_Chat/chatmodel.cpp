@@ -34,6 +34,8 @@ QVariant ChatModel::data(
         return msg.isSend;
     case MessageIdRole:
         return msg.messageId;
+    case CreateAtRole:
+        return msg.createdAt;
     default:
         return QVariant();
     }
@@ -84,4 +86,12 @@ void ChatModel::clear()
     beginResetModel();
     messages.clear();
     endResetModel();
+}
+bool ChatModel::hasMessage(const QString &messageId) const
+{
+    if (messageId.isEmpty()) return false;
+    for (const auto &m : messages) {
+        if (m.messageId == messageId) return true;
+    }
+    return false;
 }

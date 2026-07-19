@@ -32,5 +32,7 @@ private:
     ChatModel *chatModel;
 public:
     void connectDashboardSignals();
+protected:
+    void closeEvent(QCloseEvent *event) override;
 };
 #endif
