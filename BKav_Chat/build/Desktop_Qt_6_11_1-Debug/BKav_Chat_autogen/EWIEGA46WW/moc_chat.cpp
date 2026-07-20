@@ -50,8 +50,9 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "selectEmoji",
         "onMessageReceived",
         "message",
-        "downloadFile",
+        "showImagePreview",
         "url",
+        "downloadFile",
         "fileName",
         "adjustMessageEditHeight"
     };
@@ -73,12 +74,16 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 9 },
         }}),
+        // Slot 'showImagePreview'
+        QtMocHelpers::SlotData<void(const QString &)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 11 },
+        }}),
         // Slot 'downloadFile'
-        QtMocHelpers::SlotData<void(const QString &, const QString &)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 11 }, { QMetaType::QString, 12 },
+        QtMocHelpers::SlotData<void(const QString &, const QString &)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 11 }, { QMetaType::QString, 13 },
         }}),
         // Slot 'adjustMessageEditHeight'
-        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -109,8 +114,9 @@ void Chat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 4: _t->closeChat(); break;
         case 5: _t->selectEmoji(); break;
         case 6: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 7: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
-        case 8: _t->adjustMessageEditHeight(); break;
+        case 7: _t->showImagePreview((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
+        case 9: _t->adjustMessageEditHeight(); break;
         default: ;
         }
     }
@@ -139,14 +145,14 @@ int Chat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }

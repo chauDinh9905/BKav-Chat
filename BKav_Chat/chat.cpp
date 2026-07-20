@@ -166,6 +166,7 @@ Chat::Chat(
     connect(emojiButton, &QPushButton::clicked, this, &Chat::selectEmoji);
     if (auto *delegate = qobject_cast<ChatDelegate*>(messageView->itemDelegate())) {
         connect(delegate, &ChatDelegate::fileClicked, this, &Chat::downloadFile);
+        connect(delegate, &ChatDelegate::imageClicked, this, &Chat::showImagePreview);
     }
     connect(messageEdit, &QTextEdit::textChanged, this, &Chat::adjustMessageEditHeight);
     DatabaseManager::instance().init(myId);
@@ -763,6 +764,83 @@ void Chat::downloadFile(const QString &url, const QString &fileName){
             }
         }else{
             QMessageBox::critical(this, "Lỗi", "không thể tải file: " + reply->errorString());
+        }
+        reply->deleteLater();
+    });
+}
+void Chat::showImagePreview(const QString &url)
+{
+    QDialog *dialog = new QDialog(this);
+    dialog->setWindowTitle("Xem ảnh");
+    dialog->resize(600, 600);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
+
+    QLabel *imgLabel = new QLabel();
+    imgLabel->setAlignment(Qt::AlignCenter);
+    imgLabel->setText("Đang tải...");
+    imgLabel->setMinimumSize(400, 400);
+    layout->addWidget(imgLabel, 1);
+
+    QHBoxLayout *btnLayout = new QHBoxLayout();
+    QPushButton *saveBtn = new QPushButton("💾 Lưu ảnh");
+    QPushButton *closeBtn = new QPushButton("Đóng");
+    btnLayout->addStretch();
+    btnLayout->addWidget(saveBtn);
+    btnLayout->addWidget(closeBtn);
+    layout->addLayout(btnLayout);
+
+    connect(closeBtn, &QPushButton::clicked, dialog, &QDialog::close);
+    connect(saveBtn, &QPushButton::clicked, this, [=]() {
+        saveImageToDisk(url, dialog);
+    });
+
+    // Tải ảnh full-size để hiển thị trong dialog
+    QNetworkRequest request((QUrl(url)));
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, dialog, [=]() {
+        if (reply->error() == QNetworkReply::NoError) {
+            QPixmap pix;
+            if (pix.loadFromData(reply->readAll())) {
+                QPixmap scaled = pix.scaled(
+                    imgLabel->size().isEmpty() ? QSize(560, 560) : dialog->size(),
+                    Qt::KeepAspectRatio, Qt::SmoothTransformation);
+                imgLabel->setPixmap(scaled);
+            } else {
+                imgLabel->setText("Không thể hiển thị ảnh");
+            }
+        } else {
+            imgLabel->setText("Lỗi tải ảnh: " + reply->errorString());
+        }
+        reply->deleteLater();
+    });
+
+    dialog->show();
+}
+
+void Chat::saveImageToDisk(const QString &url, QWidget *parentDialog)
+{
+    QString fileName = QFileInfo(QUrl(url).path()).fileName();
+    if (fileName.isEmpty())
+        fileName = "image.png";
+
+    QString saveFilePath = QFileDialog::getSaveFileName(
+        parentDialog ? parentDialog : this, "Lưu ảnh", fileName);
+    if (saveFilePath.isEmpty())
+        return;
+
+    QNetworkRequest request((QUrl(url)));
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, this, [=]() {
+        if (reply->error() == QNetworkReply::NoError) {
+            QFile file(saveFilePath);
+            if (file.open(QIODevice::WriteOnly)) {
+                file.write(reply->readAll());
+                file.close();
+            }
+        } else {
+            QMessageBox::critical(this, "Lỗi", "Không thể tải ảnh: " + reply->errorString());
         }
         reply->deleteLater();
     });

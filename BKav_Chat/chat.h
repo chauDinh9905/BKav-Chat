@@ -42,8 +42,8 @@ private slots:
     void selectFile();
     void closeChat();
     void selectEmoji();
-    void onMessageReceived(
-        const QString &message);
+    void onMessageReceived(const QString &message);
+    void showImagePreview(const QString &url);
 
 private:
     qint64 myId;
@@ -80,6 +80,7 @@ private:
     QVector<PendingAttachment> pendingAttachments;
     void addAttachmentPreview(const QString &filePath, bool isImage);
     void clearAttachments();
+    void saveImageToDisk(const QString &url, QWidget *parentDialog = nullptr);
 public:
     void loadMessages();
     MessageInfo createMessageFromVariant(const QVariantMap &data);

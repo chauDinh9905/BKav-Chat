@@ -296,8 +296,21 @@ bool ChatDelegate::editorEvent(QEvent*event, QAbstractItemModel *itemModel,const
     if(!content.isEmpty())
         curY += qCeil(textSize.height())+spacing;
 
-    if(!images.isEmpty())
+    if(!images.isEmpty()){
+        for (int i = 0; i < images.size(); ++i) {
+            int row = i / imgCols;
+            int col = i % imgCols;
+            int ix = bubbleRect.left() + padding + col * (thumbSize + spacing);
+            int iy = curY + row * (thumbSize + spacing);
+            QRect thumbRect(ix, iy, thumbSize, thumbSize);
+
+            if (thumbRect.contains(mouse->pos())) {
+                emit imageClicked(imageBaseUrl() + images[i].urlImage);
+                return true;
+            }
+        }
         curY += imagesBlockH+spacing;
+    }
     for(int i=0;i<files.size();++i)
     {
         QRect chipRect(
