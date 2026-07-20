@@ -8,5 +8,6 @@ module.exports = function () {
     router.use('/message', middleware, require('./message')())
     router.use('/images', require('./images')())
     router.use('/files', require('./files')())
+    router.use('/nickname', middleware, require('./nicknames')())
     return router
 }

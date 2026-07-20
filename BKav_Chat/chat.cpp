@@ -18,7 +18,7 @@
 #include <QGridLayout>
 #include <QKeyEvent>
 #include <QTimer>
-#include <algorithm>
+
 using namespace std;
 
 Chat::Chat(
