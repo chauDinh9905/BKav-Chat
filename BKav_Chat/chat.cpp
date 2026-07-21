@@ -4,6 +4,7 @@
 #include "chatdelegate.h"
 #include "chat.h"
 #include "DatabaseManager.h"
+#include "nicknamecontroller.h"
 #include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -20,6 +21,8 @@
 #include <QTimer>
 
 using namespace std;
+static const qint64 MAX_ATTACHMENT_SIZE = 100LL * 1024 * 1024; // 100MB
+QHash<QString, Chat*> Chat::s_openChats;
 
 Chat::Chat(
     qint64 myId,const QString &friendId,const QString &friendName,const QString &avatarPath,QWidget *parent)
@@ -161,8 +164,20 @@ Chat::Chat(
         &Chat::selectFile);
     connect(nameButton, &QPushButton::clicked, this, [this]() {
         QPoint globalPos = nameButton->mapToGlobal(QPoint(0, nameButton->height()));
-        emit nicknameMenuRequested(this->friendId, nameButton->text(), this->friendName, globalPos);
+        NicknameController::instance().showMenuFor(this->friendId, nameButton->text(), this->friendName, globalPos, this);
     });
+
+    connect(&NicknameController::instance(), &NicknameController::nicknameUpdated, this,
+            [this](const QString &fId, const QString &newName) {
+                if (fId == this->friendId) {
+                    setDisplayName(newName);
+                }
+            });
+
+    connect(&NicknameController::instance(), &NicknameController::errorOccurred, this,
+            [this](const QString &msg) {
+                QMessageBox::warning(this, "Lỗi", msg);
+            });
     connect(
         closeButton,
         &QPushButton::clicked,
@@ -179,7 +194,6 @@ Chat::Chat(
         connect(delegate, &ChatDelegate::imageClicked, this, &Chat::showImagePreview);
     }
     connect(messageEdit, &QTextEdit::textChanged, this, &Chat::adjustMessageEditHeight);
-    DatabaseManager::instance().init(myId);
     loadMessages();
 }
 
@@ -204,11 +218,21 @@ void Chat::selectImage()
         QFileDialog::getOpenFileNames(this,"Chọn ảnh","","Images (*.png *.jpg *.jpeg)");
     if(files.isEmpty())
         return;
+    QStringList tooLargeFiles;
     for (const QString &f : files) {
+        QFileInfo fi(f);
+        if (fi.size() > MAX_ATTACHMENT_SIZE) {
+            tooLargeFiles << fi.fileName();
+            continue;
+        }
         pendingAttachments.append({f, true});
         addAttachmentPreview(f, true);
     }
     refreshAttachmentPreviewLayout();
+    if (!tooLargeFiles.isEmpty()) {
+        QMessageBox::warning(this, "File quá lớn",
+                             "Các ảnh sau vượt quá 100MB và không được thêm:\n" + tooLargeFiles.join("\n"));
+    }
 }
 void Chat::refreshAttachmentPreviewLayout()
 {
@@ -225,11 +249,21 @@ void Chat::selectFile()
     QStringList files = QFileDialog::getOpenFileNames(this,"Chọn file");
     if(files.isEmpty())
         return;
+    QStringList tooLargeFiles;
     for (const QString &f : files) {
+        QFileInfo fi(f);
+        if (fi.size() > MAX_ATTACHMENT_SIZE) {
+            tooLargeFiles << fi.fileName();
+            continue;
+        }
         pendingAttachments.append({f, false});
         addAttachmentPreview(f, false);
     }
     refreshAttachmentPreviewLayout();
+    if (!tooLargeFiles.isEmpty()) {
+        QMessageBox::warning(this, "File quá lớn",
+                             "Các file sau vượt quá 100MB và không được thêm:\n" + tooLargeFiles.join("\n"));
+    }
 }
 
 void Chat::addAttachmentPreview(const QString &filePath, bool isImage)
@@ -488,6 +522,8 @@ void Chat::sendMessage()
     connect(reply, &QNetworkReply::finished, this, [=]() {
         if (reply->error() != QNetworkReply::NoError) {
             qDebug() << reply->errorString();
+            QMessageBox::warning(this, "Lỗi kết nối",
+                                 "Không thể gửi tin nhắn: " + reply->errorString());
             reply->deleteLater();
             return;
         }
@@ -497,7 +533,11 @@ void Chat::sendMessage()
         QJsonObject resObj = doc.object();
 
         if (resObj["status"].toInt() != 1) {
-            qDebug() << resObj["message"].toString();
+            QString errMsg = resObj["message"].toString();
+            qDebug() << errMsg;
+            QMessageBox::warning(this, "Không thể gửi tin nhắn",
+                                 errMsg.isEmpty() ? "Đã có lỗi xảy ra, vui lòng thử lại." : errMsg);
+
             reply->deleteLater();
             return;
         }
@@ -507,25 +547,28 @@ void Chat::sendMessage()
         QJsonArray imagesJson = data["Images"].toArray();
         auto images = parseImages(data["Images"].toArray());
         auto files = parseFiles(data["Files"].toArray());
+        QString msgId = data["id"].toString();
+        if(!model->hasMessage(msgId)){
+            DatabaseManager::instance().insertMessage(
+                msgId, myId, friendId.toLongLong(),
+                text, filesJson, imagesJson, data["CreatedAt"].toString(), data["isSend"].toInt()
+                );
 
-        DatabaseManager::instance().insertMessage(
-            data["id"].toString(), myId, friendId.toLongLong(),
-            text, filesJson, imagesJson, data["CreatedAt"].toString(), data["isSend"].toInt()
-            );
-        // update UI từ server response
-        MessageInfo msg(
-            myId,
-            friendId.toLongLong(),
-            data["Content"].toString(),
-            files,
-            images,
-            QDateTime::fromString(data["CreatedAt"].toString(), Qt::ISODate),
-            QDateTime::currentDateTime(),
-            data["isSend"].toInt(),
-            true,
-            data["id"].toString()
-            );
-        model->addMessage(msg);
+            MessageInfo msg(
+                myId, friendId.toLongLong(),
+                data["Content"].toString(),
+                files, images,
+                QDateTime::fromString(data["CreatedAt"].toString(), Qt::ISODate),
+                QDateTime::currentDateTime(),
+                data["isSend"].toInt(),
+                true,
+                msgId
+                );
+            model->addMessage(msg);
+        } else {
+            // Đã có do message_sync đến trước — chỉ cần đồng bộ trạng thái isSend nếu cần
+            model->updateMessageStatusById(msgId, data["isSend"].toInt());
+        }
         //SocketManager::instance().sendMessage(myId, friendId.toLongLong(), text);
         qDebug() << "myId: " << myId << " friendID: " << friendId << " " << text;
         messageEdit->clear();
@@ -584,6 +627,54 @@ void Chat::onMessageReceived(
     }
     qint64 senderId =obj["from"].toVariant().toLongLong();
     qDebug() << "friend id:" << friendId.toLongLong();
+    if(type == "message_sync"){
+        QString msgId = obj["id"].toString();
+        qint64 fromId = obj["from"].toVariant().toLongLong();
+        qint64 toId   = obj["to"].toVariant().toLongLong();
+
+        // Chỉ quan tâm nếu đúng cuộc hội thoại đang mở trong khung chat này
+        bool belongsHere = (fromId == myId && toId == friendId.toLongLong())
+                           || (fromId == friendId.toLongLong() && toId == myId);
+        if(!belongsHere) return;
+
+        if(model->hasMessage(msgId)) return; // đã insert rồi (REST optimistic ở cửa sổ gốc)
+
+        QVector<ImageInfo> imagesVector;
+        if(obj.contains("images") && obj["images"].isArray()){
+            QJsonArray imgArr = obj["images"].toArray();
+            for(auto v : as_const(imgArr)){
+                QJsonObject o = v.toObject();
+                imagesVector.append({o["urlImage"].toString(), o["FileName"].toString()});
+            }
+        }
+        QVector<FileInfo> filesVector;
+        if(obj.contains("files") && obj["files"].isArray()){
+            QJsonArray fileArr = obj["files"].toArray();
+            for(auto v : as_const(fileArr)){
+                QJsonObject o = v.toObject();
+                filesVector.append({o["urlFile"].toString(), o["FileName"].toString()});
+            }
+        }
+
+        bool isMine = (fromId == myId);
+        MessageInfo msg(
+            fromId, toId,
+            obj["content"].toString(),
+            filesVector, imagesVector,
+            QDateTime::fromString(obj["createAt"].toString(), Qt::ISODate),
+            QDateTime::currentDateTime(),
+            isMine ? 0 : 1,
+            isMine,
+            msgId
+            );
+        model->addMessage(msg);
+        DatabaseManager::instance().insertMessage(
+            msgId, fromId, toId,
+            obj["content"].toString(), obj["files"].toArray(), obj["images"].toArray(),
+            obj["createAt"].toString(), isMine ? 0 : 1
+            );
+        return;
+    }
     if(senderId != friendId.toLongLong())
         return;
 
@@ -618,7 +709,7 @@ void Chat::onMessageReceived(
         content,
         filesVector,
         imagesVector,
-        QDateTime::fromString(obj["createdAt"].toString(), Qt::ISODate),
+        QDateTime::fromString(obj["createAt"].toString(), Qt::ISODate),
         QDateTime::currentDateTime(),
         1,
         false,
@@ -628,7 +719,7 @@ void Chat::onMessageReceived(
     DatabaseManager::instance().insertMessage(
                obj["id"].toString(), senderId, myId,
                content, obj["files"].toArray(), obj["images"].toArray(),
-               obj["createdAt"].toString(), 1
+               obj["createAt"].toString(), 1
                    );
     SocketManager::instance().markSeen(myId, friendId.toLongLong());
 }
@@ -858,4 +949,44 @@ void Chat::saveImageToDisk(const QString &url, QWidget *parentDialog)
 void Chat::setDisplayName(const QString &name)
 {
     nameButton->setText(name);
+}
+void Chat::openChatWindow(qint64 myId, const QString &friendId,
+                          const QString &friendName, const QString &avatarPath)
+{
+    if (s_openChats.contains(friendId)) {
+        Chat *existing = s_openChats.value(friendId);
+        existing->raise();
+        existing->activateWindow();
+        return;
+    }
+
+    Chat *chat = new Chat(myId, friendId, friendName, avatarPath, nullptr);
+    chat->setWindowFlags(Qt::Window);
+    chat->setAttribute(Qt::WA_DeleteOnClose);
+    chat->setWindowTitle(friendName);
+
+    s_openChats.insert(friendId, chat);
+
+    connect(chat, &Chat::closeRequested, chat, &QWidget::close);
+    connect(chat, &QObject::destroyed, chat, [friendId]() {
+        s_openChats.remove(friendId);
+    });
+
+    chat->show();
+    chat->raise();
+    chat->activateWindow();
+}
+
+bool Chat::isChatOpen(const QString &friendId)
+{
+    return s_openChats.contains(friendId);
+}
+
+void Chat::closeAllChatWindows()
+{
+    // close() sẽ trigger destroyed -> tự remove khỏi s_openChats
+    const auto chats = s_openChats.values();
+    for (Chat *c : chats) {
+        c->close();
+    }
 }

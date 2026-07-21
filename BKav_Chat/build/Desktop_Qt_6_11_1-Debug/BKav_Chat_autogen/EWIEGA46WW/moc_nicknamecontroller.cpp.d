@@ -1,35 +1,14 @@
-/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_nicknamecontroller.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/moc_predefs.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h \
-  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
@@ -40,8 +19,6 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
@@ -58,8 +35,6 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
@@ -77,7 +52,6 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qexceptionhandling.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qflags.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
@@ -91,22 +65,14 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlogging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmalloc.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetacontainer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
@@ -122,19 +88,14 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpoint.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qprocessordetection.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopeguard.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
@@ -174,59 +135,18 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtypes.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontmetrics.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontvariableaxis.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextcursor.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextdocument.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslError \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
@@ -238,55 +158,6 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qtwebsocketsexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsockets_global.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QCheckBox \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractslider.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qcheckbox.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qframe.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlabel.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayout.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

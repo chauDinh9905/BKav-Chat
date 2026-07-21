@@ -1,6 +1,7 @@
 #include "dashboard.h"
 #include "dashboardmodel.h"
 #include "SocketManager.h"
+#include "chat.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QDebug>
@@ -492,11 +493,25 @@ void Dashboard::onNewMessageReceived(const QString &message)
         model->updateFriendStatus(userId, isOnline);
         return;
     }
-
+    if (type == "message_sync") {
+        qint64 fromId = obj["from"].toVariant().toLongLong();
+        qint64 toId   = obj["to"].toVariant().toLongLong();
+        if (fromId == myId) {
+            // tin do chính mình gửi từ cửa sổ khác, update last message, KHÔNG tăng unread
+            model->updateFriendInfo(QString::number(toId), QDateTime::currentDateTime(), 0);
+        }
+        return;
+    }
+    if (type == "message_delivered") return;
     // Tin nhắn thường
     if (!obj.contains("from")) return;
     QString fromId = QString::number(obj["from"].toVariant().toLongLong());
-    model->updateFriendInfo(fromId, QDateTime::currentDateTime(), 1);
+    if (Chat::isChatOpen(fromId)) {
+        // Cửa sổ chat với người này đang mở -> chỉ update thời gian, không tăng badge
+        model->updateFriendInfo(fromId, QDateTime::currentDateTime(), 0);
+    } else {
+        model->updateFriendInfo(fromId, QDateTime::currentDateTime(), 1);
+    }
 }
 
 qint64 Dashboard::getMyId()

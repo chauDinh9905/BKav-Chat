@@ -9,18 +9,25 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
-NicknameController::NicknameController(QWidget *parentWidget, QObject *parent)
-    : QObject(parent), m_parentWidget(parentWidget)
+NicknameController& NicknameController::instance()
+{
+    static NicknameController inst;
+    return inst;
+}
+
+NicknameController::NicknameController(QObject *parent)
+    : QObject(parent)
 {
     m_networkManager = new QNetworkAccessManager(this);
 }
 
-void NicknameController::handleRequest(const QString &friendId,
-                                       const QString &currentDisplayName,
-                                       const QString &originalName,
-                                       const QPoint &globalPos)
+void NicknameController::showMenuFor(const QString &friendId,
+                                     const QString &currentDisplayName,
+                                     const QString &originalName,
+                                     const QPoint &globalPos,
+                                     QWidget *parentWidget)
 {
-    QMenu menu(m_parentWidget);
+    QMenu menu(parentWidget);
     QAction *renameAction = menu.addAction("Đổi biệt danh");
     QAction *removeAction = menu.addAction("Xóa biệt danh");
 
@@ -30,7 +37,7 @@ void NicknameController::handleRequest(const QString &friendId,
     if (chosen == renameAction) {
         bool ok;
         QString newName = QInputDialog::getText(
-            m_parentWidget, "Đổi biệt danh", "Nhập biệt danh mới:",
+            parentWidget, "Đổi biệt danh", "Nhập biệt danh mới:",
             QLineEdit::Normal, currentDisplayName, &ok);
         if (ok && !newName.trimmed().isEmpty()) {
             requestSetNickname(friendId, newName.trimmed());

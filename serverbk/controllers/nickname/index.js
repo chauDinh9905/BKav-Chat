@@ -1,51 +1,67 @@
 var express = require('express')
 var router = express.Router()
-mongoose = require('mongoose')
-models = reqlib('database').models
+var models = reqlib('database').models
+const { ObjectId } = require('mongoose').Types
+const authMiddleware = require('./../../middleware/index.js')
 
 module.exports = () => {
-    router.get('/', async (req, res) => {
+    router.post('/set-nickname', async (req, res) => {
         try {
-            const owner_id = req.UserID
-            const nicknames = await models.Nickname.find({ owner_id }).select('target_id nickname updated_at -_id')
-            return res.status(200).json({ status: 1, data: nicknames, message: null })
-        } catch (error) {
-            return res.status(400).json({ status: 0, data: null, message: error.message })
-        }
-    })
+            const UserID = req.UserID
+            const targetId = Number(req.body.FriendID)
+            const nickname = req.body.Nickname
 
-    router.put('/:target_id', async (req, res) => {
-        try {
-            const owner_id = req.UserID
-            const target_id = req.params.target_id
-            const { nickname } = req.body
-
-            if (!nickname || !nickname.trim()) {
-                return res.status(400).json({ status: 0, data: null, message: 'Nickname không được để trống.' })
-            }
-            if (owner_id === target_id) {
-                return res.status(400).json({ status: 0, data: null, message: 'Không thể tự đặt biệt danh cho chính mình.' })
+            if (!targetId || !nickname) {
+                return res.status(400).json({ status: 0, data: null, message: 'Thiếu dữ liệu' })
             }
 
-            const updated = await models.Nickname.findOneAndUpdate(
-                { owner_id, target_id },
-                { nickname: nickname.trim(), updated_at: new Date() },
+            let user = await models.Users.findOne({ _id: new ObjectId(UserID) }).exec()
+            if (user == null) {
+                return res.status(400).json({ status: 0, data: null, message: 'User not found' })
+            }
+            const ownerId = user.user_id
+
+            await models.Nickname.findOneAndUpdate(
+                { owner_id: ownerId, target_id: targetId },
+                { nickname },
                 { upsert: true, new: true }
             )
 
-            return res.status(200).json({ status: 1, data: updated, message: null })
+            global.sendToUser(ownerId, {
+                type: 'nickname_updated',
+                friend_id: targetId,
+                nickname: nickname
+            })
+
+            return res.status(200).json({ status: 1, data: { FriendID: targetId, Nickname: nickname }, message: '' })
         } catch (error) {
             return res.status(400).json({ status: 0, data: null, message: error.message })
         }
     })
 
-    router.delete('/:target_id', async (req, res) => {
+    router.post('/remove-nickname', async (req, res) => {
         try {
-            const owner_id = req.UserID
-            const target_id = req.params.target_id
+            const UserID = req.UserID
+            const targetId = Number(req.body.FriendID)
 
-            await models.Nickname.deleteOne({ owner_id, target_id })
-            return res.status(200).json({ status: 1, data: null, message: 'Đã xoá biệt danh.' })
+            let user = await models.Users.findOne({ _id: new ObjectId(UserID) }).exec()
+            if (user == null) {
+                return res.status(400).json({ status: 0, data: null, message: 'User not found' })
+            }
+            const ownerId = user.user_id
+
+            await models.Nickname.deleteOne({ owner_id: ownerId, target_id: targetId })
+
+            const targetUser = await models.Users.findOne({ user_id: targetId }).exec()
+            const originalName = targetUser ? targetUser.display_name : ''
+
+            global.sendToUser(ownerId, {
+                type: 'nickname_updated',
+                friend_id: targetId,
+                nickname: originalName
+            })
+
+            return res.status(200).json({ status: 1, data: { originalName }, message: '' })
         } catch (error) {
             return res.status(400).json({ status: 0, data: null, message: error.message })
         }

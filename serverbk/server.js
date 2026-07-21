@@ -26,6 +26,38 @@ const clients = new Map();
 
 global.wsClients = clients;
 
+function addClient(userId, ws) {
+    const key = userId.toString();
+    if (!clients.has(key)) {
+        clients.set(key, new Set());
+    }
+    clients.get(key).add(ws);
+}
+
+function removeClient(userId, ws) {
+    const key = userId.toString();
+    const set = clients.get(key);
+    if (!set) return false;
+    set.delete(ws);
+    if (set.size === 0) {
+        clients.delete(key);
+        return true; // user thực sự offline (không còn socket nào)
+    }
+    return false; // vẫn còn cửa sổ khác đang mở
+}
+
+function sendToUser(userId, payload) {
+    const set = clients.get(userId.toString());
+    if (!set) return;
+    for (const ws of set) {
+        if (ws.readyState === 1) {
+            ws.send(JSON.stringify(payload));
+        }
+    }
+}
+
+global.sendToUser = sendToUser; // để routes/nickname.js (và các route khác) gọi được
+
 server.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
@@ -59,27 +91,33 @@ wss.on('connection', (ws) => {
 
             // Đăng ký user
             if (msg.type === 'register') {
-                clients.set(msg.userId.toString(), ws);
+                const wasOffline = !clients.has(msg.userId.toString());
+                addClient(msg.userId, ws);
                 ws.userId = msg.userId;
                 console.log('User registered:', msg.userId);
 
-                await sendToKafka('user_presence', {
-                    userId: msg.userId,
-                    isOnline: true
-                });
-                 await sendToKafka('user_presence_sync', {
-                requesterId: msg.userId  // ai cần nhận thông tin
+                if (wasOffline) {
+                    // chỉ báo "vừa online" nếu đây là cửa sổ đầu tiên của user này
+                    await sendToKafka('user_presence', {
+                        userId: msg.userId,
+                        isOnline: true
+                    });
+                }
+                await sendToKafka('user_presence_sync', {
+                    requesterId: msg.userId
                 });
                 return;
             }
             if (msg.type === 'unregister') {
-                clients.delete(msg.userId.toString());
+                const trulyOffline = removeClient(msg.userId, ws);
                 console.log('User unregistered:', msg.userId);
 
-                await sendToKafka('user_presence', {
-                    userId: msg.userId,
-                    isOnline: false
-                });
+                if (trulyOffline) {
+                    await sendToKafka('user_presence', {
+                        userId: msg.userId,
+                        isOnline: false
+                    });
+                }
                 return;
             }
             if(msg.type === 'mark_seen'){
@@ -101,10 +139,11 @@ wss.on('connection', (ws) => {
     });
 
     ws.on('close', async () => {
-        if (ws.userId) {
-            clients.delete(ws.userId.toString());
-            console.log('User disconnected:', ws.userId);
+    if (ws.userId) {
+        const trulyOffline = removeClient(ws.userId, ws);
+        console.log('User disconnected:', ws.userId);
 
+        if (trulyOffline) {
             try{
                 await sendToKafka('user_presence', {
                     userId: ws.userId,
@@ -114,7 +153,8 @@ wss.on('connection', (ws) => {
                 console.error('Kafka presence update failed on disconnect (non-fatal):', error.message);
             }
         }
-    });
+    }
+   });
 });
 async function startConsumer() {
     await initKafka();
@@ -142,34 +182,84 @@ async function startConsumer() {
             }
 
             if (topic === 'user_presence_sync') {
-            // Mỗi server instance báo cáo clients của mình
-            // về cho requester
-            const requesterWs = clients.get(data.requesterId.toString());
-            if (!requesterWs || requesterWs.readyState !== 1) return;
+            const requesterSet = clients.get(data.requesterId.toString());
+            if (!requesterSet || requesterSet.size === 0) return;
             const models = reqlib('database').models;
 
-            // Cập nhật persistent state trong DB
-            // await models.Users.updateOne(
-            //     { user_id: data.userId },
-            //     { $set: { isOnline: data.isOnline } }
-            // );
-            // Gửi từng user đang online trên instance này
-            clients.forEach((clientWs, clientId) => {
-                if (clientId !== data.requesterId.toString() 
-                    && clientWs.readyState === 1) {
-                    requesterWs.send(JSON.stringify({
-                        type: 'presence',
-                        userId: parseInt(clientId),
-                        isOnline: true
-                    }));
+            clients.forEach((clientSet, clientId) => {
+                if (clientId !== data.requesterId.toString() && clientSet.size > 0) {
+                    for (const requesterWs of requesterSet) {
+                        if (requesterWs.readyState === 1) {
+                            requesterWs.send(JSON.stringify({
+                                type: 'presence',
+                                userId: parseInt(clientId),
+                                isOnline: true
+                            }));
+                        }
+                    }
+                }
+            });
+        }
+            
+            if (topic === 'user_presence') {
+            const models = reqlib('database').models;
+            const allUsers = await models.Users.find(
+                { user_id: { $ne: data.userId } },
+                { user_id: 1 }
+            );
+
+            clients.forEach((clientSet, clientId) => {
+                if (clientId !== data.userId.toString()) {
+                    for (const clientWs of clientSet) {
+                        if (clientWs.readyState === 1) {
+                            clientWs.send(JSON.stringify({
+                                type: 'presence',
+                                userId: data.userId,
+                                isOnline: data.isOnline
+                            }));
+                        }
+                    }
                 }
             });
         }
 
             if (topic === 'chat_messages') {
-                const targetWs = clients.get(data.to.toString());
-                if (targetWs && targetWs.readyState === 1) {
-                    targetWs.send(JSON.stringify({
+                const targetSet = clients.get(data.to.toString());
+                const payload = JSON.stringify({
+                    id: data.id,
+                    from: data.from,
+                    to: data.to,
+                    content: data.content,
+                    files: data.files,
+                    images: data.images,
+                    createAt: data.createAt
+                });
+
+                if (targetSet && targetSet.size > 0) {
+                    for (const targetWs of targetSet) {
+                        if (targetWs.readyState === 1) targetWs.send(payload);
+                    }
+                    const models = reqlib('database').models;
+                    await models.Message.updateOne({_id: data.id, isSend: 0}, {isSend: 1});
+
+                    const senderSet = clients.get(data.from.toString());
+                    if (senderSet) {
+                        const deliveredPayload = JSON.stringify({
+                            type: 'message_delivered',
+                            messageId: data.id,
+                            to: data.to
+                        });
+                        for (const senderWs of senderSet) {
+                            if (senderWs.readyState === 1) senderWs.send(deliveredPayload);
+                        }
+                    }
+                }
+
+                // đồng bộ đa cửa sổ cho chính người gửi — không phân biệt window nào đã POST REST
+                const senderSet = clients.get(data.from.toString());
+                if (senderSet) {
+                    const syncPayload = JSON.stringify({
+                        type: 'message_sync',
                         id: data.id,
                         from: data.from,
                         to: data.to,
@@ -177,27 +267,22 @@ async function startConsumer() {
                         files: data.files,
                         images: data.images,
                         createAt: data.createAt
-                    }));
-                    const models = reqlib('database').models;
-                    await models.Message.updateOne({_id: data.id, isSend: 0}, {isSend: 1});
-
-                    const senderWs = clients.get(data.from.toString());
-                    if(senderWs && senderWs.readyState === 1){
-                        senderWs.send(JSON.stringify({
-                            type: 'message_delivered',
-                            messageId: data.id,
-                            to: data.to
-                        }));
+                    });
+                    for (const senderWs of senderSet) {
+                        if (senderWs.readyState === 1) senderWs.send(syncPayload);
                     }
                 }
             }
             if (topic === 'message_seen') {
-                const targetWs = clients.get(data.to.toString());
-                if (targetWs && targetWs.readyState === 1) {
-                    targetWs.send(JSON.stringify({
+                const targetSet = clients.get(data.to.toString());
+                if (targetSet) {
+                    const payload = JSON.stringify({
                         type: 'message_seen',
                         by: data.by
-                    }));
+                    });
+                    for (const targetWs of targetSet) {
+                        if (targetWs.readyState === 1) targetWs.send(payload);
+                    }
                 }
             }
         }

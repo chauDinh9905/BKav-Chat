@@ -10,23 +10,27 @@ class NicknameController : public QObject
 {
     Q_OBJECT
 public:
-    explicit NicknameController(QWidget *parentWidget, QObject *parent = nullptr);
+    static NicknameController& instance();
 
-public slots:
-    void handleRequest(const QString &friendId,
-                       const QString &currentDisplayName,
-                       const QString &originalName,
-                       const QPoint &globalPos);
+    // Hiện QMenu tại globalPos, xử lý luôn việc đổi/xóa biệt danh
+    void showMenuFor(const QString &friendId,
+                     const QString &currentDisplayName,
+                     const QString &originalName,
+                     const QPoint &globalPos,
+                     QWidget *parentWidget);
 
 signals:
     void nicknameUpdated(const QString &friendId, const QString &newDisplayName);
     void errorOccurred(const QString &message);
 
 private:
+    explicit NicknameController(QObject *parent = nullptr);
+    NicknameController(const NicknameController&) = delete;
+    NicknameController& operator=(const NicknameController&) = delete;
+
     void requestSetNickname(const QString &friendId, const QString &newName);
     void requestRemoveNickname(const QString &friendId, const QString &originalName);
 
-    QWidget *m_parentWidget;
     QNetworkAccessManager *m_networkManager;
 };
 

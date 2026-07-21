@@ -3,6 +3,7 @@
 #include "appconfig.h"
 #include "DatabaseManager.h"
 #include "SecurityUtils.h"
+#include "chat.h"
 #include <QCloseEvent>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -72,49 +73,23 @@ void MainWindow::connectDashboardSignals()
             this,
             [this]()
             {
+                Chat::closeAllChatWindows();
                 AppConfig::instance().setProfile("default");
                 stackedWidget->setCurrentWidget(loginView);
-
                 stackedWidget->removeWidget(dashboardView);
                 delete dashboardView;
                 dashboardView = nullptr;
             });
 
-    connect(dashboardView,
-            &Dashboard::openChatRequest,
-            this,
+    connect(dashboardView, &Dashboard::openChatRequest, this,
             [this](const FriendInfo &friendInfo)
             {
-                if(chatView)
-                {
-                    stackedWidget->removeWidget(chatView);
-                    chatView->deleteLater();
-                    chatView = nullptr;
-                }
-
-                chatView = new Chat(
+                Chat::openChatWindow(
                     dashboardView->getMyId(),
                     friendInfo.friendId,
                     friendInfo.displayName,
                     friendInfo.avatarUrl
                     );
-
-
-
-                stackedWidget->addWidget(chatView);
-                stackedWidget->setCurrentWidget(chatView);
-
-                connect(chatView,
-                        &Chat::closeRequested,
-                        this,
-                        [this]()
-                        {
-                            stackedWidget->setCurrentWidget(dashboardView);
-
-                            stackedWidget->removeWidget(chatView);
-                            chatView->deleteLater();
-                            chatView = nullptr;
-                        });
             });
 }
 void MainWindow::closeEvent(QCloseEvent *event)

@@ -8,7 +8,20 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const multer = require('multer')
-const upload = multer({ storage: multer.memoryStorage() })
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 100 * 1024 * 1024 }})
+const handleUpload = (req, res, next) => {
+    upload.any()(req, res, (err) => {
+        if (err instanceof multer.MulterError) {
+            if (err.code === 'LIMIT_FILE_SIZE') {
+                return res.status(400).json({ status: 0, data: null, message: 'File vượt quá 100MB' })
+            }
+            return res.status(400).json({ status: 0, data: null, message: err.message })
+        } else if (err) {
+            return res.status(400).json({ status: 0, data: null, message: err.message })
+        }
+        next()
+    })
+}
 const currentDirectory = __dirname;
 const parentDirectory = path.resolve(currentDirectory, '..', '..');
 const savePathImage = `${parentDirectory}/images`;
@@ -76,7 +89,7 @@ module.exports = () => {
         }
     })
 
-    router.post('/send-message',upload.any(), async (req, res) => {
+    router.post('/send-message',handleUpload, async (req, res) => {
         try {
             const UserID = req.UserID
             const { FriendID, Content } = req.body
@@ -214,14 +227,11 @@ module.exports = () => {
                 else {
                     if (value?.isSend === 0) {
                         await models.Message.updateOne({ _id: value._id }, { isSend: 1 });
-                        const senderWs = global.wsClients.get(value.UserID.toString());
-                        if(senderWs && senderWs.readyState === 1){
-                            senderWs.send(JSON.stringify({
-                                type: 'message_delivered',
-                                messageId: value._id,
-                                to: user.user_id
-                            }));
-                        }
+                        global.sendToUser(value.UserID, {
+                            type: 'message_delivered',
+                            messageId: value._id,
+                            to: user.user_id
+                        });
                     }
                     return ({
                         id: value._id,

@@ -4,6 +4,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \

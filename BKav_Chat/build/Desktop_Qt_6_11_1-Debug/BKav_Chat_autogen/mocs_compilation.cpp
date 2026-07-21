@@ -13,5 +13,6 @@
 #include "EWIEGA46WW/moc_login.cpp"
 #include "EWIEGA46WW/moc_loginmodel.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_nicknamecontroller.cpp"
 #include "EWIEGA46WW/moc_signup.cpp"
 #include "EWIEGA46WW/moc_signupmodel.cpp"

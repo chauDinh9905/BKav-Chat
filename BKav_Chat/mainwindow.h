@@ -25,8 +25,6 @@ private:
     LogIn *loginView;
     SignUp *signUpView;
     Dashboard *dashboardView;
-    Chat *chatView = nullptr;
-
     LogInModel *loginModel;
     SignUpModel *signUpModel;
     DashboardModel *dashboardModel;

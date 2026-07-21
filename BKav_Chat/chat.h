@@ -11,6 +11,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QScrollArea>
+#include <QHash>
 #include "chatmodel.h"
 
 struct PendingAttachment {
@@ -32,7 +33,10 @@ public:
         const QString &friendName,
         const QString &avatarPath,
         QWidget *parent = nullptr);
-
+    static void openChatWindow(qint64 myId, const QString &friendId,
+                               const QString &friendName, const QString &avatarPath);
+    static bool isChatOpen(const QString &friendId);
+    static void closeAllChatWindows(); // khi logout
 signals:
     void closeRequested();
     void nicknameMenuRequested(const QString &friendId,const QString &currentDisplayName,const QString &originalName,const QPoint &globalPos);
@@ -81,6 +85,7 @@ private:
     void addAttachmentPreview(const QString &filePath, bool isImage);
     void clearAttachments();
     void saveImageToDisk(const QString &url, QWidget *parentDialog = nullptr);
+    static QHash<QString, Chat*> s_openChats;
 public:
     void loadMessages();
     MessageInfo createMessageFromVariant(const QVariantMap &data);

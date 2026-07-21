@@ -38,6 +38,8 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.cpp \
@@ -55,6 +57,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
