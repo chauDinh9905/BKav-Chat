@@ -85,19 +85,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 101,
+				"line" : 104,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 87,
+				"line" : 90,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 124,
+				"line" : 127,
 				"parent" : 0
 			},
 			{
@@ -239,7 +239,7 @@
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 131,
+				"line" : 134,
 				"parent" : 0
 			},
 			{
@@ -493,18 +493,19 @@
 				34,
 				36,
 				38,
-				43
+				42,
+				46
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
+			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "BKav_Chat_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "BKav_Chat_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "BKav_Chat::@6890427a1f51a3e7e1df",
@@ -599,11 +600,11 @@
 			"sourceIndexes" : 
 			[
 				0,
-				44,
-				45,
-				46,
 				47,
-				48
+				48,
+				49,
+				50,
+				51
 			]
 		},
 		{
@@ -627,7 +628,8 @@
 				34,
 				36,
 				38,
-				43
+				42,
+				46
 			]
 		},
 		{
@@ -651,7 +653,9 @@
 				33,
 				35,
 				37,
-				39
+				39,
+				40,
+				41
 			]
 		},
 		{
@@ -668,24 +672,24 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				40,
-				42
+				43,
+				45
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				41
+				44
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				49,
-				50,
-				51
+				52,
+				53,
+				54
 			]
 		}
 	],
@@ -909,6 +913,22 @@
 			"backtrace" : 4,
 			"path" : "AccountManage.h",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "imagecache.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "nicknamecontroller.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "nicknamecontroller.cpp",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 47,

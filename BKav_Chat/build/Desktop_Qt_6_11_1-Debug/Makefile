@@ -660,6 +660,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+nicknamecontroller.o: nicknamecontroller.cpp.o
+.PHONY : nicknamecontroller.o
+
+# target to build an object file
+nicknamecontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o
+.PHONY : nicknamecontroller.cpp.o
+
+nicknamecontroller.i: nicknamecontroller.cpp.i
+.PHONY : nicknamecontroller.i
+
+# target to preprocess a source file
+nicknamecontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.i
+.PHONY : nicknamecontroller.cpp.i
+
+nicknamecontroller.s: nicknamecontroller.cpp.s
+.PHONY : nicknamecontroller.s
+
+# target to generate assembly for a file
+nicknamecontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.s
+.PHONY : nicknamecontroller.cpp.s
+
 signup.o: signup.cpp.o
 .PHONY : signup.o
 
@@ -778,6 +802,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... nicknamecontroller.o"
+	@echo "... nicknamecontroller.i"
+	@echo "... nicknamecontroller.s"
 	@echo "... signup.o"
 	@echo "... signup.i"
 	@echo "... signup.s"

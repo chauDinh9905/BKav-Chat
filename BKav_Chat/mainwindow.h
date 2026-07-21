@@ -10,6 +10,7 @@
 #include "dashboard.h"
 #include "dashboardmodel.h"
 #include "chat.h"
+#include "nicknamecontroller.h"
 
 class MainWindow : public QMainWindow
 {

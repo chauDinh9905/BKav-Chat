@@ -333,10 +333,24 @@ CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.cpp -o CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.s
 
+CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
+CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp
+CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o -MF CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o.d -o CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp
+
+CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp > CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.i
+
+CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp -o CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.s
+
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: CMakeFiles/BKav_Chat.dir/flags.make
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: .qt/rcc/qrc_BKav_Chat_translations.cpp
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o: CMakeFiles/BKav_Chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o -MF CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o.d -o CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o -c /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp
 
 CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.i: cmake_force
@@ -367,6 +381,7 @@ BKav_Chat_OBJECTS = \
 "CMakeFiles/BKav_Chat.dir/avatarcache.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o" \
+"CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o" \
 "CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o"
 
 # External object files for target BKav_Chat
@@ -390,6 +405,7 @@ BKav_Chat: CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/avatarcache.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/SecurityUtils.cpp.o
+BKav_Chat: CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/build/Desktop_Qt_6_11_1-Debug/.qt/rcc/qrc_BKav_Chat_translations.cpp.o
 BKav_Chat: CMakeFiles/BKav_Chat.dir/build.make
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Widgets.so.6.11.1
@@ -401,7 +417,7 @@ BKav_Chat: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Network.so.6.11.1
 BKav_Chat: /home/chau-dinh/Qt/6.11.1/gcc_64/lib/libQt6Core.so.6.11.1
 BKav_Chat: CMakeFiles/BKav_Chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable BKav_Chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable BKav_Chat"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BKav_Chat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

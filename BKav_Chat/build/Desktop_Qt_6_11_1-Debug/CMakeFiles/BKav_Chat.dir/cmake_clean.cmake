@@ -40,6 +40,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BKav_Chat.dir/main.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o"
   "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o"
+  "CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/signup.cpp.o"
   "CMakeFiles/BKav_Chat.dir/signup.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o"

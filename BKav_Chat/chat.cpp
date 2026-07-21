@@ -40,9 +40,16 @@ Chat::Chat(
 
     avatarLabel->setFixedSize(40,40);
 
-    nameLabel =new QLabel(friendName);
-
-    nameLabel->setStyleSheet("font-size:16px;""font-weight:bold;");
+    nameButton = new QPushButton(friendName);
+    nameButton->setCursor(Qt::PointingHandCursor);
+    nameButton->setStyleSheet(
+        "QPushButton {"
+        "  font-size:16px; font-weight:bold;"
+        "  border:none; background:transparent;"
+        "  text-align:left; padding:0px;"
+        "}"
+        "QPushButton:hover { color:#1565C0; }"
+        );
 
     closeButton =new QPushButton("X");
 
@@ -50,7 +57,7 @@ Chat::Chat(
 
     headerLayout->addWidget(avatarLabel);
 
-    headerLayout->addWidget(nameLabel);
+    headerLayout->addWidget(nameButton);
 
     headerLayout->addStretch();
 
@@ -152,7 +159,10 @@ Chat::Chat(
         &QPushButton::clicked,
         this,
         &Chat::selectFile);
-
+    connect(nameButton, &QPushButton::clicked, this, [this]() {
+        QPoint globalPos = nameButton->mapToGlobal(QPoint(0, nameButton->height()));
+        emit nicknameMenuRequested(this->friendId, nameButton->text(), this->friendName, globalPos);
+    });
     connect(
         closeButton,
         &QPushButton::clicked,
@@ -844,4 +854,8 @@ void Chat::saveImageToDisk(const QString &url, QWidget *parentDialog)
         }
         reply->deleteLater();
     });
+}
+void Chat::setDisplayName(const QString &name)
+{
+    nameButton->setText(name);
 }

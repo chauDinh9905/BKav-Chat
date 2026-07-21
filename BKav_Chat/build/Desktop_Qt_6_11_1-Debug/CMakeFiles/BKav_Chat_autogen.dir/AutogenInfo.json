@@ -937,6 +937,12 @@
 			null
 		],
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h",
+			"MU",
+			"EWIEGA46WW/moc_nicknamecontroller.cpp",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h",
 			"MU",
 			"EWIEGA46WW/moc_signup.cpp",
@@ -1094,6 +1100,11 @@
 		],
 		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp",
 			"MU",
 			null
 		],

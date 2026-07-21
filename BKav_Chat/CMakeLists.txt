@@ -68,6 +68,8 @@ qt_add_executable(BKav_Chat
     SecurityUtils.cpp
     AccountManage.h
     imagecache.h
+    nicknamecontroller.h
+    nicknamecontroller.cpp
 
 
 

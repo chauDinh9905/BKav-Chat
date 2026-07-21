@@ -35,7 +35,7 @@ public:
 
 signals:
     void closeRequested();
-
+    void nicknameMenuRequested(const QString &friendId,const QString &currentDisplayName,const QString &originalName,const QPoint &globalPos);
 private slots:
     void sendMessage();
     void selectImage();
@@ -44,7 +44,7 @@ private slots:
     void selectEmoji();
     void onMessageReceived(const QString &message);
     void showImagePreview(const QString &url);
-
+    void setDisplayName(const QString &name);
 private:
     qint64 myId;
     qint64 lastEmojiPopupCloseMs = 0;
@@ -53,7 +53,7 @@ private:
     QString avatarPath;
 
     QLabel *avatarLabel;
-    QLabel *nameLabel;
+    QPushButton *nameButton;
 
     QPushButton *closeButton;
 

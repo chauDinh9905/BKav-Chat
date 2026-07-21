@@ -25,6 +25,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.cpp" "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp" "CMakeFiles/BKav_Chat.dir/main.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/main.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.cpp" "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.cpp" "CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/nicknamecontroller.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.cpp" "CMakeFiles/BKav_Chat.dir/signup.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/signup.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.cpp" "CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o.d"
   )
