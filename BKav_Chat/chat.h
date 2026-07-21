@@ -13,6 +13,7 @@
 #include <QScrollArea>
 #include <QHash>
 #include "chatmodel.h"
+#include "chatdelegate.h"
 
 struct PendingAttachment {
     QString filePath;
@@ -50,6 +51,7 @@ private slots:
     void showImagePreview(const QString &url);
     void setDisplayName(const QString &name);
 private:
+    ChatDelegate *chatDelegate = nullptr;
     qint64 myId;
     qint64 lastEmojiPopupCloseMs = 0;
     QString friendId;
@@ -84,6 +86,7 @@ private:
     QVector<PendingAttachment> pendingAttachments;
     void addAttachmentPreview(const QString &filePath, bool isImage);
     void clearAttachments();
+    void finishFileProgress(const QString &url, qint64 startMs);
     void saveImageToDisk(const QString &url, QWidget *parentDialog = nullptr);
     static QHash<QString, Chat*> s_openChats;
 public:

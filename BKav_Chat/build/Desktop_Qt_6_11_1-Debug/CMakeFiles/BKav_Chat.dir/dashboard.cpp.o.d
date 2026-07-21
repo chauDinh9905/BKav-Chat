@@ -505,6 +505,11 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFile \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h \
@@ -563,6 +568,4 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainterPath \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainterpath.h

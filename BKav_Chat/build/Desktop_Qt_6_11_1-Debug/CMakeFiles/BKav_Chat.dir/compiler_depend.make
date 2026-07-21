@@ -2505,6 +2505,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \
@@ -4163,6 +4164,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
@@ -4437,6 +4439,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMessageBox \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -4465,6 +4468,7 @@ CMakeFiles/BKav_Chat.dir/dashboard.cpp.o: /home/chau-dinh/Documents/intern/proje
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -7190,6 +7194,7 @@ CMakeFiles/BKav_Chat.dir/loginmodel.cpp.o: /home/chau-dinh/Documents/intern/proj
 CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
@@ -7383,6 +7388,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
@@ -7399,6 +7405,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
@@ -7459,6 +7466,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -7486,6 +7494,7 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: /home/chau-dinh/Documents/intern/projects_f
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -7784,6 +7793,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
@@ -7982,6 +7992,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QCloseEvent \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QTransform \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
@@ -8002,6 +8013,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
@@ -8075,6 +8087,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -8101,6 +8114,7 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: /home/chau-dinh/Documents/intern/proj
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -9947,6 +9961,8 @@ CMakeFiles/BKav_Chat.dir/signupmodel.cpp.o: /home/chau-dinh/Documents/intern/pro
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QFileDialog:
 
+/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h:
+
 /usr/include/alloca.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h:
@@ -11267,8 +11283,6 @@ BKav_Chat_autogen/EWIEGA46WW/moc_chatdelegate.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h:
@@ -11344,6 +11358,8 @@ BKav_Chat_autogen/EWIEGA46WW/moc_signup.cpp:
 .qt/rcc/qrc_BKav_Chat_translations.cpp:
 
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.cpp:
+
+/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.h:
 
 /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray:
 

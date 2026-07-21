@@ -151,12 +151,39 @@ void ChatDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, 
         painter->setPen(Qt::NoPen);
         painter->drawRoundedRect(chipRect, 6, 6);
 
-        painter->setPen(Qt::black);
-        painter->setFont(font);
-        QRect iconRect(chipRect.left() + 6, chipRect.top(), 24, chipRect.height());
-        painter->drawText(iconRect, Qt::AlignCenter, "📄");
+        QString fullFileUrl = imageBaseUrl() + f.urlFile;
+        int progress = fileProgress(fullFileUrl);
+
+        QRect iconRect(chipRect.left() + 6, chipRect.top() + (chipRect.height() - 24) / 2, 24, 24);
+
+        if (progress >= 0) {
+            // Đang tải: vòng nền + vòng tiến trình + số %
+            painter->setPen(QPen(QColor("#DDDDDD"), 3));
+            painter->setBrush(Qt::NoBrush);
+            painter->drawEllipse(iconRect);
+
+            painter->setPen(QPen(QColor("#1565C0"), 3, Qt::SolidLine, Qt::RoundCap));
+            int span = static_cast<int>(360.0 * progress / 100.0 * 16);
+            painter->drawArc(iconRect, 90 * 16, -span);
+
+            QFont pctFont = font;
+            pctFont.setPointSize(qMax(6, font.pointSize() - 5));
+            painter->setFont(pctFont);
+            painter->setPen(Qt::black);
+            painter->drawText(iconRect, Qt::AlignCenter, QString::number(progress));
+        } else {
+            // Chưa tải / đã tải xong: icon mũi tên tải xuống trong vòng tròn
+            painter->setPen(QColor("#999999"));
+            painter->setBrush(Qt::NoBrush);
+            painter->drawEllipse(iconRect);
+            painter->setPen(Qt::black);
+            painter->setFont(font);
+            painter->drawText(iconRect, Qt::AlignCenter, QString::fromUtf8("\u2193"));
+        }
 
         QRect nameRect(chipRect.left() + 34, chipRect.top(), chipRect.width() - 40, chipRect.height());
+        painter->setPen(Qt::black);
+        painter->setFont(font);
         QString elided = fm.elidedText(f.fileName, Qt::ElideMiddle, nameRect.width());
         painter->drawText(nameRect, Qt::AlignVCenter | Qt::AlignLeft, elided);
 
@@ -386,4 +413,16 @@ QString ChatDelegate::formatSeparatorTime(const QDateTime &dt) const{
     }else{
         return dt.toString("d MM yyyy, HH:mm");
     }
+}
+void ChatDelegate::setFileProgress(const QString &fileUrl, int percent)
+{
+    if (percent < 0 || percent >= 100)
+        m_fileProgress.remove(fileUrl);
+    else
+        m_fileProgress[fileUrl] = percent;
+}
+
+int ChatDelegate::fileProgress(const QString &fileUrl) const
+{
+    return m_fileProgress.value(fileUrl, -1);
 }

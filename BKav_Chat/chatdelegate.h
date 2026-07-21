@@ -10,6 +10,8 @@ public:
     explicit ChatDelegate(QObject *parent = nullptr);
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    void setFileProgress(const QString &fileUrl, int percent); // 0-99 = đang tải, -1 = xong/reset
+    int fileProgress(const QString &fileUrl) const;
     void setFriendAvatarUrl(const QString &url);
 signals:
     void fileClicked(const QString &url, const QString &fileName);
@@ -23,6 +25,7 @@ private:
     bool shouldShowTimeSeparator(const QModelIndex &index) const;
     QString formatSeparatorTime(const QDateTime &dt) const;
     QString m_friendAvatarUrl;
+    QHash<QString, int> m_fileProgress;
     static const int avatarGutter = 34;
     static const int tickGutter = 26;
     static const int separatorHeight = 26;

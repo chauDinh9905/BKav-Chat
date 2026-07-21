@@ -1,6 +1,7 @@
 /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/moc_predefs.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
+  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
   /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
@@ -181,6 +182,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
@@ -194,6 +196,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
@@ -253,6 +256,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -279,6 +283,7 @@
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
+  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
   /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \

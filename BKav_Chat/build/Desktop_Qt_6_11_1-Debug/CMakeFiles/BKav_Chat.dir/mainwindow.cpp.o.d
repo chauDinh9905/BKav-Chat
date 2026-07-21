@@ -518,6 +518,11 @@ CMakeFiles/BKav_Chat.dir/mainwindow.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \

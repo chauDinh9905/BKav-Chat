@@ -473,6 +473,11 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SocketManager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
@@ -497,11 +502,6 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
@@ -518,6 +518,7 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QFileDialog \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qfiledialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \

@@ -1,10 +1,11 @@
-CMakeFiles/BKav_Chat.dir/main.cpp.o: \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/main.cpp \
+CMakeFiles/BKav_Chat.dir/circularprogresswidget.cpp.o: \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.cpp \
  /usr/include/stdc-predef.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/appconfig.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
  /usr/include/c++/13/type_traits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -167,6 +168,13 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtresource.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttranslation.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h \
@@ -194,21 +202,13 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/array \
  /usr/include/c++/13/compare \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
- /usr/include/string.h /usr/include/strings.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
- /usr/include/c++/13/cstring /usr/include/c++/13/iterator \
- /usr/include/c++/13/bits/stream_iterator.h /usr/include/c++/13/iosfwd \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+ /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr.h /usr/include/c++/13/iosfwd \
  /usr/include/c++/13/bits/stringfwd.h /usr/include/c++/13/bits/postypes.h \
  /usr/include/c++/13/cwchar /usr/include/wchar.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
@@ -217,12 +217,8 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/13/bits/streambuf_iterator.h \
- /usr/include/c++/13/streambuf /usr/include/c++/13/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
- /usr/include/c++/13/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/cctype \
- /usr/include/ctype.h /usr/include/c++/13/bits/ios_base.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
@@ -239,6 +235,32 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+ /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/backward/auto_ptr.h \
+ /usr/include/c++/13/pstl/glue_memory_defs.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpair.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydatapointer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydataops.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qxptype_traits.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23type_traits.h \
+ /usr/include/c++/13/cstring /usr/include/c++/13/iterator \
+ /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/c++/13/bits/streambuf_iterator.h \
+ /usr/include/c++/13/streambuf /usr/include/c++/13/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+ /usr/include/c++/13/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/cctype \
+ /usr/include/ctype.h /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h /usr/include/c++/13/string \
  /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/ostream_insert.h \
@@ -262,16 +284,6 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /usr/include/c++/13/system_error \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/bits/streambuf.tcc \
- /usr/include/c++/13/memory \
- /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/concurrence.h \
- /usr/include/c++/13/bits/shared_ptr_atomic.h \
- /usr/include/c++/13/backward/auto_ptr.h \
- /usr/include/c++/13/pstl/glue_memory_defs.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20functional.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20memory.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
@@ -287,15 +299,6 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCoreApplication \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreevent.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbasictimer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
  /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
@@ -326,17 +329,21 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
  /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
  /usr/include/c++/13/ratio /usr/include/c++/13/ctime \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qeventloop.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnativeinterface.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
- /usr/include/c++/13/climits \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpoint.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -345,8 +352,22 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
+ /usr/include/c++/13/cassert \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
+ /usr/include/c++/13/climits \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
@@ -358,52 +379,6 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QApplication \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtgui-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtguiexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qwindowdefs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qpoint.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcheckedint_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsize.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmargins.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixmap.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpaintdevice.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrect.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcolor.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgb.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qrgba64.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qimage.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpixelformat.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtransform.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpolygon.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qregion.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
- /usr/include/c++/13/cassert \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qinputmethod.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlocale.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qguiapplication_platform.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QLocale \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QTranslator \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtranslator.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/mainwindow.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QMainWindow \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qmainwindow.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qwidget.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qaction.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qkeysequence.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qicon.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
@@ -412,134 +387,10 @@ CMakeFiles/BKav_Chat.dir/main.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontvariableaxis.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qsizepolicy.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabwidget.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStackedWidget \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstackedwidget.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qframe.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QWidget \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLabel \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlabel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpicture.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextdocument.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QLineEdit \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlineedit.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextcursor.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextformat.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QCheckBox \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qcheckbox.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractbutton.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QPushButton \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qpushbutton.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QVBoxLayout \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayout.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QGridLayout \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/loginmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcalendar.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslConfiguration \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslconfiguration.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtcpsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhostaddress.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslcertificate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcryptographichash.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qssl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QFlags \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkReply \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkreply.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QIODevice \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkRequest \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signup.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QListView \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qlistview.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qitemselectionmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractslider.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtabbar.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qrubberband.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsockets_global.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qtwebsocketsexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QHBoxLayout \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QHash \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chat.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QTextEdit \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qtextedit.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QScrollArea \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qscrollarea.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatdelegate.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qcursor.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbitmap.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPainter \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpainter.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qtextoption.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpen.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/QPen

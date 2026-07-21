@@ -5,6 +5,7 @@
 #include "chat.h"
 #include "DatabaseManager.h"
 #include "nicknamecontroller.h"
+#include "circularprogresswidget.h"
 #include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -70,7 +71,8 @@ Chat::Chat(
 
     messageView->setModel(model);
 
-    messageView->setItemDelegate(new ChatDelegate(this));
+    chatDelegate = new ChatDelegate(this);
+    messageView->setItemDelegate(chatDelegate);
     messageView->setSpacing(2);
     messageView->setResizeMode(QListView::Adjust);
     messageView->setStyleSheet("border:none;""background:#F5F5F5;");
@@ -847,25 +849,78 @@ MessageInfo Chat::createMessageFromVariant(const QVariantMap &data) {
         (data["sender_id"].toLongLong() == myId)
         );
 }
+void Chat::finishFileProgress(const QString &url, qint64 startMs)
+{
+    if (!chatDelegate) return;
 
+    const int minDisplayMs = 500; // thời gian tối thiểu để mắt kịp thấy vòng tròn
+    qint64 elapsed = QDateTime::currentMSecsSinceEpoch() - startMs;
+
+    // Đảm bảo % lên tới 100 trước khi tắt, để không bị "nhảy cóc" từ 20% -> icon mũi tên
+    chatDelegate->setFileProgress(url, 99);
+    messageView->viewport()->repaint();
+
+    qint64 remain = minDisplayMs - elapsed;
+    if (remain <= 0) remain = 0;
+
+    QTimer::singleShot(remain, this, [this, url](){
+        if (chatDelegate) {
+            chatDelegate->setFileProgress(url, -1);
+            messageView->viewport()->update(); // ở đây dùng update() bình thường được, không gấp
+        }
+    });
+}
 void Chat::downloadFile(const QString &url, const QString &fileName){
+    if (chatDelegate && chatDelegate->fileProgress(url) >= 0)
+        return;
+
     QString saveFilePath = QFileDialog::getSaveFileName(this, "File", fileName);
     if(saveFilePath.isEmpty()) return;
 
     QUrl fileUrl(url);
-    qDebug() << "url file:" << url;
     QNetworkRequest request(fileUrl);
     QNetworkReply *reply = networkManager->get(request);
+
+    QFile *outFile = new QFile(saveFilePath);
+    if(!outFile->open(QIODevice::WriteOnly)){
+        QMessageBox::critical(this, "Lỗi", "Không thể tạo file để lưu.");
+        delete outFile;
+        reply->abort();
+        reply->deleteLater();
+        return;
+    }
+
+    qint64 startMs = QDateTime::currentMSecsSinceEpoch();
+
+    if (chatDelegate) {
+        chatDelegate->setFileProgress(url, 0);
+        messageView->viewport()->repaint(); // repaint() = vẽ NGAY, không chờ event loop gộp lại
+    }
+
+    connect(reply, &QNetworkReply::downloadProgress, this,
+            [this, url](qint64 bytesReceived, qint64 bytesTotal){
+                if (bytesTotal > 0 && chatDelegate) {
+                    int percent = static_cast<int>((bytesReceived * 100) / bytesTotal);
+                    chatDelegate->setFileProgress(url, percent);
+                    messageView->viewport()->repaint();
+                }
+            });
+
+    connect(reply, &QNetworkReply::readyRead, outFile, [reply, outFile](){
+        outFile->write(reply->readAll());
+    });
+
     connect(reply, &QNetworkReply::finished, this, [=](){
-        if(reply->error() == QNetworkReply::NoError){
-            QFile file(saveFilePath);
-            if(file.open(QIODevice::WriteOnly)){
-                file.write(reply->readAll());
-                file.close();
-            }
-        }else{
-            QMessageBox::critical(this, "Lỗi", "không thể tải file: " + reply->errorString());
+        outFile->write(reply->readAll());
+        outFile->close();
+        outFile->deleteLater();
+
+        if (reply->error() != QNetworkReply::NoError) {
+            QFile::remove(saveFilePath);
+            QMessageBox::critical(this, "Lỗi", "Không thể tải file: " + reply->errorString());
         }
+
+        finishFileProgress(url, startMs); // thay vì set -1 ngay, gọi hàm này
         reply->deleteLater();
     });
 }
