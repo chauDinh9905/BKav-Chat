@@ -98,7 +98,7 @@ module.exports = () => {
         console.log(' [LOGIN] DB password hash:', info.password_hash);
         console.log(' [LOGIN] Password match:', password === info.password_hash ? 'YES' : 'NO');
 
-        // 3. So sánh trực tiếp chuỗi vừa băm với password_hash trong database (info.password_hash)
+        // So sánh trực tiếp chuỗi vừa băm với password_hash trong database (info.password_hash)
         // Lưu ý: Bạn kiểm tra lại tên trường trong DB của bạn là info.password_hash hay info.Password nhé
         if (info.password_hash === password) {
             console.log(' [LOGIN] Password correct');

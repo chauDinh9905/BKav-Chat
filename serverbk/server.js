@@ -222,6 +222,23 @@ async function startConsumer() {
                 }
             });
         }
+            if (topic === 'nickname_updated') {
+                const ownerSet = clients.get(data.ownerId.toString());
+                if (ownerSet) {
+                    // Đảm bảo tên trường trùng khớp chính xác 100% với Qt C++
+                    const payload = JSON.stringify({
+                        type: 'nickname_updated',
+                        friend_id: data.friendId,
+                        nickname: data.nickname
+                    });
+
+                    for (const ws of ownerSet) {
+                        if (ws.readyState === 1) {
+                            ws.send(payload);
+                        }
+                    }
+                }
+            }
 
             if (topic === 'chat_messages') {
                 const targetSet = clients.get(data.to.toString());

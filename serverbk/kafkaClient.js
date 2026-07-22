@@ -39,6 +39,10 @@ async function initKafka() {
                 topic: 'message_seen',
                 fromBeginning: false,
                 });
+            await consumer.subscribe({
+                topic: 'nickname_updated',
+                fromBeginning: false,
+            })
             console.log("Kafka Client initialized and connected.");
             return;
         }catch (err) {

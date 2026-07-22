@@ -119,16 +119,12 @@ module.exports = () => {
         message: "Unauthorized"
             });
         }
-
-        const users = await models.Users.find({
-            _id: { $ne: new ObjectId(UserID) }
-        }).lean();
-
         return res.status(200).json({
             status: 1,
             data: users.map(user => ({
                 user_id: user?.user_id,
                 display_name: user.display_name,
+                //nickname: nicknameMap[user.user_id] || "",
                 avatar_path: user.avatar_path
             })),
             message: ''

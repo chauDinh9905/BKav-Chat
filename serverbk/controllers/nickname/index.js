@@ -3,14 +3,14 @@ var router = express.Router()
 var models = reqlib('database').models
 const { ObjectId } = require('mongoose').Types
 const authMiddleware = require('./../../middleware/index.js')
-
+const { sendToKafka } = require('./../../kafkaClient');
 module.exports = () => {
     router.post('/set-nickname',authMiddleware, async (req, res) => {
         try {
             const UserID = req.UserID
             const targetId = Number(req.body.FriendID)
             const nickname = req.body.Nickname
-
+            console.log(req.body)
             if (!targetId || !nickname) {
                 return res.status(400).json({ status: 0, data: null, message: 'Thiếu dữ liệu' })
             }
@@ -19,6 +19,7 @@ module.exports = () => {
             if (user == null) {
                 return res.status(400).json({ status: 0, data: null, message: 'User not found' })
             }
+            console.log(req.UserID)
             const ownerId = user.user_id
 
             await models.Nickname.findOneAndUpdate(
@@ -26,15 +27,15 @@ module.exports = () => {
                 { nickname },
                 { upsert: true, new: true }
             )
-
-            global.sendToUser(ownerId, {
-                type: 'nickname_updated',
-                friend_id: targetId,
+            await sendToKafka('nickname_updated', {
+                ownerId: ownerId,
+                friendId: targetId,
                 nickname: nickname
             })
-
+            console.log("Kafka sent");
             return res.status(200).json({ status: 1, data: { FriendID: targetId, Nickname: nickname }, message: '' })
         } catch (error) {
+            console.error("set-nickname error:", error);
             return res.status(400).json({ status: 0, data: null, message: error.message })
         }
     })
@@ -55,9 +56,9 @@ module.exports = () => {
             const targetUser = await models.Users.findOne({ user_id: targetId }).exec()
             const originalName = targetUser ? targetUser.display_name : ''
 
-            global.sendToUser(ownerId, {
-                type: 'nickname_updated',
-                friend_id: targetId,
+           await sendToKafka('nickname_updated', {
+                ownerId: ownerId,
+                friendId: targetId,
                 nickname: originalName
             })
 

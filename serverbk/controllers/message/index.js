@@ -42,6 +42,11 @@ module.exports = () => {
                 return res.status(400).json({ status: 0, data: null, message: 'User not found' })
             }
             const listUser = await models.Users.find({ _id: { $ne: user._id } }).sort({ created_at: -1 }).exec()
+            const nicknameList = await models.Nickname.find({ owner_id: user.user_id }).exec()
+            const nicknameMap = {}
+            nicknameList.forEach(n => {
+                nicknameMap[n.target_id] = n.nickname
+            })
             let listCustomFriend = []
             await Promise.all(listUser.map(async (value) => {
                 const queryConditions = [
@@ -54,9 +59,9 @@ module.exports = () => {
                 ];
                 const response = await models.Message.find({ $and: queryConditions }).sort({ CreatedAt: -1 }).limit(1);
                 const unreadCount = await models.Message.countDocuments({
-                UserID: value.user_id,
-                FriendID: user.user_id,
-                isSend: {$lt: 2}
+                    UserID: value.user_id,
+                    FriendID: user.user_id,
+                    isSend: {$lt: 2}
                 });
                 listCustomFriend.push({
                     Content: response.length > 0 ? response[0]?.Content : '',
@@ -64,7 +69,7 @@ module.exports = () => {
                     Images: response.length > 0 ? response[0]?.Images : null,
                     isSend: response.length > 0 ? response[0]?.isSend : 0,
                     FriendID: value.user_id,
-                    FullName: value.display_name,
+                    FullName: nicknameMap[value.user_id] || value.display_name,
                     Username: value.username,
                     Avatar: value.avatar_path,
                     isOnline: global.wsClients.has(value.user_id.toString()),
