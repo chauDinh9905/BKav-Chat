@@ -5,7 +5,7 @@ const { ObjectId } = require('mongoose').Types
 const authMiddleware = require('./../../middleware/index.js')
 
 module.exports = () => {
-    router.post('/set-nickname', async (req, res) => {
+    router.post('/set-nickname',authMiddleware, async (req, res) => {
         try {
             const UserID = req.UserID
             const targetId = Number(req.body.FriendID)
@@ -39,7 +39,7 @@ module.exports = () => {
         }
     })
 
-    router.post('/remove-nickname', async (req, res) => {
+    router.post('/remove-nickname',authMiddleware, async (req, res) => {
         try {
             const UserID = req.UserID
             const targetId = Number(req.body.FriendID)
