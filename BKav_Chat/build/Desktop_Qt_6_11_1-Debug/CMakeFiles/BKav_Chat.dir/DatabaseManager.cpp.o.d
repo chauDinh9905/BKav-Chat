@@ -2,9 +2,10 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.cpp \
  /usr/include/stdc-predef.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qglobal.h \
  /usr/include/c++/13/type_traits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -167,11 +168,6 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtresource.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qttranslation.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobjectdefs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qnamespace.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcompare.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstdlibdetection.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcomparehelpers.h \
@@ -236,8 +232,9 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qrefcount.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qarraydata.h \
@@ -286,15 +283,7 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearrayview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringfwd.h \
  /usr/include/c++/13/stdlib.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qchar.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringalgorithms.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstring.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlatin1stringview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qanystringview.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
@@ -302,11 +291,22 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringbuilder.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringconverter_base.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhashfunctions.h \
  /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalgorithms.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qscopedpointer.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetatype.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevicebase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfloat16.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmath.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterable.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtaggedpointer.h \
@@ -317,6 +317,29 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /usr/include/c++/13/bits/list.tcc /usr/include/c++/13/map \
  /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
+ /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
+ /usr/include/c++/13/ratio /usr/include/c++/13/ctime \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QThread \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qthread.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /usr/include/c++/13/future /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/c++/13/condition_variable \
+ /usr/include/c++/13/bits/atomic_futex.h \
+ /usr/include/c++/13/bits/std_thread.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariantMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariantmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcontiguouscache.h \
@@ -330,42 +353,18 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
- /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
- /usr/include/c++/13/ratio /usr/include/c++/13/ctime \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qlist.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiterator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbytearraylist.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringlist.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstringmatcher.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmap.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qshareddata_impl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qset.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qhash.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qalloc.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q23utility.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20utility.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qobject_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qbindingstorage.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -378,40 +377,13 @@ CMakeFiles/BKav_Chat.dir/DatabaseManager.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/SecurityUtils.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutexLocker \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QStandardPaths \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qstandardpaths.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDir \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdirlisting.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfiledevice.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qiodevice.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qspan.h \
- /usr/include/c++/13/cassert \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20iterator.h \
- /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
- /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
- /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
- /usr/include/c++/13/bits/locale_facets.tcc \
- /usr/include/c++/13/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
- /usr/include/c++/13/bits/locale_facets_nonio.tcc \
- /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
- /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/istream /usr/include/c++/13/ios \
- /usr/include/c++/13/bits/basic_ios.h \
- /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
- /usr/include/c++/13/bits/ostream.tcc \
- /usr/include/c++/13/bits/istream.tcc \
- /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfile.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qfileinfo.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAtomicInteger \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h

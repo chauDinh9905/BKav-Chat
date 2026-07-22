@@ -390,12 +390,42 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmochelpers.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmocconstants.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20algorithm.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_DatabaseManager.cpp \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../DatabaseManager.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QThread \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qthread.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /usr/include/c++/13/future /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/c++/13/condition_variable \
+ /usr/include/c++/13/bits/atomic_futex.h \
+ /usr/include/c++/13/bits/std_thread.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariantMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariantmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAtomicInteger \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_SocketManager.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../SocketManager.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qurl.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QAbstractSocket \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qabstractsocket.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
@@ -406,8 +436,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpheaders.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmetaobject.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSharedDataPointer \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q26numeric.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkProxy \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkproxy.h \
@@ -452,7 +480,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qline.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
@@ -474,7 +501,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qpalette.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qbrush.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfont.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qendian.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontmetrics.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontinfo.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qfontvariableaxis.h \
@@ -505,7 +531,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtGui/qvalidator.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qregularexpression.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qslider.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qabstractslider.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyle.h \
@@ -523,8 +548,6 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chatmodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../chatdelegate.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QStyledItemDelegate \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
@@ -544,20 +567,19 @@ CMakeFiles/BKav_Chat.dir/BKav_Chat_autogen/mocs_compilation.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsortfilterproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_dashboardmodel.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../dashboardmodel.h \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_databaseworker.cpp \
+ /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../databaseworker.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/moc_errorconnectionnetwork.cpp \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/build/Desktop_Qt_6_11_1-Debug/BKav_Chat_autogen/EWIEGA46WW/../../../../errorconnectionnetwork.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QDialog \

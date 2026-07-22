@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/chatmodel.cpp" "CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/chatmodel.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.cpp" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o.d"
+  "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.cpp" "CMakeFiles/BKav_Chat.dir/databaseworker.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/databaseworker.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp" "CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o.d"
   "/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/login.cpp" "CMakeFiles/BKav_Chat.dir/login.cpp.o" "gcc" "CMakeFiles/BKav_Chat.dir/login.cpp.o.d"

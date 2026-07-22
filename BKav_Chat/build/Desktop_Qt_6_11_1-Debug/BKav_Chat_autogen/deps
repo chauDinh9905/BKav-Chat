@@ -26,6 +26,8 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboard.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.h \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.cpp \
+	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/friendproxymodel.cpp \
@@ -45,6 +47,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.cpp \
 	/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/signupmodel.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAbstractListModel \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAtomicInteger \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QCryptographicHash \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDateTime \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDir \
@@ -55,6 +58,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QList \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMap \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMetaType \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QObject \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
@@ -64,8 +68,10 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSortFilterProxyModel \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QStandardPaths \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QString \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QThread \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QUrl \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariant \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariantMap \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVector \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q17memory.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/q20bit.h \
@@ -113,6 +119,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdarwinhelpers.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatastream.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdatetime.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdebug.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdirlisting.h \
@@ -205,6 +212,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtextstream.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtformat_impl.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qthread.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtmetamacros.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtnoop.h \
@@ -220,6 +228,7 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qutf8stringview.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariant.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariantmap.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvarlengtharray.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvector.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qversiontagging.h \
@@ -285,6 +294,11 @@ BKav_Chat_autogen/timestamp: \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkexports.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
+	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/QWebSocket \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qtwebsocketsexports.h \
 	/home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWebSockets/qwebsocket.h \
@@ -819,6 +833,7 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/bits/allocated_ptr.h \
 	/usr/include/c++/13/bits/allocator.h \
 	/usr/include/c++/13/bits/atomic_base.h \
+	/usr/include/c++/13/bits/atomic_futex.h \
 	/usr/include/c++/13/bits/atomic_lockfree_defines.h \
 	/usr/include/c++/13/bits/basic_ios.h \
 	/usr/include/c++/13/bits/basic_ios.tcc \
@@ -881,6 +896,8 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/bits/sstream.tcc \
 	/usr/include/c++/13/bits/std_abs.h \
 	/usr/include/c++/13/bits/std_function.h \
+	/usr/include/c++/13/bits/std_mutex.h \
+	/usr/include/c++/13/bits/std_thread.h \
 	/usr/include/c++/13/bits/stl_algo.h \
 	/usr/include/c++/13/bits/stl_algobase.h \
 	/usr/include/c++/13/bits/stl_bvector.h \
@@ -909,6 +926,7 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/bits/string_view.tcc \
 	/usr/include/c++/13/bits/stringfwd.h \
 	/usr/include/c++/13/bits/uniform_int_dist.h \
+	/usr/include/c++/13/bits/unique_lock.h \
 	/usr/include/c++/13/bits/unique_ptr.h \
 	/usr/include/c++/13/bits/unordered_map.h \
 	/usr/include/c++/13/bits/unordered_set.h \
@@ -925,6 +943,7 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/cmath \
 	/usr/include/c++/13/codecvt \
 	/usr/include/c++/13/compare \
+	/usr/include/c++/13/condition_variable \
 	/usr/include/c++/13/cstddef \
 	/usr/include/c++/13/cstdint \
 	/usr/include/c++/13/cstdio \
@@ -945,6 +964,7 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/ext/type_traits.h \
 	/usr/include/c++/13/filesystem \
 	/usr/include/c++/13/functional \
+	/usr/include/c++/13/future \
 	/usr/include/c++/13/initializer_list \
 	/usr/include/c++/13/iomanip \
 	/usr/include/c++/13/ios \
@@ -956,6 +976,7 @@ BKav_Chat_autogen/timestamp: \
 	/usr/include/c++/13/locale \
 	/usr/include/c++/13/map \
 	/usr/include/c++/13/memory \
+	/usr/include/c++/13/mutex \
 	/usr/include/c++/13/new \
 	/usr/include/c++/13/numeric \
 	/usr/include/c++/13/optional \

@@ -516,6 +516,30 @@ dashboardmodel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.s
 .PHONY : dashboardmodel.cpp.s
 
+databaseworker.o: databaseworker.cpp.o
+.PHONY : databaseworker.o
+
+# target to build an object file
+databaseworker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databaseworker.cpp.o
+.PHONY : databaseworker.cpp.o
+
+databaseworker.i: databaseworker.cpp.i
+.PHONY : databaseworker.i
+
+# target to preprocess a source file
+databaseworker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databaseworker.cpp.i
+.PHONY : databaseworker.cpp.i
+
+databaseworker.s: databaseworker.cpp.s
+.PHONY : databaseworker.s
+
+# target to generate assembly for a file
+databaseworker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BKav_Chat.dir/build.make CMakeFiles/BKav_Chat.dir/databaseworker.cpp.s
+.PHONY : databaseworker.cpp.s
+
 errorconnectionnetwork.o: errorconnectionnetwork.cpp.o
 .PHONY : errorconnectionnetwork.o
 
@@ -784,6 +808,9 @@ help:
 	@echo "... dashboardmodel.o"
 	@echo "... dashboardmodel.i"
 	@echo "... dashboardmodel.s"
+	@echo "... databaseworker.o"
+	@echo "... databaseworker.i"
+	@echo "... databaseworker.s"
 	@echo "... errorconnectionnetwork.o"
 	@echo "... errorconnectionnetwork.i"
 	@echo "... errorconnectionnetwork.s"

@@ -38,19 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
             {
                 dashboardModel = new DashboardModel(this, QString::number(loggedInUserId));
                 dashboardView = new Dashboard(dashboardModel, this);
-                DatabaseManager::instance().init(loggedInUserId);
-
-                // Lấy token đã lưu để derive key
-                QString configPath = AppConfig::instance().getConfigFilePath();
-                QSettings settings(configPath, QSettings::IniFormat);
-                QString token = settings.value("auth/token").toString();
-
-                QString localKey = SecurityUtils::generateLocalKey(token, loggedInUserId);
-                DatabaseManager::instance().setEncryptionKey(localKey);
-
                 stackedWidget->addWidget(dashboardView);
                 stackedWidget->setCurrentWidget(dashboardView);
-
                 connectDashboardSignals();
                 SocketManager::instance().connectToServer();
             });

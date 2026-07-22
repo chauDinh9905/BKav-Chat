@@ -28,6 +28,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BKav_Chat.dir/dashboard.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o"
   "CMakeFiles/BKav_Chat.dir/dashboardmodel.cpp.o.d"
+  "CMakeFiles/BKav_Chat.dir/databaseworker.cpp.o"
+  "CMakeFiles/BKav_Chat.dir/databaseworker.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o"
   "CMakeFiles/BKav_Chat.dir/errorconnectionnetwork.cpp.o.d"
   "CMakeFiles/BKav_Chat.dir/friendproxymodel.cpp.o"

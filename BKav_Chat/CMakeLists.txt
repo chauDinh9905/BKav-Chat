@@ -70,6 +70,8 @@ qt_add_executable(BKav_Chat
     imagecache.h
     nicknamecontroller.h
     nicknamecontroller.cpp
+    databaseworker.h
+    databaseworker.cpp
 
 
 
@@ -126,6 +128,7 @@ qt_generate_deploy_app_script(
 )
 
 find_package(Qt6 REQUIRED COMPONENTS Core Sql)
+find_package(Qt6 REQUIRED COMPONENTS WebSockets Network)
 target_link_libraries(BKav_Chat
   PRIVATE
     Qt6::Sql
@@ -133,7 +136,6 @@ target_link_libraries(BKav_Chat
     Qt6::WebSockets
 )
 
-find_package(Qt6 REQUIRED COMPONENTS WebSockets Network)
 
 #target_include_directories(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/include")
 #target_link_libraries(BKav_Chat PRIVATE "C:/Program Files/MySQL/MySQL Server 9.7/lib/mysql")

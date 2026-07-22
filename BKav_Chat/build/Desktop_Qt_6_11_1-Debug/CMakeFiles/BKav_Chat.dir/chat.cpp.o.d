@@ -503,22 +503,29 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSettings \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qsettings.h \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/DatabaseManager.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlDatabase \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqldatabase.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlglobal.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsql-config.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qtsqlexports.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlQuery \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlquery.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/QSqlError \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtSql/qsqlerror.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QDebug \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMutex \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qmutex.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtsan_impl.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QThread \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qthread.h \
+ /usr/include/c++/13/future /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/c++/13/condition_variable \
+ /usr/include/c++/13/bits/atomic_futex.h \
+ /usr/include/c++/13/bits/std_thread.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QVariantMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qvariantmap.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QMap \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QAtomicInteger \
  /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/nicknamecontroller.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QPoint \
- /home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/circularprogresswidget.h \
+ /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QSet \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/QFileDialog \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qfiledialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qdir.h \
@@ -550,16 +557,8 @@ CMakeFiles/BKav_Chat.dir/chat.cpp.o: \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qtimezone.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtWidgets/qdialog.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonDocument \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsondocument.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonparseerror.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonObject \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonobject.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborvalue.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qcborcommon.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/quuid.h \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QJsonArray \
- /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/qjsonarray.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/QHttpMultiPart \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtNetwork/qhttpmultipart.h \
  /home/chau-dinh/Qt/6.11.1/gcc_64/include/QtCore/QByteArray \

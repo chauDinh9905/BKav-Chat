@@ -901,6 +901,12 @@
 			null
 		],
 		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.h",
+			"MU",
+			"EWIEGA46WW/moc_databaseworker.cpp",
+			null
+		],
+		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/errorconnectionnetwork.h",
 			"MU",
 			"EWIEGA46WW/moc_errorconnectionnetwork.cpp",
@@ -1070,6 +1076,11 @@
 		],
 		[
 			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/dashboardmodel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/chau-dinh/Documents/intern/projects_for_desktop/BKav_Chat/databaseworker.cpp",
 			"MU",
 			null
 		],

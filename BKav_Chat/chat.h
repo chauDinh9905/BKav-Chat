@@ -50,9 +50,11 @@ private slots:
     void onMessageReceived(const QString &message);
     void showImagePreview(const QString &url);
     void setDisplayName(const QString &name);
+
 private:
     ChatDelegate *chatDelegate = nullptr;
     qint64 myId;
+    quint64 m_pendingDbRequestId = 0;
     qint64 lastEmojiPopupCloseMs = 0;
     QString friendId;
     QString friendName;
@@ -89,6 +91,11 @@ private:
     void finishFileProgress(const QString &url, qint64 startMs);
     void saveImageToDisk(const QString &url, QWidget *parentDialog = nullptr);
     static QHash<QString, Chat*> s_openChats;
+    QVector<MessageInfo> m_cacheMessages;
+    QVector<MessageInfo> m_restMessages;
+    bool m_cacheLoaded = false;
+    bool m_restLoaded = false;
+    void tryMergeAndDisplay();
 public:
     void loadMessages();
     MessageInfo createMessageFromVariant(const QVariantMap &data);
@@ -100,6 +107,7 @@ protected:
 private slots:
     void downloadFile(const QString &url, const QString &fileName);
     void adjustMessageEditHeight();
+    void onCachedMessagesReady(quint64 requestId, QVector<QVariantMap> messages);
 };
 
 #endif

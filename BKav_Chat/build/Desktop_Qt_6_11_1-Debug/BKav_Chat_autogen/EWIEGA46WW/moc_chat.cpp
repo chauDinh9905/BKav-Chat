@@ -10,6 +10,7 @@
 #include <QtGui/qtextcursor.h>
 #include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 
 #include <QtCore/qtmochelpers.h>
 
@@ -62,7 +63,11 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         "name",
         "downloadFile",
         "fileName",
-        "adjustMessageEditHeight"
+        "adjustMessageEditHeight",
+        "onCachedMessagesReady",
+        "requestId",
+        "QList<QVariantMap>",
+        "messages"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -100,6 +105,10 @@ template <> constexpr inline auto Chat::qt_create_metaobjectdata<qt_meta_tag_ZN4
         }}),
         // Slot 'adjustMessageEditHeight'
         QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onCachedMessagesReady'
+        QtMocHelpers::SlotData<void(quint64, QVector<QVariantMap>)>(23, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::ULongLong, 24 }, { 0x80000000 | 25, 26 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -135,6 +144,7 @@ void Chat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 9: _t->setDisplayName((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 10: _t->downloadFile((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
         case 11: _t->adjustMessageEditHeight(); break;
+        case 12: _t->onCachedMessagesReady((*reinterpret_cast<std::add_pointer_t<quint64>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QList<QVariantMap>>>(_a[2]))); break;
         default: ;
         }
     }
@@ -165,14 +175,14 @@ int Chat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 13;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 13)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }

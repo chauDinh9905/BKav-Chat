@@ -5,7 +5,8 @@
 #include "chat.h"
 #include "DatabaseManager.h"
 #include "nicknamecontroller.h"
-#include "circularprogresswidget.h"
+#include <QSet>
+#include <algorithm>
 #include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -196,6 +197,8 @@ Chat::Chat(
         connect(delegate, &ChatDelegate::imageClicked, this, &Chat::showImagePreview);
     }
     connect(messageEdit, &QTextEdit::textChanged, this, &Chat::adjustMessageEditHeight);
+    connect(&DatabaseManager::instance(), &DatabaseManager::messagesReady,
+            this, &Chat::onCachedMessagesReady);
     loadMessages();
 }
 
@@ -728,7 +731,6 @@ void Chat::onMessageReceived(
 
 void Chat::loadMessages()
 {
-    //QSettings settings("BKAV", "ChatApp");
     QString configPath = AppConfig::instance().getConfigFilePath();
     QSettings settings(configPath, QSettings::IniFormat);
     QString token = settings.value("auth/token").toString();
@@ -738,32 +740,27 @@ void Chat::loadMessages()
         return;
     }
     QString baseUrl = AppConfig::instance().getBaseUrl();
-
     QUrl url(baseUrl + "/message/get-message?FriendID=" + friendId + (lastTime.isEmpty() ? "" : "&LastTime=" + lastTime));
-    qDebug() << "friendId from get message: " << friendId;
 
     model->clear();
+    m_cacheMessages.clear();
+    m_restMessages.clear();
+    m_cacheLoaded = false;
+    m_restLoaded = false;
 
-    auto cachedMsgs = DatabaseManager::instance().getMessages(myId, friendId.toLongLong());
-    for(auto& msgData : cachedMsgs) {
-        // Chuyển QVariantMap thành MessageInfo và add vào model
-        auto images = parseImages(msgData["images"].toJsonArray());
-        auto files  = parseFiles(msgData["files"].toJsonArray());
-        MessageInfo msg(msgData["sender_id"].toLongLong(), msgData["friend_id"].toLongLong(), msgData["content"].toString(), files,images, QDateTime::fromString(msgData["created_at"].toString(), Qt::ISODate), QDateTime::currentDateTime(),msgData["is_send"].toInt(), msgData["sender_id"].toLongLong() == myId, msgData["id"].toString());
-        model->addMessage(msg);
-        lastTime = msgData["created_at"].toString();
-    }
-    QTimer::singleShot(0, this, [this]() {
-        messageView->scrollToBottom();
-    });
+    // 1. Yêu cầu cache SQLite (bất đồng bộ)
+    m_pendingDbRequestId = DatabaseManager::instance().requestMessages(myId, friendId.toLongLong());
+
+    // 2. Yêu cầu REST song song
     QNetworkRequest request(url);
-    request.setRawHeader("Authorization",QString("Bearer %1").arg(token).toUtf8());
+    request.setRawHeader("Authorization", QString("Bearer %1").arg(token).toUtf8());
     QNetworkReply *reply = networkManager->get(request);
 
     connect(reply, &QNetworkReply::finished, this, [=]() {
-
         if (reply->error() != QNetworkReply::NoError) {
             qDebug() << reply->errorString();
+            m_restLoaded = true;
+            tryMergeAndDisplay();
             reply->deleteLater();
             return;
         }
@@ -773,12 +770,13 @@ void Chat::loadMessages()
         QJsonObject obj = doc.object();
 
         if (obj["status"].toInt() != 1) {
+            m_restLoaded = true;
+            tryMergeAndDisplay();
             reply->deleteLater();
             return;
         }
 
         QJsonArray arr = obj["data"].toArray();
-
         for (auto v : as_const(arr)) {
             QJsonObject m = v.toObject();
             bool isMine = (m["MessageType"].toInt() == 1);
@@ -787,67 +785,96 @@ void Chat::loadMessages()
 
             QVector<ImageInfo> imagesVector;
             QJsonArray imgArr = m["Images"].toArray();
-            for(auto imgVal : as_const(imgArr)) {
+            for (auto imgVal : as_const(imgArr)) {
                 QJsonObject imgObj = imgVal.toObject();
-                ImageInfo img;
-                img.urlImage = imgObj["urlImage"].toString();
-                img.fileName = imgObj["FileName"].toString();
-                imagesVector.append(img);
+                imagesVector.append({imgObj["urlImage"].toString(), imgObj["FileName"].toString()});
             }
-
             QVector<FileInfo> filesVector;
             QJsonArray fileArr = m["Files"].toArray();
-            for(auto fileVal : as_const(fileArr)) {
+            for (auto fileVal : as_const(fileArr)) {
                 QJsonObject fileObj = fileVal.toObject();
-                FileInfo f;
-                f.urlFile = fileObj["urlFile"].toString();
-                f.fileName = fileObj["FileName"].toString();
-                filesVector.append(f);
+                filesVector.append({fileObj["urlFile"].toString(), fileObj["FileName"].toString()});
             }
-            QString msgId = m["id"].toString();
-            if(!model->hasMessage(msgId)){
-                MessageInfo msg(
-                    senderId,
-                    receiverId,
-                    m["Content"].toString(),
-                    filesVector, // Files
-                    imagesVector, // Images
-                    QDateTime::fromString(m["CreatedAt"].toString(), Qt::ISODate), // có thể parse m["CreatedAt"].toString() nếu muốn đúng giờ
-                    QDateTime::currentDateTime(),
-                    m["isSend"].toInt(),
-                    isMine,
-                    m["id"].toString()
-                    );
 
-                model->addMessage(msg);
-                DatabaseManager::instance().insertMessage(
-                                   m["id"].toString(), senderId, receiverId,
-                                   m["Content"].toString(), m["Files"].toArray(), m["Images"].toArray(),
-                                   m["CreatedAt"].toString(), m["isSend"].toInt()
-                                       );
-            }
+            MessageInfo msg(
+                senderId, receiverId,
+                m["Content"].toString(),
+                filesVector, imagesVector,
+                QDateTime::fromString(m["CreatedAt"].toString(), Qt::ISODate),
+                QDateTime::currentDateTime(),
+                m["isSend"].toInt(),
+                isMine,
+                m["id"].toString()
+                );
+            m_restMessages.append(msg);
+
+            // vẫn cập nhật cache như cũ, không phụ thuộc thứ tự hiển thị
+            DatabaseManager::instance().insertMessage(
+                m["id"].toString(), senderId, receiverId,
+                m["Content"].toString(), m["Files"].toArray(), m["Images"].toArray(),
+                m["CreatedAt"].toString(), m["isSend"].toInt()
+                );
         }
-        QTimer::singleShot(0, this, [this]() {
-            messageView->scrollToBottom();
-        });
-        SocketManager::instance().markSeen(myId, friendId.toLongLong());
+
+        m_restLoaded = true;
+        tryMergeAndDisplay();
         reply->deleteLater();
     });
 }
 
-MessageInfo Chat::createMessageFromVariant(const QVariantMap &data) {
-    // Chuyển đổi từ QVariantMap (SQLite) hoặc QJsonObject (Server) thành MessageInfo
-    return MessageInfo(
-        data["sender_id"].toLongLong(),
-        data["friend_id"].toLongLong(),
-        data["content"].toString(),
-        {}, // Bạn cần parse lại JSON string thành QVector
-        {},
-        QDateTime::fromString(data["created_at"].toString(), Qt::ISODate),
-        QDateTime::currentDateTime(),
-        1,
-        (data["sender_id"].toLongLong() == myId)
-        );
+void Chat::onCachedMessagesReady(quint64 requestId, QVector<QVariantMap> messages)
+{
+    if (requestId != m_pendingDbRequestId) return;
+
+    for (auto &msgData : messages) {
+        auto images = parseImages(msgData["images"].toJsonArray());
+        auto files  = parseFiles(msgData["files"].toJsonArray());
+        MessageInfo msg(
+            msgData["sender_id"].toLongLong(), msgData["friend_id"].toLongLong(),
+            msgData["content"].toString(), files, images,
+            QDateTime::fromString(msgData["created_at"].toString(), Qt::ISODate),
+            QDateTime::currentDateTime(), msgData["is_send"].toInt(),
+            msgData["sender_id"].toLongLong() == myId, msgData["id"].toString());
+        m_cacheMessages.append(msg);
+    }
+
+    m_cacheLoaded = true;
+    tryMergeAndDisplay();
+}
+
+void Chat::tryMergeAndDisplay()
+{
+    if (!m_cacheLoaded || !m_restLoaded) return; // chờ đủ cả 2 nguồn
+
+    QVector<MessageInfo> merged;
+    QSet<QString> seenIds;
+
+    // Ưu tiên dữ liệu REST (nguồn xác thực từ server) trước
+    for (const auto &m : m_restMessages) {
+        if (!seenIds.contains(m.messageId)) {
+            merged.append(m);
+            seenIds.insert(m.messageId);
+        }
+    }
+    // Bù thêm tin chỉ có trong cache (ví dụ tin gửi khi offline, chưa kịp đồng bộ)
+    for (const auto &m : m_cacheMessages) {
+        if (!seenIds.contains(m.messageId)) {
+            merged.append(m);
+            seenIds.insert(m.messageId);
+        }
+    }
+
+    std::sort(merged.begin(), merged.end(), [](const MessageInfo &a, const MessageInfo &b) {
+        return a.createdAt < b.createdAt;
+    });
+
+    for (const auto &m : merged) {
+        if (!model->hasMessage(m.messageId))
+            model->addMessage(m);
+    }
+
+    QTimer::singleShot(0, this, [this]() { messageView->scrollToBottom(); });
+    SocketManager::instance().markSeen(myId, friendId.toLongLong());
 }
 void Chat::finishFileProgress(const QString &url, qint64 startMs)
 {
